@@ -140,6 +140,61 @@ p {
   }
 }
 /* ========================================
+   学習モード選択
+======================================== */
+
+.mode-section h2 {
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+}
+
+#selected-subject-name {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.mode-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.mode-card {
+  width: 100%;
+  min-height: 64px;
+  padding: 16px 20px;
+
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+
+  color: #222;
+  background-color: #fff;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   学習モード選択：PC表示
+======================================== */
+
+@media (min-width: 768px) {
+  .mode-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mode-card {
+    min-height: 72px;
+    padding: 20px 24px;
+  }
+}
+
+/* ========================================
    授業回選択
 ======================================== */
 
