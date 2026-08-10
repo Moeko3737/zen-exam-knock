@@ -5,10 +5,12 @@
 const SUBJECTS = {
   python: {
     name: "Pythonプログラミング",
+    dataDirectory: "python",
   },
 
   webapp2: {
     name: "Webアプリケーション開発2",
+    dataDirectory: "webapp2",
   },
 };
 
@@ -22,6 +24,7 @@ const TOTAL_LESSONS = 15;
 const subjectSection = document.querySelector("#subject-section");
 const modeSection = document.querySelector("#mode-section");
 const lessonSection = document.querySelector("#lesson-section");
+const quizSection = document.querySelector("#quiz-section");
 
 const subjectCards = document.querySelectorAll(".subject-card");
 const modeCards = document.querySelectorAll(".mode-card");
@@ -34,7 +37,29 @@ const lessonSubjectName = document.querySelector(
   "#lesson-subject-name"
 );
 
-const lessonList = document.querySelector("#lesson-list");
+const quizSubjectName = document.querySelector(
+  "#quiz-subject-name"
+);
+
+const quizLessonName = document.querySelector(
+  "#quiz-lesson-name"
+);
+
+const questionProgress = document.querySelector(
+  "#question-progress"
+);
+
+const quizHeading = document.querySelector(
+  "#quiz-heading"
+);
+
+const choiceList = document.querySelector(
+  "#choice-list"
+);
+
+const lessonList = document.querySelector(
+  "#lesson-list"
+);
 
 const backToSubjectButton = document.querySelector(
   "#back-to-subject"
@@ -44,27 +69,36 @@ const backToModeButton = document.querySelector(
   "#back-to-mode"
 );
 
+const backToLessonButton = document.querySelector(
+  "#back-to-lesson"
+);
+
 
 // ========================================
-// 現在選択されている科目
+// 現在の状態
 // ========================================
 
 let selectedSubject = "";
 
+let currentQuestions = [];
+
+let currentQuestionIndex = 0;
+
 
 // ========================================
-// すべての画面を非表示にする
+// すべての画面を非表示
 // ========================================
 
 function hideAllSections() {
   subjectSection.hidden = true;
   modeSection.hidden = true;
   lessonSection.hidden = true;
+  quizSection.hidden = true;
 }
 
 
 // ========================================
-// 科目選択画面を表示
+// 科目選択画面
 // ========================================
 
 function showSubjectSection() {
@@ -77,13 +111,12 @@ function showSubjectSection() {
 
 
 // ========================================
-// 学習モード選択画面を表示
+// 学習モード選択画面
 // ========================================
 
 function showModeSection(subject) {
   const subjectData = SUBJECTS[subject];
 
-  // 存在しない科目が指定された場合はトップへ戻す
   if (!subjectData) {
     location.hash = "#/";
     return;
@@ -100,13 +133,12 @@ function showModeSection(subject) {
 
 
 // ========================================
-// 授業回選択画面を表示
+// 授業回選択画面
 // ========================================
 
 function showLessonSection(subject) {
   const subjectData = SUBJECTS[subject];
 
-  // 存在しない科目が指定された場合はトップへ戻す
   if (!subjectData) {
     location.hash = "#/";
     return;
@@ -123,23 +155,138 @@ function showLessonSection(subject) {
 
 
 // ========================================
-// URLに応じて表示する画面を切り替える
+// 問題データを読み込む
+// ========================================
+
+async function loadQuestions(subject, lesson) {
+  const subjectData = SUBJECTS[subject];
+
+  if (!subjectData) {
+    throw new Error("指定された科目が存在しません。");
+  }
+
+  // 1 → 01、2 → 02 のように2桁にそろえる
+  const lessonNumber = String(lesson).padStart(2, "0");
+
+  const filePath =
+    `./src/data/${subjectData.dataDirectory}/lesson${lessonNumber}.json`;
+
+  const response = await fetch(filePath);
+
+  if (!response.ok) {
+    throw new Error(
+      `問題データの読み込みに失敗しました: ${filePath}`
+    );
+  }
+
+  return response.json();
+}
+
+
+// ========================================
+// 問題を表示する
+// ========================================
+
+function displayQuestion() {
+  const question = currentQuestions[currentQuestionIndex];
+
+  // 念のため問題が存在するか確認
+  if (!question) {
+    return;
+  }
+
+  questionProgress.textContent =
+    `Q${currentQuestionIndex + 1} / ${currentQuestions.length}`;
+
+  quizHeading.textContent = question.question;
+
+  // 前の問題の選択肢を削除
+  choiceList.replaceChildren();
+
+  // 選択肢を作成
+  question.choices.forEach((choice, index) => {
+    const button = document.createElement("button");
+
+    button.type = "button";
+    button.className = "choice-button";
+    button.dataset.choice = index;
+    button.textContent = choice;
+
+    choiceList.appendChild(button);
+  });
+}
+
+
+// ========================================
+// 問題画面
+// ========================================
+
+async function showQuizSection(subject, lesson) {
+  const subjectData = SUBJECTS[subject];
+  const lessonNumber = Number(lesson);
+
+  // 科目または授業回が不正な場合
+  if (
+    !subjectData ||
+    !Number.isInteger(lessonNumber) ||
+    lessonNumber < 1 ||
+    lessonNumber > TOTAL_LESSONS
+  ) {
+    location.hash = "#/";
+    return;
+  }
+
+  hideAllSections();
+
+  selectedSubject = subject;
+
+  quizSubjectName.textContent = subjectData.name;
+  quizLessonName.textContent = `第${lessonNumber}回`;
+
+  quizSection.hidden = false;
+
+  try {
+    currentQuestions = await loadQuestions(
+      subject,
+      lessonNumber
+    );
+
+    currentQuestionIndex = 0;
+
+    displayQuestion();
+  } catch (error) {
+    console.error(error);
+
+    quizHeading.textContent =
+      "問題データを読み込めませんでした。";
+
+    questionProgress.textContent = "";
+
+    choiceList.replaceChildren();
+  }
+}
+
+
+// ========================================
+// URLに応じた画面切り替え
 // ========================================
 
 function router() {
   const hash = location.hash || "#/";
 
-  // トップページ
+  // トップ
   if (hash === "#/" || hash === "#") {
     showSubjectSection();
     return;
   }
 
-  // #/python/mode のようなURLを分解する
-  const parts = hash.replace("#/", "").split("/");
+  const parts = hash
+    .replace("#/", "")
+    .split("/");
 
   const subject = parts[0];
   const page = parts[1];
+  const lesson = parts[2];
 
   // 学習モード選択
   if (page === "mode") {
@@ -148,12 +295,18 @@ function router() {
   }
 
   // 授業回選択
-  if (page === "lesson") {
+  if (page === "lesson" && !lesson) {
     showLessonSection(subject);
     return;
   }
 
-  // 該当する画面がない場合はトップへ戻す
+  // 問題画面
+  if (page === "lesson" && lesson) {
+    showQuizSection(subject, lesson);
+    return;
+  }
+
+  // 該当ページがない場合
   location.hash = "#/";
 }
 
@@ -179,14 +332,17 @@ modeCards.forEach((card) => {
   card.addEventListener("click", () => {
     const mode = card.dataset.mode;
 
-    // 回指定モード
     if (mode === "lesson") {
-      location.hash = `#/${selectedSubject}/lesson`;
+      location.hash =
+        `#/${selectedSubject}/lesson`;
+
       return;
     }
 
-    // その他のモードは後で実装する
-    console.log(`選択された学習モード: ${mode}`);
+    // その他のモードは後で実装
+    console.log(
+      `選択された学習モード: ${mode}`
+    );
   });
 });
 
@@ -196,8 +352,13 @@ modeCards.forEach((card) => {
 // ========================================
 
 function createLessonButtons() {
-  for (let lesson = 1; lesson <= TOTAL_LESSONS; lesson++) {
-    const button = document.createElement("button");
+  for (
+    let lesson = 1;
+    lesson <= TOTAL_LESSONS;
+    lesson++
+  ) {
+    const button =
+      document.createElement("button");
 
     button.type = "button";
     button.className = "lesson-card";
@@ -205,8 +366,8 @@ function createLessonButtons() {
     button.textContent = `第${lesson}回`;
 
     button.addEventListener("click", () => {
-      console.log(`選択された科目: ${selectedSubject}`);
-      console.log(`選択された授業回: 第${lesson}回`);
+      location.hash =
+        `#/${selectedSubject}/lesson/${lesson}`;
     });
 
     lessonList.appendChild(button);
@@ -220,27 +381,47 @@ createLessonButtons();
 // 戻るボタン
 // ========================================
 
-// 学習モード選択 → 科目選択
-backToSubjectButton.addEventListener("click", () => {
-  location.hash = "#/";
-});
+// 学習モード → 科目
+backToSubjectButton.addEventListener(
+  "click",
+  () => {
+    location.hash = "#/";
+  }
+);
 
 
-// 授業回選択 → 学習モード選択
-backToModeButton.addEventListener("click", () => {
-  location.hash = `#/${selectedSubject}/mode`;
-});
+// 授業回 → 学習モード
+backToModeButton.addEventListener(
+  "click",
+  () => {
+    location.hash =
+      `#/${selectedSubject}/mode`;
+  }
+);
+
+
+// 問題 → 授業回
+backToLessonButton.addEventListener(
+  "click",
+  () => {
+    location.hash =
+      `#/${selectedSubject}/lesson`;
+  }
+);
 
 
 // ========================================
-// ブラウザの戻る・進むへの対応
+// ブラウザの戻る・進む
 // ========================================
 
-window.addEventListener("hashchange", router);
+window.addEventListener(
+  "hashchange",
+  router
+);
 
 
 // ========================================
-// ページを最初に開いたときの表示
+// 初回表示
 // ========================================
 
 router();

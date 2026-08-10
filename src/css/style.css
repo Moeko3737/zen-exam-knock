@@ -244,3 +244,62 @@ p {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
+/* ========================================
+   問題画面
+======================================== */
+
+.quiz-section {
+  width: 100%;
+}
+
+#quiz-subject-name,
+#quiz-lesson-name,
+#question-progress {
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.question-text {
+  margin: 24px 0;
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+}
+
+.choice-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.choice-button {
+  width: 100%;
+  min-height: 56px;
+  padding: 16px 20px;
+
+  font-size: 1rem;
+  text-align: left;
+
+  color: #222;
+  background-color: #fff;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   問題画面：PC表示
+======================================== */
+
+@media (min-width: 768px) {
+  .question-text {
+    font-size: 1.3rem;
+  }
+
+  .choice-button {
+    padding: 18px 24px;
+  }
+}
