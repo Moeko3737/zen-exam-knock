@@ -17,98 +17,141 @@
     <p>授業内容をクイズ形式で復習できる試験対策サイト</p>
   </header>
 
-<main>
-  <!-- 科目選択 -->
-  <section
-    class="subject-section"
-    id="subject-section"
-    aria-labelledby="subject-heading"
-  >
-    <h2 id="subject-heading">科目を選択</h2>
+  <main>
 
-    <div class="subject-list">
-      <button
-        type="button"
-        class="subject-card"
-        data-subject="python"
-        data-subject-name="Pythonプログラミング"
-      >
-        <span class="subject-name">Pythonプログラミング</span>
-        <span class="subject-info">全15回</span>
-      </button>
-
-      <button
-        type="button"
-        class="subject-card"
-        data-subject="webapp2"
-        data-subject-name="Webアプリケーション開発2"
-      >
-        <span class="subject-name">Webアプリケーション開発2</span>
-        <span class="subject-info">全15回</span>
-      </button>
-    </div>
-  </section>
-
-
-  <!-- 学習モード選択 -->
-  <section
-    class="mode-section"
-    id="mode-section"
-    aria-labelledby="mode-heading"
-    hidden
-  >
-  <button type="button" id="back-to-subject" class="back-button">
-  ← 科目選択に戻る
-</button>
-    <p id="selected-subject-name"></p>
-
-    <h2 id="mode-heading">学習モードを選択</h2>
-
-    <div class="mode-list">
-      <button type="button" class="mode-card" data-mode="lesson">
-        回を指定して20問
-      </button>
-
-      <button type="button" class="mode-card" data-mode="mix">
-        全範囲MIX
-      </button>
-
-      <button type="button" class="mode-card" data-mode="knock100">
-        100問ノック
-      </button>
-
-      <button type="button" class="mode-card" data-mode="mistakes">
-        間違えた問題の復習
-      </button>
-    </div>
-  </section>
-
-
-<!-- 授業回選択 -->
-  <section
-    class="lesson-section"
-    id="lesson-section"
-    aria-labelledby="lesson-heading"
-    hidden
-  >
-    <button
-      type="button"
-      class="back-button"
-      id="back-to-mode"
+    <!-- ========================================
+         科目選択
+    ========================================= -->
+    <section
+      class="subject-section"
+      id="subject-section"
+      aria-labelledby="subject-heading"
+      hidden
     >
-      ← 学習モード選択に戻る
-    </button>
+      <h2 id="subject-heading">科目を選択</h2>
 
-    <p id="lesson-subject-name"></p>
+      <div class="subject-list">
 
-    <h2 id="lesson-heading">授業回を選択</h2>
+        <button
+          type="button"
+          class="subject-card"
+          data-subject="python"
+        >
+          <span class="subject-name">
+            Pythonプログラミング
+          </span>
 
-    <div
-      class="lesson-list"
-      id="lesson-list"
-    ></div>
-  </section>
-</main>
+          <span class="subject-info">
+            全15回
+          </span>
+        </button>
+
+        <button
+          type="button"
+          class="subject-card"
+          data-subject="webapp2"
+        >
+          <span class="subject-name">
+            Webアプリケーション開発2
+          </span>
+
+          <span class="subject-info">
+            全15回
+          </span>
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================
+         学習モード選択
+    ========================================= -->
+    <section
+      class="mode-section"
+      id="mode-section"
+      aria-labelledby="mode-heading"
+      hidden
+    >
+      <button
+        type="button"
+        class="back-button"
+        id="back-to-subject"
+      >
+        ← 科目選択に戻る
+      </button>
+
+      <p id="selected-subject-name"></p>
+
+      <h2 id="mode-heading">学習モードを選択</h2>
+
+      <div class="mode-list">
+
+        <button
+          type="button"
+          class="mode-card"
+          data-mode="lesson"
+        >
+          回を指定して20問
+        </button>
+
+        <button
+          type="button"
+          class="mode-card"
+          data-mode="mix"
+        >
+          全範囲MIX
+        </button>
+
+        <button
+          type="button"
+          class="mode-card"
+          data-mode="knock100"
+        >
+          100問ノック
+        </button>
+
+        <button
+          type="button"
+          class="mode-card"
+          data-mode="mistakes"
+        >
+          間違えた問題の復習
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================
+         授業回選択
+    ========================================= -->
+    <section
+      class="lesson-section"
+      id="lesson-section"
+      aria-labelledby="lesson-heading"
+      hidden
+    >
+      <button
+        type="button"
+        class="back-button"
+        id="back-to-mode"
+      >
+        ← 学習モード選択に戻る
+      </button>
+
+      <p id="lesson-subject-name"></p>
+
+      <h2 id="lesson-heading">授業回を選択</h2>
+
+      <div
+        class="lesson-list"
+        id="lesson-list"
+      ></div>
+    </section>
+
+  </main>
+
 
   <script src="./src/js/app.js"></script>
 
