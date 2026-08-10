@@ -14,13 +14,41 @@
 
   <header>
     <h1>ZEN Exam Knock</h1>
+    <p>授業内容をクイズ形式で復習できる試験対策サイト</p>
   </header>
 
   <main>
-    <p>PythonとWebアプリケーション開発の試験対策サイトです。</p>
+    <section class="subject-section" aria-labelledby="subject-heading">
+
+      <h2 id="subject-heading">科目を選択</h2>
+
+      <div class="subject-list">
+
+        <button
+          type="button"
+          class="subject-card"
+          data-subject="python"
+        >
+          <span class="subject-name">Pythonプログラミング</span>
+          <span class="subject-info">全15回</span>
+        </button>
+
+        <button
+          type="button"
+          class="subject-card"
+          data-subject="webapp2"
+        >
+          <span class="subject-name">Webアプリケーション開発2</span>
+          <span class="subject-info">全15回</span>
+        </button>
+
+      </div>
+
+    </section>
   </main>
 
   <script src="./src/js/app.js"></script>
+
 </body>
 
 </html>
