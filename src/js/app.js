@@ -23,3 +23,15 @@ subjectCards.forEach((card) => {
     modeSection.hidden = false;
   });
 });
+
+
+// 科目選択モードに戻る
+const backToSubjectButton = document.querySelector("#back-to-subject");
+
+backToSubjectButton.addEventListener("click", () => {
+  modeSection.hidden = true;
+  subjectSection.hidden = false;
+
+  selectedSubject = "";
+  selectedSubjectName.textContent = "";
+});
