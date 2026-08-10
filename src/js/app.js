@@ -73,6 +73,18 @@ const backToLessonButton = document.querySelector(
   "#back-to-lesson"
 );
 
+const answerFeedback = document.querySelector(
+  "#answer-feedback"
+);
+
+const answerResult = document.querySelector(
+  "#answer-result"
+);
+
+const answerExplanation = document.querySelector(
+  "#answer-explanation"
+);
+
 
 // ========================================
 // 現在の状態
@@ -190,20 +202,22 @@ async function loadQuestions(subject, lesson) {
 function displayQuestion() {
   const question = currentQuestions[currentQuestionIndex];
 
-  // 念のため問題が存在するか確認
   if (!question) {
     return;
   }
+
+  // 前の正誤結果をリセット
+  answerFeedback.hidden = true;
+  answerResult.textContent = "";
+  answerExplanation.textContent = "";
 
   questionProgress.textContent =
     `Q${currentQuestionIndex + 1} / ${currentQuestions.length}`;
 
   quizHeading.textContent = question.question;
 
-  // 前の問題の選択肢を削除
   choiceList.replaceChildren();
 
-  // 選択肢を作成
   question.choices.forEach((choice, index) => {
     const button = document.createElement("button");
 
@@ -212,7 +226,39 @@ function displayQuestion() {
     button.dataset.choice = index;
     button.textContent = choice;
 
+    button.addEventListener("click", () => {
+      checkAnswer(index);
+    });
+
     choiceList.appendChild(button);
+  });
+}
+
+// ========================================
+// 正誤判定
+// ========================================
+
+function checkAnswer(selectedAnswer) {
+  const question = currentQuestions[currentQuestionIndex];
+
+  const isCorrect = selectedAnswer === question.answer;
+
+  if (isCorrect) {
+    answerResult.textContent = "○ 正解！";
+  } else {
+    answerResult.textContent = "× 不正解";
+  }
+
+  answerExplanation.textContent = question.explanation;
+
+  answerFeedback.hidden = false;
+
+  // 一度回答したら選択肢を押せないようにする
+  const choiceButtons =
+    document.querySelectorAll(".choice-button");
+
+  choiceButtons.forEach((button) => {
+    button.disabled = true;
   });
 }
 

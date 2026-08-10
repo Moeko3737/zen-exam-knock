@@ -303,3 +303,32 @@ p {
     padding: 18px 24px;
   }
 }
+
+/* ========================================
+   正誤判定
+======================================== */
+
+.answer-feedback {
+  margin-top: 24px;
+  padding: 16px;
+
+  background-color: #fff;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+#answer-result {
+  margin-bottom: 8px;
+
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#answer-explanation {
+  margin-bottom: 0;
+}
+
+.choice-button:disabled {
+  cursor: default;
+}
