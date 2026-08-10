@@ -80,3 +80,62 @@ p {
     padding: 0 24px;
   }
 }
+
+/* ========================================
+   科目選択
+======================================== */
+
+.subject-section h2 {
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+}
+
+.subject-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.subject-card {
+  width: 100%;
+  padding: 24px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  text-align: left;
+
+  color: #222;
+  background-color: #fff;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+.subject-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.subject-info {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+
+/* ========================================
+   科目選択：PC表示
+======================================== */
+
+@media (min-width: 768px) {
+  .subject-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subject-card {
+    padding: 28px 24px;
+  }
+}
