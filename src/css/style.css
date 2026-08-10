@@ -139,3 +139,53 @@ p {
     padding: 28px 24px;
   }
 }
+/* ========================================
+   授業回選択
+======================================== */
+
+.lesson-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.lesson-card {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px;
+
+  font-size: 1rem;
+
+  color: #222;
+  background-color: #fff;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.back-button {
+  margin-bottom: 16px;
+  padding: 8px 0;
+
+  font-size: 0.9rem;
+
+  color: #555;
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   授業回選択：PC表示
+======================================== */
+
+@media (min-width: 768px) {
+  .lesson-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

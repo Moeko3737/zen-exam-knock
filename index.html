@@ -57,7 +57,7 @@
     aria-labelledby="mode-heading"
     hidden
   >
-  <button type="button" id="back-to-subject">
+  <button type="button" id="back-to-subject" class="back-button">
   ← 科目選択に戻る
 </button>
     <p id="selected-subject-name"></p>
@@ -81,6 +81,32 @@
         間違えた問題の復習
       </button>
     </div>
+  </section>
+
+
+<!-- 授業回選択 -->
+  <section
+    class="lesson-section"
+    id="lesson-section"
+    aria-labelledby="lesson-heading"
+    hidden
+  >
+    <button
+      type="button"
+      class="back-button"
+      id="back-to-mode"
+    >
+      ← 学習モード選択に戻る
+    </button>
+
+    <p id="lesson-subject-name"></p>
+
+    <h2 id="lesson-heading">授業回を選択</h2>
+
+    <div
+      class="lesson-list"
+      id="lesson-list"
+    ></div>
   </section>
 </main>
 
