@@ -420,3 +420,43 @@ p {
     max-width: 400px;
   }
 }
+#answer-explanation {
+  white-space: pre-wrap;
+}
+
+/* ========================================
+   回答後の選択肢
+======================================== */
+
+.choice-button:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+/* 正解 */
+.choice-button.is-correct {
+  color: #176b35;
+  background-color: #e9f8ee;
+  border-color: #36a45d;
+  font-weight: bold;
+}
+
+/* 正解アイコン */
+.choice-button.is-correct::after {
+  content: " ⭕️";
+  margin-left: 8px;
+}
+
+/* 選択した不正解 */
+.choice-button.is-wrong {
+  color: #a12626;
+  background-color: #fff0f0;
+  border-color: #d95353;
+  font-weight: bold;
+}
+
+/* 不正解アイコン */
+.choice-button.is-wrong::after {
+  content: " ❌";
+  margin-left: 8px;
+}

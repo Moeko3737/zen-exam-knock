@@ -270,7 +270,7 @@ function getLessonFromQuestionId(
   }
 
   // Webアプリケーション開発2
-  // 将来：webapp2-01-003 という形式を使用
+  // 例：webapp2-01-003
   if (subject === "webapp2") {
     const match = questionId.match(
       /^webapp2-(\d{2})-\d{3}$/
@@ -292,7 +292,7 @@ function getLessonFromQuestionId(
 async function loadMistakeQuestions(subject) {
   const mistakeIds = getMistakeIds();
 
-  // この科目に該当する授業回だけ取得する
+  // 間違い問題が含まれている授業回を取得
   const lessonNumbers = [
     ...new Set(
       mistakeIds
@@ -307,7 +307,7 @@ async function loadMistakeQuestions(subject) {
     return [];
   }
 
-  // 間違い問題が存在する授業回だけ読み込む
+  // 必要な授業回のJSONだけ読み込む
   const questionGroups = await Promise.all(
     lessonNumbers.map((lesson) =>
       loadQuestions(subject, lesson)
@@ -316,7 +316,7 @@ async function loadMistakeQuestions(subject) {
 
   const allQuestions = questionGroups.flat();
 
-  // IDから問題を探しやすくする
+  // IDから問題を取得しやすくする
   const questionMap = new Map(
     allQuestions.map((question) => [
       question.id,
@@ -327,7 +327,9 @@ async function loadMistakeQuestions(subject) {
   // localStorageに保存された順番で返す
   return mistakeIds
     .map((id) => questionMap.get(id))
-    .filter((question) => question !== undefined);
+    .filter(
+      (question) => question !== undefined
+    );
 }
 
 
@@ -343,22 +345,29 @@ function displayQuestion() {
     return;
   }
 
+  // 新しい問題なので未回答状態に戻す
   hasAnsweredCurrentQuestion = false;
 
+  // 前の問題の表示をリセット
   answerFeedback.hidden = true;
   answerResult.textContent = "";
   answerExplanation.textContent = "";
 
+  // 回答するまでは次へ進めない
   nextQuestionButton.hidden = true;
 
+  // 問題番号
   questionProgress.textContent =
     `Q${currentQuestionIndex + 1} / ${currentQuestions.length}`;
 
+  // 問題文
   quizHeading.textContent =
     question.question;
 
+  // 前の選択肢を削除
   choiceList.replaceChildren();
 
+  // 選択肢を作成
   question.choices.forEach(
     (choice, index) => {
       const button =
@@ -387,6 +396,7 @@ function displayQuestion() {
 // ========================================
 
 function checkAnswer(selectedAnswer) {
+  // 二重回答を防ぐ
   if (hasAnsweredCurrentQuestion) {
     return;
   }
@@ -399,14 +409,19 @@ function checkAnswer(selectedAnswer) {
   const isCorrect =
     selectedAnswer === question.answer;
 
+
+  // ----------------------------------------
+  // 正解・不正解
+  // ----------------------------------------
+
   if (isCorrect) {
     correctAnswerCount++;
 
     answerResult.textContent =
       "○ 正解！";
 
-    // 復習モードで正解した場合は
-    // 間違いリストから削除する
+    // 復習モードで正解したら
+    // 間違いリストから削除
     if (currentQuizMode === "mistakes") {
       removeMistake(question.id);
     }
@@ -415,25 +430,68 @@ function checkAnswer(selectedAnswer) {
     answerResult.textContent =
       "× 不正解";
 
-    // 通常モードでも復習モードでも
-    // 間違えた問題は保存しておく
+    // 間違えた問題を保存
     addMistake(question.id);
   }
+
+
+  // ----------------------------------------
+  // 解説を表示
+  // ----------------------------------------
 
   answerExplanation.textContent =
     question.explanation;
 
   answerFeedback.hidden = false;
 
-  // 回答後は選択肢を無効化
+
+  // ----------------------------------------
+  // 選択肢の正誤を視覚的に表示
+  // ----------------------------------------
+
   const choiceButtons =
     document.querySelectorAll(
       ".choice-button"
     );
 
-  choiceButtons.forEach((button) => {
-    button.disabled = true;
-  });
+  choiceButtons.forEach(
+    (button, index) => {
+      // 回答後は全選択肢を押せなくする
+      button.disabled = true;
+
+      // 正解の選択肢を緑＋⭕️にする
+      if (index === question.answer) {
+        button.classList.add(
+          "is-correct"
+        );
+
+        button.setAttribute(
+          "aria-label",
+          `${question.choices[index]} 正解`
+        );
+      }
+
+      // 選択した答えが不正解なら赤＋❌にする
+      if (
+        index === selectedAnswer &&
+        selectedAnswer !== question.answer
+      ) {
+        button.classList.add(
+          "is-wrong"
+        );
+
+        button.setAttribute(
+          "aria-label",
+          `${question.choices[index]} あなたの回答、不正解`
+        );
+      }
+    }
+  );
+
+
+  // ----------------------------------------
+  // 次の問題ボタン
+  // ----------------------------------------
 
   const isLastQuestion =
     currentQuestionIndex ===
@@ -545,7 +603,7 @@ async function showMistakeQuizSection(
     currentQuestionIndex = 0;
     correctAnswerCount = 0;
 
-    // 間違えた問題がない場合
+    // 復習する問題がない場合
     if (currentQuestions.length === 0) {
       questionProgress.textContent = "";
 
@@ -660,7 +718,11 @@ function showResultSection(
 function router() {
   const hash = location.hash || "#/";
 
-  if (hash === "#/" || hash === "#") {
+  // トップ
+  if (
+    hash === "#/" ||
+    hash === "#"
+  ) {
     showSubjectSection();
     return;
   }
@@ -674,11 +736,13 @@ function router() {
   const lesson = parts[2];
   const subPage = parts[3];
 
+
   // 学習モード
   if (page === "mode") {
     showModeSection(subject);
     return;
   }
+
 
   // 間違えた問題の結果
   if (
@@ -694,11 +758,13 @@ function router() {
     return;
   }
 
+
   // 間違えた問題の復習
   if (page === "mistakes") {
     showMistakeQuizSection(subject);
     return;
   }
+
 
   // 授業回選択
   if (
@@ -708,6 +774,7 @@ function router() {
     showLessonSection(subject);
     return;
   }
+
 
   // 回指定の結果
   if (
@@ -724,6 +791,7 @@ function router() {
     return;
   }
 
+
   // 回指定クイズ
   if (
     page === "lesson" &&
@@ -737,6 +805,8 @@ function router() {
     return;
   }
 
+
+  // 該当ページなし
   location.hash = "#/";
 }
 
@@ -770,6 +840,7 @@ modeCards.forEach((card) => {
       const mode =
         card.dataset.mode;
 
+
       // 回を指定して20問
       if (mode === "lesson") {
         location.hash =
@@ -778,6 +849,7 @@ modeCards.forEach((card) => {
         return;
       }
 
+
       // 間違えた問題の復習
       if (mode === "mistakes") {
         location.hash =
@@ -785,6 +857,7 @@ modeCards.forEach((card) => {
 
         return;
       }
+
 
       // MIX・100問ノックは後で実装
       console.log(
@@ -841,11 +914,15 @@ nextQuestionButton.addEventListener(
       currentQuestions.length - 1;
 
     if (isLastQuestion) {
+
+      // 間違い復習
       if (
         currentQuizMode === "mistakes"
       ) {
         location.hash =
           `#/${selectedSubject}/mistakes/result`;
+
+      // 回指定
       } else {
         location.hash =
           `#/${selectedSubject}/lesson/${selectedLesson}/result`;
@@ -865,6 +942,7 @@ nextQuestionButton.addEventListener(
 // 結果画面
 // ========================================
 
+// もう一度挑戦
 retryQuizButton.addEventListener(
   "click",
   () => {
@@ -873,6 +951,7 @@ retryQuizButton.addEventListener(
     ) {
       location.hash =
         `#/${selectedSubject}/mistakes`;
+
     } else {
       location.hash =
         `#/${selectedSubject}/lesson/${selectedLesson}`;
@@ -881,6 +960,7 @@ retryQuizButton.addEventListener(
 );
 
 
+// 結果画面から戻る
 resultToLessonButton.addEventListener(
   "click",
   () => {
@@ -889,6 +969,7 @@ resultToLessonButton.addEventListener(
     ) {
       location.hash =
         `#/${selectedSubject}/mode`;
+
     } else {
       location.hash =
         `#/${selectedSubject}/lesson`;
@@ -901,6 +982,7 @@ resultToLessonButton.addEventListener(
 // 戻るボタン
 // ========================================
 
+// 学習モード → 科目
 backToSubjectButton.addEventListener(
   "click",
   () => {
@@ -909,6 +991,7 @@ backToSubjectButton.addEventListener(
 );
 
 
+// 授業回 → 学習モード
 backToModeButton.addEventListener(
   "click",
   () => {
@@ -918,6 +1001,7 @@ backToModeButton.addEventListener(
 );
 
 
+// 問題 → 前の画面
 backToLessonButton.addEventListener(
   "click",
   () => {
@@ -926,6 +1010,7 @@ backToLessonButton.addEventListener(
     ) {
       location.hash =
         `#/${selectedSubject}/mode`;
+
     } else {
       location.hash =
         `#/${selectedSubject}/lesson`;
