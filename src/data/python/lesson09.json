@@ -1,0 +1,352 @@
+[
+  {
+    "id": "py09-001",
+    "subject": "python",
+    "lesson": 9,
+    "question": "Pythonを自分のPCにインストールするメリットとして、教材の説明に合っているものはどれですか？",
+    "choices": [
+      "インターネットにつながっていなくてもPythonのコードを実行できる",
+      "Python以外のプログラミング言語が使えなくなる",
+      "必ずGoogle Colabより高速に動作する",
+      "すべてのコードが自動的にクラウドへ保存される"
+    ],
+    "answer": 0,
+    "explanation": "PythonをPCにインストールすると、インターネット接続がない環境でもコードを実行できます。"
+  },
+  {
+    "id": "py09-002",
+    "subject": "python",
+    "lesson": 9,
+    "question": "ターミナルやコマンドプロンプトでPythonの対話モードを起動したときに表示されるプロンプトはどれですか？",
+    "choices": [
+      ">>>",
+      "###",
+      "$$$",
+      "..."
+    ],
+    "answer": 0,
+    "explanation": "Pythonの対話モードでは >>> というプロンプトが表示され、そこへコードを入力してすぐに実行できます。"
+  },
+  {
+    "id": "py09-003",
+    "subject": "python",
+    "lesson": 9,
+    "question": "IDEの日本語として正しいものはどれですか？",
+    "choices": [
+      "統合開発環境",
+      "情報開発環境",
+      "統合演算環境",
+      "情報演算環境"
+    ],
+    "answer": 0,
+    "explanation": "IDEはIntegrated Development Environmentの略で、日本語では「統合開発環境」と呼ばれます。"
+  },
+  {
+    "id": "py09-004",
+    "subject": "python",
+    "lesson": 9,
+    "question": "Pythonのソースファイルに使用する拡張子として正しいものはどれですか？",
+    "choices": [
+      ".python",
+      ".p",
+      ".py",
+      ".pt"
+    ],
+    "answer": 2,
+    "explanation": "Pythonのソースファイルには .py という拡張子を使用します。"
+  },
+  {
+    "id": "py09-005",
+    "subject": "python",
+    "lesson": 9,
+    "question": "VS Codeについて正しい説明はどれですか？",
+    "choices": [
+      "Pythonだけに対応した専用エディターである",
+      "Microsoftが開発した、多くのプログラミング言語に対応するコーディング用エディターである",
+      "インターネットブラウザの一種である",
+      "Pythonの組み込み関数の一つである"
+    ],
+    "answer": 1,
+    "explanation": "VS Code（Visual Studio Code）はMicrosoftが開発したコーディング用エディターで、多くの言語に対応しています。"
+  },
+  {
+    "id": "py09-006",
+    "subject": "python",
+    "lesson": 9,
+    "question": "Pythonの対話モードについて正しい説明はどれですか？",
+    "choices": [
+      "入力したコードは必ず.pyファイルとして保存される",
+      "入力したコードをその場ですぐ実行できるが、コード自体は保存されない",
+      "print()は使用できない",
+      "複数行のコードは一切実行できない"
+    ],
+    "answer": 1,
+    "explanation": "対話モードでは入力したコードをすぐに実行できますが、入力内容はソースファイルとして保存されません。"
+  },
+  {
+    "id": "py09-007",
+    "subject": "python",
+    "lesson": 9,
+    "question": "IDLEで保存したPythonのソースファイルを実行する操作として、教材で説明されているものはどれですか？",
+    "choices": [
+      "File → Export",
+      "Run → Run Module",
+      "Edit → Execute",
+      "Shell → Compile"
+    ],
+    "answer": 1,
+    "explanation": "IDLEでは「Run」メニューから「Run Module」を選択するとソースファイルを実行できます。"
+  },
+  {
+    "id": "py09-008",
+    "subject": "python",
+    "lesson": 9,
+    "question": "IDLEなどのコーディング用エディターを使うメリットとして適切なものはどれですか？",
+    "choices": [
+      "コードのパーツによって文字が色分けされ、読みやすくなる",
+      "入力したコードが必ず正しい内容に自動修正される",
+      "インターネットがなければ文字を入力できない",
+      "すべての変数名を日本語へ自動翻訳してくれる"
+    ],
+    "answer": 0,
+    "explanation": "コーディング用エディターでは、組み込み関数や文字列などが色分けされ、コードを読みやすくする機能があります。"
+  },
+  {
+    "id": "py09-009",
+    "subject": "python",
+    "lesson": 9,
+    "question": "VS CodeでPythonのコードを書くために、インストール後に追加するものとして教材で説明されているのはどれですか？",
+    "choices": [
+      "Java拡張機能",
+      "Python拡張機能",
+      "Google Drive拡張機能",
+      "Excel拡張機能"
+    ],
+    "answer": 1,
+    "explanation": "VS CodeでPythonを扱いやすくするため、Python用の拡張機能を追加します。"
+  },
+  {
+    "id": "py09-010",
+    "subject": "python",
+    "lesson": 9,
+    "question": "VS Codeでコードそのものを編集する場所として正しいものはどれですか？",
+    "choices": [
+      "エディター",
+      "ターミナル",
+      "デバッガーだけ",
+      "エクスプローラーだけ"
+    ],
+    "answer": 0,
+    "explanation": "コードの入力や編集を行う場所はエディターです。ターミナルはコマンドの入力や実行結果の表示などに使います。"
+  },
+  {
+    "id": "py09-011",
+    "subject": "python",
+    "lesson": 9,
+    "question": "VS CodeでPythonのソースファイルを実行したとき、教材では実行結果は主にどこに表示されると説明されていますか？",
+    "choices": [
+      "エクスプローラー",
+      "ターミナル",
+      "拡張機能一覧",
+      "設定画面"
+    ],
+    "answer": 1,
+    "explanation": "VS Codeでは、Pythonのコードを実行するとターミナルに実行結果が表示されます。"
+  },
+  {
+    "id": "py09-012",
+    "subject": "python",
+    "lesson": 9,
+    "question": "次のコードをVS Codeで実行するとエラーになります。原因として正しいものはどれですか？\n\nprin(\"Hello\")",
+    "choices": [
+      "文字列にダブルクォーテーションを使っているから",
+      "printをprinと書き間違えているから",
+      "Helloが英語だから",
+      "丸カッコを使っているから"
+    ],
+    "answer": 1,
+    "explanation": "組み込み関数printをprinと書き間違えているため、定義されていない名前としてNameErrorになります。"
+  },
+  {
+    "id": "py09-013",
+    "subject": "python",
+    "lesson": 9,
+    "question": "ターミナルの表示内容をきれいにしたい場合、教材で使用しているコマンドはどれですか？",
+    "choices": [
+      "delete",
+      "clear",
+      "clean",
+      "reset-python"
+    ],
+    "answer": 1,
+    "explanation": "教材では、ターミナルが見づらくなった場合にclearと入力して画面を整理しています。"
+  },
+  {
+    "id": "py09-014",
+    "subject": "python",
+    "lesson": 9,
+    "question": "VS Codeでインデントを1段戻す操作として、教材で説明されているものはどれですか？",
+    "choices": [
+      "Shift + Tab",
+      "Ctrl + Enter",
+      "Command + P",
+      "Alt + Space"
+    ],
+    "answer": 0,
+    "explanation": "教材では、インデントを戻すときにShift + Tabを使用すると説明されています。"
+  },
+  {
+    "id": "py09-015",
+    "subject": "python",
+    "lesson": 9,
+    "question": "デバッガーを使う主な目的として最も適切なものはどれですか？",
+    "choices": [
+      "プログラムを1行ずつ実行したり変数の値を確認したりして、不具合を探す",
+      "Pythonをアンインストールする",
+      "ソースファイルを画像へ変換する",
+      "ファイル名を自動的に変更する"
+    ],
+    "answer": 0,
+    "explanation": "デバッガーを使うと、コードを1行ずつ実行しながら変数の値などを確認でき、バグを探しやすくなります。"
+  },
+  {
+    "id": "py09-016",
+    "subject": "python",
+    "lesson": 9,
+    "question": "ブレークポイントについて正しい説明はどれですか？",
+    "choices": [
+      "プログラムの強制終了を行う場所",
+      "デバッグ中のプログラムを意図した場所で一時停止させる設定",
+      "コメントを書く場所",
+      "Pythonファイルを保存する場所"
+    ],
+    "answer": 1,
+    "explanation": "ブレークポイントは、実行中のプログラムを特定の位置で一時停止し、その時点の状態を確認するために使います。"
+  },
+  {
+    "id": "py09-017",
+    "subject": "python",
+    "lesson": 9,
+    "question": "次のコードをデバッグしています。1行目と2行目の実行が終わり、3行目を実行する直前で停止した場合、ここまでに表示されている文字列はどれですか？\n\nprint(\"あ\", end=\"\")\nprint(\"い\", end=\"\")\nprint(\"う\", end=\"\")\nprint(\"え\", end=\"\")",
+    "choices": [
+      "あ",
+      "あい",
+      "あいう",
+      "あいうえ"
+    ],
+    "answer": 1,
+    "explanation": "3行目を実行する直前なので、すでに1行目と2行目だけが実行されています。end=\"\"により改行されず、「あい」と表示されています。"
+  },
+  {
+    "id": "py09-018",
+    "subject": "python",
+    "lesson": 9,
+    "question": "デバッグ中にローカル変数の現在の値を確認する場所として、教材で説明されているものはどれですか？",
+    "choices": [
+      "VARIABLES欄",
+      "EXTENSIONS欄",
+      "SEARCH欄",
+      "SOURCE CONTROL欄"
+    ],
+    "answer": 0,
+    "explanation": "VS Codeのデバッグでは、VARIABLES欄からローカルスコープの変数の現在値を確認できます。"
+  },
+  {
+    "id": "py09-019",
+    "subject": "python",
+    "lesson": 9,
+    "question": "mathモジュールをインポートして25の平方根を求めるコードとして正しいものはどれですか？",
+    "choices": [
+      "import math\nprint(math.sqrt(25))",
+      "import math\nprint(sqrt.math(25))",
+      "from sqrt import math\nprint(sqrt(25))",
+      "import sqrt\nprint(math(25))"
+    ],
+    "answer": 0,
+    "explanation": "import math とした場合は、math.sqrt(25)のようにモジュール名.関数名()で呼び出します。"
+  },
+  {
+    "id": "py09-020",
+    "subject": "python",
+    "lesson": 9,
+    "question": "mathモジュールのsqrt関数だけをインポートし、sqrt(25)と書けるようにするコードはどれですか？",
+    "choices": [
+      "from sqrt import math",
+      "from math import sqrt",
+      "import math as sqrt",
+      "import sqrt as math"
+    ],
+    "answer": 1,
+    "explanation": "「from モジュール名 import 関数名」と書くと、その関数をモジュール名なしで直接呼び出せます。"
+  },
+  {
+    "id": "py09-021",
+    "subject": "python",
+    "lesson": 9,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nimport math\nprint(math.sqrt(36))",
+    "choices": [
+      "6.0",
+      "18.0",
+      "36",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "math.sqrt()は平方根を求める関数です。36の平方根は6なので6.0になります。"
+  },
+  {
+    "id": "py09-022",
+    "subject": "python",
+    "lesson": 9,
+    "question": "numpyをnpという名前でインポートするコードとして正しいものはどれですか？",
+    "choices": [
+      "import numpy as np",
+      "from np import numpy",
+      "import np as numpy",
+      "numpy import np"
+    ],
+    "answer": 0,
+    "explanation": "「import モジュール名 as ニックネーム」と書くことで、numpyをnpという短い名前で利用できます。"
+  },
+  {
+    "id": "py09-023",
+    "subject": "python",
+    "lesson": 9,
+    "question": "教材で扱われているモジュールについて、正しい説明はどれですか？",
+    "choices": [
+      "mathもnumpyも必ず事前に自分でインストールする必要がある",
+      "mathは組み込みモジュールとして利用でき、numpyのような外部モジュールは事前のインストールが必要",
+      "numpyはPythonに必ず最初から含まれている",
+      "自作モジュールはインターネットからダウンロードしなければ使えない"
+    ],
+    "answer": 1,
+    "explanation": "教材ではmathは利用可能な組み込みモジュールとして扱われ、numpyなどの外部モジュールはインポート前にインストールが必要とされています。"
+  },
+  {
+    "id": "py09-024",
+    "subject": "python",
+    "lesson": 9,
+    "question": "enjoy.pyという自作モジュールにprogramming()という関数がある場合、別のファイルから呼び出すコードとして正しいものはどれですか？",
+    "choices": [
+      "import enjoy\nenjoy.programming()",
+      "import programming\nprogramming.enjoy()",
+      "from enjoy.py import programming()",
+      "enjoy = programming()"
+    ],
+    "answer": 0,
+    "explanation": "自作モジュールもimport モジュール名で読み込み、モジュール名.関数名()の形で利用できます。"
+  },
+  {
+    "id": "py09-025",
+    "subject": "python",
+    "lesson": 9,
+    "question": "次のコードについて正しい説明はどれですか？\n\npi = \"パイ\"\nfrom math import pi\nprint(pi)",
+    "choices": [
+      "piという名前が重複しているため必ずSyntaxErrorになる",
+      "最初の文字列\"パイ\"がそのまま表示される",
+      "from math import piによって、変数piがmathモジュールのpiで上書きされる",
+      "mathモジュールをimportできない"
+    ],
+    "answer": 2,
+    "explanation": "fromを使って同名の変数や関数をインポートすると、すでに同じ名前がある場合は上書きされます。教材ではバグの原因になり得る点として注意されています。"
+  }
+]
