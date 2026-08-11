@@ -360,3 +360,62 @@ p {
     min-width: 180px;
   }
 }
+/* ========================================
+   結果画面
+======================================== */
+
+.result-section {
+  width: 100%;
+}
+
+.result-summary {
+  margin: 24px 0;
+  padding: 24px;
+
+  background-color: #fff;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.result-summary p {
+  margin: 8px 0;
+}
+
+.result-summary strong {
+  margin-left: 8px;
+  font-size: 1.4rem;
+}
+
+.result-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+#retry-quiz {
+  width: 100%;
+  padding: 16px 20px;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: #222;
+  background-color: #fff;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   結果画面：PC表示
+======================================== */
+
+@media (min-width: 768px) {
+  .result-actions {
+    max-width: 400px;
+  }
+}
