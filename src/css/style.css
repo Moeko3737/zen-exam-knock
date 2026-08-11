@@ -270,6 +270,7 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
+  white-space: pre-wrap;
 }
 
 .choice-button {

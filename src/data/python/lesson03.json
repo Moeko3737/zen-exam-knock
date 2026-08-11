@@ -11,161 +11,161 @@
       "何も表示されない"
     ],
     "answer": 0,
-    "explanation": "条件式「天気 == \"雨\"」がTrueなので、if文の中のprint()が実行され、「傘を持とう」と表示されます。"
+    "explanation": "条件式「天気 == \"雨\"」がTrueなので、インデントされたprint()が実行され、「傘を持とう」と表示されます。"
   },
   {
     "id": "py03-002",
     "subject": "python",
     "lesson": 3,
-    "question": "次のコードの実行結果として正しいものはどれですか？\n\n天気 = \"曇\"\nif 天気 == \"晴\":\n    print(\"外で遊ぼう\")\nelse:\n    print(\"本を読もう\")",
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\n天気 = \"晴\"\nif 天気 == \"雨\":\n    print(\"傘を持とう\")\nelse:\n    print(\"散歩しよう\")",
     "choices": [
-      "外で遊ぼう",
-      "本を読もう",
+      "傘を持とう",
       "晴",
-      "エラーになる"
+      "何も表示されない",
+      "散歩しよう"
     ],
-    "answer": 1,
-    "explanation": "天気は「晴」ではないためifの条件はFalseとなり、else側の「本を読もう」が表示されます。"
+    "answer": 3,
+    "explanation": "「天気 == \"雨\"」はFalseなので、elseの処理が実行され、「散歩しよう」と表示されます。"
   },
   {
     "id": "py03-003",
     "subject": "python",
     "lesson": 3,
-    "question": "条件がTrueのときだけ「合格」と表示するコードとして正しいものはどれですか？",
+    "question": "「点数が80以上なら『合格』と表示する」コードとして正しいものはどれですか？",
     "choices": [
-      "if 点数 >= 60:\n    print(\"合格\")",
-      "if 点数 >= 60\nprint(\"合格\")",
-      "if 点数 >= 60:\nprint(\"合格\")",
-      "if = 点数 >= 60:\n    print(\"合格\")"
+      "if 点数 >= 80:\n    print(\"合格\")",
+      "if 点数 >= 80\n    print(\"合格\")",
+      "if 点数 = 80:\n    print(\"合格\")",
+      "if 点数 >= 80:\nprint(\"合格\")"
     ],
     "answer": 0,
-    "explanation": "if文では条件式の後ろに「:」が必要で、処理部分はインデントして書きます。"
+    "explanation": "if文では条件式の後ろに「:」が必要で、条件がTrueのときに実行する処理はインデントして書きます。"
   },
   {
     "id": "py03-004",
     "subject": "python",
     "lesson": 3,
-    "question": "次のコードの実行結果として正しいものはどれですか？\n\n季節 = \"夏\"\nif 季節 == \"春\":\n    print(\"Spring\")\nelif 季節 == \"夏\":\n    print(\"Summer\")\nelif 季節 == \"秋\":\n    print(\"Fall\")\nelse:\n    print(\"Winter\")",
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\n文字 = \"c\"\nif 文字 == \"a\":\n    print(\"alpha\")\nelif 文字 == \"b\":\n    print(\"beta\")\nelif 文字 == \"c\":\n    print(\"gamma\")\nelse:\n    print(\"other\")",
     "choices": [
-      "Spring",
-      "Summer",
-      "Fall",
-      "Winter"
+      "alpha",
+      "beta",
+      "gamma",
+      "other"
     ],
-    "answer": 1,
-    "explanation": "「季節 == \"夏\"」がTrueなので、そのelifブロックの「Summer」が実行されます。"
+    "answer": 2,
+    "explanation": "elifは上から順に判定されます。「文字 == \"c\"」がTrueになったため、そのブロックの「gamma」だけが表示されます。"
   },
   {
     "id": "py03-005",
     "subject": "python",
     "lesson": 3,
-    "question": "次のコードの実行結果として正しいものはどれですか？\n\n体重 = 65\nif 体重 <= 60:\n    print(\"60kg級\")\nelif 体重 <= 66:\n    print(\"66kg級\")\nelif 体重 <= 73:\n    print(\"73kg級\")\nelse:\n    print(\"73kg超級\")",
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\n体重 = 72\nif 体重 <= 60:\n    print(\"60kg級\")\nelif 体重 <= 66:\n    print(\"66kg級\")\nelif 体重 <= 73:\n    print(\"73kg級\")\nelif 体重 <= 81:\n    print(\"81kg級\")",
     "choices": [
       "60kg級",
       "66kg級",
       "73kg級",
-      "66kg級と73kg級"
+      "81kg級"
     ],
-    "answer": 1,
-    "explanation": "65は60以下ではありませんが66以下です。elifは上から判定し、最初にTrueになったブロックだけが実行されます。"
+    "answer": 2,
+    "explanation": "72は60以下でも66以下でもありませんが、73以下です。そのため最初にTrueになる「73kg級」が表示されます。"
   },
   {
     "id": "py03-006",
     "subject": "python",
     "lesson": 3,
-    "question": "次のコードの実行結果として正しいものはどれですか？\n\n天気 = \"曇\"\nmatch 天気:\n    case \"晴\":\n        print(\"Sunny\")\n    case \"雨\":\n        print(\"Rainy\")\n    case \"曇\":\n        print(\"Cloudy\")\n    case _:\n        print(\"Other\")",
+    "question": "Pythonのif文で、処理のまとまりを表すために使うものはどれですか？",
     "choices": [
-      "Sunny",
-      "Rainy",
-      "Cloudy",
-      "Other"
+      "セミコロン",
+      "インデント",
+      "丸カッコ",
+      "カンマ"
     ],
-    "answer": 2,
-    "explanation": "天気の値「曇」がcase \"曇\"に一致するため、「Cloudy」が表示されます。"
+    "answer": 1,
+    "explanation": "Pythonではインデントによってコードのブロックを表します。教材では半角スペース4つを使う形で説明されています。"
   },
   {
     "id": "py03-007",
     "subject": "python",
     "lesson": 3,
-    "question": "match文で、どのcaseにも一致しなかった場合の処理を書くコードとして正しいものはどれですか？",
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\n天気 = \"雷\"\nmatch 天気:\n    case \"晴\":\n        print(\"Sunny\")\n    case \"雨\":\n        print(\"Rainy\")\n    case _:\n        print(\"Other\")",
     "choices": [
-      "case else:",
-      "case default:",
-      "case _:",
-      "case any:"
+      "Sunny",
+      "Rainy",
+      "Other",
+      "何も表示されない"
     ],
     "answer": 2,
-    "explanation": "「case _:」はワイルドカードで、どの値にもマッチします。if文のelseに近い役割です。"
+    "explanation": "「雷」は「晴」「雨」のどちらにも一致しないため、どんな値にもマッチする「case _:」が実行され、「Other」と表示されます。"
   },
   {
     "id": "py03-008",
     "subject": "python",
     "lesson": 3,
-    "question": "「雨」「あめ」「アメ」のどれでも同じ処理を行うmatch文のcaseとして正しいものはどれですか？",
+    "question": "match文で「晴」「はれ」「ハレ」のどれかに一致したとき同じ処理を行うcaseとして正しいものはどれですか？",
     "choices": [
-      "case \"雨\" or \"あめ\" or \"アメ\":",
-      "case \"雨\" | \"あめ\" | \"アメ\":",
-      "case \"雨\", \"あめ\", \"アメ\":",
-      "case [\"雨\", \"あめ\", \"アメ\"]:"
+      "case \"晴\" and \"はれ\" and \"ハレ\":",
+      "case \"晴\", \"はれ\", \"ハレ\":",
+      "case \"晴\" | \"はれ\" | \"ハレ\":",
+      "case [\"晴\" | \"はれ\" | \"ハレ\"]:"
     ],
-    "answer": 1,
-    "explanation": "match文で複数の値を同じパターンとして扱う場合は「|」を使用します。"
+    "answer": 2,
+    "explanation": "match文では「|」を使うことで、複数のパターンのどれかに一致した場合に同じ処理を実行できます。"
   },
   {
     "id": "py03-009",
     "subject": "python",
     "lesson": 3,
-    "question": "match文で、caseは作っておきたいものの、まだ何も処理を行わない場合に使うコードはどれですか？",
+    "question": "match文で、caseは用意しておくものの、そのcaseでは何も処理をしたくない場合に書くコードはどれですか？",
     "choices": [
-      "skip",
-      "continue",
+      "break",
       "pass",
-      "none"
+      "skip",
+      "return"
     ],
-    "answer": 2,
-    "explanation": "passは「何もしない」命令です。処理を後で実装したい場合などに使えます。"
+    "answer": 1,
+    "explanation": "passは「何もしない」命令です。処理内容をまだ実装しないcaseなどに書くことで、構文上必要な処理を用意できます。"
   },
   {
     "id": "py03-010",
     "subject": "python",
     "lesson": 3,
-    "question": "次のコードでは、何が順番に表示されますか？\n\ni = 1\nwhile i <= 3:\n    print(i)\n    i += 1",
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\ni = 1\nwhile i <= 5:\n    print(i)\n    i = i + 2",
     "choices": [
-      "1、2、3",
-      "0、1、2",
-      "1だけ",
-      "無限に1が表示される"
+      "1、2、3、4、5",
+      "1、3、5",
+      "1、3、5、7",
+      "2、4"
     ],
-    "answer": 0,
-    "explanation": "iは1から始まり、繰り返すたびに1ずつ増えます。iが3までは条件がTrueなので、1、2、3が表示されます。"
+    "answer": 1,
+    "explanation": "iは1から始まり、繰り返すたびに2ずつ増えます。1、3、5を表示した後、iが7となって条件「i <= 5」がFalseになるため終了します。"
   },
   {
     "id": "py03-011",
     "subject": "python",
     "lesson": 3,
-    "question": "次のwhile文を1から5まで表示して終了させるため、空欄に入れるコードとして正しいものはどれですか？\n\ni = 1\nwhile i <= 5:\n    print(i)\n    # ここに入れる",
+    "question": "次のwhile文で、カウンター変数iを1ずつ増やすコードとして正しいものはどれですか？",
     "choices": [
-      "i += 1",
       "i -= 1",
-      "i = 1",
-      "i == 1"
+      "i == 1",
+      "i += 1",
+      "i =+ 1"
     ],
-    "answer": 0,
-    "explanation": "iを1ずつ増やす必要があるため「i += 1」を使います。更新しないと条件がずっとTrueのままになり、無限ループになる可能性があります。"
+    "answer": 2,
+    "explanation": "「i += 1」は「i = i + 1」と同じ意味で、iの値を1増やします。"
   },
   {
     "id": "py03-012",
     "subject": "python",
     "lesson": 3,
-    "question": "次の2つのコードと同じ意味になるものはどれですか？\n\ni = i + 1",
+    "question": "次のコードで起こることとして最も適切なものはどれですか？\n\ni = 1\nwhile i <= 3:\n    print(i)",
     "choices": [
-      "i += 1",
-      "i -= 1",
-      "i == 1",
-      "i =+ 1"
+      "1、2、3と表示して終了する",
+      "1だけ表示して終了する",
+      "エラーになって実行できない",
+      "1が繰り返し表示され続ける"
     ],
-    "answer": 0,
-    "explanation": "「i += 1」は「i = i + 1」と同じ意味で、変数iの値を1増やします。"
+    "answer": 3,
+    "explanation": "ループの中でiの値を更新していないため、iはずっと1のままです。条件「i <= 3」がTrueのままになり、無限ループになります。"
   },
   {
     "id": "py03-013",
@@ -173,97 +173,97 @@
     "lesson": 3,
     "question": "次のコードの実行結果として正しいものはどれですか？\n\ni = 3\nwhile i >= 1:\n    print(i)\n    i -= 1",
     "choices": [
-      "1、2、3",
       "3、2、1",
-      "3、3、3",
-      "2、1、0"
+      "1、2、3",
+      "3、2、1、0",
+      "2、1"
     ],
-    "answer": 1,
-    "explanation": "iは3から始まり、繰り返すたびに1ずつ減るため、3、2、1の順で表示されます。"
+    "answer": 0,
+    "explanation": "iは3から始まり、繰り返すたびに1ずつ減ります。3、2、1を表示した後、iが0となって条件がFalseになり終了します。"
   },
   {
     "id": "py03-014",
     "subject": "python",
     "lesson": 3,
-    "question": "次のコードでは「ZEN」は何回表示されますか？\n\nfor i in [1, 2, 3, 4]:\n    print(\"ZEN\")",
+    "question": "「1回目の繰り返し」「2回目の繰り返し」「3回目の繰り返し」と表示するため、空欄に入るコードとして正しいものはどれですか？\n\n# ここに入れる\n    print(str(i) + \"回目の繰り返し\")",
     "choices": [
-      "1回",
-      "3回",
-      "4回",
-      "無限に表示される"
+      "for i = [1, 2, 3]:",
+      "for i in [1, 2, 3]:",
+      "for [1, 2, 3] in i:",
+      "for i == [1, 2, 3]:"
     ],
-    "answer": 2,
-    "explanation": "for文はリストの値を順番に1つずつ取り出します。リストに4つの値があるため、4回繰り返されます。"
+    "answer": 1,
+    "explanation": "for文の基本形は「for 変数 in [値1, 値2, ...]:」です。iに1、2、3が順番に入ります。"
   },
   {
     "id": "py03-015",
     "subject": "python",
     "lesson": 3,
-    "question": "次のコードの実行結果として正しいものはどれですか？\n\nfor 食べ物 in [\"麦\", \"米\", \"卵\"]:\n    print(\"生\" + 食べ物)",
+    "question": "次のコードでは「こんにちは」は何回表示されますか？\n\nfor i in [10, 20, 30, 40]:\n    print(\"こんにちは\")",
     "choices": [
-      "生食べ物 が3回表示される",
-      "生麦、生米、生卵の順に表示される",
-      "麦、米、卵だけが表示される",
-      "エラーになる"
+      "1回",
+      "3回",
+      "4回",
+      "40回"
     ],
-    "answer": 1,
-    "explanation": "変数「食べ物」にはリストの値が順番に入り、「生」+ 食べ物 が評価されるため、生麦、生米、生卵と表示されます。"
+    "answer": 2,
+    "explanation": "for文はリストに含まれる値を1つずつ取り出します。値が4つあるため、print()は4回実行されます。"
   },
   {
     "id": "py03-016",
     "subject": "python",
     "lesson": 3,
-    "question": "次のコードではprint()は全部で何回実行されますか？\n\nfor i in [1, 2, 3]:\n    for 色 in [\"赤\", \"青\"]:\n        print(色)",
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nfor 食べ物 in [\"麦\", \"米\", \"卵\"]:\n    print(\"生\" + 食べ物)",
     "choices": [
-      "2回",
-      "3回",
-      "5回",
-      "6回"
+      "生麦、生米、生卵の順に表示される",
+      "麦、米、卵の順に表示される",
+      "生食べ物が3回表示される",
+      "生麦生米生卵が必ず1行で表示される"
     ],
-    "answer": 3,
-    "explanation": "外側のfor文が3回、内側のfor文が各回2回実行されるため、3 × 2 = 6回です。"
+    "answer": 0,
+    "explanation": "変数「食べ物」には「麦」「米」「卵」が順番に入り、それぞれ「生」と連結されるため、生麦、生米、生卵と順に表示されます。通常のprint()なので各出力の後に改行されます。"
   },
   {
     "id": "py03-017",
     "subject": "python",
     "lesson": 3,
-    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(\"生麦\", end=\"\")\nprint(\"生米\", end=\"\")\nprint(\"生卵\", end=\"\")",
+    "question": "次のコードでは「○」は全部で何回表示されますか？\n\nfor 曜日 in [\"月\", \"火\", \"水\", \"木\", \"金\", \"土\", \"日\"]:\n    for 時間帯 in [\"朝\", \"夜\"]:\n        print(\"○\")",
     "choices": [
-      "生麦\n生米\n生卵",
-      "生麦 生米 生卵",
-      "生麦生米生卵",
-      "end=\"\"が3回表示される"
+      "2回",
+      "7回",
+      "9回",
+      "14回"
     ],
-    "answer": 2,
-    "explanation": "print()は通常改行しますが、end=\"\"を指定すると改行しません。そのため3つの文字列が続けて表示されます。"
+    "answer": 3,
+    "explanation": "外側のfor文は7回、内側のfor文は各回2回実行されるため、7 × 2 = 14回表示されます。"
   },
   {
     "id": "py03-018",
     "subject": "python",
     "lesson": 3,
-    "question": "「ドルから円への為替レート」を表す英字の変数名として、教材のルールに最も適しているものはどれですか？",
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(\"A\", end=\"\")\nprint(\"B\", end=\"\")\nprint(\"C\")",
     "choices": [
-      "dollar_yen_rate",
-      "Dollar-Yen-Rate",
-      "dollar yen rate",
-      "$dollar_yen_rate"
+      "A、B、Cの間に半角スペースが入って表示される",
+      "ABCと続けて表示される",
+      "A、B、Cがそれぞれ別の行に表示される",
+      "ABCendと表示される"
     ],
-    "answer": 0,
-    "explanation": "変数名には半角英数字とアンダースコアを使い、小文字で書き、単語の区切りにはアンダースコアを使うことが推奨されています。"
+    "answer": 1,
+    "explanation": "最初の2つのprint()はend=\"\"によって改行しません。そのためA、B、Cが続けて「ABC」と表示されます。"
   },
   {
     "id": "py03-019",
     "subject": "python",
     "lesson": 3,
-    "question": "次のうち、変数名として使用するとエラーになるものはどれですか？",
+    "question": "「ドルから円への為替レート」を表す変数名として、教材のルールに最も適しているものはどれですか？",
     "choices": [
-      "total_price",
-      "user_name",
-      "for",
-      "score2"
+      "DollarYenRate",
+      "dollar-yen-rate",
+      "dollar_yen_rate",
+      "dollar yen rate"
     ],
     "answer": 2,
-    "explanation": "forはPythonの予約語なので、変数名として使用することはできません。"
+    "explanation": "教材では、英字小文字を使い、複数の単語はアンダースコアで区切る書き方が推奨されています。"
   },
   {
     "id": "py03-020",
@@ -272,11 +272,11 @@
     "question": "次のコードを実行した後に起こることとして正しいものはどれですか？\n\nprint = \"A4\"\nprint(\"Hello\")",
     "choices": [
       "Helloと表示される",
+      "A4と表示される",
       "A4Helloと表示される",
-      "printという組み込み関数名を上書きしたため、print()を呼び出せずエラーになる",
-      "printへの代入自体が予約語なのでエラーになる"
+      "printという組み込み関数名を文字列で上書きしたため、print()を呼び出そうとするとエラーになる"
     ],
-    "answer": 2,
-    "explanation": "printは予約語ではないため上書きできてしまいます。しかし文字列\"A4\"を代入すると、元のprint()関数が使えなくなります。教材では、このような上書きを避けるよう説明されています。"
+    "answer": 3,
+    "explanation": "printは予約語ではないため変数名として使えてしまいますが、文字列を代入すると組み込み関数print()を上書きします。その後print(\"Hello\")を呼び出そうとするとエラーになります。"
   }
 ]
