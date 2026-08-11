@@ -1,0 +1,282 @@
+[
+  {
+    "id": "py04-001",
+    "subject": "python",
+    "lesson": 4,
+    "question": "「報酬」「観察」「実例」の3つの文字列をリストとして代入するコードとして正しいものはどれですか？",
+    "choices": [
+      "words = [\"報酬\", \"観察\", \"実例\"]",
+      "words = (\"報酬\", \"観察\", \"実例\")",
+      "words = {\"報酬\", \"観察\", \"実例\"}",
+      "words = \"報酬\", \"観察\", \"実例\""
+    ],
+    "answer": 0,
+    "explanation": "リストは角カッコ [ ] を使い、要素をコンマで区切って記述します。"
+  },
+  {
+    "id": "py04-002",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nshopping_list = [\"牛乳\", \"卵\", \"パン\"]\nprint(shopping_list[0])",
+    "choices": [
+      "牛乳",
+      "卵",
+      "パン",
+      "0"
+    ],
+    "answer": 0,
+    "explanation": "リストのインデックスは0から始まります。shopping_list[0]は最初の要素「牛乳」です。"
+  },
+  {
+    "id": "py04-003",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\ncolor_list = [\"赤\", \"青\", \"黄\"]\nprint(color_list[2])",
+    "choices": [
+      "赤",
+      "青",
+      "黄",
+      "IndexError"
+    ],
+    "answer": 2,
+    "explanation": "インデックスは0から始まるため、0が「赤」、1が「青」、2が「黄」です。"
+  },
+  {
+    "id": "py04-004",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードを実行するとどうなりますか？\n\nfood_list = [\"麦\", \"米\", \"卵\"]\nprint(food_list[3])",
+    "choices": [
+      "麦と表示される",
+      "卵と表示される",
+      "何も表示されない",
+      "IndexErrorが発生する"
+    ],
+    "answer": 3,
+    "explanation": "要素が3個の場合、有効なインデックスは0、1、2です。インデックス3は範囲外なのでIndexErrorになります。"
+  },
+  {
+    "id": "py04-005",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nnanakusa = [\"セリ\", \"ナズナ\", \"ゴギョウ\", \"ハコベラ\", \"ホトケノザ\", \"スズナ\", \"スズシロ\"]\nprint(len(nanakusa))",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "0"
+    ],
+    "answer": 1,
+    "explanation": "len()はリストに含まれる要素数を返します。このリストには7個の要素があるため7です。"
+  },
+  {
+    "id": "py04-006",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nfood_list = [\"麦\", \"米\", \"卵\"]\nfor food in food_list:\n    print(\"生\" + food)",
+    "choices": [
+      "生麦、生米、生卵の順に表示される",
+      "麦、米、卵の順に表示される",
+      "生foodが3回表示される",
+      "生麦だけ表示される"
+    ],
+    "answer": 0,
+    "explanation": "for文ではリストの要素が順番に変数foodへ入り、それぞれ「生」と連結して表示されます。"
+  },
+  {
+    "id": "py04-007",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nfood_list = [\"麦\", \"米\", \"卵\"]\ni = 0\nwhile i < len(food_list):\n    print(food_list[i])\n    i += 1",
+    "choices": [
+      "麦、米、卵の順に表示される",
+      "米、卵の順に表示される",
+      "麦だけ表示される",
+      "無限ループになる"
+    ],
+    "answer": 0,
+    "explanation": "iは0から始まり、0、1、2の要素を順に参照します。iが3になると条件がFalseになり終了します。"
+  },
+  {
+    "id": "py04-008",
+    "subject": "python",
+    "lesson": 4,
+    "question": "リストの長さが変わっても対応できるwhile文の条件として最も適切なものはどれですか？\n\nkaikyu = [60, 66, 73, 81, 90, 100]\ni = 0\nwhile ここに条件:",
+    "choices": [
+      "i < 6",
+      "i < len(kaikyu)",
+      "i <= len(kaikyu)",
+      "i == len(kaikyu)"
+    ],
+    "answer": 1,
+    "explanation": "len(kaikyu)を使えばリストの要素数が変わっても対応できます。インデックスは0から始まるため、i < len(kaikyu)とします。"
+  },
+  {
+    "id": "py04-009",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードでは「ZEN」は何回表示されますか？\n\nfor i in range(5):\n    print(\"ZEN\")",
+    "choices": [
+      "4回",
+      "5回",
+      "6回",
+      "無限に表示される"
+    ],
+    "answer": 1,
+    "explanation": "range(5)は0、1、2、3、4の5個の値を生成するため、5回繰り返します。"
+  },
+  {
+    "id": "py04-010",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードで表示される数字として正しいものはどれですか？\n\nfor i in range(1, 5):\n    print(i)",
+    "choices": [
+      "0、1、2、3、4",
+      "1、2、3、4",
+      "1、2、3、4、5",
+      "0、1、2、3"
+    ],
+    "answer": 1,
+    "explanation": "range(開始値, 終了値)では終了値は含まれません。range(1, 5)は1、2、3、4です。"
+  },
+  {
+    "id": "py04-011",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nfor i in range(2, 11, 2):\n    print(i)",
+    "choices": [
+      "2、4、6、8、10",
+      "2、4、6、8",
+      "2、3、4、5、6、7、8、9、10",
+      "10、8、6、4、2"
+    ],
+    "answer": 0,
+    "explanation": "range(2, 11, 2)は2から始まり2ずつ増え、終了値11の手前までなので、2、4、6、8、10です。"
+  },
+  {
+    "id": "py04-012",
+    "subject": "python",
+    "lesson": 4,
+    "question": "「3、2、1」とカウントダウンするためのrange()として正しいものはどれですか？",
+    "choices": [
+      "range(3, 0, -1)",
+      "range(3, 1, -1)",
+      "range(3, 0, 1)",
+      "range(0, 3, -1)"
+    ],
+    "answer": 0,
+    "explanation": "3から1まで1ずつ減らすにはrange(3, 0, -1)を使います。終了値0は含まれません。"
+  },
+  {
+    "id": "py04-013",
+    "subject": "python",
+    "lesson": 4,
+    "question": "キーボードからユーザーの入力を受け取る関数として正しいものはどれですか？",
+    "choices": [
+      "print()",
+      "input()",
+      "len()",
+      "range()"
+    ],
+    "answer": 1,
+    "explanation": "キーボードから入力を受け取るときはinput()関数を使用します。"
+  },
+  {
+    "id": "py04-014",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードでユーザーが「20」と入力した場合、変数ageのデータ型は何ですか？\n\nage = input(\"何歳ですか？\")",
+    "choices": [
+      "int",
+      "float",
+      "str",
+      "bool"
+    ],
+    "answer": 2,
+    "explanation": "input()で受け取った値は、数字を入力した場合でも文字列型strとして扱われます。"
+  },
+  {
+    "id": "py04-015",
+    "subject": "python",
+    "lesson": 4,
+    "question": "ユーザーから年齢を入力してもらい、18歳以上かどうか数値として判定するためのコードとして正しいものはどれですか？",
+    "choices": [
+      "age = input(\"何歳ですか？\")\nif age >= 18:\n    print(\"成人です\")",
+      "age = int(input(\"何歳ですか？\"))\nif age >= 18:\n    print(\"成人です\")",
+      "age = str(input(\"何歳ですか？\"))\nif age >= 18:\n    print(\"成人です\")",
+      "age = print(\"何歳ですか？\")\nif age >= 18:\n    print(\"成人です\")"
+    ],
+    "answer": 1,
+    "explanation": "input()の戻り値は文字列なので、整数として比較するにはint()で型変換する必要があります。"
+  },
+  {
+    "id": "py04-016",
+    "subject": "python",
+    "lesson": 4,
+    "question": "ユーザーから「身長」を小数として入力してもらうコードとして適切なものはどれですか？",
+    "choices": [
+      "height = float(input(\"身長を教えてください\"))",
+      "height = int(\"身長を教えてください\")",
+      "height = input(float(\"身長を教えてください\"))",
+      "height = len(input(\"身長を教えてください\"))"
+    ],
+    "answer": 0,
+    "explanation": "小数を扱いたい場合は、input()で受け取った文字列をfloat()で変換します。"
+  },
+  {
+    "id": "py04-017",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードで、weightに65を入力した場合に表示されるものはどれですか？\n\nweight = 65\nfor i in [60, 66, 73, 81, 90, 100]:\n    if weight <= i:\n        print(str(i) + \"kg級\")\n        break",
+    "choices": [
+      "60kg級",
+      "66kg級",
+      "73kg級",
+      "60kg級から100kg級まで全部"
+    ],
+    "answer": 1,
+    "explanation": "65は60以下ではありませんが66以下です。「66kg級」を表示した後、breakでforループを終了します。"
+  },
+  {
+    "id": "py04-018",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードで、ユーザーが最初に「いいえ」、次に「はい」と入力した場合、質問は何回表示されますか？\n\nwhile True:\n    answer = input(\"続けますか？\")\n    if answer == \"はい\":\n        break",
+    "choices": [
+      "1回",
+      "2回",
+      "3回",
+      "無限に表示される"
+    ],
+    "answer": 1,
+    "explanation": "最初の「いいえ」ではbreakされず、もう一度繰り返します。2回目の「はい」でbreakが実行され、ループを終了します。"
+  },
+  {
+    "id": "py04-019",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードで、朝食について「いいえ」と答えた場合、その後どうなりますか？\n\nfor meal in [\"朝食\", \"昼食\", \"夕食\"]:\n    answer = input(meal + \"は食べましたか？\")\n    if answer == \"いいえ\":\n        continue\n    food = input(\"何を食べましたか？\")",
+    "choices": [
+      "「何を食べましたか？」と聞かれた後、昼食へ進む",
+      "朝食についての処理を終了してプログラム全体も終了する",
+      "「何を食べましたか？」は聞かれず、昼食の質問へ進む",
+      "朝食の質問を無限に繰り返す"
+    ],
+    "answer": 2,
+    "explanation": "continueが実行されると、その繰り返しの残りの処理をスキップし、次の要素へ進みます。そのため朝食の内容は聞かれず、昼食の質問へ進みます。"
+  },
+  {
+    "id": "py04-020",
+    "subject": "python",
+    "lesson": 4,
+    "question": "次のコードで、iが2のときユーザーが「5」と答えた場合、次に表示される質問として正しいものはどれですか？\n\ni = 1\nwhile i <= 5:\n    print(str(i) + \"の二乗はいくつ？\")\n    answer = int(input())\n    if answer != i ** 2:\n        print(\"もう一度トライしよう\")\n        continue\n    i += 1",
+    "choices": [
+      "3の二乗はいくつ？",
+      "2の二乗はいくつ？",
+      "1の二乗はいくつ？",
+      "ループが終了する"
+    ],
+    "answer": 1,
+    "explanation": "iが2のとき正解は4ですが、5と答えているためcontinueが実行されます。i += 1は実行されないのでiは2のままで、再び「2の二乗はいくつ？」と表示されます。"
+  }
+]
