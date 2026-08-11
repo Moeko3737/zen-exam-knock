@@ -1,3 +1,7 @@
+import {
+  addMistake
+} from "./storage/mistakeStorage.js";
+
 // ========================================
 // 科目情報
 // ========================================
@@ -302,6 +306,9 @@ function checkAnswer(selectedAnswer) {
     answerResult.textContent = "○ 正解！";
   } else {
     answerResult.textContent = "× 不正解";
+
+    // 間違えた問題をブラウザに保存する
+    addMistake(question.id);
   }
 
   // 解説
