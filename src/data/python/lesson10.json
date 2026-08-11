@@ -1,0 +1,422 @@
+[
+  {
+    "id": "py10-001",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nmy_string = \"Python\"\nprint(my_string[0])",
+    "choices": [
+      "P",
+      "y",
+      "Python",
+      "0"
+    ],
+    "answer": 0,
+    "explanation": "文字列のインデックスは0から始まります。my_string[0]は最初の文字「P」です。"
+  },
+  {
+    "id": "py10-002",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nmy_string = \"I love Python!\"\nprint(my_string[2:6])",
+    "choices": [
+      " lov",
+      "love",
+      "love ",
+      "I lo"
+    ],
+    "answer": 1,
+    "explanation": "スライスでは開始位置は含まれますが、終了位置は含まれません。インデックス2〜5の「love」が取り出されます。"
+  },
+  {
+    "id": "py10-003",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(len(\"I love Python!\"))",
+    "choices": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "answer": 2,
+    "explanation": "len()は文字列に含まれる文字数を返します。スペースや「!」も1文字として数えるため14です。"
+  },
+  {
+    "id": "py10-004",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(\"Python\".isalpha())",
+    "choices": [
+      "True",
+      "False",
+      "Python",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "isalpha()は、文字列が文字だけで構成されている場合にTrueを返します。"
+  },
+  {
+    "id": "py10-005",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(\"1234\".isdecimal())",
+    "choices": [
+      "True",
+      "False",
+      "1234",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "isdecimal()は、文字列が数字だけで構成されている場合にTrueを返します。"
+  },
+  {
+    "id": "py10-006",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(\"python3\".isalnum())",
+    "choices": [
+      "True",
+      "False",
+      "3",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "isalnum()は、文字と数字だけで構成されている文字列の場合にTrueを返します。"
+  },
+  {
+    "id": "py10-007",
+    "subject": "python",
+    "lesson": 10,
+    "question": "文字列passcodeが「4文字かつ数字だけ」であることを判定するコードとして正しいものはどれですか？",
+    "choices": [
+      "len(passcode) == 4 and passcode.isdecimal()",
+      "len(passcode) == 4 or passcode.isalpha()",
+      "passcode == 4 and passcode.isdecimal()",
+      "len(passcode) == 4 and passcode.isalpha()"
+    ],
+    "answer": 0,
+    "explanation": "4桁であることはlen(passcode) == 4、数字だけであることはpasscode.isdecimal()で確認し、両方をandで結びます。"
+  },
+  {
+    "id": "py10-008",
+    "subject": "python",
+    "lesson": 10,
+    "question": "ユーザーネームが「文字と数字のみ」で、さらに「先頭が文字」であることを判定するコードとして正しいものはどれですか？",
+    "choices": [
+      "username.isalpha() and username.isdecimal()",
+      "username.isalnum() and username[0].isalpha()",
+      "username.isdecimal() and username[0].isalnum()",
+      "username[0].isdecimal() and username.isalpha()"
+    ],
+    "answer": 1,
+    "explanation": "文字と数字のみかはisalnum()、先頭文字が文字かはusername[0].isalpha()で確認します。"
+  },
+  {
+    "id": "py10-009",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nemail = \"asutarisu@donguri.com\"\nprint(\"@\" in email)",
+    "choices": [
+      "True",
+      "False",
+      "@",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "in演算子は、指定した文字列が対象の文字列に含まれている場合にTrueを返します。"
+  },
+  {
+    "id": "py10-010",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nemail = \"asutarisu@donguri.com\"\nprint(\"..\" not in email)",
+    "choices": [
+      "True",
+      "False",
+      "..",
+      "None"
+    ],
+    "answer": 0,
+    "explanation": "not inは、指定した文字列が含まれていない場合にTrueを返します。このメールアドレスには「..」がありません。"
+  },
+  {
+    "id": "py10-011",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nword = \"りんご\"\nprint(word.startswith(\"り\"))",
+    "choices": [
+      "True",
+      "False",
+      "り",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "startswith()は、文字列が指定した文字列で始まっている場合にTrueを返します。"
+  },
+  {
+    "id": "py10-012",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nword = \"みかん\"\nprint(word.endswith(\"ん\"))",
+    "choices": [
+      "True",
+      "False",
+      "ん",
+      "None"
+    ],
+    "answer": 0,
+    "explanation": "endswith()は、文字列が指定した文字列で終わっている場合にTrueを返します。"
+  },
+  {
+    "id": "py10-013",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nuser_name = \"  umeko  \"\nprint(user_name.strip())",
+    "choices": [
+      "  umeko  ",
+      "umeko",
+      "  umeko",
+      "umeko  "
+    ],
+    "answer": 1,
+    "explanation": "strip()は文字列の両端にある空白文字を取り除いた新しい文字列を返します。"
+  },
+  {
+    "id": "py10-014",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nheading = \"-#-最優秀賞-#-\"\nprint(heading.strip(\"-#\"))",
+    "choices": [
+      "-最優秀賞-",
+      "#最優秀賞#",
+      "最優秀賞",
+      "-#-最優秀賞-#-"
+    ],
+    "answer": 2,
+    "explanation": "strip(\"-#\")は、文字列の両端から「-」または「#」に該当する文字を取り除きます。"
+  },
+  {
+    "id": "py10-015",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(\"0003020\".lstrip(\"0\"))",
+    "choices": [
+      "3020",
+      "302",
+      "000302",
+      "0003020"
+    ],
+    "answer": 0,
+    "explanation": "lstrip()は文字列の左端から指定した文字を取り除きます。先頭の0だけが除かれて「3020」になります。"
+  },
+  {
+    "id": "py10-016",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(\"10!!!\".rstrip(\"!\"))",
+    "choices": [
+      "10",
+      "10!",
+      "10!!",
+      "!!!"
+    ],
+    "answer": 0,
+    "explanation": "rstrip()は右端から指定した文字を取り除くため、末尾の「!」がすべて取り除かれます。"
+  },
+  {
+    "id": "py10-017",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\npostal_code = \"001-0001\"\nprint(postal_code.replace(\"-\", \"\"))",
+    "choices": [
+      "001-0001",
+      "0010001",
+      "001",
+      "0001"
+    ],
+    "answer": 1,
+    "explanation": "replace(\"-\", \"\")では、ハイフンを空文字列に置き換えるため、ハイフンを削除できます。"
+  },
+  {
+    "id": "py10-018",
+    "subject": "python",
+    "lesson": 10,
+    "question": "文字列user_nameの両端の空白を取り除き、その結果をuser_name自身に保存するコードとして正しいものはどれですか？",
+    "choices": [
+      "user_name.strip()",
+      "user_name = user_name.strip()",
+      "strip = user_name",
+      "user_name.strip = \"\""
+    ],
+    "answer": 1,
+    "explanation": "文字列はイミュータブルなのでstrip()を呼んでも元の文字列自体は変更されません。変更後の文字列を使うには、戻り値を変数へ代入します。"
+  },
+  {
+    "id": "py10-019",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nitems = [\"京都\", \"紅葉\", \"焼き芋\"]\nprint(\"#\".join(items))",
+    "choices": [
+      "京都紅葉焼き芋",
+      "京都#紅葉#焼き芋",
+      "#京都#紅葉#焼き芋#",
+      "[\"京都\", \"紅葉\", \"焼き芋\"]"
+    ],
+    "answer": 1,
+    "explanation": "join()は、指定した文字列を区切りとしてリストの要素を連結し、新しい文字列を返します。"
+  },
+  {
+    "id": "py10-020",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(\"松,竹,梅\".split(\",\"))",
+    "choices": [
+      "[\"松\", \"竹\", \"梅\"]",
+      "\"松竹梅\"",
+      "[\"松,竹,梅\"]",
+      "\"松\", \"竹\", \"梅\""
+    ],
+    "answer": 0,
+    "explanation": "split(\",\")は、コンマを区切り文字として文字列を分割し、リストとして返します。"
+  },
+  {
+    "id": "py10-021",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(\"Python is fun\".split())",
+    "choices": [
+      "[\"Python is fun\"]",
+      "[\"Python\", \"is\", \"fun\"]",
+      "\"Python\", \"is\", \"fun\"",
+      "Pythonisfun"
+    ],
+    "answer": 1,
+    "explanation": "split()を引数なしで使うと、スペースや改行などの空白文字で分割します。"
+  },
+  {
+    "id": "py10-022",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nmonth = \"06\"\nprint(month.lstrip(\"0\"))",
+    "choices": [
+      "06",
+      "0",
+      "6",
+      "60"
+    ],
+    "answer": 2,
+    "explanation": "lstrip(\"0\")によって左端の0が取り除かれるため、「6」になります。日付の再フォーマットなどに利用できます。"
+  },
+  {
+    "id": "py10-023",
+    "subject": "python",
+    "lesson": 10,
+    "question": "「Let's learn Python!」と表示するコードとして正しく実行できるものはどれですか？",
+    "choices": [
+      "print(\"Let's learn Python!\")",
+      "print('Let's learn Python!')",
+      "print(\"Let's learn Python!')",
+      "print(Let's learn Python!)"
+    ],
+    "answer": 0,
+    "explanation": "文字列の中にシングルクォーテーションが含まれる場合、外側をダブルクォーテーションで囲めばそのまま扱えます。"
+  },
+  {
+    "id": "py10-024",
+    "subject": "python",
+    "lesson": 10,
+    "question": "トリプルクォーテーションの用途として正しいものはどれですか？",
+    "choices": [
+      "数値を整数型へ変換するために使う",
+      "複数行の文字列やドックストリングを記述するために使える",
+      "リストを自動的に辞書へ変換する",
+      "文字列を必ず大文字に変換する"
+    ],
+    "answer": 1,
+    "explanation": "''' または \"\"\" のトリプルクォーテーションは、複数行の文字列や関数のドックストリングなどに利用できます。"
+  },
+  {
+    "id": "py10-025",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nname = \"Taro\"\nprint(f\"こんにちは、{name}さん\")",
+    "choices": [
+      "こんにちは、nameさん",
+      "こんにちは、{name}さん",
+      "こんにちは、Taroさん",
+      "fこんにちは、Taroさん"
+    ],
+    "answer": 2,
+    "explanation": "f文字列では、文字列の先頭にfを付け、{}の中に変数を書くと、その値を文字列へ埋め込めます。"
+  },
+  {
+    "id": "py10-026",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(\"1たす1は{1+1}です。\")",
+    "choices": [
+      "1たす1は2です。",
+      "1たす1は{1+1}です。",
+      "1たす1は11です。",
+      "エラーになる"
+    ],
+    "answer": 1,
+    "explanation": "文字列の先頭にfが付いていないため、{1+1}は式として計算されず、そのまま文字として表示されます。"
+  },
+  {
+    "id": "py10-027",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(ord(\"あ\"))",
+    "choices": [
+      "12353",
+      "12354",
+      "12355",
+      "あ"
+    ],
+    "answer": 1,
+    "explanation": "ord()は文字を対応するコードポイントの整数値へ変換します。教材では「あ」のコードポイントは12354とされています。"
+  },
+  {
+    "id": "py10-028",
+    "subject": "python",
+    "lesson": 10,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(chr(12354))",
+    "choices": [
+      "12354",
+      "あ",
+      "い",
+      "エラーになる"
+    ],
+    "answer": 1,
+    "explanation": "chr()はコードポイントの整数値を対応する文字へ変換します。12354は「あ」です。"
+  },
+  {
+    "id": "py10-029",
+    "subject": "python",
+    "lesson": 10,
+    "question": "シーザー暗号で文字cのコードポイントをshiftだけ大きくして暗号化する処理として正しいものはどれですか？",
+    "choices": [
+      "chr(ord(c) + shift)",
+      "ord(chr(c) + shift)",
+      "chr(ord(c) - shift)",
+      "ord(c) + chr(shift)"
+    ],
+    "answer": 0,
+    "explanation": "暗号化ではord(c)で文字をコードポイントに変換し、shiftを加え、その結果をchr()で文字へ戻します。"
+  },
+  {
+    "id": "py10-030",
+    "subject": "python",
+    "lesson": 10,
+    "question": "shiftだけずらして作られた暗号文の文字cを、元の文字へ復号する処理として正しいものはどれですか？",
+    "choices": [
+      "chr(ord(c) + shift)",
+      "chr(ord(c) - shift)",
+      "ord(chr(c) - shift)",
+      "chr(c) - ord(shift)"
+    ],
+    "answer": 1,
+    "explanation": "復号するときは暗号化と逆方向へずらすため、コードポイントからshiftを引いてからchr()で文字へ戻します。"
+  }
+]
