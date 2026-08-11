@@ -13,7 +13,15 @@ export function getMistakeIds() {
     return [];
   }
 
-  return JSON.parse(savedData);
+  try {
+    const mistakeIds = JSON.parse(savedData);
+
+    return Array.isArray(mistakeIds)
+      ? mistakeIds
+      : [];
+  } catch {
+    return [];
+  }
 }
 
 
