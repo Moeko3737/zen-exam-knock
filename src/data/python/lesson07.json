@@ -1,0 +1,422 @@
+[
+  {
+    "id": "py07-001",
+    "subject": "python",
+    "lesson": 7,
+    "question": "「犬」に「dog」、「猫」に「cat」を対応させた辞書として正しいものはどれですか？",
+    "choices": [
+      "animals = [\"犬\": \"dog\", \"猫\": \"cat\"]",
+      "animals = {\"犬\": \"dog\", \"猫\": \"cat\"}",
+      "animals = (\"犬\": \"dog\", \"猫\": \"cat\")",
+      "animals = {\"犬\", \"dog\", \"猫\", \"cat\"}"
+    ],
+    "answer": 1,
+    "explanation": "辞書は波カッコ {} で囲み、キーとバリューをコロン : で結びます。"
+  },
+  {
+    "id": "py07-002",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nhero = {\"知力\": 4, \"体力\": 6, \"気力\": 9}\nprint(hero[\"体力\"])",
+    "choices": [
+      "4",
+      "6",
+      "9",
+      "体力"
+    ],
+    "answer": 1,
+    "explanation": "辞書では辞書名[キー]の形でバリューを参照します。「体力」に対応する値は6です。"
+  },
+  {
+    "id": "py07-003",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nradio = {1: 1030, 2: 954, 3: 1297}\nprint(len(radio))",
+    "choices": [
+      "2",
+      "3",
+      "6",
+      "3281"
+    ],
+    "answer": 1,
+    "explanation": "len()で辞書の長さを調べると、キーとバリューのペアの数が返されます。この辞書には3要素あります。"
+  },
+  {
+    "id": "py07-004",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nhero = {\"知力\": 4, \"体力\": 6}\nprint(\"体力\" in hero)",
+    "choices": [
+      "True",
+      "False",
+      "6",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "辞書に対してin演算子を使うと、指定したキーが存在するかを確認できます。「体力」はキーとして存在するのでTrueです。"
+  },
+  {
+    "id": "py07-005",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次の辞書の「体力」を10に変更するコードとして正しいものはどれですか？\n\nhero = {\"知力\": 4, \"体力\": 6}",
+    "choices": [
+      "hero[\"体力\"] = 10",
+      "hero[10] = \"体力\"",
+      "hero(\"体力\") = 10",
+      "hero.add(\"体力\", 10)"
+    ],
+    "answer": 0,
+    "explanation": "既存のキーを指定して新しい値を代入すると、そのキーのバリューを変更できます。"
+  },
+  {
+    "id": "py07-006",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードを実行するとどうなりますか？\n\nhero = {\"知力\": 4, \"体力\": 6}\nprint(hero[\"運\"])",
+    "choices": [
+      "0と表示される",
+      "Noneと表示される",
+      "Falseと表示される",
+      "KeyErrorが発生する"
+    ],
+    "answer": 3,
+    "explanation": "辞書名[キー]で存在しないキーを参照するとKeyErrorが発生します。"
+  },
+  {
+    "id": "py07-007",
+    "subject": "python",
+    "lesson": 7,
+    "question": "存在しないキーを参照する前に、そのキーが辞書にあるか確認するコードとして適切なものはどれですか？",
+    "choices": [
+      "if \"運\" in hero:",
+      "if hero == \"運\":",
+      "if \"運\" == hero[0]:",
+      "if hero.index(\"運\"):"
+    ],
+    "answer": 0,
+    "explanation": "in演算子を使うと、辞書に指定したキーが存在するかを確認できます。"
+  },
+  {
+    "id": "py07-008",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードを実行した後のheroとして正しいものはどれですか？\n\nhero = {\"知力\": 4, \"体力\": 6}\nhero[\"レベル\"] = 2",
+    "choices": [
+      "{\"知力\": 4, \"体力\": 6}",
+      "{\"知力\": 4, \"体力\": 6, \"レベル\": 2}",
+      "{\"知力\": 4, \"体力\": 2}",
+      "{\"レベル\": 2}"
+    ],
+    "answer": 1,
+    "explanation": "存在しないキーに値を代入すると、新しいキーとバリューのペアが辞書に追加されます。"
+  },
+  {
+    "id": "py07-009",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードを実行した後のheroとして正しいものはどれですか？\n\nhero = {\"知力\": 4, \"体力\": 6, \"装備\": \"鋼の剣\"}\ndel hero[\"装備\"]",
+    "choices": [
+      "{\"知力\": 4, \"体力\": 6}",
+      "{\"装備\": \"鋼の剣\"}",
+      "{\"知力\": 4, \"体力\": 6, \"装備\": None}",
+      "辞書全体が削除される"
+    ],
+    "answer": 0,
+    "explanation": "del 辞書名[キー]を使うと、指定したキーとそのバリューのペアを削除できます。"
+  },
+  {
+    "id": "py07-010",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\na = {\"egg\": \"卵\", \"chicken\": \"鶏\"}\nb = {\"chicken\": \"鶏\", \"egg\": \"卵\"}\nprint(a == b)",
+    "choices": [
+      "True",
+      "False",
+      "辞書の順番が違うのでエラーになる",
+      "None"
+    ],
+    "answer": 0,
+    "explanation": "辞書はキーとバリューの対応内容が同じであれば、記述順が異なっていても等しいと判定されます。"
+  },
+  {
+    "id": "py07-011",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次の辞書からキーだけを取り出すメソッドはどれですか？\n\nscenery = {\"松島\": \"宮城県\", \"宮島\": \"広島県\"}",
+    "choices": [
+      "scenery.keys()",
+      "scenery.values()",
+      "scenery.items()",
+      "scenery.index()"
+    ],
+    "answer": 0,
+    "explanation": "keys()メソッドは辞書のキーだけを取得します。"
+  },
+  {
+    "id": "py07-012",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次の辞書からバリューだけを取り出すメソッドはどれですか？",
+    "choices": [
+      "data.keys()",
+      "data.values()",
+      "data.items()",
+      "data.copy()"
+    ],
+    "answer": 1,
+    "explanation": "values()メソッドは辞書のバリューだけを取得します。"
+  },
+  {
+    "id": "py07-013",
+    "subject": "python",
+    "lesson": 7,
+    "question": "辞書から「キーとバリューのペア」を取得するメソッドはどれですか？",
+    "choices": [
+      "keys()",
+      "values()",
+      "items()",
+      "pairs()"
+    ],
+    "answer": 2,
+    "explanation": "items()メソッドを使うと、キーとバリューのペアを取得できます。"
+  },
+  {
+    "id": "py07-014",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のうち、辞書のメソッドではないものはどれですか？",
+    "choices": [
+      "clear()",
+      "copy()",
+      "index()",
+      "pop()"
+    ],
+    "answer": 2,
+    "explanation": "確認テストの範囲では、clear()、copy()、pop()は辞書で使えるメソッドですが、index()は辞書のメソッドではありません。"
+  },
+  {
+    "id": "py07-015",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードを実行した後のstatus[\"Alice\"]として正しいものはどれですか？\n\nstatus = {\"Alice\": \"プロ\"}\nstatus.setdefault(\"Alice\", \"ビギナー\")\nprint(status[\"Alice\"])",
+    "choices": [
+      "プロ",
+      "ビギナー",
+      "None",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "setdefault()で指定したキーがすでに存在する場合、そのバリューは変更されません。"
+  },
+  {
+    "id": "py07-016",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードを実行した後のstatusとして正しいものはどれですか？\n\nstatus = {\"Alice\": \"プロ\"}\nstatus.setdefault(\"Bob\", \"ビギナー\")",
+    "choices": [
+      "{\"Alice\": \"プロ\"}",
+      "{\"Alice\": \"プロ\", \"Bob\": \"ビギナー\"}",
+      "{\"Bob\": \"ビギナー\"}",
+      "{\"Alice\": \"ビギナー\", \"Bob\": \"ビギナー\"}"
+    ],
+    "answer": 1,
+    "explanation": "setdefault()で指定したキーが存在しない場合、そのキーとデフォルト値が新しい要素として追加されます。"
+  },
+  {
+    "id": "py07-017",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードについて正しい説明はどれですか？\n\nscenery = {\"松島\": \"宮城県\"}\nscenery_keys = scenery.keys()\nscenery[\"宮島\"] = \"広島県\"",
+    "choices": [
+      "scenery_keysには「松島」だけが残る",
+      "scenery_keysにも追加された「宮島」が反映される",
+      "scenery_keysはリストなのでappend()が必要になる",
+      "辞書を変更するとscenery_keysはエラーになる"
+    ],
+    "answer": 1,
+    "explanation": "keys()などの戻り値は辞書のビューです。元の辞書を変更すると、その内容も反映されます。"
+  },
+  {
+    "id": "py07-018",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードで作られるresultの内容として正しいものはどれですか？\n\nhero = {\"知力\": 4, \"体力\": 6, \"気力\": 9}\nresult = list(hero)",
+    "choices": [
+      "[4, 6, 9]",
+      "[\"知力\", \"体力\", \"気力\"]",
+      "[(\"知力\", 4), (\"体力\", 6), (\"気力\", 9)]",
+      "{\"知力\": 4, \"体力\": 6, \"気力\": 9}"
+    ],
+    "answer": 1,
+    "explanation": "辞書をそのままlist()に渡すと、辞書のキーから新しいリストを作ります。"
+  },
+  {
+    "id": "py07-019",
+    "subject": "python",
+    "lesson": 7,
+    "question": "辞書heroのバリューだけを新しいリストにするコードとして正しいものはどれですか？",
+    "choices": [
+      "list(hero)",
+      "list(hero.keys())",
+      "list(hero.values())",
+      "dict(hero.values())"
+    ],
+    "answer": 2,
+    "explanation": "values()でバリューを取得し、それをlist()に渡すと値だけの新しいリストになります。"
+  },
+  {
+    "id": "py07-020",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のタプルのリストから辞書を作成するコードとして正しいものはどれですか？\n\n[(\"知力\", 2), (\"体力\", 10)]",
+    "choices": [
+      "list([(\"知力\", 2), (\"体力\", 10)])",
+      "dict([(\"知力\", 2), (\"体力\", 10)])",
+      "set([(\"知力\", 2), (\"体力\", 10)])",
+      "tuple([(\"知力\", 2), (\"体力\", 10)])"
+    ],
+    "answer": 1,
+    "explanation": "キーとバリューの2要素のタプルを並べたリストは、dict()を使って辞書に変換できます。"
+  },
+  {
+    "id": "py07-021",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nhero = {\"知力\": 4, \"体力\": 6}\nwarrior = {\"知力\": 2, \"体力\": 10}\nparty = [hero, warrior]\nprint(party[1][\"体力\"])",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "10"
+    ],
+    "answer": 3,
+    "explanation": "party[1]は2番目の辞書warriorです。そこから[\"体力\"]を参照するので10になります。"
+  },
+  {
+    "id": "py07-022",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nhero = {\n    \"名前\": \"勇者\",\n    \"装備\": [\"伝説の兜\", \"最強の鎧\", \"鋼の剣\"]\n}\nprint(hero[\"装備\"][1])",
+    "choices": [
+      "伝説の兜",
+      "最強の鎧",
+      "鋼の剣",
+      "装備"
+    ],
+    "answer": 1,
+    "explanation": "hero[\"装備\"]でリストを取得し、そのインデックス1を参照するので2番目の「最強の鎧」です。"
+  },
+  {
+    "id": "py07-023",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードを実行した後、hero[\"装備\"][1]の値はどれですか？\n\nhero = {\"装備\": [\"兜\", \"鎧\", \"剣\"]}\nhero[\"装備\"][1] = \"羽の鎧\"",
+    "choices": [
+      "兜",
+      "鎧",
+      "羽の鎧",
+      "剣"
+    ],
+    "answer": 2,
+    "explanation": "辞書のバリューとして格納されたリストも、辞書名[キー][インデックス]の形で要素を変更できます。"
+  },
+  {
+    "id": "py07-024",
+    "subject": "python",
+    "lesson": 7,
+    "question": "セットについて正しい説明はどれですか？",
+    "choices": [
+      "要素には必ずキーとバリューがある",
+      "要素の順番を保持し、同じ値も複数保存する",
+      "要素の順番を保持せず、重複する値は1つにまとめられる",
+      "作成後は要素を追加・削除できない"
+    ],
+    "answer": 2,
+    "explanation": "セットは順番を持たず、重複した値を保持しない集合型です。add()やremove()による変更はできます。"
+  },
+  {
+    "id": "py07-025",
+    "subject": "python",
+    "lesson": 7,
+    "question": "空のセットを作るコードとして正しいものはどれですか？",
+    "choices": [
+      "{}",
+      "[]",
+      "()",
+      "set()"
+    ],
+    "answer": 3,
+    "explanation": "空のセットはset()で作ります。{}だけを書くと空の辞書になります。"
+  },
+  {
+    "id": "py07-026",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nnumbers = {1, 1, 2, 2, 3}\nprint(len(numbers))",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "セットでは同じ値を重複して保持しません。そのため要素は1、2、3の3種類です。"
+  },
+  {
+    "id": "py07-027",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次の条件式の結果として正しいものはどれですか？\n\n{1, 2, 3} == {3, 2, 1}",
+    "choices": [
+      "True",
+      "False",
+      "順番が違うのでエラーになる",
+      "比較できない"
+    ],
+    "answer": 0,
+    "explanation": "セットでは要素の順番は等価判定に影響しません。同じ要素を持つためTrueです。"
+  },
+  {
+    "id": "py07-028",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次の2つのセットの和集合を求める式として正しいものはどれですか？\n\na = {\"赤\", \"青\"}\nb = {\"青\", \"白\"}",
+    "choices": [
+      "a | b",
+      "a & b",
+      "a - b",
+      "a ^ b"
+    ],
+    "answer": 0,
+    "explanation": "| は和集合を求める演算子です。両方のセットに含まれる要素をすべて集めます。"
+  },
+  {
+    "id": "py07-029",
+    "subject": "python",
+    "lesson": 7,
+    "question": "次のコードの結果と等しいセットはどれですか？\n\na = {\"ラーメン\", \"焼肉\", \"天ぷら\"}\nb = {\"寿司\", \"焼肉\", \"天ぷら\"}\nresult = a & b",
+    "choices": [
+      "{\"ラーメン\", \"寿司\"}",
+      "{\"焼肉\", \"天ぷら\"}",
+      "{\"ラーメン\", \"焼肉\", \"天ぷら\", \"寿司\"}",
+      "{\"ラーメン\"}"
+    ],
+    "answer": 1,
+    "explanation": "&は積集合を求める演算子です。両方のセットに共通する「焼肉」と「天ぷら」が残ります。"
+  },
+  {
+    "id": "py07-030",
+    "subject": "python",
+    "lesson": 7,
+    "question": "セットの集合演算について、正しい組み合わせはどれですか？",
+    "choices": [
+      "|：和集合、&：積集合、-：差集合、^：対称差集合",
+      "|：積集合、&：和集合、-：対称差集合、^：差集合",
+      "|：和集合、&：差集合、-：積集合、^：対称差集合",
+      "|：対称差集合、&：積集合、-：和集合、^：差集合"
+    ],
+    "answer": 0,
+    "explanation": "セットでは | が和集合、& が積集合、- が差集合、^ が対称差集合を表します。"
+  }
+]
