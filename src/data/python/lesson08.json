@@ -1,0 +1,422 @@
+[
+  {
+    "id": "py08-001",
+    "subject": "python",
+    "lesson": 8,
+    "question": "Pythonでクラスを定義するコードとして正しいものはどれですか？",
+    "choices": [
+      "class Cat:\n    pass",
+      "def Cat:\n    pass",
+      "class Cat()\n    pass",
+      "Cat class:\n    pass"
+    ],
+    "answer": 0,
+    "explanation": "クラスは「class クラス名:」の形で定義します。内容がまだない場合はpassを書くことができます。"
+  },
+  {
+    "id": "py08-002",
+    "subject": "python",
+    "lesson": 8,
+    "question": "クラスとインスタンスの関係として正しいものはどれですか？",
+    "choices": [
+      "クラスは設計図で、インスタンスはその設計図から作られた実際のオブジェクト",
+      "インスタンスが設計図で、クラスが実際のオブジェクト",
+      "クラスとインスタンスはまったく同じ意味",
+      "クラスは関数の戻り値だけを保存するもの"
+    ],
+    "answer": 0,
+    "explanation": "クラスはオブジェクトの構造やメソッドを定義する設計図で、インスタンスはそのクラスから実際に作られたオブジェクトです。"
+  },
+  {
+    "id": "py08-003",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のCatクラスからインスタンスtamaを作るコードとして正しいものはどれですか？\n\nclass Cat:\n    pass",
+    "choices": [
+      "tama = Cat",
+      "tama = Cat()",
+      "Cat = tama()",
+      "tama.Cat()"
+    ],
+    "answer": 1,
+    "explanation": "クラス名の後ろに丸カッコを付けてCat()とすると、そのクラスのインスタンスを作れます。"
+  },
+  {
+    "id": "py08-004",
+    "subject": "python",
+    "lesson": 8,
+    "question": "インスタンスtamaに「名前」という属性を追加して「たま」を保存するコードとして正しいものはどれですか？",
+    "choices": [
+      "tama[\"名前\"] = \"たま\"",
+      "tama.名前 = \"たま\"",
+      "tama(名前) = \"たま\"",
+      "名前.tama = \"たま\""
+    ],
+    "answer": 1,
+    "explanation": "インスタンスの属性は「オブジェクト名.属性名」の形で追加・参照します。"
+  },
+  {
+    "id": "py08-005",
+    "subject": "python",
+    "lesson": 8,
+    "question": "クラスのインスタンスを作ったときに自動的に呼び出される初期化メソッドはどれですか？",
+    "choices": [
+      "__start__",
+      "__init__",
+      "__new_class__",
+      "__self__"
+    ],
+    "answer": 1,
+    "explanation": "__init__はインスタンス生成時に自動的に呼び出される初期化メソッドです。"
+  },
+  {
+    "id": "py08-006",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のクラスから、好物が「魚」のCatインスタンスを作るコードとして正しいものはどれですか？\n\nclass Cat:\n    def __init__(self, favorite):\n        self.好物 = favorite",
+    "choices": [
+      "Cat.__init__(\"魚\")",
+      "Cat(self, \"魚\")",
+      "Cat(\"魚\")",
+      "Cat.favorite(\"魚\")"
+    ],
+    "answer": 2,
+    "explanation": "インスタンスを作るときはCat(\"魚\")のように書きます。selfは自動的に渡されるため、呼び出し側では書きません。"
+  },
+  {
+    "id": "py08-007",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nclass Cat:\n    def __init__(self, favorite):\n        self.好物 = favorite\n\ntama = Cat(\"魚\")\nprint(tama.好物)",
+    "choices": [
+      "Cat",
+      "favorite",
+      "魚",
+      "self"
+    ],
+    "answer": 2,
+    "explanation": "Cat(\"魚\")を作ると、favoriteに「魚」が渡され、self.好物に保存されます。"
+  },
+  {
+    "id": "py08-008",
+    "subject": "python",
+    "lesson": 8,
+    "question": "クラスのメソッドを定義するコードとして正しいものはどれですか？",
+    "choices": [
+      "def meow(self):\n    print(\"ニャー\")",
+      "def meow():\n    print(self, \"ニャー\")",
+      "method meow(self):\n    print(\"ニャー\")",
+      "def self.meow():\n    print(\"ニャー\")"
+    ],
+    "answer": 0,
+    "explanation": "クラスのインスタンスメソッドは、第一引数にselfを取る形で定義します。"
+  },
+  {
+    "id": "py08-009",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のコードでtamaにmeowメソッドを実行させるコードとして正しいものはどれですか？\n\nclass Cat:\n    def meow(self):\n        print(\"ニャー\")\n\ntama = Cat()",
+    "choices": [
+      "meow(tama)",
+      "tama.meow()",
+      "tama.meow(self)",
+      "Cat.meow()"
+    ],
+    "answer": 1,
+    "explanation": "メソッドは「インスタンス.メソッド名()」の形で呼び出します。呼び出し時にselfを書く必要はありません。"
+  },
+  {
+    "id": "py08-010",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nclass Person:\n    def __init__(self, name):\n        self.name = name\n\n    def greet(self):\n        print(\"こんにちは、\" + self.name)\n\nperson = Person(\"アリス\")\nperson.greet()",
+    "choices": [
+      "こんにちは、self",
+      "こんにちは、name",
+      "こんにちは、アリス",
+      "エラーになる"
+    ],
+    "answer": 2,
+    "explanation": "self.nameにはインスタンス作成時に渡した「アリス」が保存されているので、その値が表示されます。"
+  },
+  {
+    "id": "py08-011",
+    "subject": "python",
+    "lesson": 8,
+    "question": "メソッドの中から、同じインスタンスの別のメソッドgreet()を呼び出すコードとして正しいものはどれですか？",
+    "choices": [
+      "greet()",
+      "self.greet()",
+      "self.greet(self)",
+      "Person.self.greet()"
+    ],
+    "answer": 1,
+    "explanation": "同じインスタンスの別のメソッドを呼ぶときは「self.メソッド名()」と書きます。"
+  },
+  {
+    "id": "py08-012",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nclass Person:\n    def greet(self):\n        print(\"こんにちは\")\n\n    def introduce(self):\n        self.greet()\n        print(\"よろしくお願いします\")\n\nperson = Person()\nperson.introduce()",
+    "choices": [
+      "こんにちは",
+      "よろしくお願いします",
+      "こんにちは\nよろしくお願いします",
+      "エラーになる"
+    ],
+    "answer": 2,
+    "explanation": "introduce()の中でself.greet()を呼び、その後print()を実行するため、2行表示されます。"
+  },
+  {
+    "id": "py08-013",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nclass BankAccount:\n    def __init__(self):\n        self.balance = 0\n\n    def deposit(self, amount):\n        self.balance += amount\n\n    def withdraw(self, amount):\n        self.balance -= amount\n\naccount = BankAccount()\naccount.deposit(100)\naccount.withdraw(20)\nprint(account.balance)",
+    "choices": [
+      "0",
+      "20",
+      "80",
+      "100"
+    ],
+    "answer": 2,
+    "explanation": "残高は0から始まり、100を預けて100、20を引き出して80になります。"
+  },
+  {
+    "id": "py08-014",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のメソッド定義の問題点として正しいものはどれですか？\n\nclass Cat:\n    def meow():\n        print(\"ニャー\")",
+    "choices": [
+      "クラス名が大文字なので誤り",
+      "メソッドの第一引数にselfがない",
+      "print()はクラス内では使えない",
+      "meowという名前は予約語なので使えない"
+    ],
+    "answer": 1,
+    "explanation": "教材で扱うインスタンスメソッドは第一引数にselfを取ります。"
+  },
+  {
+    "id": "py08-015",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のcompare_hobbiesメソッドをレイチェルから呼び出し、ジョーンを比較相手として渡すコードはどれですか？\n\ndef compare_hobbies(self, other):\n    pass",
+    "choices": [
+      "compare_hobbies(レイチェル, ジョーン)",
+      "レイチェル.compare_hobbies(ジョーン)",
+      "レイチェル.compare_hobbies(self, ジョーン)",
+      "compare_hobbies.レイチェル(ジョーン)"
+    ],
+    "answer": 1,
+    "explanation": "selfはレイチェル自身として自動的に渡されます。比較する相手のジョーンだけを実引数として渡します。"
+  },
+  {
+    "id": "py08-016",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のメソッドで、otherが表しているものとして正しいものはどれですか？\n\ndef compare_hobbies(self, other):\n    print(self.hobbies & other.hobbies)",
+    "choices": [
+      "クラスそのもの",
+      "自分自身のインスタンス",
+      "引数として渡された別のインスタンス",
+      "__init__メソッド"
+    ],
+    "answer": 2,
+    "explanation": "selfはメソッドを呼び出した自分自身、otherは引数として渡された別のインスタンスを表します。"
+  },
+  {
+    "id": "py08-017",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nclass Person:\n    def __init__(self, hobbies):\n        self.hobbies = hobbies\n\n    def common_hobbies(self, other):\n        print(self.hobbies & other.hobbies)\n\na = Person({\"読書\", \"映画\"})\nb = Person({\"映画\", \"旅行\"})\na.common_hobbies(b)",
+    "choices": [
+      "{\"読書\", \"映画\", \"旅行\"}",
+      "{\"映画\"}",
+      "{\"読書\"}",
+      "空のセット"
+    ],
+    "answer": 1,
+    "explanation": "&はセットの積集合なので、両方のインスタンスに共通する「映画」だけが残ります。"
+  },
+  {
+    "id": "py08-018",
+    "subject": "python",
+    "lesson": 8,
+    "question": "クラス変数とインスタンス変数について正しい説明はどれですか？",
+    "choices": [
+      "クラス変数は全インスタンスで共有され、インスタンス変数は各インスタンスごとに持つ",
+      "インスタンス変数は全インスタンスで共有される",
+      "クラス変数は各インスタンスごとに別々の値になる",
+      "クラス変数とインスタンス変数に違いはない"
+    ],
+    "answer": 0,
+    "explanation": "クラス変数はクラス全体で共有され、self.属性名として作られるインスタンス変数は各インスタンス固有です。"
+  },
+  {
+    "id": "py08-019",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のStudentクラスで、クラス変数はどれですか？\n\nclass Student:\n    required_subjects = [\"数学\", \"IT\"]\n\n    def __init__(self, electives):\n        self.electives = electives",
+    "choices": [
+      "required_subjects",
+      "electives",
+      "self",
+      "__init__"
+    ],
+    "answer": 0,
+    "explanation": "クラス定義の中でメソッドの外に定義されたrequired_subjectsはクラス変数です。self.electivesはインスタンス変数です。"
+  },
+  {
+    "id": "py08-020",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のコードで、aliceとbobがそれぞれ別の値を持つものはどれですか？\n\nclass Student:\n    school = \"ZEN大学\"\n\n    def __init__(self, name):\n        self.name = name\n\nalice = Student(\"Alice\")\nbob = Student(\"Bob\")",
+    "choices": [
+      "school",
+      "name",
+      "Student",
+      "クラスそのもの"
+    ],
+    "answer": 1,
+    "explanation": "self.nameはインスタンス変数なので、aliceにはAlice、bobにはBobという別々の値が保存されます。"
+  },
+  {
+    "id": "py08-021",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nclass Roommate:\n    milk = 0\n\n    def buy_milk(self):\n        Roommate.milk += 100\n\n    def drink_milk(self, amount):\n        Roommate.milk -= amount\n\na = Roommate()\nb = Roommate()\na.buy_milk()\nb.buy_milk()\na.drink_milk(50)\nprint(Roommate.milk)",
+    "choices": [
+      "50",
+      "100",
+      "150",
+      "200"
+    ],
+    "answer": 2,
+    "explanation": "milkはクラス変数なので全インスタンスで共有されます。0→100→200→150となります。"
+  },
+  {
+    "id": "py08-022",
+    "subject": "python",
+    "lesson": 8,
+    "question": "クラス変数countを定義する位置として適切なものはどれですか？",
+    "choices": [
+      "class Sample:\n    count = 0",
+      "class Sample:\n    def __init__(self):\n        self.count = 0",
+      "def Sample():\n    count = 0",
+      "Sample(self).count = 0"
+    ],
+    "answer": 0,
+    "explanation": "クラス変数はクラス定義の中で、メソッドの外側に「属性名 = 値」の形で定義します。"
+  },
+  {
+    "id": "py08-023",
+    "subject": "python",
+    "lesson": 8,
+    "question": "クラス変数beansをクラス全体で共有する値として100増やすコードはどれですか？",
+    "choices": [
+      "self.beans += 100",
+      "Person.beans += 100",
+      "beans.self += 100",
+      "Person[\"beans\"] += 100"
+    ],
+    "answer": 1,
+    "explanation": "教材では、共有するクラス変数を操作するときにPerson.beansのようにクラス名を使って参照・変更します。"
+  },
+  {
+    "id": "py08-024",
+    "subject": "python",
+    "lesson": 8,
+    "question": "クラスの継承について正しい説明はどれですか？",
+    "choices": [
+      "派生クラスの属性やメソッドを基底クラスが受け継ぐ仕組み",
+      "基底クラスの属性やメソッドを派生クラスが受け継ぐ仕組み",
+      "すべてのクラス変数を削除する仕組み",
+      "インスタンスを辞書に変換する仕組み"
+    ],
+    "answer": 1,
+    "explanation": "継承では、基底クラス（親クラス）の属性やメソッドを派生クラス（子クラス）が受け継ぎます。"
+  },
+  {
+    "id": "py08-025",
+    "subject": "python",
+    "lesson": 8,
+    "question": "Animalクラスを継承してCatクラスを作るコードとして正しいものはどれですか？",
+    "choices": [
+      "class Animal(Cat):",
+      "class Cat(Animal):",
+      "class Cat = Animal:",
+      "class Cat(parent=Animal):"
+    ],
+    "answer": 1,
+    "explanation": "継承するときは「class 派生クラス(基底クラス):」と書きます。"
+  },
+  {
+    "id": "py08-026",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nclass Animal:\n    def sleep(self):\n        print(\"すやすや\")\n\nclass Cat(Animal):\n    pass\n\ntama = Cat()\ntama.sleep()",
+    "choices": [
+      "すやすや",
+      "Cat",
+      "Animal",
+      "Catクラスにsleep()が直接書かれていないためエラーになる"
+    ],
+    "answer": 0,
+    "explanation": "CatはAnimalを継承しているため、Animalで定義されたsleep()メソッドをそのまま利用できます。"
+  },
+  {
+    "id": "py08-027",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のコードについて正しい説明はどれですか？\n\nclass Animal:\n    def sleep(self):\n        print(\"すやすや\")\n\nclass Cat(Animal):\n    def meow(self):\n        print(\"ニャー\")",
+    "choices": [
+      "Catはsleep()だけ使える",
+      "Catはmeow()だけ使える",
+      "Catはsleep()とmeow()の両方を使える",
+      "CatではAnimalのメソッドを一切使えない"
+    ],
+    "answer": 2,
+    "explanation": "派生クラスは基底クラスのメソッドを受け継ぎ、さらに独自のメソッドを追加できます。"
+  },
+  {
+    "id": "py08-028",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nclass Animal:\n    def speak(self):\n        print(\"鳴き声\")\n\nclass Cat(Animal):\n    def speak(self):\n        print(\"ニャー\")\n\ntama = Cat()\ntama.speak()",
+    "choices": [
+      "鳴き声",
+      "ニャー",
+      "鳴き声\nニャー",
+      "同名メソッドがあるためエラーになる"
+    ],
+    "answer": 1,
+    "explanation": "派生クラスで基底クラスと同じ名前のメソッドを定義すると、そのメソッドを上書き（オーバーライド）できます。"
+  },
+  {
+    "id": "py08-029",
+    "subject": "python",
+    "lesson": 8,
+    "question": "教材で示されている名前の付け方として適切な組み合わせはどれですか？",
+    "choices": [
+      "クラス名：PremiumUser、変数名：premium_user",
+      "クラス名：premium_user、変数名：PremiumUser",
+      "クラス名：premium-user、変数名：premium-user",
+      "クラス名：premiumuser、変数名：PREMIUMUSER"
+    ],
+    "answer": 0,
+    "explanation": "教材ではクラス名にはキャメルケース、変数や関数名にはスネークケースを使う例が示されています。"
+  },
+  {
+    "id": "py08-030",
+    "subject": "python",
+    "lesson": 8,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nclass Character:\n    count = 0\n\n    def __init__(self, name):\n        self.name = name\n        Character.count += 1\n\na = Character(\"勇者\")\nb = Character(\"戦士\")\nc = Character(\"魔法使い\")\n\nprint(Character.count)\nprint(b.name)",
+    "choices": [
+      "1\n戦士",
+      "3\n戦士",
+      "3\n勇者",
+      "3\n魔法使い"
+    ],
+    "answer": 1,
+    "explanation": "countはクラス変数なので、インスタンスを作るたびに共有された値が1ずつ増え、3になります。一方nameは各インスタンス固有なので、b.nameは「戦士」です。"
+  }
+]
