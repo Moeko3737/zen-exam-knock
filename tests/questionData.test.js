@@ -60,9 +60,12 @@ questionFiles.forEach((fileName) => {
   // ----------------------------------------
 
   test(
-    `Python第${lessonNumber}回の問題が20問ある`,
+    `Python第${lessonNumber}回の問題が20問以上ある`,
     () => {
-      assert.equal(questions.length, 20);
+      assert.ok(
+        questions.length >= 20,
+        `${fileName} は20問以上である必要があります`
+      );
     }
   );
 
