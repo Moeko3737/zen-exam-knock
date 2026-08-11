@@ -1,0 +1,282 @@
+[
+  {
+    "id": "py02-001",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nx = 10\nx + 5",
+    "choices": [
+      "15",
+      "10",
+      "5",
+      "何も表示されない"
+    ],
+    "answer": 0,
+    "explanation": "「x + 5」は式です。式は評価されると値15になります。Colabなどで式を実行すると、その評価結果が表示されます。"
+  },
+  {
+    "id": "py02-002",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードを実行したとき、print()で表示される値はどれですか？\n\n底辺 = 6\n高さ = 4\n面積 = 底辺 * 高さ / 2\nprint(面積)",
+    "choices": [
+      "10.0",
+      "12.0",
+      "24.0",
+      "48.0"
+    ],
+    "answer": 1,
+    "explanation": "6 × 4 ÷ 2 = 12.0です。「/」による割り算の結果は浮動小数点数になります。"
+  },
+  {
+    "id": "py02-003",
+    "subject": "python",
+    "lesson": 2,
+    "question": "変数「合計」の値を画面に表示するコードとして正しいものはどれですか？",
+    "choices": [
+      "print(合計)",
+      "print('合計')",
+      "合計(print)",
+      "print = 合計"
+    ],
+    "answer": 0,
+    "explanation": "変数の値を表示するときは、print()のカッコ内に変数名を記述します。print('合計')では、文字列の「合計」が表示されます。"
+  },
+  {
+    "id": "py02-004",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\n温度 = 28\n温度 = 27\nprint(温度)",
+    "choices": [
+      "28",
+      "27",
+      "28と27",
+      "エラーになる"
+    ],
+    "answer": 1,
+    "explanation": "変数には後から新しい値を代入できます。最後に温度へ代入された値は27なので、27が表示されます。"
+  },
+  {
+    "id": "py02-005",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいデータ型はどれですか？\n\ntype(6 / 2)",
+    "choices": [
+      "int",
+      "float",
+      "str",
+      "bool"
+    ],
+    "answer": 1,
+    "explanation": "「6 / 2」の結果は3.0となり、浮動小数点型のfloatです。"
+  },
+  {
+    "id": "py02-006",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(0.1 + 0.1 + 0.1)",
+    "choices": [
+      "0.3",
+      "0.30000000000000004",
+      "3.0",
+      "エラーになる"
+    ],
+    "answer": 1,
+    "explanation": "浮動小数点数は近似値で扱われるため、0.1 + 0.1 + 0.1 の結果は0.30000000000000004となります。"
+  },
+  {
+    "id": "py02-007",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\n朝 = 'おはよう'\n昼 = 'こんにちは'\nprint(朝 + 昼)",
+    "choices": [
+      "おはよう こんにちは",
+      "おはようこんにちは",
+      "朝昼",
+      "エラーになる"
+    ],
+    "answer": 1,
+    "explanation": "文字列同士を「+」でつなぐと連結されます。自動的に空白は入らないため、「おはようこんにちは」となります。"
+  },
+  {
+    "id": "py02-008",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint('ZEN' * 3)",
+    "choices": [
+      "ZEN3",
+      "ZEN ZEN ZEN",
+      "ZENZENZEN",
+      "エラーになる"
+    ],
+    "answer": 2,
+    "explanation": "文字列に整数を掛けると、その文字列が指定した回数だけ繰り返されます。"
+  },
+  {
+    "id": "py02-009",
+    "subject": "python",
+    "lesson": 2,
+    "question": "Pythonでブール型の「真」を表すコードとして正しいものはどれですか？",
+    "choices": [
+      "TRUE",
+      "true",
+      "True",
+      "'True'"
+    ],
+    "answer": 2,
+    "explanation": "Pythonのブール値はTrueとFalseです。先頭を大文字にして記述します。'True'はブール値ではなく文字列です。"
+  },
+  {
+    "id": "py02-010",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(10 >= 10)",
+    "choices": [
+      "True",
+      "False",
+      "10",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "「>=」は「以上」を表します。10は10以上なのでTrueになります。"
+  },
+  {
+    "id": "py02-011",
+    "subject": "python",
+    "lesson": 2,
+    "question": "変数「年齢」が18歳以上であることを判定するコードとして正しいものはどれですか？",
+    "choices": [
+      "年齢 > 18",
+      "年齢 >= 18",
+      "年齢 => 18",
+      "年齢 = 18"
+    ],
+    "answer": 1,
+    "explanation": "「以上」は境界の値を含むため「>=」を使用します。18歳ちょうどもTrueになります。"
+  },
+  {
+    "id": "py02-012",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\n年齢 = 25\nprint(年齢 >= 18 and 年齢 <= 30)",
+    "choices": [
+      "True",
+      "False",
+      "25",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "25は18歳以上かつ30歳以下なので、左右の条件が両方Trueとなり、andの結果もTrueです。"
+  },
+  {
+    "id": "py02-013",
+    "subject": "python",
+    "lesson": 2,
+    "question": "「学生である、または65歳以上である」という条件を表すコードとして正しいものはどれですか？",
+    "choices": [
+      "学生 and 年齢 >= 65",
+      "学生 or 年齢 >= 65",
+      "学生 not 年齢 >= 65",
+      "学生 == 年齢 >= 65"
+    ],
+    "answer": 1,
+    "explanation": "どちらか一方の条件を満たせばよい場合はor演算子を使います。"
+  },
+  {
+    "id": "py02-014",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\n在庫あり = False\nprint(not 在庫あり)",
+    "choices": [
+      "True",
+      "False",
+      "0",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "notはTrueとFalseを反転します。Falseを反転するためTrueになります。"
+  },
+  {
+    "id": "py02-015",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(int(True) + int(False))",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "TrueFalse"
+    ],
+    "answer": 1,
+    "explanation": "Trueを整数型に変換すると1、Falseは0になります。そのため1 + 0 = 1です。"
+  },
+  {
+    "id": "py02-016",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(bool(-1))",
+    "choices": [
+      "True",
+      "False",
+      "-1",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "整数をbool型に変換した場合、0だけがFalseとなり、0以外の整数はTrueになります。"
+  },
+  {
+    "id": "py02-017",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(bool('False'))",
+    "choices": [
+      "True",
+      "False",
+      "'False'",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "文字列をbool型へ変換すると、空文字列だけがFalseです。'False'は文字が入っているためTrueになります。"
+  },
+  {
+    "id": "py02-018",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(3 + 4 > 8)",
+    "choices": [
+      "True",
+      "False",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "算術演算が比較演算より先に行われます。まず3 + 4 = 7となり、その後7 > 8を評価するためFalseです。"
+  },
+  {
+    "id": "py02-019",
+    "subject": "python",
+    "lesson": 2,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(True or False and False)",
+    "choices": [
+      "True",
+      "False",
+      "TrueFalse",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "論理演算子の優先順位は not、and、or の順です。まずFalse and FalseがFalseとなり、その後True or Falseを評価するためTrueです。"
+  },
+  {
+    "id": "py02-020",
+    "subject": "python",
+    "lesson": 2,
+    "question": "変数「年齢」が7歳、5歳、3歳のいずれかであることを正しく判定するコードはどれですか？",
+    "choices": [
+      "年齢 == 7 or 年齢 == 5 or 年齢 == 3",
+      "年齢 == 7 or 5 or 3",
+      "年齢 = 7 or 年齢 = 5 or 年齢 = 3",
+      "年齢 == 7 and 年齢 == 5 and 年齢 == 3"
+    ],
+    "answer": 0,
+    "explanation": "orで複数の比較を行う場合、それぞれについて比較式を書く必要があります。「年齢 == 7 or 5 or 3」では意図した判定になりません。"
+  }
+]
