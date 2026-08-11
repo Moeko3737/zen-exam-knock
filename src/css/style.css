@@ -332,3 +332,31 @@ p {
 .choice-button:disabled {
   cursor: default;
 }
+
+/* ========================================
+   次の問題へ
+======================================== */
+
+.next-button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px 20px;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: #222;
+  background-color: #fff;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .next-button {
+    width: auto;
+    min-width: 180px;
+  }
+}

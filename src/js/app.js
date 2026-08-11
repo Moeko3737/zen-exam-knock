@@ -57,8 +57,24 @@ const choiceList = document.querySelector(
   "#choice-list"
 );
 
+const answerFeedback = document.querySelector(
+  "#answer-feedback"
+);
+
+const answerResult = document.querySelector(
+  "#answer-result"
+);
+
+const answerExplanation = document.querySelector(
+  "#answer-explanation"
+);
+
 const lessonList = document.querySelector(
   "#lesson-list"
+);
+
+const nextQuestionButton = document.querySelector(
+  "#next-question"
 );
 
 const backToSubjectButton = document.querySelector(
@@ -71,18 +87,6 @@ const backToModeButton = document.querySelector(
 
 const backToLessonButton = document.querySelector(
   "#back-to-lesson"
-);
-
-const answerFeedback = document.querySelector(
-  "#answer-feedback"
-);
-
-const answerResult = document.querySelector(
-  "#answer-result"
-);
-
-const answerExplanation = document.querySelector(
-  "#answer-explanation"
 );
 
 
@@ -129,6 +133,7 @@ function showSubjectSection() {
 function showModeSection(subject) {
   const subjectData = SUBJECTS[subject];
 
+  // 存在しない科目の場合はトップへ戻す
   if (!subjectData) {
     location.hash = "#/";
     return;
@@ -151,6 +156,7 @@ function showModeSection(subject) {
 function showLessonSection(subject) {
   const subjectData = SUBJECTS[subject];
 
+  // 存在しない科目の場合はトップへ戻す
   if (!subjectData) {
     location.hash = "#/";
     return;
@@ -206,18 +212,25 @@ function displayQuestion() {
     return;
   }
 
-  // 前の正誤結果をリセット
+  // 前の問題の正誤結果をリセット
   answerFeedback.hidden = true;
   answerResult.textContent = "";
   answerExplanation.textContent = "";
 
+  // 次の問題へボタンを隠す
+  nextQuestionButton.hidden = true;
+
+  // 現在の問題番号を表示
   questionProgress.textContent =
     `Q${currentQuestionIndex + 1} / ${currentQuestions.length}`;
 
+  // 問題文を表示
   quizHeading.textContent = question.question;
 
+  // 前の問題の選択肢を削除
   choiceList.replaceChildren();
 
+  // 選択肢を作成
   question.choices.forEach((choice, index) => {
     const button = document.createElement("button");
 
@@ -234,6 +247,7 @@ function displayQuestion() {
   });
 }
 
+
 // ========================================
 // 正誤判定
 // ========================================
@@ -249,6 +263,7 @@ function checkAnswer(selectedAnswer) {
     answerResult.textContent = "× 不正解";
   }
 
+  // 解説を表示
   answerExplanation.textContent = question.explanation;
 
   answerFeedback.hidden = false;
@@ -260,6 +275,9 @@ function checkAnswer(selectedAnswer) {
   choiceButtons.forEach((button) => {
     button.disabled = true;
   });
+
+  // 次の問題へ進むボタンを表示
+  nextQuestionButton.hidden = false;
 }
 
 
@@ -292,23 +310,29 @@ async function showQuizSection(subject, lesson) {
   quizSection.hidden = false;
 
   try {
+    // JSONから問題を読み込む
     currentQuestions = await loadQuestions(
       subject,
       lessonNumber
     );
 
+    // 1問目から開始
     currentQuestionIndex = 0;
 
     displayQuestion();
+
   } catch (error) {
     console.error(error);
+
+    questionProgress.textContent = "";
 
     quizHeading.textContent =
       "問題データを読み込めませんでした。";
 
-    questionProgress.textContent = "";
-
     choiceList.replaceChildren();
+
+    answerFeedback.hidden = true;
+    nextQuestionButton.hidden = true;
   }
 }
 
@@ -326,6 +350,7 @@ function router() {
     return;
   }
 
+  // URLを分解
   const parts = hash
     .replace("#/", "")
     .split("/");
@@ -378,6 +403,7 @@ modeCards.forEach((card) => {
   card.addEventListener("click", () => {
     const mode = card.dataset.mode;
 
+    // 回を指定して20問
     if (mode === "lesson") {
       location.hash =
         `#/${selectedSubject}/lesson`;
@@ -385,7 +411,7 @@ modeCards.forEach((card) => {
       return;
     }
 
-    // その他のモードは後で実装
+    // その他のモードは後で実装する
     console.log(
       `選択された学習モード: ${mode}`
     );
@@ -421,6 +447,30 @@ function createLessonButtons() {
 }
 
 createLessonButtons();
+
+
+// ========================================
+// 次の問題へ
+// ========================================
+
+nextQuestionButton.addEventListener("click", () => {
+  const isLastQuestion =
+    currentQuestionIndex === currentQuestions.length - 1;
+
+  // 最終問題の場合
+  if (isLastQuestion) {
+    console.log("全20問終了");
+
+    // 次に結果画面を実装する
+    return;
+  }
+
+  // 次の問題番号へ進む
+  currentQuestionIndex++;
+
+  // 次の問題を表示
+  displayQuestion();
+});
 
 
 // ========================================
