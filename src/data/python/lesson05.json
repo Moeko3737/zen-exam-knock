@@ -1,0 +1,282 @@
+[
+  {
+    "id": "py05-001",
+    "subject": "python",
+    "lesson": 5,
+    "question": "「Hello」と表示するユーザー定義関数 hello を正しく定義しているコードはどれですか？",
+    "choices": [
+      "def hello():\n    print(\"Hello\")",
+      "function hello():\n    print(\"Hello\")",
+      "def hello:\n    print(\"Hello\")",
+      "hello def():\n    print(\"Hello\")"
+    ],
+    "answer": 0,
+    "explanation": "ユーザー定義関数は「def 関数名():」の形で定義し、関数内の処理はインデントして書きます。"
+  },
+  {
+    "id": "py05-002",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次の関数を実行するための呼び出し方として正しいものはどれですか？\n\ndef start():\n    print(\"位置について\")\n    print(\"よーい\")\n    print(\"どん！\")",
+    "choices": [
+      "call start()",
+      "start",
+      "start()",
+      "call(start)"
+    ],
+    "answer": 2,
+    "explanation": "定義した関数を呼び出すときは、関数名の後ろに丸カッコを付けて「start()」と書きます。"
+  },
+  {
+    "id": "py05-003",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nimport math\nprint(math.sqrt(81))",
+    "choices": [
+      "81",
+      "9.0",
+      "9",
+      "エラーになる"
+    ],
+    "answer": 1,
+    "explanation": "math.sqrt(x)はxの平方根を戻り値として返します。81の平方根は9で、math.sqrt()の結果は9.0です。"
+  },
+  {
+    "id": "py05-004",
+    "subject": "python",
+    "lesson": 5,
+    "question": "ユーザーに「名前を入力してください：」と表示して入力を受け取るコードとして正しいものはどれですか？",
+    "choices": [
+      "name = input",
+      "name = input(default=\"名前を入力してください：\")",
+      "name = input(\"名前を入力してください：\")",
+      "name = print(\"名前を入力してください：\")"
+    ],
+    "answer": 2,
+    "explanation": "input()のカッコ内に文字列を渡すと、その文字列を質問文として表示してから入力を受け取れます。"
+  },
+  {
+    "id": "py05-005",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次のコードで「ZEN」と表示する呼び出しとして正しいものはどれですか？\n\ndef greeting(name):\n    print(name)",
+    "choices": [
+      "greeting()",
+      "greeting(\"ZEN\")",
+      "greeting = \"ZEN\"",
+      "greeting[name=\"ZEN\"]"
+    ],
+    "answer": 1,
+    "explanation": "関数定義のnameは仮引数です。呼び出すときに実引数として「ZEN」を渡すと、nameに「ZEN」が入り表示されます。"
+  },
+  {
+    "id": "py05-006",
+    "subject": "python",
+    "lesson": 5,
+    "question": "関数 greeting の説明をドックストリングとして正しく記述しているものはどれですか？",
+    "choices": [
+      "def greeting(name):\n    \"\"\"ユーザーに挨拶する関数\"\"\"\n    print(\"こんにちは、\" + name)",
+      "def greeting(name):\n    ##ユーザーに挨拶する関数##\n    print(\"こんにちは、\" + name)",
+      "def greeting(name):\n    docstring(\"ユーザーに挨拶する関数\")\n    print(\"こんにちは、\" + name)",
+      "\"\"\"ユーザーに挨拶する関数\"\"\"\ndef greeting(name):\n    print(\"こんにちは、\" + name)"
+    ],
+    "answer": 0,
+    "explanation": "ドックストリングは関数定義の直後に三重引用符で囲んで記述します。help(関数名)でその説明を確認できます。"
+  },
+  {
+    "id": "py05-007",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\ndef profile(name, age):\n    print(name + \"：\" + str(age))\n\nprofile(\"アオイ\", 20)",
+    "choices": [
+      "20：アオイ",
+      "アオイ：20",
+      "アオイ：age",
+      "エラーになる"
+    ],
+    "answer": 1,
+    "explanation": "位置引数は関数定義の順番に対応します。nameには「アオイ」、ageには20が入り、「アオイ：20」と表示されます。"
+  },
+  {
+    "id": "py05-008",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\ndef profile(name, age):\n    print(name + \"：\" + str(age))\n\nprofile(age=20, name=\"アオイ\")",
+    "choices": [
+      "20：アオイ",
+      "name：age",
+      "アオイ：20",
+      "キーワード引数の順番が逆なのでエラーになる"
+    ],
+    "answer": 2,
+    "explanation": "キーワード引数は仮引数名を指定して値を渡すため、呼び出し時の順番を入れ替えても問題ありません。"
+  },
+  {
+    "id": "py05-009",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次の関数の呼び出しとして、正しく実行できるものはどれですか？\n\ndef meals(breakfast, lunch, dinner):\n    print(breakfast, lunch, dinner)",
+    "choices": [
+      "meals(\"焼き魚\", lunch=\"チャーハン\", dinner=\"ピザ\")",
+      "meals(breakfast=\"焼き魚\", \"チャーハン\", \"ピザ\")",
+      "meals(\"焼き魚\", breakfast=\"パン\", dinner=\"ピザ\")",
+      "meals(lunch=\"チャーハン\", dinner=\"ピザ\")"
+    ],
+    "answer": 0,
+    "explanation": "位置引数とキーワード引数を混在させる場合、位置引数を先に書きます。1つ目はbreakfastを位置引数で渡し、残りをキーワード引数で指定しているため正しく実行できます。"
+  },
+  {
+    "id": "py05-010",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次の関数を正しく呼び出せるコードはどれですか？\n\ndef square(x, /):\n    return x ** 2",
+    "choices": [
+      "square(x=3)",
+      "square()",
+      "square(value=3)",
+      "square(3)"
+    ],
+    "answer": 3,
+    "explanation": "「/」より前の仮引数は位置専用引数です。xはキーワードでは指定できないため、square(3)のように位置引数として渡します。"
+  },
+  {
+    "id": "py05-011",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次の関数を正しく呼び出せるコードはどれですか？\n\ndef greeting(*, name):\n    print(\"こんにちは、\" + name)",
+    "choices": [
+      "greeting(\"ZEN\")",
+      "greeting(name=\"ZEN\")",
+      "greeting(ZEN)",
+      "greeting()"
+    ],
+    "answer": 1,
+    "explanation": "「*」より後の仮引数はキーワード専用引数です。そのためname=\"ZEN\"のように仮引数名を指定して渡します。"
+  },
+  {
+    "id": "py05-012",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\ndef greeting(name=\"ゲスト\"):\n    print(name)\n\ngreeting()\ngreeting(\"ZEN\")",
+    "choices": [
+      "ゲスト\nZEN",
+      "ZEN\nゲスト",
+      "ゲスト\nゲスト",
+      "引数を省略しているため1回目の呼び出しでエラーになる"
+    ],
+    "answer": 0,
+    "explanation": "1回目は引数を省略しているためデフォルト値「ゲスト」が使われます。2回目は「ZEN」を渡しているため、その値が使われます。"
+  },
+  {
+    "id": "py05-013",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次の関数定義を実行するとどうなりますか？\n\ndef greeting(name=\"ゲスト\", age):\n    print(name, age)",
+    "choices": [
+      "正しく定義され、nameだけ省略できる",
+      "正しく定義され、ageだけ省略できる",
+      "デフォルト値のある引数より後にデフォルト値のない引数があるためエラーになる",
+      "すべての引数に自動的にデフォルト値Noneが設定される"
+    ],
+    "answer": 2,
+    "explanation": "デフォルト値のない引数を先に、デフォルト値のある引数を後に書く必要があります。この順番では関数定義時にエラーになります。"
+  },
+  {
+    "id": "py05-014",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\ndef celsius_to_fahrenheit(celsius):\n    return celsius * 9 / 5 + 32\n\nprint(celsius_to_fahrenheit(0))",
+    "choices": [
+      "0",
+      "32.0",
+      "32",
+      "273.15"
+    ],
+    "answer": 1,
+    "explanation": "returnで計算結果を戻り値として返します。0 * 9 / 5 + 32 の結果は32.0です。"
+  },
+  {
+    "id": "py05-015",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\ndef peace():\n    print(\"peace\")\n\nresult = peace()\nprint(result)",
+    "choices": [
+      "peace\nNone",
+      "peace",
+      "None",
+      "戻り値がないためエラーになる"
+    ],
+    "answer": 0,
+    "explanation": "peace()は「peace」を表示しますが、returnで値を返していないため戻り値はNoneです。そのNoneがresultに代入され、続けて表示されます。"
+  },
+  {
+    "id": "py05-016",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\ndef sample():\n    print(\"A\")\n    return 10\n    print(\"B\")\n\nprint(sample())",
+    "choices": [
+      "A\nB\n10",
+      "A\n10",
+      "10\nB",
+      "A\nB"
+    ],
+    "answer": 1,
+    "explanation": "returnが実行された時点で関数の処理は終了します。そのため「B」は表示されず、「A」の後に戻り値10が表示されます。"
+  },
+  {
+    "id": "py05-017",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\ndef double(x):\n    return x * 2\n\ntwice = double\nprint(twice(4))",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "関数に別名を付けることはできないためエラーになる"
+    ],
+    "answer": 2,
+    "explanation": "関数は別の変数に代入して別名で呼び出すことができます。twiceはdoubleと同じ関数を参照するため、twice(4)は8を返します。"
+  },
+  {
+    "id": "py05-018",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\ndef bank(money):\n    return money * 1.03\n    return money * 1.02\n    return money * 1.01\n\nprint(bank(100))",
+    "choices": [
+      "101.0",
+      "102.0",
+      "103.0",
+      "306.0"
+    ],
+    "answer": 2,
+    "explanation": "最初のreturnが実行された時点で関数は終了するため、それ以降のreturnは実行されません。100 * 1.03 = 103.0が戻り値です。"
+  },
+  {
+    "id": "py05-019",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nscore = 10\n\ndef change_score():\n    score = 20\n    print(score)\n\nchange_score()\nprint(score)",
+    "choices": [
+      "10\n10",
+      "20\n20",
+      "10\n20",
+      "20\n10"
+    ],
+    "answer": 3,
+    "explanation": "関数内で作られたscoreはローカル変数で、関数外のグローバル変数scoreとは別物です。関数内では20、その後グローバルの10が表示されます。"
+  },
+  {
+    "id": "py05-020",
+    "subject": "python",
+    "lesson": 5,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nanswer = 1\n\ndef initial_answer():\n    answer = 3\n\ndef final_answer(answer):\n    answer = answer * 2\n\ninitial_answer()\nfinal_answer(2)\nprint(answer)",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 0,
+    "explanation": "initial_answer()内のanswerも、final_answer()の仮引数answerもローカル変数です。グローバル変数answerの値1は変更されないため、最後に1が表示されます。"
+  }
+]
