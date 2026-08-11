@@ -1,0 +1,282 @@
+[
+  {
+    "id": "py06-001",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nprint(list(\"ZEN\"))",
+    "choices": [
+      "[\"ZEN\"]",
+      "[\"Z\", \"E\", \"N\"]",
+      "\"Z\", \"E\", \"N\"",
+      "(\"Z\", \"E\", \"N\")"
+    ],
+    "answer": 1,
+    "explanation": "list()に文字列を渡すと、文字列が1文字ずつ分解されてリストになります。"
+  },
+  {
+    "id": "py06-002",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nnumbers = [0] * 5\nprint(numbers)",
+    "choices": [
+      "[0, 0, 0, 0, 0]",
+      "[5]",
+      "[0, 5]",
+      "0"
+    ],
+    "answer": 0,
+    "explanation": "リストに * を使うと、リストの要素を指定した回数だけ繰り返します。[0] * 5 は0が5個入ったリストになります。"
+  },
+  {
+    "id": "py06-003",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nfirst = [\"a\", \"b\"]\nsecond = [\"c\", \"d\"]\nprint(first + second)",
+    "choices": [
+      "[\"a\", \"b\", \"c\", \"d\"]",
+      "[\"ab\", \"cd\"]",
+      "[[\"a\", \"b\"], [\"c\", \"d\"]]",
+      "[\"a\", \"b\"]"
+    ],
+    "answer": 0,
+    "explanation": "リスト同士に + を使うと、2つのリストを連結した新しいリストができます。"
+  },
+  {
+    "id": "py06-004",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nusers = [\"アリス\", \"ボブ\", \"チャーリー\"]\nprint(\"デイビッド\" not in users)",
+    "choices": [
+      "True",
+      "False",
+      "None",
+      "エラーになる"
+    ],
+    "answer": 0,
+    "explanation": "not in は、指定した要素が含まれていない場合にTrueを返します。「デイビッド」はusersに含まれていないのでTrueです。"
+  },
+  {
+    "id": "py06-005",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nmonths = [\"睦月\", \"如月\", \"弥生\"]\nfor i, month in enumerate(months):\n    print(str(i + 1) + \"月：\" + month)",
+    "choices": [
+      "0月：睦月、1月：如月、2月：弥生",
+      "1月：睦月、2月：如月、3月：弥生",
+      "睦月、如月、弥生だけが表示される",
+      "1、2、3だけが表示される"
+    ],
+    "answer": 1,
+    "explanation": "enumerate()を使うとインデックスと要素を同時に取得できます。iは0から始まりますが、表示するときにi + 1としているため1月から3月になります。"
+  },
+  {
+    "id": "py06-006",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nnumeros = [\"uno\", \"dos\", \"tres\", \"cuatro\", \"cinco\"]\nprint(numeros[-2])",
+    "choices": [
+      "cinco",
+      "cuatro",
+      "tres",
+      "dos"
+    ],
+    "answer": 1,
+    "explanation": "負のインデックスはリストの最後から数えます。-1が最後の「cinco」、-2が最後から2番目の「cuatro」です。"
+  },
+  {
+    "id": "py06-007",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nnumeros = [\"uno\", \"dos\", \"tres\", \"cuatro\", \"cinco\"]\nprint(numeros[1:3])",
+    "choices": [
+      "[\"uno\", \"dos\", \"tres\"]",
+      "[\"dos\", \"tres\"]",
+      "[\"dos\", \"tres\", \"cuatro\"]",
+      "[\"tres\", \"cuatro\"]"
+    ],
+    "answer": 1,
+    "explanation": "スライスでは開始位置は含まれますが、終了位置は含まれません。インデックス1と2の「dos」「tres」が取り出されます。"
+  },
+  {
+    "id": "py06-008",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nnumbers = [\"one\", \"two\", \"three\", \"four\", \"five\"]\nprint(numbers[::2])",
+    "choices": [
+      "[\"one\", \"two\"]",
+      "[\"two\", \"four\"]",
+      "[\"one\", \"three\", \"five\"]",
+      "[\"one\", \"two\", \"three\", \"four\"]"
+    ],
+    "answer": 2,
+    "explanation": "スライスの3つ目の値は差分です。[::2]は先頭から2つおきに要素を取り出すため、「one」「three」「five」になります。"
+  },
+  {
+    "id": "py06-009",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nbronze_medals = [5, 12, 10, 17, 21, 17]\nprint(min(bronze_medals))",
+    "choices": [
+      "5",
+      "10",
+      "17",
+      "21"
+    ],
+    "answer": 0,
+    "explanation": "min()は、リストに含まれる値の中から最小値を返します。このリストの最小値は5です。"
+  },
+  {
+    "id": "py06-010",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\ngold_medals = [5, 16, 9, 7, 12, 27]\nprint(sum(gold_medals[3:6]))",
+    "choices": [
+      "39",
+      "46",
+      "55",
+      "76"
+    ],
+    "answer": 1,
+    "explanation": "gold_medals[3:6]は[7, 12, 27]です。sum()で合計すると7 + 12 + 27 = 46になります。"
+  },
+  {
+    "id": "py06-011",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードを実行した後のweekとして正しいものはどれですか？\n\nweek = [\"Mon\", \"Wed\", \"Tue\"]\nnew_week = sorted(week)",
+    "choices": [
+      "[\"Mon\", \"Tue\", \"Wed\"]",
+      "[\"Mon\", \"Wed\", \"Tue\"]",
+      "[\"Wed\", \"Tue\", \"Mon\"]",
+      "None"
+    ],
+    "answer": 1,
+    "explanation": "sorted()は並び替えた新しいリストを返す非破壊的な関数です。元のweek自体は変更されないため、[\"Mon\", \"Wed\", \"Tue\"]のままです。"
+  },
+  {
+    "id": "py06-012",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nnumbers = [3, 1, 2]\nresult = numbers.sort()\nprint(numbers)\nprint(result)",
+    "choices": [
+      "[1, 2, 3]\nNone",
+      "[3, 1, 2]\n[1, 2, 3]",
+      "[1, 2, 3]\n[1, 2, 3]",
+      "None\n[1, 2, 3]"
+    ],
+    "answer": 0,
+    "explanation": "sort()は元のリスト自身を並び替えるメソッドなのでnumbersは[1, 2, 3]になります。一方、sort()は戻り値を返さないためresultはNoneです。"
+  },
+  {
+    "id": "py06-013",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nweek = [\"Mon\", \"Tue\", \"Wed\", \"Thu\"]\nweek.reverse()\nweek.reverse()\nprint(week)",
+    "choices": [
+      "[\"Thu\", \"Wed\", \"Tue\", \"Mon\"]",
+      "[\"Mon\", \"Tue\", \"Wed\", \"Thu\"]",
+      "[\"Tue\", \"Wed\", \"Thu\", \"Mon\"]",
+      "None"
+    ],
+    "answer": 1,
+    "explanation": "reverse()はリスト自身の順番を逆にします。2回reverse()すると、再び元の順番に戻ります。"
+  },
+  {
+    "id": "py06-014",
+    "subject": "python",
+    "lesson": 6,
+    "question": "リストから要素を1つランダムに選ぶコードとして正しいものはどれですか？",
+    "choices": [
+      "random.shuffle(names)",
+      "random.choice(names)",
+      "names.random()",
+      "names.choice()"
+    ],
+    "answer": 1,
+    "explanation": "random.choice()は、リストなどから要素を1つランダムに選びます。random.shuffle()はリストそのものをランダムな順番に並び替える処理です。"
+  },
+  {
+    "id": "py06-015",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のリストを「カルメン」「魔笛」「セビリアの理髪師」「フィガロの結婚」の順に変更するコードはどれですか？\n\noperas = [\"カルメン\", \"魔笛\", \"フィガロの結婚\"]",
+    "choices": [
+      "operas.append(\"セビリアの理髪師\")",
+      "operas.insert(2, \"セビリアの理髪師\")",
+      "operas.extend(\"セビリアの理髪師\")",
+      "operas[0] = \"セビリアの理髪師\""
+    ],
+    "answer": 1,
+    "explanation": "insert(インデックス, 値)を使うと、指定した位置に新しい要素を挿入できます。インデックス2は3番目の位置です。"
+  },
+  {
+    "id": "py06-016",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nitems = [\"A\", \"B\"]\nitems.extend([\"C\", \"D\"])\nprint(items)",
+    "choices": [
+      "[\"A\", \"B\", [\"C\", \"D\"]]",
+      "[\"A\", \"B\", \"C\", \"D\"]",
+      "[\"C\", \"D\", \"A\", \"B\"]",
+      "[\"A\", \"B\"]"
+    ],
+    "answer": 1,
+    "explanation": "extend()は複数の要素をリストの末尾に追加します。そのため「C」と「D」がそれぞれ1つの要素として追加されます。"
+  },
+  {
+    "id": "py06-017",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\nitems = [\"a\", \"b\", \"c\"]\nremoved = items.pop(1)\nprint(removed)\nprint(items)",
+    "choices": [
+      "a\n[\"b\", \"c\"]",
+      "b\n[\"a\", \"c\"]",
+      "b\n[\"a\", \"b\", \"c\"]",
+      "c\n[\"a\", \"b\"]"
+    ],
+    "answer": 1,
+    "explanation": "pop(1)はインデックス1の「b」をリストから削除し、その削除した値を戻り値として返します。"
+  },
+  {
+    "id": "py06-018",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードの実行結果として正しいものはどれですか？\n\na = [1, 2]\nb = a\nc = a.copy()\nb.append(3)\nprint(a)\nprint(c)",
+    "choices": [
+      "[1, 2]\n[1, 2]",
+      "[1, 2, 3]\n[1, 2, 3]",
+      "[1, 2, 3]\n[1, 2]",
+      "[1, 2]\n[1, 2, 3]"
+    ],
+    "answer": 2,
+    "explanation": "b = a は同じリストを参照するため、bを変更するとaも変わります。一方、a.copy()で作ったcは別のリストなので変更されません。"
+  },
+  {
+    "id": "py06-019",
+    "subject": "python",
+    "lesson": 6,
+    "question": "次のコードを実行するとどうなりますか？\n\nnumbers = (1, 2, 3)\nnumbers[0] = 10",
+    "choices": [
+      "numbersが(10, 2, 3)になる",
+      "numbersが[10, 2, 3]になる",
+      "値を変更できないためエラーになる",
+      "何も起こらない"
+    ],
+    "answer": 2,
+    "explanation": "タプルはイミュータブルなオブジェクトなので、作成後に要素の値を変更することはできません。"
+  },
+  {
+    "id": "py06-020",
+    "subject": "python",
+    "lesson": 6,
+    "question": "破壊的処理と非破壊的処理の組み合わせとして正しいものはどれですか？",
+    "choices": [
+      "sort()は破壊的、sorted()は非破壊的",
+      "sort()は非破壊的、sorted()は破壊的",
+      "random.choice()は破壊的、random.shuffle()は非破壊的",
+      "すべて非破壊的"
+    ],
+    "answer": 0,
+    "explanation": "sort()は元のリスト自身を並び替えるため破壊的処理です。sorted()は元のオブジェクトを変更せず、新しいリストを返すため非破壊的処理です。"
+  }
+]
