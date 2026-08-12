@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>ZEN Exam Knock</title>
 
-  <link rel="stylesheet" href="./src/css/style.css">
+  <link
+    rel="stylesheet"
+    href="./src/css/style.css"
+  >
 </head>
 
 <body>
 
-  <header>
-    <h1>ZEN Exam Knock</h1>
-    <p>授業内容をクイズ形式で復習できる試験対策サイト</p>
+  <!-- ========================================
+       ヘッダー
+  ========================================= -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <h1 class="site-title">
+        ZEN Exam Knock
+      </h1>
+
+      <p class="site-description">
+        授業内容をクイズ形式で復習できる試験対策サイト
+      </p>
+
+    </div>
   </header>
 
+
+  <!-- ========================================
+       メインコンテンツ
+  ========================================= -->
   <main>
+
 
     <!-- ========================================
          科目選択
@@ -28,10 +51,15 @@
       aria-labelledby="subject-heading"
       hidden
     >
-      <h2 id="subject-heading">科目を選択</h2>
+
+      <h2 id="subject-heading">
+        科目を選択
+      </h2>
 
       <div class="subject-list">
 
+
+        <!-- Python -->
         <button
           type="button"
           class="subject-card"
@@ -46,6 +74,8 @@
           </span>
         </button>
 
+
+        <!-- Webアプリ -->
         <button
           type="button"
           class="subject-card"
@@ -60,7 +90,25 @@
           </span>
         </button>
 
+
+        <!-- 情報倫理 -->
+        <button
+          type="button"
+          class="subject-card"
+          data-subject="ethics"
+        >
+          <span class="subject-name">
+            情報倫理と法
+          </span>
+
+          <span class="subject-info">
+            全15回
+          </span>
+        </button>
+
+
       </div>
+
     </section>
 
 
@@ -73,6 +121,7 @@
       aria-labelledby="mode-heading"
       hidden
     >
+
       <button
         type="button"
         class="back-button"
@@ -81,45 +130,83 @@
         ← 科目選択に戻る
       </button>
 
-      <p id="selected-subject-name"></p>
 
-      <h2 id="mode-heading">学習モードを選択</h2>
+      <p
+        class="screen-subject-name"
+        id="selected-subject-name"
+      ></p>
+
+
+      <h2 id="mode-heading">
+        学習方法を選択
+      </h2>
+
 
       <div class="mode-list">
+
 
         <button
           type="button"
           class="mode-card"
           data-mode="lesson"
         >
-          回を指定して挑戦
+          <span class="mode-name">
+            回を指定して学習
+          </span>
+
+          <span class="mode-info">
+            授業回を選んで全問に挑戦
+          </span>
         </button>
+
 
         <button
           type="button"
           class="mode-card"
           data-mode="mix"
         >
-          全範囲MIX
+          <span class="mode-name">
+            全範囲MIX
+          </span>
+
+          <span class="mode-info">
+            準備中
+          </span>
         </button>
+
 
         <button
           type="button"
           class="mode-card"
           data-mode="knock100"
         >
-          100問ノック
+          <span class="mode-name">
+            100問ノック
+          </span>
+
+          <span class="mode-info">
+            準備中
+          </span>
         </button>
+
 
         <button
           type="button"
           class="mode-card"
           data-mode="mistakes"
         >
-          間違えた問題の復習
+          <span class="mode-name">
+            間違えた問題の復習
+          </span>
+
+          <span class="mode-info">
+            間違えた問題だけを再挑戦
+          </span>
         </button>
 
+
       </div>
+
     </section>
 
 
@@ -132,52 +219,85 @@
       aria-labelledby="lesson-heading"
       hidden
     >
+
       <button
         type="button"
         class="back-button"
         id="back-to-mode"
       >
-        ← 学習モード選択に戻る
+        ← 学習方法に戻る
       </button>
 
-      <p id="lesson-subject-name"></p>
 
-      <h2 id="lesson-heading">授業回を選択</h2>
+      <p
+        class="screen-subject-name"
+        id="lesson-subject-name"
+      ></p>
+
+
+      <h2 id="lesson-heading">
+        授業回を選択
+      </h2>
+
 
       <div
         class="lesson-list"
         id="lesson-list"
       ></div>
+
     </section>
 
-<!-- ========================================
-     問題画面
-======================================== -->
+
+    <!-- ========================================
+         問題画面
+    ========================================= -->
     <section
       class="quiz-section"
       id="quiz-section"
       aria-labelledby="quiz-heading"
       hidden
     >
+
       <button
         type="button"
         class="back-button"
         id="back-to-lesson"
       >
-        ← 授業回選択に戻る
+        ← 戻る
       </button>
 
-      <p id="quiz-subject-name"></p>
-      <p id="quiz-lesson-name"></p>
 
-      <p id="question-progress"></p>
+      <!-- 問題の情報 -->
+      <div class="quiz-meta">
 
-      <h2 id="quiz-heading" class="question-text"></h2>
+        <div class="quiz-meta-left">
 
+          <p id="quiz-subject-name"></p>
+
+          <p id="quiz-lesson-name"></p>
+
+        </div>
+
+        <p id="question-progress"></p>
+
+      </div>
+
+
+      <!-- 問題文 -->
+      <h2
+        id="quiz-heading"
+        class="question-text"
+      ></h2>
+
+
+      <!-- 選択肢 -->
       <div
         class="choice-list"
         id="choice-list"
       ></div>
+
+
+      <!-- 正誤・解説 -->
       <div
         class="answer-feedback"
         id="answer-feedback"
@@ -185,9 +305,15 @@
         aria-live="polite"
         hidden
       >
+
         <p id="answer-result"></p>
+
         <p id="answer-explanation"></p>
+
       </div>
+
+
+      <!-- 次へ -->
       <button
         type="button"
         class="next-button"
@@ -196,55 +322,96 @@
       >
         次の問題へ
       </button>
+
     </section>
+
+
     <!-- ========================================
-        結果画面
-    ======================================== -->
+         結果画面
+    ========================================= -->
     <section
       class="result-section"
       id="result-section"
       aria-labelledby="result-heading"
       hidden
     >
-      <p id="result-subject-name"></p>
-      <p id="result-lesson-name"></p>
 
-      <h2 id="result-heading">結果</h2>
+      <p
+        class="screen-subject-name"
+        id="result-subject-name"
+      ></p>
+
+      <p
+        class="result-lesson-name"
+        id="result-lesson-name"
+      ></p>
+
+
+      <h2 id="result-heading">
+        結果
+      </h2>
+
 
       <div class="result-summary">
-        <p>
-          正解数
-          <strong id="result-score"></strong>
-        </p>
 
-        <p>
-          正答率
+        <div class="result-item">
+
+          <span class="result-label">
+            正解数
+          </span>
+
+          <strong id="result-score"></strong>
+
+        </div>
+
+
+        <div class="result-item">
+
+          <span class="result-label">
+            正答率
+          </span>
+
           <strong id="result-rate"></strong>
-        </p>
+
+        </div>
+
       </div>
 
+
       <div class="result-actions">
+
         <button
           type="button"
+          class="primary-button"
           id="retry-quiz"
         >
           もう一度挑戦
         </button>
 
+
         <button
           type="button"
-          class="back-button"
+          class="secondary-button"
           id="result-to-lesson"
         >
           ← 授業回選択に戻る
         </button>
+
       </div>
+
     </section>
+
+
   </main>
 
 
-  <script type="module" src="./src/js/app.js"></script>
+  <!-- ========================================
+       JavaScript
+  ========================================= -->
+  <script
+    type="module"
+    src="./src/js/app.js"
+  ></script>
 
 </body>
-
 </html>

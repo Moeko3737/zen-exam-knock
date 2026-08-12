@@ -1,10 +1,13 @@
 /* ========================================
-   基本設定
+基本設定
 ======================================== */
 
-/* paddingやborderを含めてサイズ計算する */
 * {
   box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 html {
@@ -13,6 +16,7 @@ html {
 
 body {
   margin: 0;
+
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -23,440 +27,824 @@ body {
     sans-serif;
 
   color: #222;
-  background-color: #f7f7f7;
+  background-color: #f6f7f8;
+
   line-height: 1.6;
 }
 
-
-/* ========================================
-   ヘッダー
-======================================== */
-
-header {
-  width: 100%;
-  padding: 20px 16px;
-  text-align: center;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+button {
+  font: inherit;
 }
 
-h1 {
-  margin: 0;
-  font-size: 1.75rem;
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
-
-/* ========================================
-   メインコンテンツ
-======================================== */
-
-main {
-  width: 100%;
-  max-width: 960px;
-  margin: 32px auto;
-  padding: 0 16px;
-}
-
+h1,
+h2,
 p {
   margin-top: 0;
 }
 
 
 /* ========================================
-   PC表示
+ヘッダー
 ======================================== */
 
-@media (min-width: 768px) {
-  header {
-    padding: 24px 32px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  main {
-    margin: 40px auto;
-    padding: 0 24px;
-  }
-}
-
-/* ========================================
-   科目選択
-======================================== */
-
-.subject-section h2 {
-  margin-bottom: 16px;
-  font-size: 1.4rem;
-}
-
-.subject-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-.subject-card {
+.site-header {
   width: 100%;
-  padding: 24px 20px;
 
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  padding: 22px 16px;
 
-  text-align: left;
-
-  color: #222;
   background-color: #fff;
 
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  border-bottom: 1px solid #e2e4e7;
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 880px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.site-title {
+  margin: 0;
+
+  font-size: 1.55rem;
+  font-weight: 750;
+
+  line-height: 1.3;
+}
+
+.site-description {
+  margin: 6px 0 0;
+
+  color: #666;
+
+  font-size: 0.85rem;
+}
+
+
+/* ========================================
+メイン
+======================================== */
+
+main {
+  width: 100%;
+  max-width: 880px;
+
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+
+/* ========================================
+共通見出し
+======================================== */
+
+.subject-section h2,
+.mode-section h2,
+.lesson-section h2,
+.result-section h2 {
+  margin-bottom: 18px;
+
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+
+/* ========================================
+画面上部の科目名
+======================================== */
+
+.screen-subject-name {
+  margin-bottom: 4px;
+
+  color: #666;
+
+  font-size: 0.9rem;
+}
+
+
+/* ========================================
+戻るボタン
+======================================== */
+
+.back-button {
+  display: inline-flex;
+
+  margin: 0 0 20px;
+  padding: 4px 0;
+
+  color: #666;
+  background: none;
+
+  border: 0;
+
+  font-size: 0.9rem;
 
   cursor: pointer;
 }
 
+.back-button:hover {
+  color: #222;
+}
+
+
+/* ========================================
+科目選択
+======================================== */
+
+.subject-list {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 12px;
+}
+
+.subject-card {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  padding: 18px 20px;
+
+  color: #222;
+  background-color: #fff;
+
+  border: 1px solid #dfe1e4;
+  border-radius: 12px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.subject-card:hover {
+  border-color: #b8bcc2;
+
+  box-shadow:
+    0 4px 12px
+    rgba(0, 0, 0, 0.05);
+
+  transform: translateY(-1px);
+}
+
 .subject-name {
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .subject-info {
-  font-size: 0.9rem;
-  color: #666;
+  color: #777;
+
+  font-size: 0.82rem;
 }
 
 
 /* ========================================
-   科目選択：PC表示
+学習方法
 ======================================== */
-
-@media (min-width: 768px) {
-  .subject-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .subject-card {
-    padding: 28px 24px;
-  }
-}
-/* ========================================
-   学習モード選択
-======================================== */
-
-.mode-section h2 {
-  margin-bottom: 16px;
-  font-size: 1.4rem;
-}
-
-#selected-subject-name {
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-  color: #666;
-}
 
 .mode-list {
   display: grid;
+
   grid-template-columns: 1fr;
+
   gap: 12px;
 }
 
 .mode-card {
   width: 100%;
-  min-height: 64px;
-  padding: 16px 20px;
 
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  min-height: 68px;
+
+  padding: 15px 18px;
 
   color: #222;
   background-color: #fff;
 
-  border: 1px solid #ddd;
+  border: 1px solid #dfe1e4;
   border-radius: 12px;
 
+  text-align: left;
+
   cursor: pointer;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.mode-card:hover {
+  border-color: #b8bcc2;
+
+  box-shadow:
+    0 4px 12px
+    rgba(0, 0, 0, 0.05);
+
+  transform: translateY(-1px);
+}
+
+.mode-name {
+  font-weight: 700;
+}
+
+.mode-info {
+  color: #777;
+
+  font-size: 0.82rem;
+  font-weight: 400;
 }
 
 
 /* ========================================
-   学習モード選択：PC表示
-======================================== */
-
-@media (min-width: 768px) {
-  .mode-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .mode-card {
-    min-height: 72px;
-    padding: 20px 24px;
-  }
-}
-
-/* ========================================
-   授業回選択
+授業回選択
 ======================================== */
 
 .lesson-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
 }
 
 .lesson-card {
   width: 100%;
   min-height: 52px;
-  padding: 12px;
 
-  font-size: 1rem;
+  padding: 11px 8px;
 
   color: #222;
   background-color: #fff;
 
-  border: 1px solid #ddd;
+  border: 1px solid #dfe1e4;
   border-radius: 10px;
 
+  text-align: center;
+
   cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
 }
 
-.back-button {
-  margin-bottom: 16px;
-  padding: 8px 0;
-
-  font-size: 0.9rem;
-
-  color: #555;
-  background: none;
-
-  border: none;
-
-  cursor: pointer;
+.lesson-card:hover {
+  background-color: #fafafa;
+  border-color: #b8bcc2;
 }
 
 
 /* ========================================
-   授業回選択：PC表示
-======================================== */
-
-@media (min-width: 768px) {
-  .lesson-list {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-/* ========================================
-   問題画面
+問題画面
 ======================================== */
 
 .quiz-section {
   width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
 }
 
-#quiz-subject-name,
-#quiz-lesson-name,
-#question-progress {
-  margin-bottom: 8px;
-  color: #666;
+
+/* ========================================
+問題画面上部
+======================================== */
+
+.quiz-section .back-button {
+  margin-bottom: 14px;
 }
+
+.quiz-meta {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 16px;
+
+  margin-bottom: 22px;
+}
+
+.quiz-meta-left {
+  min-width: 0;
+}
+
+#quiz-subject-name {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 0.86rem;
+}
+
+#quiz-lesson-name {
+  margin: 2px 0 0;
+
+  color: #777;
+
+  font-size: 0.86rem;
+}
+
+#question-progress {
+  flex-shrink: 0;
+
+  margin: 0;
+
+  color: #777;
+
+  font-size: 0.86rem;
+}
+
+
+/* ========================================
+問題文
+======================================== */
 
 .question-text {
-  margin: 24px 0;
-  font-size: 1.2rem;
+  margin: 0 0 22px;
+
+  color: #222;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  line-height: 1.75;
+
+  text-align: left;
+
   white-space: pre-wrap;
 }
+
+
+/* ========================================
+選択肢
+======================================== */
 
 .choice-list {
   display: grid;
+
   grid-template-columns: 1fr;
-  gap: 12px;
-  white-space: pre-wrap;
+
+  gap: 10px;
 }
 
 .choice-button {
-  width: 100%;
-  min-height: 56px;
-  padding: 16px 20px;
+  position: relative;
 
-  font-size: 1rem;
-  text-align: left;
+  width: 100%;
+  min-height: 58px;
+
+  padding:
+    14px
+    52px
+    14px
+    17px;
 
   color: #222;
   background-color: #fff;
 
-  border: 1px solid #ddd;
+  border: 1px solid #dfe1e4;
   border-radius: 12px;
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  text-align: left;
+
+  white-space: pre-wrap;
 
   cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
 }
 
-
-/* ========================================
-   問題画面：PC表示
-======================================== */
-
-@media (min-width: 768px) {
-  .question-text {
-    font-size: 1.3rem;
-  }
-
-  .choice-button {
-    padding: 18px 24px;
-  }
-}
-
-/* ========================================
-   正誤判定
-======================================== */
-
-.answer-feedback {
-  margin-top: 24px;
-  padding: 16px;
-
-  background-color: #fff;
-
-  border: 1px solid #ddd;
-  border-radius: 12px;
-}
-
-#answer-result {
-  margin-bottom: 8px;
-
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-#answer-explanation {
-  margin-bottom: 0;
+.choice-button:hover:not(:disabled) {
+  background-color: #fafafa;
+  border-color: #aaaeb4;
 }
 
 .choice-button:disabled {
+  opacity: 1;
+
   cursor: default;
 }
 
+
 /* ========================================
-   次の問題へ
+正解
+======================================== */
+
+.choice-button.is-correct {
+  color: #176b35;
+
+  background-color: #eef9f2;
+
+  border-color: #36a45d;
+
+  font-weight: 600;
+}
+
+.choice-button.is-correct::after {
+  content: "⭕️";
+
+  position: absolute;
+
+  top: 50%;
+  right: 17px;
+
+  font-size: 1.15rem;
+
+  transform: translateY(-50%);
+}
+
+
+/* ========================================
+不正解
+======================================== */
+
+.choice-button.is-wrong {
+  color: #a12626;
+
+  background-color: #fff2f2;
+
+  border-color: #d95353;
+
+  font-weight: 600;
+}
+
+.choice-button.is-wrong::after {
+  content: "❌";
+
+  position: absolute;
+
+  top: 50%;
+  right: 17px;
+
+  font-size: 1.15rem;
+
+  transform: translateY(-50%);
+}
+
+
+/* ========================================
+回答結果・解説
+======================================== */
+
+.answer-feedback {
+  margin-top: 14px;
+
+  padding: 14px 16px;
+
+  background-color: #fff;
+
+  border: 1px solid #dfe1e4;
+  border-radius: 10px;
+}
+
+#answer-result {
+  margin: 0 0 5px;
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#answer-explanation {
+  margin: 0;
+
+  color: #444;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+
+  white-space: pre-wrap;
+}
+
+
+/* ========================================
+次の問題
 ======================================== */
 
 .next-button {
   width: 100%;
-  margin-top: 16px;
-  padding: 16px 20px;
 
-  font-size: 1rem;
-  font-weight: bold;
+  margin-top: 12px;
+
+  padding: 13px 18px;
 
   color: #222;
   background-color: #fff;
 
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  border: 1px solid #cfd2d6;
+  border-radius: 10px;
+
+  font-weight: 700;
 
   cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
 }
 
-@media (min-width: 768px) {
-  .next-button {
-    width: auto;
-    min-width: 180px;
-  }
+.next-button:hover {
+  background-color: #f3f4f5;
+  border-color: #aaaeb4;
 }
+
+
 /* ========================================
-   結果画面
+結果画面
 ======================================== */
 
 .result-section {
   width: 100%;
+  max-width: 600px;
+
+  margin: 0 auto;
+}
+
+.result-lesson-name {
+  margin: 0 0 16px;
+
+  color: #777;
+
+  font-size: 0.9rem;
 }
 
 .result-summary {
-  margin: 24px 0;
-  padding: 24px;
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin: 20px 0;
+
+  padding: 16px;
 
   background-color: #fff;
 
-  border: 1px solid #ddd;
+  border: 1px solid #dfe1e4;
   border-radius: 12px;
 }
 
-.result-summary p {
-  margin: 8px 0;
+.result-item {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  padding: 10px;
 }
 
-.result-summary strong {
-  margin-left: 8px;
+.result-label {
+  color: #777;
+
+  font-size: 0.85rem;
+}
+
+.result-item strong {
+  margin-top: 4px;
+
   font-size: 1.4rem;
 }
 
 .result-actions {
   display: grid;
+
   grid-template-columns: 1fr;
-  gap: 12px;
+
+  gap: 10px;
 }
 
+
+/* ========================================
+結果画面ボタン
+======================================== */
+
+.primary-button,
+.secondary-button,
 #retry-quiz {
   width: 100%;
-  padding: 16px 20px;
 
-  font-size: 1rem;
-  font-weight: bold;
+  padding: 13px 18px;
 
-  color: #222;
-  background-color: #fff;
+  border-radius: 10px;
 
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  font-weight: 700;
 
   cursor: pointer;
 }
 
+.primary-button,
+#retry-quiz {
+  color: #222;
+  background-color: #fff;
+
+  border: 1px solid #cfd2d6;
+}
+
+.primary-button:hover,
+#retry-quiz:hover {
+  background-color: #f3f4f5;
+}
+
+.secondary-button {
+  color: #666;
+  background: none;
+
+  border: 0;
+
+  font-weight: 500;
+}
+
 
 /* ========================================
-   結果画面：PC表示
+PC
 ======================================== */
 
 @media (min-width: 768px) {
-  .result-actions {
-    max-width: 400px;
+
+  .site-header {
+    padding: 25px 24px;
+  }
+
+  .site-title {
+    font-size: 1.8rem;
+  }
+
+  .site-description {
+    font-size: 0.9rem;
+  }
+
+
+  main {
+    padding:
+      32px
+      24px
+      64px;
+  }
+
+
+  /* 科目 */
+
+  .subject-list {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+  .subject-card {
+    padding: 21px 22px;
+  }
+
+
+  /* 学習方法 */
+
+  .mode-list {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+
+  /* 授業回 */
+
+  .lesson-list {
+    grid-template-columns:
+      repeat(5, minmax(0, 1fr));
+
+    gap: 11px;
+  }
+
+
+  /* 問題 */
+
+  .quiz-meta {
+    margin-bottom: 26px;
+  }
+
+  .question-text {
+    margin-bottom: 24px;
+
+    font-size: 1.18rem;
+  }
+
+  .choice-button {
+    min-height: 60px;
+
+    padding:
+      15px
+      58px
+      15px
+      20px;
+
+    font-size: 1rem;
+  }
+
+  .choice-button.is-correct::after,
+  .choice-button.is-wrong::after {
+    right: 20px;
+  }
+
+
+  /* 次へ */
+
+  .next-button {
+    width: auto;
+    min-width: 180px;
   }
 }
-#answer-explanation {
-  white-space: pre-wrap;
-}
+
 
 /* ========================================
-   回答後の選択肢
+小さいスマートフォン
 ======================================== */
 
-.choice-button:disabled {
-  opacity: 1;
-  cursor: default;
-}
+@media (max-width: 420px) {
 
-/* 正解 */
-.choice-button.is-correct {
-  color: #176b35;
-  background-color: #e9f8ee;
-  border-color: #36a45d;
-  font-weight: bold;
-}
+  .site-header {
+    padding:
+      18px
+      14px;
+  }
 
-/* 正解アイコン */
-.choice-button.is-correct::after {
-  content: " ⭕️";
-  margin-left: 8px;
-}
+  .site-title {
+    font-size: 1.35rem;
+  }
 
-/* 選択した不正解 */
-.choice-button.is-wrong {
-  color: #a12626;
-  background-color: #fff0f0;
-  border-color: #d95353;
-  font-weight: bold;
-}
+  .site-description {
+    font-size: 0.78rem;
+  }
 
-/* 不正解アイコン */
-.choice-button.is-wrong::after {
-  content: " ❌";
-  margin-left: 8px;
+
+  main {
+    padding:
+      20px
+      14px
+      40px;
+  }
+
+
+  .quiz-meta {
+    margin-bottom: 18px;
+  }
+
+  .question-text {
+    margin-bottom: 18px;
+
+    font-size: 1.05rem;
+  }
+
+  .choice-button {
+    min-height: 54px;
+
+    padding:
+      12px
+      48px
+      12px
+      14px;
+
+    font-size: 0.92rem;
+  }
+
+
+  .answer-feedback {
+    padding: 13px 14px;
+  }
+
+
+  .result-summary {
+    gap: 4px;
+
+    padding: 12px;
+  }
 }
