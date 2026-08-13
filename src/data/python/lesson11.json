@@ -1,0 +1,422 @@
+[
+  {
+    "id": "py11-001",
+    "subject": "python",
+    "lesson": 11,
+    "question": "プログラムで扱っているデータを、プログラム終了後も残しておきたい場合に最も適切な方法はどれですか？",
+    "choices": [
+      "ファイルに保存する",
+      "変数名を長くする",
+      "print関数で表示する",
+      "コメントとしてコードに書く"
+    ],
+    "answer": 0,
+    "explanation": "変数に格納されたデータは、プログラムが終了すると失われます。データを永続的に残したい場合は、ファイルなどに保存します。"
+  },
+  {
+    "id": "py11-002",
+    "subject": "python",
+    "lesson": 11,
+    "question": "txtファイルについて、授業内容に合っているものはどれですか？",
+    "choices": [
+      "文字情報を扱うプレーンテキストファイルである",
+      "必ず画像データを含む",
+      "Pythonでしか読み書きできない",
+      "文字の大きさや色などの装飾情報を必ず含む"
+    ],
+    "answer": 0,
+    "explanation": "txtファイルは文字情報を中心に扱うプレーンテキストファイルです。文字の色や大きさなどの装飾情報は含みません。"
+  },
+  {
+    "id": "py11-003",
+    "subject": "python",
+    "lesson": 11,
+    "question": "次のコードを、まだ存在しない memo.txt に対して実行した場合どうなりますか？\n\nf = open(\"memo.txt\", \"w\", encoding=\"utf-8\")\nf.write(\"Hello\")\nf.close()",
+    "choices": [
+      "memo.txt が作成され、Hello と書き込まれる",
+      "ファイルが存在しないため必ずエラーになる",
+      "画面に Hello とだけ表示される",
+      "memo.txt は作られるが何も書き込まれない"
+    ],
+    "answer": 0,
+    "explanation": "wモードでは、ファイルが存在しない場合は新しく作成されます。writeメソッドで文字列を書き込めます。"
+  },
+  {
+    "id": "py11-004",
+    "subject": "python",
+    "lesson": 11,
+    "question": "memo.txt にすでに「AAA」と保存されています。次のコードを実行した後の内容はどれですか？\n\nwith open(\"memo.txt\", \"w\", encoding=\"utf-8\") as f:\n    f.write(\"BBB\")",
+    "choices": [
+      "BBB",
+      "AAABBB",
+      "BBBAAA",
+      "AAA"
+    ],
+    "answer": 0,
+    "explanation": "wモードは上書き用です。既存の内容は消去され、新しく書き込んだ「BBB」が保存されます。"
+  },
+  {
+    "id": "py11-005",
+    "subject": "python",
+    "lesson": 11,
+    "question": "memo.txt に「AAA」と保存されています。内容を残したまま「BBB」を追加したいとき、open関数のモードとして最も適切なものはどれですか？",
+    "choices": [
+      "\"a\"",
+      "\"w\"",
+      "\"r\"",
+      "\"x\""
+    ],
+    "answer": 0,
+    "explanation": "既存の内容を残したまま追加する場合は、追記を表すaモードを使用します。"
+  },
+  {
+    "id": "py11-006",
+    "subject": "python",
+    "lesson": 11,
+    "question": "次のコードで with 文を使う主な利点はどれですか？\n\nwith open(\"memo.txt\", \"r\", encoding=\"utf-8\") as f:\n    text = f.read()",
+    "choices": [
+      "処理が終わるとファイルを自動的に閉じてくれる",
+      "ファイルを必ずCSV形式に変換してくれる",
+      "文字列を自動的に整数へ変換してくれる",
+      "ファイルの内容を自動的に削除してくれる"
+    ],
+    "answer": 0,
+    "explanation": "with文を使うと処理終了時にファイルが自動的に閉じられるため、close()の書き忘れを防げます。"
+  },
+  {
+    "id": "py11-007",
+    "subject": "python",
+    "lesson": 11,
+    "question": "ファイル全体の内容を一度に読み込みたい場合に使うメソッドはどれですか？",
+    "choices": [
+      "read()",
+      "write()",
+      "append()",
+      "open()"
+    ],
+    "answer": 0,
+    "explanation": "read()メソッドを使うと、ファイルの内容全体を一度に読み込めます。"
+  },
+  {
+    "id": "py11-008",
+    "subject": "python",
+    "lesson": 11,
+    "question": "次のコードで open関数のモードを省略しています。どのモードとして開かれますか？\n\nf = open(\"memo.txt\", encoding=\"utf-8\")",
+    "choices": [
+      "\"r\"",
+      "\"w\"",
+      "\"a\"",
+      "\"a+\""
+    ],
+    "answer": 0,
+    "explanation": "open関数でモードを省略した場合、デフォルトでは読み込み用のrモードになります。"
+  },
+  {
+    "id": "py11-009",
+    "subject": "python",
+    "lesson": 11,
+    "question": "1行ずつファイルを読み込むために使えるメソッドはどれですか？",
+    "choices": [
+      "readline()",
+      "writerow()",
+      "decode()",
+      "dump()"
+    ],
+    "answer": 0,
+    "explanation": "readline()はファイルを1行ずつ読み込むためのメソッドです。ファイルの最後まで到達すると空文字列が返ります。"
+  },
+  {
+    "id": "py11-010",
+    "subject": "python",
+    "lesson": 11,
+    "question": "次のコードについて正しい説明はどれですか？\n\nwith open(\"memo.txt\", \"r\", encoding=\"utf-8\") as f:\n    text = f.read()\n\ntext2 = f.read()",
+    "choices": [
+      "with文を抜けた後はファイルが閉じているため、最後のread()でエラーになる",
+      "最後のread()でも必ず同じ内容を読み込める",
+      "with文を使うとファイルは閉じられない",
+      "最後のread()によってファイルが削除される"
+    ],
+    "answer": 0,
+    "explanation": "with文を抜けるとファイルは自動的に閉じられます。閉じたファイルに対してread()などを実行するとエラーになります。"
+  },
+  {
+    "id": "py11-011",
+    "subject": "python",
+    "lesson": 11,
+    "question": "読み込みと追記の両方を行いたい場合に使用できるモードはどれですか？",
+    "choices": [
+      "\"a+\"",
+      "\"a\"",
+      "\"r\"",
+      "\"w\""
+    ],
+    "answer": 0,
+    "explanation": "a+モードでは追記と読み込みの両方が可能です。"
+  },
+  {
+    "id": "py11-012",
+    "subject": "python",
+    "lesson": 11,
+    "question": "memo.txt の内容が「ABC」だとします。次のコードで content にファイル全体を読み込むために、空欄に入れるものはどれですか？\n\nwith open(\"memo.txt\", \"a+\", encoding=\"utf-8\") as f:\n    f.write(\"D\")\n    ______\n    content = f.read()",
+    "choices": [
+      "f.seek(0)",
+      "f.close()",
+      "f.write(0)",
+      "f.readline(0)"
+    ],
+    "answer": 0,
+    "explanation": "a+モードではカーソルが末尾側にあるため、先頭から読み込むにはseek(0)でカーソルをファイル先頭へ移動します。"
+  },
+  {
+    "id": "py11-013",
+    "subject": "python",
+    "lesson": 11,
+    "question": "エンコーディングとは何をする処理ですか？",
+    "choices": [
+      "文字をコンピューターが扱える符号に変換する",
+      "符号を必ず整数の0に変換する",
+      "ファイルを削除する",
+      "CSVをJSONへ変換する"
+    ],
+    "answer": 0,
+    "explanation": "エンコーディングとは、文字をコンピューターで扱えるバイナリデータなどの符号へ変換することです。"
+  },
+  {
+    "id": "py11-014",
+    "subject": "python",
+    "lesson": 11,
+    "question": "デコーディングについて正しいものはどれですか？",
+    "choices": [
+      "符号化されたデータを文字に戻す処理",
+      "文字をバイナリデータへ変換する処理",
+      "ファイルへ追記する処理",
+      "文字列をリストへ変換する処理"
+    ],
+    "answer": 0,
+    "explanation": "デコーディングは、エンコードされた符号を元の文字へ戻す処理です。"
+  },
+  {
+    "id": "py11-015",
+    "subject": "python",
+    "lesson": 11,
+    "question": "次の式の実行結果として適切なものはどれですか？\n\n\"あ\".encode()",
+    "choices": [
+      "b'\\xe3\\x81\\x82'",
+      "\"あ\"",
+      "12354",
+      "[227, 129, 130]"
+    ],
+    "answer": 0,
+    "explanation": "授業資料では、UTF-8で「あ」をエンコードすると b'\\xe3\\x81\\x82' になります。"
+  },
+  {
+    "id": "py11-016",
+    "subject": "python",
+    "lesson": 11,
+    "question": "文字化けが発生する原因として、授業で説明されているものはどれですか？",
+    "choices": [
+      "エンコード時とデコード時で異なる文字コードを使用する",
+      "変数名に英字を使う",
+      "open関数でファイル名を指定する",
+      "Pythonでリストを使用する"
+    ],
+    "answer": 0,
+    "explanation": "UTF-8でエンコードしたデータを別の文字コードとしてデコードするなど、文字コードが一致しないと文字化けの原因になります。"
+  },
+  {
+    "id": "py11-017",
+    "subject": "python",
+    "lesson": 11,
+    "question": "授業資料の説明では、UTF-8で日本語1文字を表すとき、基本的に何バイトとして扱われていますか？",
+    "choices": [
+      "3バイト",
+      "1バイト",
+      "2バイト",
+      "8バイト"
+    ],
+    "answer": 0,
+    "explanation": "授業資料では、UTF-8で日本語1文字は3バイトとして表現されると説明されています。"
+  },
+  {
+    "id": "py11-018",
+    "subject": "python",
+    "lesson": 11,
+    "question": "CSVの正式な意味として正しいものはどれですか？",
+    "choices": [
+      "Comma-Separated Values",
+      "Computer Saved Variables",
+      "Code Storage Version",
+      "Common String Viewer"
+    ],
+    "answer": 0,
+    "explanation": "CSVはComma-Separated Valuesの略で、値をコンマで区切って記録する形式です。"
+  },
+  {
+    "id": "py11-019",
+    "subject": "python",
+    "lesson": 11,
+    "question": "PythonでCSVファイルを扱うために、授業で使用している標準ライブラリの読み込み方はどれですか？",
+    "choices": [
+      "import csv",
+      "import CSVFile",
+      "from python import csv",
+      "open csv"
+    ],
+    "answer": 0,
+    "explanation": "Pythonでは標準ライブラリのcsvモジュールをimport csvで読み込みます。"
+  },
+  {
+    "id": "py11-020",
+    "subject": "python",
+    "lesson": 11,
+    "question": "CSVファイルを書き込む次のコードの空欄に入るものはどれですか？\n\nimport csv\n\nwith open(\"score.csv\", \"w\", encoding=\"utf-8\", newline=\"\") as f:\n    writer = ______\n    writer.writerow([\"A\", 10])",
+    "choices": [
+      "csv.writer(f)",
+      "csv.reader(f)",
+      "f.csv()",
+      "csv.writerow(f)"
+    ],
+    "answer": 0,
+    "explanation": "CSVへ書き込むときはcsv.writer(ファイルオブジェクト)でwriterオブジェクトを作成します。"
+  },
+  {
+    "id": "py11-021",
+    "subject": "python",
+    "lesson": 11,
+    "question": "CSVを書き込むとき、授業のコードで open関数に newline=\"\" を指定している主な理由はどれですか？",
+    "choices": [
+      "余計な改行が入るのを防ぐため",
+      "数値を自動的に整数へ変換するため",
+      "CSVを暗号化するため",
+      "ファイルを読み込み専用にするため"
+    ],
+    "answer": 0,
+    "explanation": "授業では、CSV書き込み時に余計な改行が入るのを防ぐためnewline=\"\"を指定しています。"
+  },
+  {
+    "id": "py11-022",
+    "subject": "python",
+    "lesson": 11,
+    "question": "次のうち、CSVファイルへ1行分のデータを書き込むコードとして正しいものはどれですか？",
+    "choices": [
+      "writer.writerow([\"Alice\", 80])",
+      "writer.readrow([\"Alice\", 80])",
+      "csv.write([\"Alice\", 80])",
+      "f.readerow([\"Alice\", 80])"
+    ],
+    "answer": 0,
+    "explanation": "writerオブジェクトのwriterowメソッドへリストなどを渡すことで、CSVへ1行分のデータを書き込めます。"
+  },
+  {
+    "id": "py11-023",
+    "subject": "python",
+    "lesson": 11,
+    "question": "既存のCSVファイルの内容を残したまま、新しい行を追加したい場合のopen関数として適切なものはどれですか？",
+    "choices": [
+      "open(\"score.csv\", \"a\", encoding=\"utf-8\", newline=\"\")",
+      "open(\"score.csv\", \"w\", encoding=\"utf-8\", newline=\"\")",
+      "open(\"score.csv\", \"r\", encoding=\"utf-8\", newline=\"\")",
+      "open(\"score.csv\", \"rb\", encoding=\"utf-8\")"
+    ],
+    "answer": 0,
+    "explanation": "既存の内容へ追記する場合はaモードを使用します。CSVの場合も同様です。"
+  },
+  {
+    "id": "py11-024",
+    "subject": "python",
+    "lesson": 11,
+    "question": "CSVファイルを読み込むためのreaderオブジェクトを作るコードとして正しいものはどれですか？",
+    "choices": [
+      "reader = csv.reader(f)",
+      "reader = csv.writer(f)",
+      "reader = f.read.csv()",
+      "reader = csv.load(f)"
+    ],
+    "answer": 0,
+    "explanation": "CSVを読み込む場合はcsv.readerにファイルオブジェクトを渡してreaderオブジェクトを作ります。"
+  },
+  {
+    "id": "py11-025",
+    "subject": "python",
+    "lesson": 11,
+    "question": "score.csv の内容が次の通りだとします。\n\nAlice,7\nBob,8\n\n次のコードを実行したとき、contentsの形として最も適切なものはどれですか？\n\nimport csv\nwith open(\"score.csv\", \"r\", encoding=\"utf-8\") as f:\n    contents = list(csv.reader(f))",
+    "choices": [
+      "[[\"Alice\", \"7\"], [\"Bob\", \"8\"]]",
+      "[\"Alice\", \"7\", \"Bob\", \"8\"]",
+      "[[\"Alice\", 7], [\"Bob\", 8]]",
+      "{\"Alice\": 7, \"Bob\": 8}"
+    ],
+    "answer": 0,
+    "explanation": "csv.readerで読み込んだ各行はリストとして扱われ、CSVの値は文字列として読み込まれます。"
+  },
+  {
+    "id": "py11-026",
+    "subject": "python",
+    "lesson": 11,
+    "question": "CSVファイルを単純にread()してからコンマでsplit()する方法より、csv.readerを使う方が適切な場合がある理由はどれですか？",
+    "choices": [
+      "値そのものにコンマが含まれる場合でもCSVとして適切に扱えるため",
+      "csv.readerを使うと必ず数値がint型になるため",
+      "read()では文字列を読み込めないため",
+      "split()はPythonに存在しないため"
+    ],
+    "answer": 0,
+    "explanation": "値の中にコンマが含まれるCSVでは、単純なsplit(',')では正しく分割できない場合があります。そのためcsv.readerを利用します。"
+  },
+  {
+    "id": "py11-027",
+    "subject": "python",
+    "lesson": 11,
+    "question": "CSVから読み込んだ数値の文字列を計算に使いたい場合、必要になる処理として適切なものはどれですか？",
+    "choices": [
+      "int()などで数値型へ変換する",
+      "encode()でバイト列へ変換する",
+      "writerow()で書き直す",
+      "close()で文字列を数値にする"
+    ],
+    "answer": 0,
+    "explanation": "CSVでは値が文字列として読み込まれるため、数値計算を行う場合はint()などで型変換する必要があります。"
+  },
+  {
+    "id": "py11-028",
+    "subject": "python",
+    "lesson": 11,
+    "question": "JSONファイルの特徴として、授業内容に最も合っているものはどれですか？",
+    "choices": [
+      "辞書・リスト・数値などのデータ型を保ちながら保存・復元しやすい",
+      "文字列以外は一切保存できない",
+      "Pythonでしか利用できない",
+      "必ず表計算ソフトで開かなければならない"
+    ],
+    "answer": 0,
+    "explanation": "JSONは辞書、リスト、数値、文字列、ブール値などのデータを保存・復元でき、多くのプログラミング言語でも扱えます。"
+  },
+  {
+    "id": "py11-029",
+    "subject": "python",
+    "lesson": 11,
+    "question": "Pythonの辞書 data を data.json に保存するコードの空欄に入るものはどれですか？\n\nimport json\n\ndata = {\"name\": \"Alice\", \"score\": 80}\n\nwith open(\"data.json\", \"w\", encoding=\"utf-8\") as f:\n    ______",
+    "choices": [
+      "json.dump(data, f)",
+      "json.load(data, f)",
+      "json.write(data, f)",
+      "f.json(data)"
+    ],
+    "answer": 0,
+    "explanation": "PythonのデータをJSONファイルへ書き込むときはjson.dump(データ, ファイルオブジェクト)を使用します。"
+  },
+  {
+    "id": "py11-030",
+    "subject": "python",
+    "lesson": 11,
+    "question": "data.json に保存されたJSONデータをPythonの辞書やリストとして読み込みたい場合、空欄に入るものはどれですか？\n\nimport json\n\nwith open(\"data.json\", \"r\", encoding=\"utf-8\") as f:\n    data = ______",
+    "choices": [
+      "json.load(f)",
+      "json.dump(f)",
+      "csv.reader(f)",
+      "f.writerow()"
+    ],
+    "answer": 0,
+    "explanation": "JSONファイルからデータを読み込んでPythonの辞書やリストなどとして復元する場合はjson.load()を使用します。"
+  }
+]
