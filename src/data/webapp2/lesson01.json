@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-01-001",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "Webアプリケーション開発コース2で主に学ぶ内容として、最も適切なものはどれですか？",
+    "choices": [
+      "HTMLのタグだけを暗記する方法",
+      "実践的な開発環境の構築とプログラミングの進め方",
+      "画像編集ソフトだけを使ったデザイン制作",
+      "表計算ソフトだけを使ったデータ整理"
+    ],
+    "answer": 1,
+    "explanation": "Webアプリケーション開発コース2では、より本格的なWebアプリケーション開発に向けて、実践的な開発環境の構築やプログラミングの進め方を学びます。"
+  },
+  {
+    "id": "webapp2-01-002",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "本コースの到達目標として、授業内容に最も合っているものはどれですか？",
+    "choices": [
+      "小規模なWebサービスを自分ひとりで企画・開発・運用できるようになる",
+      "すべてのWebサービスを一人で管理しなければならない",
+      "HTMLを使わずWebサイトを作れるようになる",
+      "プログラミングをせずサーバだけ管理できるようになる"
+    ],
+    "answer": 0,
+    "explanation": "本コースでは、小規模なWebサービスを自分ひとりで企画・開発・運用できるようになることが到達目標として示されています。"
+  },
+  {
+    "id": "webapp2-01-003",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "一人でWebサービスを開発・運用するために必要な知識として、授業で挙げられていないものはどれですか？",
+    "choices": [
+      "プログラムを実行する環境に関する知識",
+      "コンピューターやインターネットに関する法律やルールの知識",
+      "コードを書く知識",
+      "効果的なマーケティング方法の知識"
+    ],
+    "answer": 3,
+    "explanation": "授業では、コードを書く知識だけでなく、プログラムを実行する環境や法律・ルールに関する知識も必要とされています。マーケティング方法の知識は、この問いでは必要なものとして挙げられていません。"
+  },
+  {
+    "id": "webapp2-01-004",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "複数人でプログラムを分担して開発するときに利用するものとして、最も適切なものはどれですか？",
+    "choices": [
+      "バージョン管理ツール",
+      "画像編集ツール",
+      "表計算ソフト",
+      "動画再生ソフト"
+    ],
+    "answer": 0,
+    "explanation": "複数人でプログラムを分担して書く場合、変更履歴などを管理するためにバージョン管理ツールを利用します。"
+  },
+  {
+    "id": "webapp2-01-005",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "授業で、世界で最も使われているバージョン管理ツールとして紹介されているものはどれですか？",
+    "choices": [
+      "Docker",
+      "Git",
+      "Ubuntu",
+      "Multipass"
+    ],
+    "answer": 1,
+    "explanation": "Gitは世界で広く使われているバージョン管理ツールです。GitHubはGitをベースにしたWebサービスです。"
+  },
+  {
+    "id": "webapp2-01-006",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "OS（Operating System）の役割として、最も適切なものはどれですか？",
+    "choices": [
+      "コンピューター全体を管理する",
+      "Webページだけを表示する",
+      "画像ファイルだけを管理する",
+      "ソースコードだけを保存する"
+    ],
+    "answer": 0,
+    "explanation": "OSはコンピューター全体を管理するソフトウェアです。Windows、macOS、iOS、AndroidなどもOSの例です。"
+  },
+  {
+    "id": "webapp2-01-007",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "Linuxについて正しい説明はどれですか？",
+    "choices": [
+      "画像編集専用のアプリケーションである",
+      "プログラミングやサーバ運用でよく利用されるOSである",
+      "Windows上では一切利用できない",
+      "インターネット接続専用のブラウザである"
+    ],
+    "answer": 1,
+    "explanation": "LinuxはOSの一種で、特にプログラミングやサーバ運用でよく利用されています。"
+  },
+  {
+    "id": "webapp2-01-008",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "「Linux」という言葉が本来指すものはどれですか？",
+    "choices": [
+      "Linuxのカーネル",
+      "Ubuntuだけ",
+      "Multipassだけ",
+      "Webブラウザ"
+    ],
+    "answer": 0,
+    "explanation": "Linuxという名称は本来、OSの中核部分であるLinuxカーネルを指します。ただし一般的にはOS全体やLinuxディストリビューションを含めてLinuxと呼ぶこともあります。"
+  },
+  {
+    "id": "webapp2-01-009",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "Linuxディストリビューションとは何ですか？",
+    "choices": [
+      "Linuxカーネルと必要なソフトウェアを組み合わせて配布したもの",
+      "Linuxを削除するためだけのソフトウェア",
+      "Windows専用のファイル形式",
+      "WebサイトのURLを管理する仕組み"
+    ],
+    "answer": 0,
+    "explanation": "Linuxディストリビューションは、Linuxカーネルと各種ソフトウェアを組み合わせ、実用的なOSとして配布したものです。"
+  },
+  {
+    "id": "webapp2-01-010",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "次のうち、授業でLinuxディストリビューションの例として紹介されたものはどれですか？",
+    "choices": [
+      "Ubuntu",
+      "GitHub",
+      "Windows Terminal",
+      "Homebrew"
+    ],
+    "answer": 0,
+    "explanation": "UbuntuはLinuxディストリビューションの一つです。ほかにDebian、Red Hat、CentOS、Slackwareなどが紹介されています。"
+  },
+  {
+    "id": "webapp2-01-011",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "Linuxをプログラミングで利用する理由として、授業内容に合っていないものはどれですか？",
+    "choices": [
+      "プログラミング用のソフトウェアが豊富である",
+      "無料で利用できる",
+      "開発環境をサーバ環境と揃えやすい",
+      "マウスを一切使うことができない"
+    ],
+    "answer": 3,
+    "explanation": "LinuxでもGUIを利用できるため、マウスが一切使えないわけではありません。プログラミング用ソフトウェアが豊富で、無料で利用でき、サーバと開発環境を揃えやすいことなどが利点です。"
+  },
+  {
+    "id": "webapp2-01-012",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "授業でLinuxが無料で利用できることと関連して紹介されたライセンスはどれですか？",
+    "choices": [
+      "GNU GPL",
+      "HTML",
+      "TCP/IP",
+      "HTTP"
+    ],
+    "answer": 0,
+    "explanation": "授業では、Linuxと関連するライセンスとしてGNU General Public License（GPL）が紹介されています。"
+  },
+  {
+    "id": "webapp2-01-013",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "授業で紹介されたGPLについて、禁止されているものはどれですか？",
+    "choices": [
+      "ソースを改変すること",
+      "ソフトウェアを利用・再配布すること",
+      "改良したプログラムをリリースすること",
+      "改良したプログラムの公開要求を拒否すること"
+    ],
+    "answer": 3,
+    "explanation": "確認テストでは、GPLにおいて「改良したプログラムの公開要求を拒否すること」が禁止されるものとして扱われています。"
+  },
+  {
+    "id": "webapp2-01-014",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "仮想環境について、授業内容に最も合っている説明はどれですか？",
+    "choices": [
+      "すべてのプロジェクトで同じ設定だけを使用する仕組み",
+      "一つのプロジェクト専用に独立したソフトウェア環境を作る仕組み",
+      "ゲームの中に存在する仮想空間",
+      "CPUを使わずにプログラムを実行する仕組み"
+    ],
+    "answer": 1,
+    "explanation": "仮想環境は、特定のプロジェクト専用の設定やライブラリを持つ独立したソフトウェア環境を作る仕組みとして説明されています。"
+  },
+  {
+    "id": "webapp2-01-015",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "Multipassとは何をするためのツールですか？",
+    "choices": [
+      "UbuntuなどのLinux仮想環境を簡単に構築する",
+      "画像を圧縮する",
+      "WebページのCSSを書く",
+      "メールを送受信する"
+    ],
+    "answer": 0,
+    "explanation": "MultipassはWindowsやmacOS上で、UbuntuなどのLinux仮想環境を簡単に構築するためのツールです。"
+  },
+  {
+    "id": "webapp2-01-016",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "Multipassで作成する仮想マシンを、授業では何と呼んでいますか？",
+    "choices": [
+      "VMインスタンス",
+      "Gitリポジトリ",
+      "パッケージ",
+      "プロンプト"
+    ],
+    "answer": 0,
+    "explanation": "Multipassなどで作成する仮想マシンは、授業ではVMインスタンスと呼ばれています。"
+  },
+  {
+    "id": "webapp2-01-017",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "利用可能なUbuntuのバージョンを確認するMultipassコマンドはどれですか？",
+    "choices": [
+      "multipass ls",
+      "multipass find",
+      "multipass shell",
+      "multipass stop"
+    ],
+    "answer": 1,
+    "explanation": "multipass findを実行すると、利用可能なUbuntuのバージョンを確認できます。"
+  },
+  {
+    "id": "webapp2-01-018",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "Ubuntu 22.04のVMインスタンスを「linux-study」という名前で作成・起動するコマンドはどれですか？",
+    "choices": [
+      "multipass shell 22.04 --name linux-study",
+      "multipass launch 22.04 --name linux-study",
+      "multipass stop 22.04 --name linux-study",
+      "multipass find linux-study"
+    ],
+    "answer": 1,
+    "explanation": "multipass launch 22.04 --name linux-study でUbuntu 22.04のVMインスタンスをlinux-studyという名前で作成・起動できます。"
+  },
+  {
+    "id": "webapp2-01-019",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "すでに存在するVMインスタンス「linux-study」を起動するときに使うコマンドはどれですか？",
+    "choices": [
+      "multipass start linux-study",
+      "multipass find linux-study",
+      "multipass delete linux-study",
+      "multipass shell --purge linux-study"
+    ],
+    "answer": 0,
+    "explanation": "既存のVMインスタンスを起動するときはmultipass startを使用します。launchは主にインスタンスの作成・起動に使われます。"
+  },
+  {
+    "id": "webapp2-01-020",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "VMインスタンス「linux-study」のシェルへログインするときのコマンドはどれですか？",
+    "choices": [
+      "multipass ls linux-study",
+      "multipass shell linux-study",
+      "multipass find linux-study",
+      "multipass stop linux-study"
+    ],
+    "answer": 1,
+    "explanation": "multipass shell linux-study を実行すると、linux-studyインスタンスのシェルへログインできます。"
+  },
+  {
+    "id": "webapp2-01-021",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "作成されているMultipassのインスタンス一覧を表示するコマンドはどれですか？",
+    "choices": [
+      "multipass start",
+      "multipass ls",
+      "multipass find",
+      "multipass exit"
+    ],
+    "answer": 1,
+    "explanation": "multipass lsを使うと、現在作成されているインスタンスの一覧を確認できます。"
+  },
+  {
+    "id": "webapp2-01-022",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "現在ログインしているUbuntuのVMインスタンスから抜けるときに入力するものはどれですか？",
+    "choices": [
+      "close",
+      "leave",
+      "exit",
+      "logout --purge"
+    ],
+    "answer": 2,
+    "explanation": "VMインスタンスのシェルから抜けるときはexitを入力します。"
+  },
+  {
+    "id": "webapp2-01-023",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "VMインスタンス「linux-study」を停止するためのコマンドはどれですか？",
+    "choices": [
+      "multipass stop linux-study",
+      "multipass delete --purge linux-study",
+      "multipass shell linux-study",
+      "multipass find linux-study"
+    ],
+    "answer": 0,
+    "explanation": "インスタンスを停止するときはmultipass stopを使います。停止しただけではインスタンス自体は削除されません。"
+  },
+  {
+    "id": "webapp2-01-024",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "VMインスタンス「linux-study」を完全に削除するときに使うコマンドはどれですか？",
+    "choices": [
+      "multipass stop linux-study",
+      "multipass delete --purge linux-study",
+      "multipass start linux-study",
+      "multipass find linux-study"
+    ],
+    "answer": 1,
+    "explanation": "授業では、VMインスタンスを完全に削除するコマンドとして multipass delete --purge linux-study を使用しています。"
+  },
+  {
+    "id": "webapp2-01-025",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "コンソールやターミナルのように、文字やコマンドを入力して操作するインターフェースを何といいますか？",
+    "choices": [
+      "GUI",
+      "CLI",
+      "GPL",
+      "VM"
+    ],
+    "answer": 1,
+    "explanation": "CLIはCommand Line Interfaceの略で、文字やコマンドを入力してコンピューターを操作するインターフェースです。"
+  },
+  {
+    "id": "webapp2-01-026",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "GUIについて、最も適切な説明はどれですか？",
+    "choices": [
+      "文字だけを入力して操作する方式",
+      "ボタンやウィンドウなどを使って視覚的に操作する方式",
+      "Linux専用のライセンス",
+      "仮想マシンを削除するコマンド"
+    ],
+    "answer": 1,
+    "explanation": "GUIはGraphical User Interfaceの略で、ボタンやウィンドウなどの視覚的な要素を使って操作するインターフェースです。"
+  },
+  {
+    "id": "webapp2-01-027",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "コンソールに表示される「ubuntu@linux-study:~$」のような、コマンド入力待ちを示す表示を何といいますか？",
+    "choices": [
+      "プロンプト",
+      "ディストリビューション",
+      "パッケージ",
+      "カーネル"
+    ],
+    "answer": 0,
+    "explanation": "コマンドを入力できる状態で表示される記号や文字列をプロンプトと呼びます。"
+  },
+  {
+    "id": "webapp2-01-028",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "パッケージマネージャの主な役割はどれですか？",
+    "choices": [
+      "ソフトウェアのインストール・更新・削除などを管理する",
+      "ファイルの画像サイズだけを変更する",
+      "CPUの動作速度だけを変更する",
+      "プログラムのソースコードを自動生成する"
+    ],
+    "answer": 0,
+    "explanation": "パッケージマネージャは、ソフトウェアのインストール、更新、削除などを管理するためのツールです。"
+  },
+  {
+    "id": "webapp2-01-029",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "UbuntuなどのDebian系Linuxで利用されるパッケージマネージャはどれですか？",
+    "choices": [
+      "Homebrew",
+      "apt",
+      "npm",
+      "pipenv"
+    ],
+    "answer": 1,
+    "explanation": "UbuntuなどのDebian系Linuxではaptやapt-getがパッケージマネージャとして使われます。"
+  },
+  {
+    "id": "webapp2-01-030",
+    "subject": "webapp2",
+    "lesson": 1,
+    "question": "Ubuntuでbsdgamesをインストールする流れとして、授業で使用した組み合わせはどれですか？",
+    "choices": [
+      "sudo apt update → sudo apt install bsdgames",
+      "multipass find → multipass stop bsdgames",
+      "git init → git install bsdgames",
+      "npm update → npm install ubuntu"
+    ],
+    "answer": 0,
+    "explanation": "授業では、まず sudo apt update でパッケージ情報を更新し、その後 sudo apt install bsdgames でゲーム群をインストールしています。インストール後はtetrisコマンドでテトリスを起動できます。"
+  }
+]
