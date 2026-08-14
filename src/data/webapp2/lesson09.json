@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-09-001",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "Gitの説明として最も適切なものはどれですか？",
+    "choices": [
+      "ソースコードなどの変更履歴を管理するバージョン管理システム",
+      "ソースコードをクラウド上に保存するだけのサービス",
+      "Webページを作成するためのマークアップ言語",
+      "プロジェクトのドキュメントだけを作成するツール"
+    ],
+    "answer": 0,
+    "explanation": "Gitはファイルやソースコードの変更履歴を管理するためのバージョン管理ソフトウェアです。"
+  },
+  {
+    "id": "webapp2-09-002",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "Gitにおける「リポジトリ」とは何ですか？",
+    "choices": [
+      "GitHubのユーザー名",
+      "ファイルやディレクトリの状態や変更履歴を保存する場所",
+      "SSHの秘密鍵だけを保存する場所",
+      "コミットメッセージだけを管理するファイル"
+    ],
+    "answer": 1,
+    "explanation": "リポジトリは、ファイルやディレクトリの状態や変更履歴を保存・管理する場所です。"
+  },
+  {
+    "id": "webapp2-09-003",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "自分のコンピューター上に存在するGitリポジトリを何といいますか？",
+    "choices": [
+      "リモートリポジトリ",
+      "インデックス",
+      "ローカルリポジトリ",
+      "ワークツリー"
+    ],
+    "answer": 2,
+    "explanation": "自分のコンピューター内にあるリポジトリをローカルリポジトリといいます。GitHubなど外部サーバー上にあるものはリモートリポジトリです。"
+  },
+  {
+    "id": "webapp2-09-004",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "Gitにおける「コミット」の説明として正しいものはどれですか？",
+    "choices": [
+      "リポジトリを削除する操作",
+      "GitHubアカウントを作成する操作",
+      "ファイルを暗号化する操作",
+      "変更内容をリポジトリの履歴として記録する操作"
+    ],
+    "answer": 3,
+    "explanation": "コミットは、ファイルなどの変更内容をリポジトリへ履歴として記録する操作です。"
+  },
+  {
+    "id": "webapp2-09-005",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "リモートリポジトリを自分のコンピューターへ複製し、ローカルリポジトリを作成する操作を何といいますか？",
+    "choices": [
+      "clone",
+      "push",
+      "commit",
+      "tag"
+    ],
+    "answer": 0,
+    "explanation": "cloneは、GitHubなどにあるリモートリポジトリを自分のコンピューターへ複製する操作です。"
+  },
+  {
+    "id": "webapp2-09-006",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "Gitがインストールされているか、バージョンを確認するコマンドはどれですか？",
+    "choices": [
+      "git version check",
+      "git --version",
+      "git config -l",
+      "git status"
+    ],
+    "answer": 1,
+    "explanation": "git --versionを実行すると、インストールされているGitのバージョンを確認できます。"
+  },
+  {
+    "id": "webapp2-09-007",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "Gitでコミットログに記録するユーザー名を設定するコマンドはどれですか？",
+    "choices": [
+      "git user --name \"名前\"",
+      "git config user \"名前\"",
+      "git config --global user.name \"名前\"",
+      "git init user.name \"名前\""
+    ],
+    "answer": 2,
+    "explanation": "git config --global user.name \"名前\"で、Gitで使用するユーザー名を設定します。"
+  },
+  {
+    "id": "webapp2-09-008",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "Gitで使用するメールアドレスを設定するコマンドはどれですか？",
+    "choices": [
+      "git email --global",
+      "git config --mail",
+      "git set email",
+      "git config --global user.email \"メールアドレス\""
+    ],
+    "answer": 3,
+    "explanation": "git config --global user.emailで、コミットログなどに使用するメールアドレスを設定します。"
+  },
+  {
+    "id": "webapp2-09-009",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "Gitの設定内容を一覧表示して確認するコマンドはどれですか？",
+    "choices": [
+      "git config -l",
+      "git status -l",
+      "git log -l",
+      "git init -l"
+    ],
+    "answer": 0,
+    "explanation": "git config -lを使うと、Gitに設定されているユーザー名やメールアドレスなどを一覧で確認できます。"
+  },
+  {
+    "id": "webapp2-09-010",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "GitHub上で自分のメールアドレスを公開したくない場合に利用できるものとして、講義で紹介されているものはどれですか？",
+    "choices": [
+      "自分の電話番号",
+      "GitHubが提供するusers.noreply.github.com形式のメールアドレス",
+      "SSH公開鍵そのもの",
+      "コミットハッシュ"
+    ],
+    "answer": 1,
+    "explanation": "GitHubのメール非公開設定を利用すると、ID+USERNAME@users.noreply.github.com形式のメールアドレスをGitに設定できます。"
+  },
+  {
+    "id": "webapp2-09-011",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "SSH（Secure Shell）の説明として、講義内容に最も合っているものはどれですか？",
+    "choices": [
+      "ファイル名を自動生成する仕組み",
+      "Git専用のバージョン管理方式",
+      "安全なリモート通信を実現するための暗号化プロトコル",
+      "Webページのデザインを指定する言語"
+    ],
+    "answer": 2,
+    "explanation": "SSHはSecure Shellの略で、安全なリモート通信を行うための暗号化プロトコルです。GitHubとの安全な通信にも利用されます。"
+  },
+  {
+    "id": "webapp2-09-012",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "SSHの公開鍵認証で使用するものとして正しい組み合わせはどれですか？",
+    "choices": [
+      "ユーザー名とIssue ID",
+      "コミットハッシュとタグ",
+      "メールアドレスとパスワード",
+      "公開鍵と秘密鍵"
+    ],
+    "answer": 3,
+    "explanation": "公開鍵認証では、ペアとなる公開鍵と秘密鍵を利用して安全に認証を行います。"
+  },
+  {
+    "id": "webapp2-09-013",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "SSH認証に使う鍵のうち、GitHubへ登録するのはどちらですか？",
+    "choices": [
+      "公開鍵",
+      "秘密鍵",
+      "両方",
+      "どちらも登録しない"
+    ],
+    "answer": 0,
+    "explanation": "GitHubへ登録するのは公開鍵です。秘密鍵は自分のコンピューターで厳重に保管します。"
+  },
+  {
+    "id": "webapp2-09-014",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "SSHキーのファイルについて、他人へ渡してはいけないものはどれですか？",
+    "choices": [
+      "id_ed25519.pub",
+      "秘密鍵であるid_ed25519",
+      "公開鍵の文字列",
+      "GitHubのユーザー名"
+    ],
+    "answer": 1,
+    "explanation": ".pubが付かないid_ed25519は秘密鍵です。秘密鍵は絶対に他人へ渡さず、自分だけで厳重に管理します。"
+  },
+  {
+    "id": "webapp2-09-015",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "SSHキー作成時の暗号化形式として、講義で推奨されているものはどれですか？",
+    "choices": [
+      "HTML",
+      "IPv4",
+      "Ed25519",
+      "Markdown"
+    ],
+    "answer": 2,
+    "explanation": "講義ではSSHキーの暗号化形式としてEd25519が推奨されています。"
+  },
+  {
+    "id": "webapp2-09-016",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "SSHキーをデフォルトの保存場所に保存した場合、秘密鍵のパスとして講義で示されているものはどれですか？",
+    "choices": [
+      "~/git/id_ed25519",
+      "~/github/ssh",
+      "/home/git/key.pub",
+      "~/.ssh/id_ed25519"
+    ],
+    "answer": 3,
+    "explanation": "SSHキーをデフォルト設定で作成すると、秘密鍵は通常~/.ssh/id_ed25519へ保存されます。"
+  },
+  {
+    "id": "webapp2-09-017",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "GitHubへSSH公開鍵を登録する画面として、講義で示されているものはどれですか？",
+    "choices": [
+      "Settings → SSH and GPG keys → New SSH key",
+      "Issues → New issue → SSH",
+      "Wiki → New page → Authentication",
+      "Gist → Create secret gist"
+    ],
+    "answer": 0,
+    "explanation": "GitHubのSettingsからSSH and GPG keysを開き、New SSH keyから公開鍵を登録します。"
+  },
+  {
+    "id": "webapp2-09-018",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "GitHubへSSHキーを登録するときのKey typeとして、講義で選択しているものはどれですか？",
+    "choices": [
+      "Signing Key",
+      "Authentication Key",
+      "Commit Key",
+      "Repository Key"
+    ],
+    "answer": 1,
+    "explanation": "講義ではSSH公開鍵を認証に利用するため、Key typeとしてAuthentication Keyを選択します。"
+  },
+  {
+    "id": "webapp2-09-019",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "Gitの4つの領域のうち、実際にファイルを作成・編集している作業場所はどれですか？",
+    "choices": [
+      "リモートリポジトリ",
+      "インデックス",
+      "ワークツリー",
+      "コミットログ"
+    ],
+    "answer": 2,
+    "explanation": "ワークツリーは、ユーザーが実際にファイルを作成・編集している作業ディレクトリです。"
+  },
+  {
+    "id": "webapp2-09-020",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "コミットする変更を一時的に登録して準備する領域を何といいますか？",
+    "choices": [
+      "ワークツリー",
+      "リモートリポジトリ",
+      "SSH領域",
+      "インデックス"
+    ],
+    "answer": 3,
+    "explanation": "インデックスはステージングエリアとも呼ばれ、コミットする変更を準備する領域です。"
+  },
+  {
+    "id": "webapp2-09-021",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "git addが行うデータの流れとして正しいものはどれですか？",
+    "choices": [
+      "ワークツリーの変更をインデックスへ登録する",
+      "インデックスからGitHubへ直接送信する",
+      "リモートリポジトリを削除する",
+      "ローカルリポジトリからワークツリーを削除する"
+    ],
+    "answer": 0,
+    "explanation": "git addは、ワークツリーで行った変更をインデックスへ追加して、コミットする準備を行います。"
+  },
+  {
+    "id": "webapp2-09-022",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "git commitが行うデータの流れとして正しいものはどれですか？",
+    "choices": [
+      "リモートリポジトリからインデックスへ取得する",
+      "インデックスの内容をローカルリポジトリへ記録する",
+      "ワークツリーからGitHubへ直接送信する",
+      "GitHubからファイルをクローンする"
+    ],
+    "answer": 1,
+    "explanation": "git commitは、インデックスへステージングされている変更をローカルリポジトリの履歴として記録します。"
+  },
+  {
+    "id": "webapp2-09-023",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "git pushの役割として最も適切なものはどれですか？",
+    "choices": [
+      "ワークツリーの変更をインデックスへ移す",
+      "リモートの変更をローカルへ取り込む",
+      "ローカルリポジトリの履歴をリモートリポジトリへ反映する",
+      "新しいローカルリポジトリを作る"
+    ],
+    "answer": 2,
+    "explanation": "git pushは、ローカルリポジトリにあるコミット履歴をGitHubなどのリモートリポジトリへ反映します。"
+  },
+  {
+    "id": "webapp2-09-024",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "git pullの役割として最も適切なものはどれですか？",
+    "choices": [
+      "コミットを削除する",
+      "ワークツリーの変更をステージングする",
+      "ローカルの変更をGitHubへ送る",
+      "リモートリポジトリの最新状態をローカルへ取り込む"
+    ],
+    "answer": 3,
+    "explanation": "git pullは、リモートリポジトリの最新の変更をローカルリポジトリやワークツリーへ取り込むために使用します。"
+  },
+  {
+    "id": "webapp2-09-025",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "現在のディレクトリを新しいGitリポジトリとして初期化するコマンドはどれですか？",
+    "choices": [
+      "git init",
+      "git clone",
+      "git add",
+      "git config"
+    ],
+    "answer": 0,
+    "explanation": "git initを実行すると.gitディレクトリが作成され、現在のディレクトリがGitリポジトリとして初期化されます。"
+  },
+  {
+    "id": "webapp2-09-026",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "ファイルの変更状態やステージング状態を確認するコマンドはどれですか？",
+    "choices": [
+      "git log",
+      "git status",
+      "git tag",
+      "git clone"
+    ],
+    "answer": 1,
+    "explanation": "git statusを使うと、変更されたファイルやインデックスへ追加されたファイルなど、現在の状態を確認できます。"
+  },
+  {
+    "id": "webapp2-09-027",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "コミットメッセージ「はじめてのコミット」を付けてコミットするコマンドはどれですか？",
+    "choices": [
+      "git add -m \"はじめてのコミット\"",
+      "git push -m \"はじめてのコミット\"",
+      "git commit -m \"はじめてのコミット\"",
+      "git log -m \"はじめてのコミット\""
+    ],
+    "answer": 2,
+    "explanation": "git commit -m \"メッセージ\"で、コミットメッセージを指定して変更を記録できます。"
+  },
+  {
+    "id": "webapp2-09-028",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "これまでのコミット履歴を確認するコマンドはどれですか？",
+    "choices": [
+      "git status",
+      "git init",
+      "git config",
+      "git log"
+    ],
+    "answer": 3,
+    "explanation": "git logを使うと、これまでのコミット履歴やコミットハッシュ、メッセージなどを確認できます。"
+  },
+  {
+    "id": "webapp2-09-029",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "ForkとCloneの違いとして、講義内容に合っているものはどれですか？",
+    "choices": [
+      "ForkはGitHub上で他人のリポジトリを自分のアカウントへコピーし、Cloneはリポジトリを自分のコンピューターへコピーする",
+      "ForkとCloneは完全に同じ操作である",
+      "Forkはローカルでしか行えず、CloneはGitHub上でしか行えない",
+      "Cloneはコミットを削除し、Forkはタグを作成する"
+    ],
+    "answer": 0,
+    "explanation": "ForkはGitHub上で他人のリポジトリを自分のアカウントへコピーする操作、Cloneはリポジトリを自分のコンピューターへ複製する操作です。"
+  },
+  {
+    "id": "webapp2-09-030",
+    "subject": "webapp2",
+    "lesson": 9,
+    "question": "ローカルでREADME.mdを修正し、その変更をGitHubへ反映する基本的な操作順として正しいものはどれですか？",
+    "choices": [
+      "git push → git commit → git add",
+      "git add README.md → git commit -m \"変更内容\" → git push",
+      "git commit → git clone → git init",
+      "git pull → git init → git add"
+    ],
+    "answer": 1,
+    "explanation": "基本的には、ワークツリーの変更をgit addでインデックスへ追加し、git commitでローカルリポジトリへ記録し、最後にgit pushでリモートリポジトリへ反映します。"
+  }
+]
