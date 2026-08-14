@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-02-001",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "コンピューターの「頭脳」にあたり、主に計算や制御を担当する装置はどれですか？",
+    "choices": [
+      "CPU",
+      "メモリ",
+      "ストレージ",
+      "ネットワークデバイス"
+    ],
+    "answer": 0,
+    "explanation": "CPU（中央演算処理装置）は、コンピューターの頭脳にあたり、計算や制御を担当します。"
+  },
+  {
+    "id": "webapp2-02-002",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "プログラムやデータを一時的に記憶し、電源を切ると内容が消える装置はどれですか？",
+    "choices": [
+      "ストレージ",
+      "メモリ",
+      "CPU",
+      "ディスプレイ"
+    ],
+    "answer": 1,
+    "explanation": "メモリ（RAM）はプログラムやデータを一時的に保持する作業領域で、電源を切ると内容が消えます。"
+  },
+  {
+    "id": "webapp2-02-003",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "データやプログラムを長期間保存し、電源を切っても内容が残る装置はどれですか？",
+    "choices": [
+      "CPU",
+      "メモリ",
+      "ストレージ",
+      "バス"
+    ],
+    "answer": 2,
+    "explanation": "HDDやSSDなどのストレージは、データやプログラムを長期間保存し、電源を切っても内容が残ります。"
+  },
+  {
+    "id": "webapp2-02-004",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "Wi-FiやLANカードなど、他のコンピューターと通信するための装置を何といいますか？",
+    "choices": [
+      "入力デバイス",
+      "ストレージ",
+      "バス",
+      "ネットワークデバイス"
+    ],
+    "answer": 3,
+    "explanation": "ネットワークデバイスは、Wi-FiやLANカードなど、他のコンピューターと通信するための装置です。"
+  },
+  {
+    "id": "webapp2-02-005",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "CPU、メモリ、ストレージなどの各部品をつなぎ、データの通り道となるものはどれですか？",
+    "choices": [
+      "バス",
+      "パス",
+      "ディレクトリ",
+      "シェル"
+    ],
+    "answer": 0,
+    "explanation": "バスは、マザーボード上でCPUやメモリ、ストレージなどの各部品をつなぐデータの通り道です。"
+  },
+  {
+    "id": "webapp2-02-006",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "Linuxでハードウェアの一覧を表示するために使うコマンドはどれですか？",
+    "choices": [
+      "df",
+      "lshw",
+      "pwd",
+      "ls"
+    ],
+    "answer": 1,
+    "explanation": "lshwコマンドを使うと、CPU、メモリ、ストレージ、ネットワークデバイスなどのハードウェア情報を確認できます。"
+  },
+  {
+    "id": "webapp2-02-007",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "ハードウェア情報を簡潔な一覧形式で確認するときのコマンドとして、授業で使用したものはどれですか？",
+    "choices": [
+      "sudo df -short",
+      "sudo ls -short",
+      "sudo lshw -short",
+      "sudo pwd -short"
+    ],
+    "answer": 2,
+    "explanation": "授業ではsudo lshw -shortを使って、システムのハードウェア情報を簡潔な一覧で確認しています。"
+  },
+  {
+    "id": "webapp2-02-008",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "ストレージの使用量や空き容量を確認したいときに使うコマンドはどれですか？",
+    "choices": [
+      "lshw",
+      "pwd",
+      "man",
+      "df"
+    ],
+    "answer": 3,
+    "explanation": "dfコマンドを使うと、ストレージの使用状況や空き容量などを確認できます。"
+  },
+  {
+    "id": "webapp2-02-009",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "dfコマンドの詳しい使い方をLinux上で確認したいとき、適切なコマンドはどれですか？",
+    "choices": [
+      "man df",
+      "help storage",
+      "pwd df",
+      "ls df"
+    ],
+    "answer": 0,
+    "explanation": "manコマンドはコマンドのマニュアルを表示します。dfの詳細を調べるならman dfと入力します。"
+  },
+  {
+    "id": "webapp2-02-010",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "ファイルやディレクトリの位置を表す文字列を何といいますか？",
+    "choices": [
+      "バス",
+      "パス",
+      "オプション",
+      "引数"
+    ],
+    "answer": 1,
+    "explanation": "パスは、ファイルやディレクトリがどこにあるかという位置を表す文字列です。"
+  },
+  {
+    "id": "webapp2-02-011",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "次のうち、絶対パスの例はどれですか？",
+    "choices": [
+      "./test",
+      "../test",
+      "/home/ubuntu",
+      "test/file.txt"
+    ],
+    "answer": 2,
+    "explanation": "絶対パスはルートディレクトリ「/」から始まるパスです。/home/ubuntuは絶対パスです。"
+  },
+  {
+    "id": "webapp2-02-012",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "現在作業しているディレクトリのことを何といいますか？",
+    "choices": [
+      "ルートディレクトリ",
+      "ホームディレクトリ",
+      "親ディレクトリ",
+      "カレントディレクトリ"
+    ],
+    "answer": 3,
+    "explanation": "現在作業中のディレクトリをカレントディレクトリといいます。"
+  },
+  {
+    "id": "webapp2-02-013",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "現在のカレントディレクトリのパスを表示するコマンドはどれですか？",
+    "choices": [
+      "pwd",
+      "cd",
+      "ls",
+      "find"
+    ],
+    "answer": 0,
+    "explanation": "pwdはprint working directoryの略で、現在の作業ディレクトリのパスを表示します。"
+  },
+  {
+    "id": "webapp2-02-014",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "現在のディレクトリ内にあるファイルやディレクトリの一覧を確認するコマンドはどれですか？",
+    "choices": [
+      "pwd",
+      "ls",
+      "cd",
+      "mkdir"
+    ],
+    "answer": 1,
+    "explanation": "lsコマンドは、指定したディレクトリやカレントディレクトリ内のファイル・ディレクトリ一覧を表示します。"
+  },
+  {
+    "id": "webapp2-02-015",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "ドット「.」で始まるファイルも含めて一覧表示したいときに使うコマンドはどれですか？",
+    "choices": [
+      "ls /",
+      "ls -r",
+      "ls -a",
+      "ls ."
+    ],
+    "answer": 2,
+    "explanation": "ls -aを使うと、通常は表示されないドットファイルを含むすべてのファイルを表示できます。"
+  },
+  {
+    "id": "webapp2-02-016",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "現在のカレントディレクトリを変更するために使うコマンドはどれですか？",
+    "choices": [
+      "pwd",
+      "mkdir",
+      "mv",
+      "cd"
+    ],
+    "answer": 3,
+    "explanation": "cdコマンドはchange directoryの略で、カレントディレクトリを変更するために使います。"
+  },
+  {
+    "id": "webapp2-02-017",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "現在のディレクトリから1つ上のディレクトリへ移動するコマンドはどれですか？",
+    "choices": [
+      "cd ..",
+      "cd .",
+      "cd /",
+      "cd ~"
+    ],
+    "answer": 0,
+    "explanation": "..は1つ上のディレクトリを表すため、cd ..で親ディレクトリへ移動できます。"
+  },
+  {
+    "id": "webapp2-02-018",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "自分のホームディレクトリへ移動したいときに使用できるコマンドはどれですか？",
+    "choices": [
+      "cd .",
+      "cd ~",
+      "cd ..",
+      "cd -a"
+    ],
+    "answer": 1,
+    "explanation": "~はユーザーのホームディレクトリを表すため、cd ~でホームディレクトリへ移動できます。"
+  },
+  {
+    "id": "webapp2-02-019",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "カレントディレクトリに「tmp」という新しいディレクトリを作成するコマンドはどれですか？",
+    "choices": [
+      "cd tmp",
+      "mv tmp",
+      "mkdir tmp",
+      "pwd tmp"
+    ],
+    "answer": 2,
+    "explanation": "mkdirはディレクトリを作成するコマンドです。mkdir tmpでtmpディレクトリを作成できます。"
+  },
+  {
+    "id": "webapp2-02-020",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "存在していない途中のディレクトリもまとめて作成しながら「folder-a/folder-b」を作りたい場合、授業内容に合うコマンドはどれですか？",
+    "choices": [
+      "mkdir folder-a/folder-b",
+      "cd -p folder-a/folder-b",
+      "ls -p folder-a/folder-b",
+      "mkdir -p folder-a/folder-b"
+    ],
+    "answer": 3,
+    "explanation": "mkdir -pを使うと、必要な親ディレクトリも含めて階層構造をまとめて作成できます。"
+  },
+  {
+    "id": "webapp2-02-021",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "「file.txt」というファイルを削除したいときに使うコマンドはどれですか？",
+    "choices": [
+      "rm file.txt",
+      "cp file.txt",
+      "mv file.txt",
+      "find file.txt"
+    ],
+    "answer": 0,
+    "explanation": "rmはファイルやディレクトリを削除するためのコマンドです。ファイルならrm file.txtのように使います。"
+  },
+  {
+    "id": "webapp2-02-022",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "「folder」というディレクトリと、その中身をまとめて削除したい場合のコマンドはどれですか？",
+    "choices": [
+      "rm folder",
+      "rm -r folder",
+      "ls -r folder",
+      "cd -r folder"
+    ],
+    "answer": 1,
+    "explanation": "ディレクトリを中身ごと再帰的に削除するときはrm -rを使います。"
+  },
+  {
+    "id": "webapp2-02-023",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "カレントディレクトリ以下から「test.txt」という名前のファイルやディレクトリを検索するコマンドはどれですか？",
+    "choices": [
+      "ls . -name test.txt",
+      "pwd test.txt",
+      "find . -name test.txt",
+      "cd . test.txt"
+    ],
+    "answer": 2,
+    "explanation": "findコマンドはファイルやディレクトリを検索します。find . -name test.txtでは、カレントディレクトリ以下からtest.txtを検索します。"
+  },
+  {
+    "id": "webapp2-02-024",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "「file1」を「file2」という名前でコピーするコマンドはどれですか？",
+    "choices": [
+      "mv file1 file2",
+      "rm file1 file2",
+      "find file1 file2",
+      "cp file1 file2"
+    ],
+    "answer": 3,
+    "explanation": "cpはコピーを行うコマンドです。cp file1 file2とすると、file1の内容をfile2としてコピーできます。"
+  },
+  {
+    "id": "webapp2-02-025",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "ディレクトリ「dir1」を中身ごと「dir2」へコピーするときに使用するコマンドはどれですか？",
+    "choices": [
+      "cp -r dir1 dir2",
+      "cp dir1 dir2",
+      "mv -r dir1 dir2",
+      "rm -r dir1 dir2"
+    ],
+    "answer": 0,
+    "explanation": "ディレクトリを中身ごとコピーする場合は、cpに-rオプションを付けてcp -r dir1 dir2のように使います。"
+  },
+  {
+    "id": "webapp2-02-026",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "「old」というファイルまたはディレクトリの名前を「new」に変更する場合に使えるコマンドはどれですか？",
+    "choices": [
+      "cp old new",
+      "mv old new",
+      "mkdir old new",
+      "find old new"
+    ],
+    "answer": 1,
+    "explanation": "mvは移動だけでなく名前変更にも使えます。mv old newでoldをnewという名前に変更できます。"
+  },
+  {
+    "id": "webapp2-02-027",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "「ls -a」における「-a」は何ですか？",
+    "choices": [
+      "引数",
+      "パス",
+      "オプション",
+      "カレントディレクトリ"
+    ],
+    "answer": 2,
+    "explanation": "オプションはコマンドの動作を変更する指定です。ls -aでは-aがオプションです。"
+  },
+  {
+    "id": "webapp2-02-028",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "「mkdir folder」における「folder」は何にあたりますか？",
+    "choices": [
+      "オプション",
+      "コマンド",
+      "ホームディレクトリ",
+      "引数"
+    ],
+    "answer": 3,
+    "explanation": "引数はコマンドへ渡す値です。mkdir folderでは、作成するディレクトリ名のfolderが引数です。"
+  },
+  {
+    "id": "webapp2-02-029",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "Linuxのコマンド入力中に、過去に実行したコマンドを検索するショートカットはどれですか？",
+    "choices": [
+      "Ctrl + r",
+      "Ctrl + a",
+      "Ctrl + e",
+      "Ctrl + s"
+    ],
+    "answer": 0,
+    "explanation": "Ctrl + rを使うと、過去に入力したコマンドの履歴を検索できます。Ctrl + aは行頭、Ctrl + eは行末へカーソルを移動します。"
+  },
+  {
+    "id": "webapp2-02-030",
+    "subject": "webapp2",
+    "lesson": 2,
+    "question": "「/home/ubuntu に file-command-study ディレクトリを作成し、その中へ移動した後、現在地を確認する」という操作を正しい順序で行っているものはどれですか？",
+    "choices": [
+      "cd /home/ubuntu/file-command-study\nmkdir /home/ubuntu/file-command-study\npwd",
+      "pwd\ncd /home/ubuntu/file-command-study\nrm /home/ubuntu/file-command-study",
+      "mkdir /home/ubuntu/file-command-study\ncd /home/ubuntu/file-command-study\npwd",
+      "ls /home/ubuntu/file-command-study\npwd\nmkdir file-command-study"
+    ],
+    "answer": 2,
+    "explanation": "まずmkdirでディレクトリを作成し、cdでそのディレクトリへ移動し、最後にpwdで現在地を確認します。授業の練習問題でもこの手順が使われています。"
+  }
+]
