@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-05-001",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "Linuxにおけるシェルの説明として最も適切なものはどれですか？",
+    "choices": [
+      "OSのカーネルと対話するためのインターフェース",
+      "画像編集専用のソフトウェア",
+      "ネットワーク通信を監視する装置",
+      "ファイルを保存するストレージ"
+    ],
+    "answer": 0,
+    "explanation": "シェルは、ユーザーからの命令を受け取り、OSのカーネルと対話するためのインターフェースです。bash、zsh、fishなどがあります。"
+  },
+  {
+    "id": "webapp2-05-002",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "次のうち、シェルの一種ではないものはどれですか？",
+    "choices": [
+      "bash",
+      "VS Code",
+      "zsh",
+      "fish"
+    ],
+    "answer": 1,
+    "explanation": "bash、zsh、fishはシェルですが、VS Codeはテキストエディタ・開発環境であり、シェルそのものではありません。"
+  },
+  {
+    "id": "webapp2-05-003",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "シェルプログラミングの説明として正しいものはどれですか？",
+    "choices": [
+      "HTMLだけを使ってWebページを作ること",
+      "ネットワークケーブルを接続すること",
+      "シェルのコマンドや条件分岐、繰り返しなどを組み合わせてプログラムを作ること",
+      "CPUの命令を直接機械語で記述すること"
+    ],
+    "answer": 2,
+    "explanation": "シェルプログラミングでは、Linuxコマンドや条件分岐などを組み合わせて処理を自動化するプログラムを作成します。"
+  },
+  {
+    "id": "webapp2-05-004",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "「sample.txt」というファイルが存在しない場合、次のコマンドを実行するとどうなりますか？\n\ntouch sample.txt",
+    "choices": [
+      "sample.txtが削除される",
+      "sample.txtの内容が画面に表示される",
+      "sample.txtというディレクトリが作成される",
+      "空のsample.txtが作成される"
+    ],
+    "answer": 3,
+    "explanation": "touchは、指定したファイルが存在しなければ空ファイルを作成します。すでに存在する場合は更新日時を変更します。"
+  },
+  {
+    "id": "webapp2-05-005",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "ファイルやディレクトリの読み込み・書き込み・実行などの権限を変更するコマンドはどれですか？",
+    "choices": [
+      "chmod",
+      "echo",
+      "read",
+      "touch"
+    ],
+    "answer": 0,
+    "explanation": "chmodコマンドは、ファイルやディレクトリのパーミッション（権限）を変更するために使います。"
+  },
+  {
+    "id": "webapp2-05-006",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "次のコマンドが行う処理として正しいものはどれですか？\n\nchmod a+x my-first.sh",
+    "choices": [
+      "所有者だけから実行権限を削除する",
+      "すべてのユーザーに実行権限を追加する",
+      "ファイルを削除する",
+      "ファイルの内容を表示する"
+    ],
+    "answer": 1,
+    "explanation": "aは全ユーザー、+は権限追加、xは実行権限を表します。そのためchmod a+xは全ユーザーに実行権限を追加します。"
+  },
+  {
+    "id": "webapp2-05-007",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "Linuxのパーミッションで「r」「w」「x」がそれぞれ表すものの組み合わせとして正しいものはどれですか？",
+    "choices": [
+      "rename・write・exit",
+      "read・watch・execute",
+      "read・write・execute",
+      "run・write・export"
+    ],
+    "answer": 2,
+    "explanation": "rは読み込み（read）、wは書き込み（write）、xは実行（execute）を表します。"
+  },
+  {
+    "id": "webapp2-05-008",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "ファイルのパーミッションを確認するときに使うコマンドはどれですか？",
+    "choices": [
+      "ls",
+      "chmod",
+      "pwd",
+      "ls -l"
+    ],
+    "answer": 3,
+    "explanation": "ls -lを使うと、ファイルやディレクトリの詳細情報とともにパーミッションを確認できます。"
+  },
+  {
+    "id": "webapp2-05-009",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "指定した文字列を標準出力へ表示するコマンドはどれですか？",
+    "choices": [
+      "echo",
+      "read",
+      "chmod",
+      "tcpdump"
+    ],
+    "answer": 0,
+    "explanation": "echoは、指定された文字列や変数の内容などを標準出力へ表示するコマンドです。"
+  },
+  {
+    "id": "webapp2-05-010",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "標準入力から値を受け取り、変数nameへ代入するコマンドはどれですか？",
+    "choices": [
+      "echo name",
+      "read name",
+      "touch name",
+      "chmod name"
+    ],
+    "answer": 1,
+    "explanation": "readコマンドを使うと標準入力から値を受け取れます。read nameでは入力された値が変数nameへ代入されます。"
+  },
+  {
+    "id": "webapp2-05-011",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "シェルスクリプトの先頭に書く「#!/bin/bash」を何と呼びますか？",
+    "choices": [
+      "パイプ",
+      "リダイレクト",
+      "シバン（shebang）",
+      "パーミッション"
+    ],
+    "answer": 2,
+    "explanation": "#!/bin/bashはシバンと呼ばれ、そのスクリプトをどのインタープリタで実行するかを示します。"
+  },
+  {
+    "id": "webapp2-05-012",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "実行権限を付けたmy-first.shを、カレントディレクトリから実行するコマンドはどれですか？",
+    "choices": [
+      "my-first.sh/",
+      "run my-first.sh",
+      "/my-first.sh",
+      "./my-first.sh"
+    ],
+    "answer": 3,
+    "explanation": "パスが通っていないスクリプトをカレントディレクトリから実行する場合は、./my-first.shのように相対パスを指定します。"
+  },
+  {
+    "id": "webapp2-05-013",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "my-first.shに実行権限が付いていない場合でも、授業で示されている実行方法はどれですか？",
+    "choices": [
+      "bash my-first.sh",
+      "chmod my-first.sh",
+      "echo my-first.sh",
+      "read my-first.sh"
+    ],
+    "answer": 0,
+    "explanation": "実行権限がない場合でも、bash my-first.shのようにbashへスクリプトファイルを渡して実行することができます。"
+  },
+  {
+    "id": "webapp2-05-014",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "シェルスクリプトで変数aへ文字列hogeを代入する書き方として、授業資料に沿っているものはどれですか？",
+    "choices": [
+      "$a='hoge'",
+      "a='hoge'",
+      "a = 'hoge'",
+      "set a='hoge'"
+    ],
+    "answer": 1,
+    "explanation": "変数への代入はa='hoge'のように書きます。=の前後に空白は入れません。"
+  },
+  {
+    "id": "webapp2-05-015",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "シェルスクリプトで変数aの値を参照するときの書き方はどれですか？",
+    "choices": [
+      "a$",
+      "{a}",
+      "$a",
+      "#a"
+    ],
+    "answer": 2,
+    "explanation": "シェルでは、変数の値を参照するときに変数名の前へ$を付けます。"
+  },
+  {
+    "id": "webapp2-05-016",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "シェルスクリプトのif文について、授業で特に注意点として示されているものはどれですか？",
+    "choices": [
+      "ifの後には必ずコロンを書く",
+      "条件式では必ず==だけを使う",
+      "fiは書いてはいけない",
+      "[ ]の内側や演算子の前後に必要な半角スペースを入れる"
+    ],
+    "answer": 3,
+    "explanation": "シェルのif文では、[ ]の中や比較演算子の前後のスペースが重要です。スペースがないと正しく評価されないことがあります。"
+  },
+  {
+    "id": "webapp2-05-017",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "通信について、講義内容に最も合っている説明はどれですか？",
+    "choices": [
+      "送り手が情報を送り、受け手がその情報を受け取ること",
+      "情報を必ず紙に印刷すること",
+      "同じコンピューター内だけでファイルをコピーすること",
+      "データを削除すること"
+    ],
+    "answer": 0,
+    "explanation": "通信とは、送り手が情報を送り、それを受け手が受け取ることです。電話、無線、インターネットなどは電気通信の例です。"
+  },
+  {
+    "id": "webapp2-05-018",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "回線交換方式の特徴として正しいものはどれですか？",
+    "choices": [
+      "通信データを必ず複数経路へ分割する",
+      "通信を始める前に回線を占有する",
+      "インターネットだけで使用される",
+      "送信先の情報を持たない"
+    ],
+    "answer": 1,
+    "explanation": "回線交換方式では、通信を開始する前に回線を確保・占有します。固定電話などが例として挙げられています。"
+  },
+  {
+    "id": "webapp2-05-019",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "パケット交換方式について正しい説明はどれですか？",
+    "choices": [
+      "通信の間、必ず1本の回線を占有する",
+      "情報を分割せず、そのまま送る",
+      "情報をパケットという単位に分割して送信する",
+      "インターネットでは利用されていない"
+    ],
+    "answer": 2,
+    "explanation": "パケット交換方式では、情報をパケットと呼ばれる単位に分割して送信します。インターネットで利用されている方式です。"
+  },
+  {
+    "id": "webapp2-05-020",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "パケット交換方式のメリットとして、講義で示されているものはどれですか？",
+    "choices": [
+      "必ず同じ経路しか利用できない",
+      "1人が回線を独占できる",
+      "送信先を指定しなくても届く",
+      "回線を占有しないため、多くの人が同時に利用しやすい"
+    ],
+    "answer": 3,
+    "explanation": "パケット交換方式は通信中に回線を占有しないため、多くの利用者が同時に通信しやすく、災害時にも強いという特徴があります。"
+  },
+  {
+    "id": "webapp2-05-021",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "パケットに含まれる情報として正しいものはどれですか？",
+    "choices": [
+      "送信元や送信先のIPアドレス",
+      "CPUのクロック周波数だけ",
+      "ユーザーのVim設定だけ",
+      "ディスプレイの解像度だけ"
+    ],
+    "answer": 0,
+    "explanation": "パケットには送信するデータだけでなく、送信元や送信先のIPアドレスなどの情報が含まれます。"
+  },
+  {
+    "id": "webapp2-05-022",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "IPv4アドレスについて、講義内容に合っているものはどれですか？",
+    "choices": [
+      "128bitで構成される",
+      "0〜255の整数4つで構成される32bitのアドレス",
+      "文字だけで構成される",
+      "コンピューター1台につき無制限に発行できる"
+    ],
+    "answer": 1,
+    "explanation": "IPv4は0〜255の整数4つで表現される32bitのIPアドレスです。"
+  },
+  {
+    "id": "webapp2-05-023",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "IPv4のアドレス枯渇問題について、講義資料で示されている内容はどれですか？",
+    "choices": [
+      "IPv4は無限個のアドレスを利用できる",
+      "IPv4は2011年から利用禁止になった",
+      "IPv4は約43億個が上限で、新規アドレスの枯渇が問題となった",
+      "IPv4よりIPv6の方がアドレス数が少ない"
+    ],
+    "answer": 2,
+    "explanation": "IPv4は32bitのため利用できるアドレス数に上限があり、約43億個とされています。講義では2011年に新規アドレスが枯渇したと説明されています。"
+  },
+  {
+    "id": "webapp2-05-024",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "ルータの役割として最も適切なものはどれですか？",
+    "choices": [
+      "ファイルの実行権限を変更する",
+      "シェルスクリプトを編集する",
+      "標準入力から文字を読み込む",
+      "パケットを受け取り、IPアドレスをもとに適切なネットワークへ転送する"
+    ],
+    "answer": 3,
+    "explanation": "ルータは受け取ったパケットのIPアドレスなどを確認し、適切なネットワークへ転送します。"
+  },
+  {
+    "id": "webapp2-05-025",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "TCPの特徴として正しいものはどれですか？",
+    "choices": [
+      "通信相手との接続を確立し、信頼性を重視してデータを転送する",
+      "相手との接続を一切確認せず効率だけを重視する",
+      "IPアドレスを使用しない",
+      "Webページの内容を取得するコマンドである"
+    ],
+    "answer": 0,
+    "explanation": "TCPは通信相手との接続を確立してデータを転送し、転送後に接続を切断するなど、信頼性を重視するプロトコルです。"
+  },
+  {
+    "id": "webapp2-05-026",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "UDPの特徴として最も適切なものはどれですか？",
+    "choices": [
+      "必ず相手との接続を確立してから送信する",
+      "接続を確立せずにデータを送り、効率を重視する",
+      "ファイルの権限を変更する",
+      "通信内容を必ずファイルに保存する"
+    ],
+    "answer": 1,
+    "explanation": "UDPは通信前に接続を確立せずにデータを送信する方式で、TCPよりも効率を重視します。"
+  },
+  {
+    "id": "webapp2-05-027",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "Linuxで通信パケットの内容を監視・表示するために使うコマンドはどれですか？",
+    "choices": [
+      "curl",
+      "ping",
+      "tcpdump",
+      "echo"
+    ],
+    "answer": 2,
+    "explanation": "tcpdumpは、TCPやUDPなどの通信パケットを監視・表示するためのコマンドです。"
+  },
+  {
+    "id": "webapp2-05-028",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "指定したURLのWebページの内容を取得して表示するために使うコマンドはどれですか？",
+    "choices": [
+      "ping",
+      "tcpdump",
+      "chmod",
+      "curl"
+    ],
+    "answer": 3,
+    "explanation": "curlは、指定したURLへアクセスしてWebコンテンツなどを取得するために使います。"
+  },
+  {
+    "id": "webapp2-05-029",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "指定したホストへパケットを送り、ネットワークの疎通や応答時間を確認するコマンドはどれですか？",
+    "choices": [
+      "ping",
+      "read",
+      "touch",
+      "ls"
+    ],
+    "answer": 0,
+    "explanation": "pingは指定したホストへパケットを送り、通信できるかどうかや応答時間を確認するコマンドです。"
+  },
+  {
+    "id": "webapp2-05-030",
+    "subject": "webapp2",
+    "lesson": 5,
+    "question": "Webコンテンツを世界各地のキャッシュサーバーから配信し、利用者へのレスポンスを高速化する仕組みはどれですか？",
+    "choices": [
+      "TCP",
+      "CDN",
+      "chmod",
+      "シバン"
+    ],
+    "answer": 1,
+    "explanation": "CDN（Content Delivery Network）は、世界各地のキャッシュサーバーなどを利用して、Webコンテンツを効率的・高速に配信する仕組みです。"
+  }
+]
