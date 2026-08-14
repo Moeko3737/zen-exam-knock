@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-06-001",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "サーバクライアント型通信における「サーバ」の説明として正しいものはどれですか？",
+    "choices": [
+      "サービスを提供する側のコンピューター",
+      "必ず個人が操作する側のコンピューター",
+      "通信を行わないコンピューター",
+      "サービスを受け取る側だけを指す"
+    ],
+    "answer": 0,
+    "explanation": "サーバはサービスを提供する側、クライアントはサービスを受ける側です。どちらもコンピューターであり、役割は状況によって変わることがあります。"
+  },
+  {
+    "id": "webapp2-06-002",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "P2P（Peer to Peer）型通信の特徴として最も適切なものはどれですか？",
+    "choices": [
+      "必ず1台だけがサーバになる",
+      "各コンピューターがサーバにもクライアントにもなり得る",
+      "ネットワークを使用しない",
+      "クライアント同士は絶対に通信できない"
+    ],
+    "answer": 1,
+    "explanation": "P2P型では、すべてのコンピューターがサーバとクライアントの両方の役割を持ち、メッシュ状に通信します。"
+  },
+  {
+    "id": "webapp2-06-003",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "tmuxの説明として、授業内容に最も合っているものはどれですか？",
+    "choices": [
+      "HTTP通信だけを解析するコマンド",
+      "DNSを設定するためのサービス",
+      "1つのコンソールで複数の仮想端末を扱えるソフトウェア",
+      "Webブラウザの一種"
+    ],
+    "answer": 2,
+    "explanation": "tmuxは仮想端末ソフトウェアで、1つのコンソールから複数のセッションやウィンドウを管理できます。"
+  },
+  {
+    "id": "webapp2-06-004",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "tmuxで新しいウィンドウを作成する操作はどれですか？",
+    "choices": [
+      "Ctrl+b → d",
+      "Ctrl+b → n",
+      "Ctrl+b → &",
+      "Ctrl+b → c"
+    ],
+    "answer": 3,
+    "explanation": "tmuxではCtrl+bを押した後にcを押すと、新しいウィンドウを作成できます。"
+  },
+  {
+    "id": "webapp2-06-005",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "tmuxの仮想端末を終了せず、一時的にそこから離れる「デタッチ」の操作はどれですか？",
+    "choices": [
+      "Ctrl+b → d",
+      "Ctrl+b → c",
+      "Ctrl+b → ?",
+      "Ctrl+b → &"
+    ],
+    "answer": 0,
+    "explanation": "Ctrl+b → dでデタッチできます。tmuxでは状態を維持したまま仮想端末から離れられます。"
+  },
+  {
+    "id": "webapp2-06-006",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "デタッチしたtmuxのセッションへ再接続するコマンドはどれですか？",
+    "choices": [
+      "tmux d",
+      "tmux a",
+      "tmux c",
+      "tmux r"
+    ],
+    "answer": 1,
+    "explanation": "tmux aで既存のtmuxセッションへアタッチし、再接続できます。"
+  },
+  {
+    "id": "webapp2-06-007",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "TCPやUDP通信で利用するポート番号の範囲として、授業資料に示されているものはどれですか？",
+    "choices": [
+      "0〜255",
+      "0〜1023",
+      "0〜65535",
+      "1〜999999"
+    ],
+    "answer": 2,
+    "explanation": "ポート番号はTCP・UDP通信で使われる番号で、0〜65535番の範囲があります。"
+  },
+  {
+    "id": "webapp2-06-008",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "NetCat（nc）を使い、8000番ポートで接続を待ち受けるコマンドはどれですか？",
+    "choices": [
+      "nc 8000",
+      "nc -p 8000",
+      "nc localhost 8000",
+      "nc -l 8000"
+    ],
+    "answer": 3,
+    "explanation": "nc -l 8000とすると、8000番ポートで接続を待ち受けるサーバ側の動作ができます。"
+  },
+  {
+    "id": "webapp2-06-009",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "自分自身の8000番ポートで待ち受けているncサーバへ、別の端末からncで接続するコマンドはどれですか？",
+    "choices": [
+      "nc 127.0.0.1 8000",
+      "nc -l 127.0.0.1",
+      "nc 8000 127.0.0.1",
+      "nc --server 8000"
+    ],
+    "answer": 0,
+    "explanation": "サーバ側でnc -l 8000と待ち受け、クライアント側でnc 127.0.0.1 8000とすると、自分自身の8000番ポートへ接続できます。"
+  },
+  {
+    "id": "webapp2-06-010",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "telnetについて、授業内容に合っている説明はどれですか？",
+    "choices": [
+      "通信内容を必ず暗号化する",
+      "リモート端末へ接続できるが、暗号化されないため利用は減少傾向にある",
+      "ファイルの権限だけを変更する",
+      "HTTPサーバ専用のコマンドである"
+    ],
+    "answer": 1,
+    "explanation": "telnetはリモート端末へのアクセスなどに利用できますが、通信が暗号化されないため、セキュリティの観点から利用は減少しています。"
+  },
+  {
+    "id": "webapp2-06-011",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "HTTPの正式名称として正しいものはどれですか？",
+    "choices": [
+      "High Transfer Text Program",
+      "Host Terminal Transfer Protocol",
+      "HyperText Transfer Protocol",
+      "Hyper Terminal Text Process"
+    ],
+    "answer": 2,
+    "explanation": "HTTPはHyperText Transfer Protocolの略で、HTMLなどのハイパーテキストをやりとりするためのプロトコルです。"
+  },
+  {
+    "id": "webapp2-06-012",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "HTTPのデフォルトのポート番号はどれですか？",
+    "choices": [
+      "21",
+      "443",
+      "8000",
+      "80"
+    ],
+    "answer": 3,
+    "explanation": "HTTPのデフォルトポートは80番です。授業でPythonのHTTPサーバに使う8000番は、HTTPのデフォルトポートではありません。"
+  },
+  {
+    "id": "webapp2-06-013",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "HTTP通信における「HTTPリクエスト」とは何ですか？",
+    "choices": [
+      "クライアントからサーバへの要求",
+      "サーバからクライアントへの応答",
+      "DNSからIPアドレスへの変換",
+      "Webサーバを停止する命令"
+    ],
+    "answer": 0,
+    "explanation": "HTTPリクエストはクライアントからサーバへ送る要求です。授業ではGETメソッドが例として使われています。"
+  },
+  {
+    "id": "webapp2-06-014",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "HTTPレスポンスに含まれるものとして、授業資料に示されているものはどれですか？",
+    "choices": [
+      "IPアドレスだけ",
+      "ステータスコード、ヘッダ、HTMLなどのボディ",
+      "必ず画像ファイルだけ",
+      "DNSサーバの設定だけ"
+    ],
+    "answer": 1,
+    "explanation": "HTTPレスポンスはサーバからクライアントへの応答で、ステータスコード、ヘッダ、ボディなどを含みます。"
+  },
+  {
+    "id": "webapp2-06-015",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "HTTPSについて正しい説明はどれですか？",
+    "choices": [
+      "HTTPより暗号化を弱くした通信方式",
+      "HTMLを使わない通信方式",
+      "HTTPをSSL/TLSで暗号化したプロトコル",
+      "DNSを利用しないHTTP"
+    ],
+    "answer": 2,
+    "explanation": "HTTPSはHTTP通信をSSL/TLSによって暗号化したプロトコルで、盗聴やなりすましへの対策になります。"
+  },
+  {
+    "id": "webapp2-06-016",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "HTTPSのデフォルトのポート番号はどれですか？",
+    "choices": [
+      "53",
+      "80",
+      "8000",
+      "443"
+    ],
+    "answer": 3,
+    "explanation": "HTTPSのデフォルトポート番号は443番です。"
+  },
+  {
+    "id": "webapp2-06-017",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "DNS（Domain Name System）の主な役割はどれですか？",
+    "choices": [
+      "ドメイン名やホスト名をIPアドレスへ変換する",
+      "Webページを暗号化する",
+      "ポート番号を自動的に8000へ変更する",
+      "tmuxのウィンドウを切り替える"
+    ],
+    "answer": 0,
+    "explanation": "DNSはnnn.ed.jpのようなホスト名を、通信に利用するIPアドレスへ変換する仕組みです。"
+  },
+  {
+    "id": "webapp2-06-018",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "DNSでホスト名を変換した後、実際のネットワーク通信で使用されるものはどれですか？",
+    "choices": [
+      "HTMLのtitle要素",
+      "IPアドレス",
+      "tmuxのセッション名",
+      "ファイル名"
+    ],
+    "answer": 1,
+    "explanation": "人間にとって扱いやすいホスト名をDNSでIPアドレスへ変換し、実際の通信はIPアドレスを用いて行われます。"
+  },
+  {
+    "id": "webapp2-06-019",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "Pythonを使ってカレントディレクトリを公開する簡易HTTPサーバを8000番ポートで起動するコマンドはどれですか？",
+    "choices": [
+      "python3 server 8000",
+      "python3 http 8000",
+      "python3 -m http.server 8000",
+      "python3 -m server.http 8000"
+    ],
+    "answer": 2,
+    "explanation": "授業ではpython3 -m http.server 8000を実行し、8000番ポートで簡易HTTPサーバを起動しています。"
+  },
+  {
+    "id": "webapp2-06-020",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "次のコマンドで起動したHTTPサーバが待ち受けるポート番号はどれですか？\n\npython3 -m http.server 8000",
+    "choices": [
+      "80",
+      "443",
+      "65535",
+      "8000"
+    ],
+    "answer": 3,
+    "explanation": "コマンド末尾で8000を指定しているため、このHTTPサーバは8000番ポートで起動します。"
+  },
+  {
+    "id": "webapp2-06-021",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "IPアドレスが192.0.2.10で、8000番ポートにHTTPサーバを立てた場合、ブラウザからアクセスするURLの形として正しいものはどれですか？",
+    "choices": [
+      "http://192.0.2.10:8000/",
+      "192.0.2.10/http/8000",
+      "https://8000:192.0.2.10/",
+      "http:8000//192.0.2.10"
+    ],
+    "answer": 0,
+    "explanation": "授業ではhttp://<IPアドレス>:8000/という形で、サーバのIPアドレスとポート番号を指定してアクセスします。"
+  },
+  {
+    "id": "webapp2-06-022",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "Ubuntuで、自分のIPv4アドレスを確認するために授業で使ったコマンドはどれですか？",
+    "choices": [
+      "pwd -4",
+      "ip -4 a",
+      "dns -4 a",
+      "http -4 a"
+    ],
+    "answer": 1,
+    "explanation": "授業ではip -4 aを使い、ネットワークインターフェースに設定されたIPv4アドレスを確認しています。"
+  },
+  {
+    "id": "webapp2-06-023",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "HTTPサーバの公開ディレクトリにindex.htmlがある場合、ディレクトリ名だけをURLで指定するとどうなりますか？",
+    "choices": [
+      "必ず404エラーになる",
+      "ファイル一覧しか表示できない",
+      "index.htmlが自動的に表示される",
+      "index.htmlはダウンロードされるだけで表示されない"
+    ],
+    "answer": 2,
+    "explanation": "授業では、ディレクトリ名だけを指定した場合にindex.htmlが自動的に表示される特別な役割を学びます。"
+  },
+  {
+    "id": "webapp2-06-024",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "Multipassなどで動かしているUbuntuのVMと、手元のホストPCについて正しい説明はどれですか？",
+    "choices": [
+      "常に同じコンピューターとして扱う",
+      "IPアドレスを持つことはない",
+      "VMからホストPCへは絶対に通信できない",
+      "別のコンピューターとして扱う必要がある"
+    ],
+    "answer": 3,
+    "explanation": "仮想環境のUbuntuとホストPCは別のコンピューターとして扱われます。そのため、ホストPCからアクセス可能なVMのIPアドレスを確認する必要があります。"
+  },
+  {
+    "id": "webapp2-06-025",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "Linuxのipコマンドの主な用途として、確認テストの内容に最も合っているものはどれですか？",
+    "choices": [
+      "ネットワークインターフェースの設定や状態を確認する",
+      "ファイルの内容を暗号化する",
+      "通信パケットの中身を監視する",
+      "IPアドレスをDNS名へ変換するだけ"
+    ],
+    "answer": 0,
+    "explanation": "ipコマンドは、IPアドレスやネットワークインターフェースなど、ネットワークの設定や状態を確認・操作するために使います。"
+  },
+  {
+    "id": "webapp2-06-026",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "tmuxを利用する利点として、授業内容に最も合っているものはどれですか？",
+    "choices": [
+      "Web通信を自動的にHTTPSへ変換できる",
+      "作業状態を維持しながら複数の仮想端末を扱える",
+      "DNSを利用せずWebサイトへ接続できる",
+      "すべてのLinuxコマンドをGUI化できる"
+    ],
+    "answer": 1,
+    "explanation": "tmuxでは複数の仮想端末を扱い、デタッチしても状態を維持できます。そのため、複数の処理を並行して試すときなどに便利です。"
+  },
+  {
+    "id": "webapp2-06-027",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "ncを使ってサーバとクライアントで通信するとき、ポート番号について正しいものはどれですか？",
+    "choices": [
+      "サーバとクライアントは必ず違うポート番号を使う",
+      "クライアント側ではポート番号を指定してはいけない",
+      "接続先となるサーバが待ち受けているポート番号を指定して通信する",
+      "ポート番号はHTTPの場合しか使わない"
+    ],
+    "answer": 2,
+    "explanation": "例えばサーバがnc -l 8000で待ち受けている場合、クライアントも接続先として8000番ポートを指定します。"
+  },
+  {
+    "id": "webapp2-06-028",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "授業のWebアプリ公開例で、GitHub Pagesなどからファイルを取得するために使われているコマンドはどれですか？",
+    "choices": [
+      "tmux",
+      "telnet",
+      "ip",
+      "curl"
+    ],
+    "answer": 3,
+    "explanation": "授業ではcurlを利用してGitHub PagesなどからHTML・CSS・JavaScriptのファイルを取得し、HTTPサーバ上へ配置する例があります。"
+  },
+  {
+    "id": "webapp2-06-029",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "HTTPレスポンスの「HTTP/1.1 400 Bad Request」は、授業ではどのような例として紹介されていますか？",
+    "choices": [
+      "不適切なHTTPリクエストに対するレスポンス",
+      "正常なDNS変換の結果",
+      "HTTPS接続が成功したことを示す表示",
+      "tmuxの接続エラー"
+    ],
+    "answer": 0,
+    "explanation": "授業では、不適切なHTTPリクエストを送った場合のHTTPレスポンス例として「HTTP/1.1 400 Bad Request」が紹介されています。"
+  },
+  {
+    "id": "webapp2-06-030",
+    "subject": "webapp2",
+    "lesson": 6,
+    "question": "Ubuntu上で作成したindex.htmlを、ホストPCのブラウザから確認したい場合の手順として最も適切なものはどれですか？",
+    "choices": [
+      "index.htmlを作成 → tmuxを削除 → DNSを停止する",
+      "index.htmlを作成 → python3 -m http.server 8000でサーバ起動 → VMのIPアドレスを確認 → ホストPCからhttp://<IPアドレス>:8000/へアクセス",
+      "index.htmlを作成 → chmodでHTTPへ変換 → pingでHTMLを表示する",
+      "index.htmlを作成 → ncだけ起動すればブラウザが自動表示する"
+    ],
+    "answer": 1,
+    "explanation": "授業では、HTMLを用意し、python3 -m http.server 8000でサーバを起動して、ip -4 aなどでVMのIPアドレスを確認し、ホストPCのブラウザからアクセスする流れを実践しています。"
+  }
+]
