@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-04-001",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimについて、授業内容に最も合っている説明はどれですか？",
+    "choices": [
+      "ネットワーク設定専用のツール",
+      "viを改良したCLIテキストエディタ",
+      "ファイルを圧縮するためのコマンド",
+      "Linuxのパッケージ管理ツール"
+    ],
+    "answer": 1,
+    "explanation": "Vimはviを改良したCLIテキストエディタで、キーボード操作を中心にファイルを編集できます。"
+  },
+  {
+    "id": "webapp2-04-002",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimがリモート環境でも利用しやすい理由として、授業内容に合っているものはどれですか？",
+    "choices": [
+      "キーボード操作だけでテキスト編集ができるため",
+      "必ずマウス操作が必要だから",
+      "Webブラウザ上でしか動かないから",
+      "画像編集専用だから"
+    ],
+    "answer": 0,
+    "explanation": "VimはCLI上でキーボードを使って操作できるため、GUIがないリモート環境でも利用できます。"
+  },
+  {
+    "id": "webapp2-04-003",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimがインストールされているか確認するために使うコマンドはどれですか？",
+    "choices": [
+      "vim install",
+      "vim check",
+      "vim --version",
+      "man --vim"
+    ],
+    "answer": 2,
+    "explanation": "vim --versionを実行し、バージョン情報が表示されればVimがインストールされています。"
+  },
+  {
+    "id": "webapp2-04-004",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "test.txtというファイルをVimで開くコマンドはどれですか？",
+    "choices": [
+      "open test.txt",
+      "edit test.txt",
+      "cat test.txt",
+      "vim test.txt"
+    ],
+    "answer": 3,
+    "explanation": "Vimでファイルを開くときは「vim ファイル名」と入力します。"
+  },
+  {
+    "id": "webapp2-04-005",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "存在しないファイル名を指定して「vim new.txt」と実行した場合、授業内容に沿った説明はどれですか？",
+    "choices": [
+      "新しいファイルを作成するための編集画面を開ける",
+      "必ずエラーになりVimは起動しない",
+      "ディレクトリが自動で削除される",
+      "ファイルは即座に保存される"
+    ],
+    "answer": 0,
+    "explanation": "存在しないファイル名を指定してVimを起動すると、新規ファイルとして編集できます。実際に保存するには:wを実行します。"
+  },
+  {
+    "id": "webapp2-04-006",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vim起動直後の基本モードはどれですか？",
+    "choices": [
+      "インサートモード",
+      "コマンドモード",
+      "検索モード",
+      "保存モード"
+    ],
+    "answer": 1,
+    "explanation": "Vimは起動直後、基本的にコマンドモードになっています。"
+  },
+  {
+    "id": "webapp2-04-007",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimで実際に文字を入力・編集できるモードはどれですか？",
+    "choices": [
+      "コマンドモード",
+      "終了モード",
+      "インサートモード",
+      "検索モード"
+    ],
+    "answer": 2,
+    "explanation": "文字を入力するにはインサートモードへ切り替える必要があります。"
+  },
+  {
+    "id": "webapp2-04-008",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "インサートモードからコマンドモードへ戻るために使うキーはどれですか？",
+    "choices": [
+      "Tab",
+      "Ctrl",
+      "Shift",
+      "Esc"
+    ],
+    "answer": 3,
+    "explanation": "Escキーを押すと、インサートモードからコマンドモードへ戻れます。"
+  },
+  {
+    "id": "webapp2-04-009",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "コマンドモードで「i」を押したときの動作として正しいものはどれですか？",
+    "choices": [
+      "カーソル位置の前側から文字を挿入できるようになる",
+      "現在の行を削除する",
+      "ファイルを保存する",
+      "Vimを終了する"
+    ],
+    "answer": 0,
+    "explanation": "iを押すとインサートモードになり、カーソル位置の前側から文字を挿入できます。"
+  },
+  {
+    "id": "webapp2-04-010",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "コマンドモードで「a」を押した場合の動作はどれですか？",
+    "choices": [
+      "現在の文字を削除する",
+      "カーソルの後ろ側から文字を追加できるようになる",
+      "行末へ移動するだけ",
+      "ファイルを保存する"
+    ],
+    "answer": 1,
+    "explanation": "aはappendの操作で、カーソルの後ろ側から文字を入力できる状態になります。"
+  },
+  {
+    "id": "webapp2-04-011",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "コマンドモードで「A」を押した場合の動作として正しいものはどれですか？",
+    "choices": [
+      "行の先頭から入力する",
+      "現在の文字を削除する",
+      "行末へ移動して文字を追加できる状態になる",
+      "すべての行を削除する"
+    ],
+    "answer": 2,
+    "explanation": "Aを押すと、その行の末尾へ移動してインサートモードになり、文字を追加できます。"
+  },
+  {
+    "id": "webapp2-04-012",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "次のうち、コマンドモードからインサートモードへ切り替える操作ではないものはどれですか？",
+    "choices": [
+      "i",
+      "a",
+      "A",
+      ":w"
+    ],
+    "answer": 3,
+    "explanation": "i、a、Aは文字入力のためにインサートモードへ切り替える操作ですが、:wはファイルを保存するコマンドです。"
+  },
+  {
+    "id": "webapp2-04-013",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimのコマンドモードでカーソルを左へ移動するキーはどれですか？",
+    "choices": [
+      "h",
+      "j",
+      "k",
+      "l"
+    ],
+    "answer": 0,
+    "explanation": "Vimではhが左、jが下、kが上、lが右です。"
+  },
+  {
+    "id": "webapp2-04-014",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimでカーソルを下へ移動するキーはどれですか？",
+    "choices": [
+      "h",
+      "j",
+      "k",
+      "l"
+    ],
+    "answer": 1,
+    "explanation": "jキーでカーソルを下へ移動します。"
+  },
+  {
+    "id": "webapp2-04-015",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimでカーソルを上へ移動するキーはどれですか？",
+    "choices": [
+      "h",
+      "j",
+      "k",
+      "l"
+    ],
+    "answer": 2,
+    "explanation": "kキーでカーソルを上へ移動します。"
+  },
+  {
+    "id": "webapp2-04-016",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimでカーソルを右へ移動するキーはどれですか？",
+    "choices": [
+      "h",
+      "j",
+      "k",
+      "l"
+    ],
+    "answer": 3,
+    "explanation": "lキーでカーソルを右へ移動します。"
+  },
+  {
+    "id": "webapp2-04-017",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "コマンドモードで、カーソル位置にある1文字を削除する操作はどれですか？",
+    "choices": [
+      "x",
+      "dd",
+      "p",
+      "q"
+    ],
+    "answer": 0,
+    "explanation": "xを押すと、カーソル位置にある文字を1文字削除できます。"
+  },
+  {
+    "id": "webapp2-04-018",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimで現在の行を丸ごと削除するコマンドはどれですか？",
+    "choices": [
+      "xx",
+      "dd",
+      "qq",
+      "pp"
+    ],
+    "answer": 1,
+    "explanation": "コマンドモードでddと入力すると現在の行を削除できます。"
+  },
+  {
+    "id": "webapp2-04-019",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimで「dd」を実行した後、その削除した行を貼り付けるときに使うキーはどれですか？",
+    "choices": [
+      "x",
+      "a",
+      "p",
+      "i"
+    ],
+    "answer": 2,
+    "explanation": "ddで削除した行は、pを使ってカーソル位置の後ろへ貼り付けることができます。"
+  },
+  {
+    "id": "webapp2-04-020",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "「現在の行を切り取り、別の位置に貼り付ける」という操作として正しい組み合わせはどれですか？",
+    "choices": [
+      "xで切り取り、iで貼り付け",
+      "pで切り取り、ddで貼り付け",
+      "yyで切り取り、xで貼り付け",
+      "ddで切り取り、pで貼り付け"
+    ],
+    "answer": 3,
+    "explanation": "ddで現在の行を削除すると、その内容をpで別の場所に貼り付けられます。"
+  },
+  {
+    "id": "webapp2-04-021",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimで編集内容を保存するコマンドはどれですか？",
+    "choices": [
+      ":w",
+      ":q",
+      ":q!",
+      ":p"
+    ],
+    "answer": 0,
+    "explanation": ":wはファイルを保存するコマンドです。"
+  },
+  {
+    "id": "webapp2-04-022",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "編集内容に問題がなく、Vimを終了したい場合に使う基本コマンドはどれですか？",
+    "choices": [
+      ":w",
+      ":q",
+      ":x!",
+      ":i"
+    ],
+    "answer": 1,
+    "explanation": ":qはVimを終了するコマンドです。ただし、未保存の変更がある場合はそのままでは終了できません。"
+  },
+  {
+    "id": "webapp2-04-023",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "編集内容を保存してVimを終了するコマンドはどれですか？",
+    "choices": [
+      ":save",
+      ":quit",
+      ":wq",
+      ":qq"
+    ],
+    "answer": 2,
+    "explanation": ":wqはwriteとquitを組み合わせた操作で、保存して終了します。"
+  },
+  {
+    "id": "webapp2-04-024",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "編集した内容を保存せず、変更を破棄して強制終了したい場合に使うコマンドはどれですか？",
+    "choices": [
+      ":w",
+      ":q",
+      ":wq",
+      ":q!"
+    ],
+    "answer": 3,
+    "explanation": ":q!を使うと、未保存の変更を破棄してVimを終了できます。"
+  },
+  {
+    "id": "webapp2-04-025",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "次の操作の順序として適切なものはどれですか？\n\n「test.txtを開く → 文字を入力する → 保存して終了する」",
+    "choices": [
+      "vim test.txt → i → 文字入力 → Esc → :wq",
+      "vim test.txt → :wq → i → 文字入力",
+      "i → vim test.txt → :q!",
+      "vim test.txt → dd → :q!"
+    ],
+    "answer": 0,
+    "explanation": "ファイルを開き、iでインサートモードに入り、入力後Escでコマンドモードへ戻り、:wqで保存して終了します。"
+  },
+  {
+    "id": "webapp2-04-026",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimで「2.6」という文字列を検索する操作として、授業で使われているものはどれですか？",
+    "choices": [
+      "grep 2.6",
+      "/2.6",
+      ":find 2.6",
+      "?2.6?"
+    ],
+    "answer": 1,
+    "explanation": "コマンドモードで/に続けて検索文字列を入力し、Enterを押すことで検索できます。授業では/2.6が例として使われています。"
+  },
+  {
+    "id": "webapp2-04-027",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimの基本操作を対話形式で練習するために授業で利用しているものはどれですか？",
+    "choices": [
+      "vimhelp",
+      "manvim",
+      "vimtutor",
+      "vimstudy"
+    ],
+    "answer": 2,
+    "explanation": "vimtutorを使うと、Vimの基本操作を実際に手を動かしながら練習できます。"
+  },
+  {
+    "id": "webapp2-04-028",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "コマンドモードとインサートモードの役割について正しいものはどれですか？",
+    "choices": [
+      "どちらのモードでも常に同じ操作になる",
+      "コマンドモードでは文字入力だけを行い、インサートモードで保存する",
+      "インサートモードではカーソル移動しかできない",
+      "コマンドモードでは移動・保存・終了などを行い、インサートモードでは文字入力を行う"
+    ],
+    "answer": 3,
+    "explanation": "Vimではモードごとにキーの意味が異なります。コマンドモードでは操作命令、インサートモードでは文字入力を行います。"
+  },
+  {
+    "id": "webapp2-04-029",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "インサートモードで文字を入力している途中に「:wq」と入力しました。この操作について最も適切な説明はどれですか？",
+    "choices": [
+      "そのまま保存して終了するとは限らず、まずEscでコマンドモードへ戻る必要がある",
+      "必ず保存して終了する",
+      "自動的にコマンドモードへ切り替わる",
+      "必ず現在の行が削除される"
+    ],
+    "answer": 0,
+    "explanation": ":wqなどの保存・終了コマンドを実行するには、まずEscでコマンドモードへ戻る必要があります。"
+  },
+  {
+    "id": "webapp2-04-030",
+    "subject": "webapp2",
+    "lesson": 4,
+    "question": "Vimで文章を編集していたところ、間違って1行削除してしまいました。しかし、その行を別の場所へ移動したかっただけでした。授業で習った操作を使うなら、削除した直後にどのキーを使うとよいですか？",
+    "choices": [
+      "i",
+      "p",
+      ":q",
+      "x"
+    ],
+    "answer": 1,
+    "explanation": "ddで削除した行は保持されているため、移動先でpを押せばその行を貼り付けることができます。"
+  }
+]
