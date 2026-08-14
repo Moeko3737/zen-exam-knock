@@ -1,0 +1,422 @@
+[
+  {
+    "id": "py12-001",
+    "subject": "python",
+    "lesson": 12,
+    "question": "Web（ウェブ）の説明として、授業内容に最も合っているものはどれですか？",
+    "choices": [
+      "Webブラウザそのものを指す",
+      "HTMLファイルだけを保存する仕組みを指す",
+      "World Wide Webの略で、インターネット上のさまざまな情報を閲覧できるシステム",
+      "URLを作成するためのPythonモジュール"
+    ],
+    "answer": 2,
+    "explanation": "WebはWorld Wide Webの略で、インターネット上のテキスト・画像・動画などの情報を閲覧できるシステムです。"
+  },
+  {
+    "id": "py12-002",
+    "subject": "python",
+    "lesson": 12,
+    "question": "URLの役割として最も適切なものはどれですか？",
+    "choices": [
+      "インターネット上の場所を示す住所のようなもの",
+      "HTMLの見出しを作るタグ",
+      "PythonでWebページを解析するモジュール",
+      "Webページの色やレイアウトを指定するファイル"
+    ],
+    "answer": 0,
+    "explanation": "URLはWebページなど、インターネット上の場所を示す住所のようなものです。"
+  },
+  {
+    "id": "py12-003",
+    "subject": "python",
+    "lesson": 12,
+    "question": "Google Chrome、Microsoft Edge、Apple Safariなどに共通する役割はどれですか？",
+    "choices": [
+      "WebサーバーとしてHTMLを保存する",
+      "Webページを閲覧する",
+      "Pythonの外部モジュールをインストールする",
+      "CSSだけを編集する"
+    ],
+    "answer": 1,
+    "explanation": "Chrome、Edge、SafariなどはWebブラウザであり、Webページを閲覧するためのアプリケーションです。"
+  },
+  {
+    "id": "py12-004",
+    "subject": "python",
+    "lesson": 12,
+    "question": "Webページの本体となるファイルは、主に何という言語で書かれていますか？",
+    "choices": [
+      "CSV",
+      "JSON",
+      "CSS",
+      "HTML"
+    ],
+    "answer": 3,
+    "explanation": "WebページはHTMLという言語で書かれたファイルで、WebブラウザがWebサーバーから受け取って画面に表示します。"
+  },
+  {
+    "id": "py12-005",
+    "subject": "python",
+    "lesson": 12,
+    "question": "PCに保存したHTMLファイルについて、授業内容に合っているものはどれですか？",
+    "choices": [
+      "インターネット接続がなければ絶対に開けない",
+      "保存すると元のWebサイトのファイルも変更される",
+      "保存したHTML自体はオフラインでもブラウザで開けるが、リンク先のページには接続が必要な場合がある",
+      "保存すると必ず画像とCSSが1つのHTMLファイルに統合される"
+    ],
+    "answer": 2,
+    "explanation": "保存したHTMLファイルはオフラインでも開けます。ただし、リンク先のページなどネット上の情報へアクセスする場合はインターネット接続が必要です。"
+  },
+  {
+    "id": "py12-006",
+    "subject": "python",
+    "lesson": 12,
+    "question": "Webページを構成するCSSファイルの主な役割はどれですか？",
+    "choices": [
+      "画像そのものを保存する",
+      "色やレイアウトなどWebページのデザインを指定する",
+      "WebページのURLを決定する",
+      "Pythonコードを実行する"
+    ],
+    "answer": 1,
+    "explanation": "CSSファイルは、Webページの色やレイアウトなどのデザインを指定します。"
+  },
+  {
+    "id": "py12-007",
+    "subject": "python",
+    "lesson": 12,
+    "question": "Webスクレイピングの説明として最も適切なものはどれですか？",
+    "choices": [
+      "Webページを紙に印刷すること",
+      "ブラウザの履歴を削除すること",
+      "HTMLを手作業だけで編集すること",
+      "プログラムを使ってWebからデータを取得・処理すること"
+    ],
+    "answer": 3,
+    "explanation": "Webスクレイピングとは、プログラムを使ってWebからデータを取得し、HTMLから文字情報を抽出するなどの処理を行うことです。"
+  },
+  {
+    "id": "py12-008",
+    "subject": "python",
+    "lesson": 12,
+    "question": "Webスクレイピングを行うときの注意として、授業で示された組み合わせはどれですか？",
+    "choices": [
+      "著作権を尊重する・利用規約を確認する・短い間隔で大量のリクエストを送らない",
+      "著作権だけ確認すれば利用規約は無視してよい",
+      "同じページへできるだけ短時間に大量アクセスする",
+      "ダウンロードした著作物は自由に再配布してよい"
+    ],
+    "answer": 0,
+    "explanation": "Webスクレイピングでは、著作権や利用規約を確認し、サーバーへ負荷をかけないよう適切な間隔をあけてアクセスする必要があります。"
+  },
+  {
+    "id": "py12-009",
+    "subject": "python",
+    "lesson": 12,
+    "question": "同じWebサイトへ短い間隔で何度もリクエストを送ることを避けるべき主な理由はどれですか？",
+    "choices": [
+      "HTMLファイルが自動的に削除されるから",
+      "Pythonが必ず終了するから",
+      "サーバーに負荷をかけ、アクセス制限などにつながる可能性があるから",
+      "URLが別の文字列へ自動変換されるから"
+    ],
+    "answer": 2,
+    "explanation": "短い間隔で何度もアクセスするとサーバーへ負荷がかかり、大量アクセスとみなされてアクセス制限などにつながる可能性があります。"
+  },
+  {
+    "id": "py12-010",
+    "subject": "python",
+    "lesson": 12,
+    "question": "PythonからWebブラウザでWebページを開くために使用するモジュールはどれですか？",
+    "choices": [
+      "requests",
+      "webbrowser",
+      "bs4",
+      "csv"
+    ],
+    "answer": 1,
+    "explanation": "PythonからWebページをブラウザで開くときはwebbrowserモジュールを使います。"
+  },
+  {
+    "id": "py12-011",
+    "subject": "python",
+    "lesson": 12,
+    "question": "PythonからGoogleのトップページをブラウザで開くコードとして正しいものはどれですか？",
+    "choices": [
+      "import requests\nrequests.open('https://www.google.com')",
+      "import bs4\nbs4.open('https://www.google.com')",
+      "import webbrowser\nwebbrowser.get('https://www.google.com')",
+      "import webbrowser\nwebbrowser.open('https://www.google.com')"
+    ],
+    "answer": 3,
+    "explanation": "webbrowserをimportし、webbrowser.open(URL)を使うと指定したWebページをブラウザで開けます。"
+  },
+  {
+    "id": "py12-012",
+    "subject": "python",
+    "lesson": 12,
+    "question": "指定したURLを新しいタブで開くための関数はどれですか？",
+    "choices": [
+      "webbrowser.open_new_tab(URL)",
+      "webbrowser.select(URL)",
+      "requests.open_new_tab(URL)",
+      "bs4.open_tab(URL)"
+    ],
+    "answer": 0,
+    "explanation": "新しいタブでWebページを開くときはwebbrowser.open_new_tab(URL)を使います。"
+  },
+  {
+    "id": "py12-013",
+    "subject": "python",
+    "lesson": 12,
+    "question": "HTMLの正式名称として正しいものはどれですか？",
+    "choices": [
+      "HighText Machine Language",
+      "Hyper Transfer Media Language",
+      "HyperText Markup Language",
+      "Home Tool Markup Language"
+    ],
+    "answer": 2,
+    "explanation": "HTMLはHyperText Markup Languageの略で、Webページの構造を表現するための言語です。"
+  },
+  {
+    "id": "py12-014",
+    "subject": "python",
+    "lesson": 12,
+    "question": "HTMLで文書の構造を表すために使う「タグ」の基本的な書き方として正しいものはどれですか？",
+    "choices": [
+      "タグは必ず丸カッコ ( ) で囲む",
+      "タグは山カッコ < > で囲む",
+      "タグは必ず波カッコ { } で囲む",
+      "タグは引用符 \" \" だけで囲む"
+    ],
+    "answer": 1,
+    "explanation": "HTMLのタグは<h1>や<p>のように山カッコ < > で囲んで記述します。"
+  },
+  {
+    "id": "py12-015",
+    "subject": "python",
+    "lesson": 12,
+    "question": "HTMLのhead要素とbody要素の役割について正しいものはどれですか？",
+    "choices": [
+      "headは画像専用、bodyはCSS専用である",
+      "headとbodyは同じ役割である",
+      "headは画面表示だけを担当し、bodyは文字コードだけを指定する",
+      "headはタイトルや文字コードなどの文書情報、bodyはブラウザ画面に表示される内容を扱う"
+    ],
+    "answer": 3,
+    "explanation": "headにはタイトルや文字コードなど文書に関する情報を書き、bodyには実際にブラウザ画面へ表示する内容を書きます。"
+  },
+  {
+    "id": "py12-016",
+    "subject": "python",
+    "lesson": 12,
+    "question": "HTMLの見出しタグについて正しいものはどれですか？",
+    "choices": [
+      "h1が最も大きな見出しで、h6が最も小さい",
+      "h6が最も大きく、h1が最も小さい",
+      "見出しにはpタグだけを使う",
+      "hタグはh1の1種類しかない"
+    ],
+    "answer": 0,
+    "explanation": "見出しにはh1〜h6タグを使い、h1が最も大きく、h6が最も小さい見出しです。"
+  },
+  {
+    "id": "py12-017",
+    "subject": "python",
+    "lesson": 12,
+    "question": "HTMLで段落を作るために使うタグはどれですか？",
+    "choices": [
+      "aタグ",
+      "imgタグ",
+      "pタグ",
+      "divタグ"
+    ],
+    "answer": 2,
+    "explanation": "段落（paragraph）を作るときはpタグを使います。"
+  },
+  {
+    "id": "py12-018",
+    "subject": "python",
+    "lesson": 12,
+    "question": "HTMLでハイパーリンクを作成するために使うタグはどれですか？",
+    "choices": [
+      "imgタグ",
+      "aタグ",
+      "pタグ",
+      "titleタグ"
+    ],
+    "answer": 1,
+    "explanation": "aタグ（アンカータグ）はハイパーリンクを作成するために使います。"
+  },
+  {
+    "id": "py12-019",
+    "subject": "python",
+    "lesson": 12,
+    "question": "次のHTMLにおけるhrefは何と呼ばれますか？\n<a href=\"https://www.nicovideo.jp\">ニコニコ動画</a>",
+    "choices": [
+      "要素",
+      "クラス",
+      "タグ",
+      "属性"
+    ],
+    "answer": 3,
+    "explanation": "hrefはa要素にリンク先URLという追加情報を与える属性です。"
+  },
+  {
+    "id": "py12-020",
+    "subject": "python",
+    "lesson": 12,
+    "question": "imgタグで画像ファイルの場所を指定する属性はどれですか？",
+    "choices": [
+      "src",
+      "href",
+      "class",
+      "title"
+    ],
+    "answer": 0,
+    "explanation": "imgタグではsrc属性で画像の場所を指定します。width、height、altなどの属性も使用できます。"
+  },
+  {
+    "id": "py12-021",
+    "subject": "python",
+    "lesson": 12,
+    "question": "HTMLのclass属性の主な用途として適切なものはどれですか？",
+    "choices": [
+      "WebページのURLを変更する",
+      "Pythonモジュールを読み込む",
+      "複数の要素に同じCSSスタイルを適用するためのクラス名を指定する",
+      "画像データそのものをHTML内に保存する"
+    ],
+    "answer": 2,
+    "explanation": "class属性を使うと、CSSで定義した同じスタイルを複数のHTML要素へ適用できます。"
+  },
+  {
+    "id": "py12-022",
+    "subject": "python",
+    "lesson": 12,
+    "question": "requestsやBeautiful Soupのような外部モジュールをPythonで利用する前に必要な操作はどれですか？",
+    "choices": [
+      "エンコード",
+      "インストール",
+      "リクエスト",
+      "パース"
+    ],
+    "answer": 1,
+    "explanation": "requestsやbeautifulsoup4などの外部モジュールは、利用する前にpipやpip3などを使ってインストールする必要があります。"
+  },
+  {
+    "id": "py12-023",
+    "subject": "python",
+    "lesson": 12,
+    "question": "Webスクレイピングでrequestsモジュールが担当する主な役割はどれですか？",
+    "choices": [
+      "HTMLのタグをCSSで装飾する",
+      "ブラウザの新しいタブを開く",
+      "画像をHTMLタグへ変換する",
+      "指定したURLのWebページを取得する"
+    ],
+    "answer": 3,
+    "explanation": "requestsはWebページのHTMLを取得するために使います。requests.get(URL)でResponseオブジェクトを取得できます。"
+  },
+  {
+    "id": "py12-024",
+    "subject": "python",
+    "lesson": 12,
+    "question": "BeautifulSoup（bs4）の主な役割はどれですか？",
+    "choices": [
+      "取得したHTMLを解析（パース）して、要素を抽出できるようにする",
+      "Webブラウザそのものを起動する",
+      "PythonファイルをHTMLへ変換する",
+      "Webサーバーへ大量のリクエストを送る"
+    ],
+    "answer": 0,
+    "explanation": "BeautifulSoupは、requestsなどで取得したHTMLをパースして、タグやクラスなどを指定して必要な要素を抽出するために使います。"
+  },
+  {
+    "id": "py12-025",
+    "subject": "python",
+    "lesson": 12,
+    "question": "requestsとBeautifulSoupを使ってWebページを取得・解析する基本的な順序として正しいものはどれですか？",
+    "choices": [
+      "BeautifulSoupでURLを取得してからrequestsでHTMLを書く",
+      "requestsでHTMLを解析してからBeautifulSoupでWebページを取得する",
+      "requests.get()でWebページを取得し、その内容をBeautifulSoupでパースする",
+      "webbrowserでHTMLを解析し、requestsでブラウザを起動する"
+    ],
+    "answer": 2,
+    "explanation": "まずrequests.get()でWebページを取得し、そのHTMLをbs4.BeautifulSoup(..., \"html.parser\")でパースします。"
+  },
+  {
+    "id": "py12-026",
+    "subject": "python",
+    "lesson": 12,
+    "question": "BeautifulSoupで取得したページのtitleタグ内の文字列だけを表示するコードはどれですか？",
+    "choices": [
+      "print(soup.title)",
+      "print(soup.title.string)",
+      "print(requests.title.string)",
+      "print(soup.select)"
+    ],
+    "answer": 1,
+    "explanation": "soup.titleではtitleタグごと取得でき、soup.title.stringを使うとタグ内の文字列だけを取り出せます。"
+  },
+  {
+    "id": "py12-027",
+    "subject": "python",
+    "lesson": 12,
+    "question": "変数soupにBeautifulSoupオブジェクトが入っています。HTML内のa要素をすべて抽出するコードはどれですか？",
+    "choices": [
+      "requests.get(\"a\")",
+      "soup.get(\"a\")",
+      "soup.read(\"a\")",
+      "soup.select(\"a\")"
+    ],
+    "answer": 3,
+    "explanation": "HTML要素をCSSセレクタで抽出するときはBeautifulSoupオブジェクトのselectメソッドを使います。a要素ならsoup.select(\"a\")です。"
+  },
+  {
+    "id": "py12-028",
+    "subject": "python",
+    "lesson": 12,
+    "question": "class=\"blue_box\"が指定された要素をBeautifulSoupのselectメソッドで抽出するコードはどれですか？",
+    "choices": [
+      "soup.select(\".blue_box\")",
+      "soup.select(\"blue_box\")",
+      "soup.select(class=\"blue_box\")",
+      "soup.select([class=\"blue_box\"])"
+    ],
+    "answer": 0,
+    "explanation": "CSSセレクタではクラス名の前にピリオドを付けます。したがってclass=\"blue_box\"の要素はsoup.select(\".blue_box\")で抽出できます。"
+  },
+  {
+    "id": "py12-029",
+    "subject": "python",
+    "lesson": 12,
+    "question": "p要素のうち、class=\"bold\"が指定された要素だけを抽出するCSSセレクタはどれですか？",
+    "choices": [
+      "\"p#bold\"",
+      "\".p.bold\"",
+      "\"p.bold\"",
+      "\"p>bold\""
+    ],
+    "answer": 2,
+    "explanation": "要素名とクラス名を組み合わせる場合は「要素名.クラス名」と書くため、p要素でclass=\"bold\"なら\"p.bold\"です。"
+  },
+  {
+    "id": "py12-030",
+    "subject": "python",
+    "lesson": 12,
+    "question": "class=\"bold\"の要素をすべて取得し、タグを除いてテキストだけを1行ずつ表示するコードとして正しいものはどれですか？",
+    "choices": [
+      "for e in requests.get(\".bold\"):\n    print(e)",
+      "for e in soup.select(\".bold\"):\n    print(e.getText())",
+      "for e in soup.select(\".bold\"):\n    print(e.href)",
+      "for e in webbrowser.open(\".bold\"):\n    print(e.getText())"
+    ],
+    "answer": 1,
+    "explanation": "select(\".bold\")で対象要素を取得し、for文で1つずつ取り出してgetText()を使うとタグを除いたテキストだけを表示できます。"
+  }
+]
