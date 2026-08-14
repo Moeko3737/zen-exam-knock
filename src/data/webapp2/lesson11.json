@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-11-001",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "コンテナ技術の説明として、講義内容に最も合っているものはどれですか？",
+    "choices": [
+      "OS上に論理的な区切りを作り、それぞれを独立したコンピューターのように扱う仕組み",
+      "1台のPCでは必ず1つのアプリしか動かせないようにする仕組み",
+      "すべてのアプリケーションで同じファイルシステムを共有する仕組み",
+      "ソースコードをGitHubへ自動送信する仕組み"
+    ],
+    "answer": 0,
+    "explanation": "コンテナ技術ではOS上に論理的な区切りを作り、互いに干渉しにくい独立した環境として扱います。アプリごとに実行環境を分離できます。"
+  },
+  {
+    "id": "webapp2-11-002",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Dockerの説明として最も適切なものはどれですか？",
+    "choices": [
+      "JavaScriptだけを実行するブラウザ",
+      "Linux上でコンテナ環境を実現するための仮想化ソフトウェア",
+      "Gitのリモートリポジトリを管理するサービス",
+      "Webページを記述するマークアップ言語"
+    ],
+    "answer": 1,
+    "explanation": "DockerはLinux上でコンテナ環境を実現するためのソフトウェアです。アプリケーションと実行環境をまとめて扱いやすくできます。"
+  },
+  {
+    "id": "webapp2-11-003",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Dockerコンテナ内でPID 1として動作しているプロセスが終了した場合、どうなりますか？",
+    "choices": [
+      "ホストPCが終了する",
+      "Docker Desktopだけが終了する",
+      "コンテナも終了する",
+      "新しいコンテナが自動作成される"
+    ],
+    "answer": 2,
+    "explanation": "DockerコンテナではPID 1のプロセスがコンテナ全体の親プロセスとなり、このプロセスの終了とコンテナの終了が連動しています。"
+  },
+  {
+    "id": "webapp2-11-004",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "WindowsやmacOSでDocker Desktopを使用する主な理由として、講義内容に合っているものはどれですか？",
+    "choices": [
+      "Docker Hubへログインするため",
+      "Dockerを自動更新するため",
+      "ファイルをGitで管理するため",
+      "Dockerが利用するLinux環境を内部に用意するため"
+    ],
+    "answer": 3,
+    "explanation": "DockerはLinuxの仕組みを利用します。Docker DesktopはWindowsやmacOS上にLinuxカーネルを利用できる環境を用意し、Dockerを使えるようにします。"
+  },
+  {
+    "id": "webapp2-11-005",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "初めて次のコマンドを実行し、ローカルにhello-worldイメージが存在しなかった場合の動作として正しいものはどれですか？\n\ndocker container run hello-world",
+    "choices": [
+      "Docker Hubからイメージを自動取得してコンテナを起動する",
+      "必ずエラーになり終了する",
+      "Ubuntuイメージへ自動的に置き換える",
+      "Dockerfileを自動生成する"
+    ],
+    "answer": 0,
+    "explanation": "必要なイメージがローカルに存在しない場合、DockerはDocker Hubからイメージを取得し、そのイメージからコンテナを起動します。"
+  },
+  {
+    "id": "webapp2-11-006",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "次のコマンドにおける「-it」の主な役割はどれですか？\n\ndocker container run -it --rm ubuntu:22.04",
+    "choices": [
+      "コンテナを終了時に削除する",
+      "標準入力を開き仮想端末を割り当て、コンテナ内を対話操作できるようにする",
+      "Dockerイメージをビルドする",
+      "ホストとコンテナのファイルを共有する"
+    ],
+    "answer": 1,
+    "explanation": "-itは-i（interactive）と-t（tty）の組み合わせで、コンテナ内のコンソールを対話的に操作する際に利用します。"
+  },
+  {
+    "id": "webapp2-11-007",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Dockerの「--rm」オプションの役割はどれですか？",
+    "choices": [
+      "イメージをDocker Hubへ送信する",
+      "コンテナをバックグラウンドで起動する",
+      "コンテナ終了時にそのコンテナを自動削除する",
+      "ホストPCを終了する"
+    ],
+    "answer": 2,
+    "explanation": "--rmを指定すると、コンテナ終了後に不要になったコンテナを自動的に削除できます。"
+  },
+  {
+    "id": "webapp2-11-008",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Dockerfileの役割として最も適切なものはどれですか？",
+    "choices": [
+      "Docker Hubのユーザー情報を保存する",
+      "コンテナの実行ログだけを保存する",
+      "Gitのブランチを設定する",
+      "独自のDockerイメージを構築するための設計図となる"
+    ],
+    "answer": 3,
+    "explanation": "Dockerfileは、ベースイメージや必要なソフトウェアなどを記述し、独自のDockerイメージを構築するための設計図です。"
+  },
+  {
+    "id": "webapp2-11-009",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Dockerfileの「FROM ubuntu:22.04」が示すものはどれですか？",
+    "choices": [
+      "ベースとして使用するDockerイメージ",
+      "コンテナ起動時に実行するコマンド",
+      "ホスト側のマウント元",
+      "コンテナの名前"
+    ],
+    "answer": 0,
+    "explanation": "FROMは、作成するDockerイメージの土台として利用するベースイメージを指定します。"
+  },
+  {
+    "id": "webapp2-11-010",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Dockerfileの「RUN apt-get install -y vim」にある「-y」の役割はどれですか？",
+    "choices": [
+      "vimを削除する",
+      "インストール確認に自動的にYesと回答する",
+      "日本語環境を有効にする",
+      "コンテナをバックグラウンド化する"
+    ],
+    "answer": 1,
+    "explanation": "-yを付けることで、apt-get install時の確認に自動的にYesと回答し、Dockerイメージのビルドが途中で停止することを防ぎます。"
+  },
+  {
+    "id": "webapp2-11-011",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "次のDockerイメージのビルドコマンドで、末尾の「.」が表すものはどれですか？\n\ndocker image build --tag my-ubuntu:vim .",
+    "choices": [
+      "latestというタグ",
+      "Docker Hub",
+      "Dockerfileがあるカレントディレクトリ",
+      "コンテナのルートディレクトリ"
+    ],
+    "answer": 2,
+    "explanation": "末尾の.はカレントディレクトリを表し、Dockerイメージのビルドに使用するDockerfileなどが存在する場所を指定しています。"
+  },
+  {
+    "id": "webapp2-11-012",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "次のDockerコマンドの説明として正しいものはどれですか？\n\ndocker container run -it --rm --mount type=bind,source=.,target=/app my-ubuntu:vim",
+    "choices": [
+      "コンテナ内の/appをDocker Hubへ送信する",
+      "コンテナをネットワークから切断する",
+      "ホスト側の/appを削除する",
+      "ホストのカレントディレクトリをコンテナ内の/appへバインドマウントする"
+    ],
+    "answer": 3,
+    "explanation": "type=bindでバインドマウントを指定し、source=.でホストのカレントディレクトリ、target=/appでコンテナ内の共有先を指定しています。"
+  },
+  {
+    "id": "webapp2-11-013",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "バインドマウントしたファイルをコンテナ内で編集した場合の動作として、講義内容に合っているものはどれですか？",
+    "choices": [
+      "ホスト側の同じファイルにも変更が反映される",
+      "コンテナ内だけが変更され、ホストには絶対に反映されない",
+      "編集した瞬間にコンテナが削除される",
+      "Dockerfileだけに変更が記録される"
+    ],
+    "answer": 0,
+    "explanation": "バインドマウントではホストとコンテナが同じファイルを共有するため、コンテナ内で行った編集もホスト側へ反映されます。"
+  },
+  {
+    "id": "webapp2-11-014",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Docker Composeで使用する「compose.yaml」の役割として最も適切なものはどれですか？",
+    "choices": [
+      "JavaScriptのテストコードを記述する",
+      "コンテナの構成や起動設定などをまとめて定義する",
+      "Gitのコミット履歴を保存する",
+      "Docker Hubのパスワードを保存する"
+    ],
+    "answer": 1,
+    "explanation": "compose.yamlには、サービス、イメージ、ビルド方法、マウント、作業ディレクトリなど、Docker Composeで利用する構成を記述します。"
+  },
+  {
+    "id": "webapp2-11-015",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "compose.yamlのYAML形式を記述するとき、特に重要なルールはどれですか？",
+    "choices": [
+      "すべて1行で記述する",
+      "必ずHTMLタグで囲む",
+      "インデントを正しく揃える",
+      "変数名は数字だけにする"
+    ],
+    "answer": 2,
+    "explanation": "YAMLではインデントによって構造を表現するため、スペースの数や字下げを正しく揃えることが重要です。"
+  },
+  {
+    "id": "webapp2-11-016",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "compose.yamlの「tty: true」の役割として、講義内容に合っているものはどれですか？",
+    "choices": [
+      "日本語ロケールを有効化する",
+      "Dockerイメージを削除する",
+      "ポート8000を公開する",
+      "コンテナが起動直後に終了せず、起動した状態を維持する"
+    ],
+    "answer": 3,
+    "explanation": "教材ではtty: trueを、コンテナを起動したまま常駐させるための設定として使用しています。"
+  },
+  {
+    "id": "webapp2-11-017",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Docker Composeでコンテナをバックグラウンド起動するコマンドはどれですか？",
+    "choices": [
+      "docker compose up --detach",
+      "docker compose exec app bash",
+      "docker compose down",
+      "docker compose build app bash"
+    ],
+    "answer": 0,
+    "explanation": "docker compose up --detach、またはdocker compose up -dで、コンテナをバックグラウンドで起動できます。"
+  },
+  {
+    "id": "webapp2-11-018",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Dockerfileを変更した内容を反映しながらDocker Composeで起動したい場合に必要なオプションはどれですか？",
+    "choices": [
+      "--rm",
+      "--build",
+      "--version",
+      "--mount"
+    ],
+    "answer": 1,
+    "explanation": "Dockerfileを変更した場合、以前のビルド結果ではなく再ビルドして反映させるために--buildを付けて起動します。"
+  },
+  {
+    "id": "webapp2-11-019",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Docker Composeで起動中の「app」サービスのコンテナ内に入り、bashを操作するコマンドはどれですか？",
+    "choices": [
+      "docker compose bash app",
+      "docker compose run bash",
+      "docker compose exec app bash",
+      "docker compose app exec"
+    ],
+    "answer": 2,
+    "explanation": "docker compose exec サービス名 コマンドの形式で、すでに起動しているコンテナ内でコマンドを実行できます。"
+  },
+  {
+    "id": "webapp2-11-020",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "「docker compose exec app bash」でコンテナ内に入ったあとexitしても、コンテナ自体が動き続ける理由はどれですか？",
+    "choices": [
+      "exitには何の効果もないから",
+      "Docker Composeではコンテナを終了できないから",
+      "bashが自動的に再起動するから",
+      "execで起動したbashはPID 1ではなく、コンテナ本体とは別のプロセスだから"
+    ],
+    "answer": 3,
+    "explanation": "docker compose execで後から起動したbashはPID 1ではありません。そのbashをexitしても、コンテナ本体のPID 1が動いているためコンテナは継続します。"
+  },
+  {
+    "id": "webapp2-11-021",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Docker Composeで起動しているコンテナを停止し、コンテナを削除するコマンドはどれですか？",
+    "choices": [
+      "docker compose down",
+      "docker compose exit",
+      "docker compose delete",
+      "docker compose rm-all"
+    ],
+    "answer": 0,
+    "explanation": "docker compose downを使うと、Docker Composeで起動したコンテナを停止して削除できます。"
+  },
+  {
+    "id": "webapp2-11-022",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Node.jsの説明として最も適切なものはどれですか？",
+    "choices": [
+      "ブラウザ内でHTMLを装飾するための言語",
+      "ブラウザ以外、特にサーバーサイドなどでもJavaScriptを実行できる実行環境",
+      "Dockerコンテナ専用のOS",
+      "CSSをJavaScriptへ変換するツール"
+    ],
+    "answer": 1,
+    "explanation": "Node.jsは、Webブラウザ以外の環境でもJavaScriptを動かすための実行環境です。サーバーサイド処理などにも利用されます。"
+  },
+  {
+    "id": "webapp2-11-023",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Node.js用compose.yamlの「working_dir: /app」の役割はどれですか？",
+    "choices": [
+      "Node.jsのバージョンを指定する",
+      "ホスト側のポートを指定する",
+      "コンテナ内でのデフォルトの作業ディレクトリを/appにする",
+      "JavaScriptをStrictモードにする"
+    ],
+    "answer": 2,
+    "explanation": "working_dirを指定すると、コンテナ内でコマンドを実行するときの基準となる作業ディレクトリを設定できます。"
+  },
+  {
+    "id": "webapp2-11-024",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Node.jsのバージョンを確認するコマンドとして正しいものはどれですか？",
+    "choices": [
+      "npm install",
+      "docker compose up -d",
+      "node check",
+      "node -v"
+    ],
+    "answer": 3,
+    "explanation": "node -v、またはnode --versionでインストールされているNode.jsのバージョンを確認できます。"
+  },
+  {
+    "id": "webapp2-11-025",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Node.jsのREPLを起動して、その場でJavaScriptを1行ずつ実行したい場合に入力するコマンドはどれですか？",
+    "choices": [
+      "node",
+      "npm",
+      "repl start",
+      "node --build"
+    ],
+    "answer": 0,
+    "explanation": "nodeとだけ入力するとNode.jsのREPLが起動し、ブラウザのコンソールのようにJavaScriptを対話的に実行できます。"
+  },
+  {
+    "id": "webapp2-11-026",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "JavaScriptファイルの先頭に「'use strict';」と記述する主な目的はどれですか？",
+    "choices": [
+      "Node.jsを自動インストールする",
+      "JavaScriptをStrictモードで動作させ、より厳格なエラーチェックを行う",
+      "変数をすべて文字列へ変換する",
+      "Dockerコンテナを起動する"
+    ],
+    "answer": 1,
+    "explanation": "'use strict';を記述するとStrictモードとなり、一部の不安全な構文を禁止するなど、より厳格なJavaScriptとして実行されます。"
+  },
+  {
+    "id": "webapp2-11-027",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Node.jsで、コマンド実行時に後ろから渡した値を格納する配列はどれですか？",
+    "choices": [
+      "console.log",
+      "require",
+      "process.argv",
+      "docker.argv"
+    ],
+    "answer": 2,
+    "explanation": "Node.jsではコマンドライン引数がprocess.argvという配列へ格納されます。また、コマンドラインから渡された値は最初は文字列として扱われます。"
+  },
+  {
+    "id": "webapp2-11-028",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "JavaScriptで次の式を評価した結果はどれですか？\n\n2 || 1",
+    "choices": [
+      "0",
+      "1",
+      "true",
+      "2"
+    ],
+    "answer": 3,
+    "explanation": "論理和||は左側がtruthyなら左側の値を返します。2はtruthyなので、2 || 1の評価結果は2です。"
+  },
+  {
+    "id": "webapp2-11-029",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "次のうち、JavaScriptでTruthyと判定される値はどれですか？",
+    "choices": [
+      "\" \"",
+      "0",
+      "null",
+      "undefined"
+    ],
+    "answer": 0,
+    "explanation": "1文字以上ある文字列はTruthyです。空白だけの文字列\" \"も1文字を含むためTruthyです。一方、0、null、undefinedはFalsyです。"
+  },
+  {
+    "id": "webapp2-11-030",
+    "subject": "webapp2",
+    "lesson": 11,
+    "question": "Dockerコンテナ内でPythonのHTTPサーバを8000番ポートで動かし、ホストPCのlocalhost:8000からアクセスできるようにするための「--publish 8000:8000」の説明として正しいものはどれですか？",
+    "choices": [
+      "コンテナ内の8000番ポートを削除する",
+      "ホストの8000番ポートとコンテナの8000番ポートを接続する",
+      "Docker Hubへ8000個のファイルを公開する",
+      "Pythonを8000回実行する"
+    ],
+    "answer": 1,
+    "explanation": "--publish 8000:8000は「ホスト側のポート:コンテナ側のポート」という対応を設定し、ホストからコンテナ内のHTTPサーバへアクセスできるようにします。"
+  }
+]
