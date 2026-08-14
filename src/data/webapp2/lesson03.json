@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-03-001",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "Linuxのコマンドプロセスの基本的な入出力として正しいものはどれですか？",
+    "choices": [
+      "標準入力を受け取り、標準出力と標準エラー出力を出す",
+      "標準出力だけを受け取り、標準入力を出す",
+      "標準エラー出力だけを受け取る",
+      "ファイルを必ず入力し、画面には何も出力しない"
+    ],
+    "answer": 0,
+    "explanation": "コマンドプロセスは標準入力を受け取り、処理結果を標準出力、エラーメッセージなどを標準エラー出力へ出します。"
+  },
+  {
+    "id": "webapp2-03-002",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "標準入力は通常、どこから入力されますか？",
+    "choices": [
+      "ディスプレイ",
+      "ファイルだけ",
+      "キーボード",
+      "プリンター"
+    ],
+    "answer": 2,
+    "explanation": "標準入力は、通常はキーボードからコマンドへ入力されるデータです。"
+  },
+  {
+    "id": "webapp2-03-003",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "標準出力について正しい説明はどれですか？",
+    "choices": [
+      "エラーメッセージだけを扱う",
+      "コマンドの通常の実行結果で、通常は画面に表示される",
+      "キーボードから入力された文字だけを指す",
+      "必ずファイルに保存される"
+    ],
+    "answer": 1,
+    "explanation": "標準出力はコマンドの通常の実行結果で、特に指定しなければ通常は画面に表示されます。"
+  },
+  {
+    "id": "webapp2-03-004",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "標準エラー出力について最も適切な説明はどれですか？",
+    "choices": [
+      "標準入力と完全に同じものである",
+      "正常な実行結果だけを表示する",
+      "ファイル名だけを表示する",
+      "エラーメッセージなどを出力し、標準出力とは区別される"
+    ],
+    "answer": 3,
+    "explanation": "標準エラー出力は、エラーメッセージなどを出力するための仕組みで、通常の標準出力とは区別されています。"
+  },
+  {
+    "id": "webapp2-03-005",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "次のコマンドを実行したとき、output.txtがすでに存在していた場合の動作として正しいものはどれですか？\n\necho \"Hello\" > output.txt",
+    "choices": [
+      "既存の内容の最後に必ず追記する",
+      "既存の内容を上書きしてHelloを書き込む",
+      "既存ファイルがあると必ずエラーになる",
+      "画面だけにHelloを表示し、ファイルには書かない"
+    ],
+    "answer": 1,
+    "explanation": "> は標準出力をファイルへ書き出すリダイレクトで、既存のファイル内容は上書きされます。"
+  },
+  {
+    "id": "webapp2-03-006",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "既存ファイルの内容を残したまま、標準出力を末尾へ追加したい場合に使う記号はどれですか？",
+    "choices": [
+      ">>",
+      ">",
+      "|",
+      "2>"
+    ],
+    "answer": 0,
+    "explanation": ">> は追記のリダイレクトです。既存の内容を残したまま、ファイルの末尾へ標準出力を追加します。"
+  },
+  {
+    "id": "webapp2-03-007",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "標準エラー出力をファイルへ書き出すときに使用する記号はどれですか？",
+    "choices": [
+      ">",
+      ">>",
+      "|",
+      "2>"
+    ],
+    "answer": 3,
+    "explanation": "2> は標準エラー出力を指定したファイルへ書き出すために使います。"
+  },
+  {
+    "id": "webapp2-03-008",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "標準出力と標準エラー出力の両方をresult.txtへまとめたい場合、授業内容に沿った書き方はどれですか？",
+    "choices": [
+      "command | result.txt",
+      "command >> 2 result.txt",
+      "command > result.txt 2>&1",
+      "command 2> result.txt >"
+    ],
+    "answer": 2,
+    "explanation": "標準出力をresult.txtへリダイレクトし、2>&1によって標準エラー出力も標準出力と同じ出力先へまとめることができます。"
+  },
+  {
+    "id": "webapp2-03-009",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "最初はmemo.txtが存在しないものとします。次のコマンドを順番に実行した後、memo.txtの内容はどうなりますか？\n\necho \"A\" >> memo.txt\necho \"B\" >> memo.txt\necho \"C\" >> memo.txt",
+    "choices": [
+      "A\nB\nC",
+      "Cだけ",
+      "Aだけ",
+      "ファイルは作成されない"
+    ],
+    "answer": 0,
+    "explanation": ">> は追記なので、A、B、Cが順番にファイルの末尾へ追加されます。"
+  },
+  {
+    "id": "webapp2-03-010",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "次のコマンドを順番に実行した後、memo.txtに残る内容はどれですか？\n\necho \"A\" > memo.txt\necho \"B\" >> memo.txt\necho \"C\" > memo.txt",
+    "choices": [
+      "A\nB\nC",
+      "C",
+      "A\nB",
+      "B\nC"
+    ],
+    "answer": 1,
+    "explanation": "1回目の>でAを書き込み、>>でBを追記しますが、最後の>で内容が上書きされるため、最終的にはCだけが残ります。"
+  },
+  {
+    "id": "webapp2-03-011",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "ファイルの内容を画面に表示するために使うコマンドはどれですか？",
+    "choices": [
+      "grep",
+      "less",
+      "cat",
+      "pwd"
+    ],
+    "answer": 2,
+    "explanation": "catコマンドはファイルの内容を標準出力へ表示します。"
+  },
+  {
+    "id": "webapp2-03-012",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "次のコマンドの動作として正しいものはどれですか？\n\ncat file1.txt file2.txt",
+    "choices": [
+      "2つのファイルを削除する",
+      "file2.txtだけを表示する",
+      "2つのファイル名だけを表示する",
+      "2つのファイルの内容を順番に結合して表示する"
+    ],
+    "answer": 3,
+    "explanation": "catは複数のファイルを指定することができ、それぞれの内容を順番に結合して表示します。"
+  },
+  {
+    "id": "webapp2-03-013",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "長いファイルの内容をページ送りしながら確認したい場合に適したコマンドはどれですか？",
+    "choices": [
+      "cat",
+      "less",
+      "grep",
+      "head"
+    ],
+    "answer": 1,
+    "explanation": "lessコマンドは、長いファイルの内容をページ単位で表示し、スクロールしながら閲覧できます。"
+  },
+  {
+    "id": "webapp2-03-014",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "lessコマンドでファイルを閲覧している状態から終了するときに押すキーはどれですか？",
+    "choices": [
+      "q",
+      "x",
+      "e",
+      "Escだけ"
+    ],
+    "answer": 0,
+    "explanation": "lessの閲覧を終了するときはqキーを押します。"
+  },
+  {
+    "id": "webapp2-03-015",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "オプションを指定せずにheadコマンドを使った場合、基本的にファイルの何行を表示しますか？",
+    "choices": [
+      "先頭1行",
+      "末尾10行",
+      "先頭10行",
+      "すべての行"
+    ],
+    "answer": 2,
+    "explanation": "headはデフォルトでファイルの先頭10行を表示します。"
+  },
+  {
+    "id": "webapp2-03-016",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "file.txtの先頭5行だけを表示するコマンドとして正しいものはどれですか？",
+    "choices": [
+      "tail -5 file.txt",
+      "less -5 file.txt",
+      "cat -5 file.txt",
+      "head -5 file.txt"
+    ],
+    "answer": 3,
+    "explanation": "head -5 file.txtとすると、file.txtの先頭5行を表示できます。"
+  },
+  {
+    "id": "webapp2-03-017",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "tailコマンドをオプションなしで使ったときの動作として正しいものはどれですか？",
+    "choices": [
+      "ファイルの末尾10行を表示する",
+      "ファイルの先頭10行を表示する",
+      "ファイルを削除する",
+      "ファイル全体をページ送りする"
+    ],
+    "answer": 0,
+    "explanation": "tailコマンドは、デフォルトではファイルの末尾10行を表示します。"
+  },
+  {
+    "id": "webapp2-03-018",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "log.txtの末尾5行だけを表示するコマンドはどれですか？",
+    "choices": [
+      "head -5 log.txt",
+      "cat -5 log.txt",
+      "tail -5 log.txt",
+      "less -5 log.txt"
+    ],
+    "answer": 2,
+    "explanation": "tail -5 log.txtとすると、log.txtの末尾5行を表示できます。"
+  },
+  {
+    "id": "webapp2-03-019",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "あるコマンドの標準出力を、別のコマンドの標準入力へつなぐ仕組みを何といいますか？",
+    "choices": [
+      "リダイレクト",
+      "パイプ",
+      "標準エラー出力",
+      "追記"
+    ],
+    "answer": 1,
+    "explanation": "パイプは、あるコマンドの標準出力を次のコマンドの標準入力へつなぐ仕組みです。記号|を使用します。"
+  },
+  {
+    "id": "webapp2-03-020",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "次のコマンドの動作として正しいものはどれですか？\n\nls /bin | less",
+    "choices": [
+      "/binを削除する",
+      "lessというファイルに一覧を保存する",
+      "/bin内を検索してlessという名前だけ表示する",
+      "ls /binの結果をlessへ渡し、ページ送りしながら表示する"
+    ],
+    "answer": 3,
+    "explanation": "ls /binの標準出力がパイプを通してlessの標準入力へ渡され、長い一覧をページ送りで確認できます。"
+  },
+  {
+    "id": "webapp2-03-021",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "ファイルや標準入力の中から、特定の文字列を含む行を検索するコマンドはどれですか？",
+    "choices": [
+      "less",
+      "cat",
+      "grep",
+      "head"
+    ],
+    "answer": 2,
+    "explanation": "grepコマンドは、ファイルや標準入力から指定した文字列を検索するために使います。"
+  },
+  {
+    "id": "webapp2-03-022",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "memo.txtから「Linux」という文字列を含む行を検索する基本的なコマンドはどれですか？",
+    "choices": [
+      "grep Linux memo.txt",
+      "cat Linux memo.txt",
+      "less Linux memo.txt",
+      "grep memo.txt Linux"
+    ],
+    "answer": 0,
+    "explanation": "grepの基本形は「grep 検索文字列 ファイル名」です。したがってgrep Linux memo.txtとなります。"
+  },
+  {
+    "id": "webapp2-03-023",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "grepがパイプから標準入力を受け取る場合について正しいものはどれですか？",
+    "choices": [
+      "必ず2つのファイル名が必要になる",
+      "grepはパイプと組み合わせられない",
+      "検索文字列を省略しなければならない",
+      "検索対象のファイル名を省略できる"
+    ],
+    "answer": 3,
+    "explanation": "パイプから検索対象となるデータを標準入力として受け取れるため、grepではファイル名を省略できます。"
+  },
+  {
+    "id": "webapp2-03-024",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "grepで、指定した文字列を「含まない」行だけを表示したい場合に使用するオプションはどれですか？",
+    "choices": [
+      "-a",
+      "-v",
+      "-r",
+      "-p"
+    ],
+    "answer": 1,
+    "explanation": "grep -vを使うと、指定した検索文字列を含まない行を表示できます。"
+  },
+  {
+    "id": "webapp2-03-025",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "次のコマンドが行う処理はどれですか？\n\nls /bin | grep ss",
+    "choices": [
+      "/bin内を削除する",
+      "/binの一覧からssを含む名前だけを表示する",
+      "ssというファイルへ/binの一覧を保存する",
+      "/binの一覧からssを含まない名前だけを表示する"
+    ],
+    "answer": 1,
+    "explanation": "ls /binで得た一覧をgrepへ渡し、その中からssという文字列を含む行だけを表示します。"
+  },
+  {
+    "id": "webapp2-03-026",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "/binディレクトリの一覧から「apt」を含まない行だけを取り出し、~/io-study/non-apt-command.txtへ保存するコマンドはどれですか？",
+    "choices": [
+      "ls /bin > grep -v apt | ~/io-study/non-apt-command.txt",
+      "grep apt /bin >> ~/io-study/non-apt-command.txt",
+      "ls /bin > ~/io-study/non-apt-command.txt | grep -v apt",
+      "ls /bin | grep -v apt > ~/io-study/non-apt-command.txt"
+    ],
+    "answer": 3,
+    "explanation": "まずls /binの結果をパイプでgrep -v aptへ渡し、aptを含まない行だけに絞ります。その結果を>でファイルへ保存します。"
+  },
+  {
+    "id": "webapp2-03-027",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "次の2つの記号の役割の違いとして正しいものはどれですか？\n\n> と |",
+    "choices": [
+      "> は標準出力をファイルへ向け、| は標準出力を次のコマンドの標準入力へ渡す",
+      "> は検索、| はファイル削除を行う",
+      "> は追記、| は上書きを行う",
+      "どちらも完全に同じ働きをする"
+    ],
+    "answer": 0,
+    "explanation": ">は標準出力をファイルへリダイレクトする記号で、|は標準出力を別のコマンドの標準入力へつなぐ記号です。"
+  },
+  {
+    "id": "webapp2-03-028",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "次の処理を実現するコマンドとして正しいものはどれですか？\n\n「/binの一覧を取得 → 'python'を含む行だけ抽出 → result.txtに保存」",
+    "choices": [
+      "grep python > ls /bin | result.txt",
+      "ls /bin > grep python > result.txt",
+      "ls /bin | grep python > result.txt",
+      "result.txt | grep python | ls /bin"
+    ],
+    "answer": 2,
+    "explanation": "ls /binの出力をgrep pythonへ渡して絞り込み、その標準出力を>でresult.txtへ保存します。"
+  },
+  {
+    "id": "webapp2-03-029",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "「コマンドA | コマンドB > result.txt」という形の処理順として適切な説明はどれですか？",
+    "choices": [
+      "result.txtをコマンドAへ入力し、その後コマンドBを削除する",
+      "コマンドAの出力をコマンドBへ渡し、コマンドBの出力をresult.txtへ保存する",
+      "コマンドAとコマンドBの両方をresult.txtから読み込む",
+      "コマンドAの出力だけをresult.txtへ保存し、コマンドBは実行されない"
+    ],
+    "answer": 1,
+    "explanation": "パイプによりコマンドAの標準出力がコマンドBの標準入力となり、その処理結果がリダイレクトによってresult.txtへ保存されます。"
+  },
+  {
+    "id": "webapp2-03-030",
+    "subject": "webapp2",
+    "lesson": 3,
+    "question": "memo.txtの内容から「error」を含まない行だけを表示したい場合、適切なコマンドはどれですか？",
+    "choices": [
+      "cat -v error memo.txt",
+      "less -v error memo.txt",
+      "grep error -v memo.txt",
+      "grep -v error memo.txt"
+    ],
+    "answer": 3,
+    "explanation": "grep -v 検索文字列 ファイル名とすると、指定した文字列を含まない行だけを表示できます。"
+  }
+]
