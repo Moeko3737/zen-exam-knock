@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-15-001",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "リファクタリングの説明として最も適切なものはどれですか？",
+    "choices": [
+      "処理結果を変えずに、コードを読みやすく整理して品質を高めること",
+      "新しい機能を大量に追加すること",
+      "プログラムの実行結果を意図的に変更すること",
+      "ソースコードを別の言語へ変換すること"
+    ],
+    "answer": 0,
+    "explanation": "リファクタリングとは、外部から見た処理結果を変えずにコード内部を整理し、可読性や保守性などを向上させることです。"
+  },
+  {
+    "id": "webapp2-15-002",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "リファクタリングの前後でテストを実行する主な理由はどれですか？",
+    "choices": [
+      "コードの行数が増えたか確認するため",
+      "処理結果が変わっておらず、不具合を混入させていないことを確認するため",
+      "GitHubへ自動的にpushするため",
+      "Dockerイメージを更新するため"
+    ],
+    "answer": 1,
+    "explanation": "リファクタリングでは動作を変えないことが重要です。そのため前後でテストし、既存の動作が保たれていることを確認します。"
+  },
+  {
+    "id": "webapp2-15-003",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "TDD（Test Driven Development）の説明として最も適切なものはどれですか？",
+    "choices": [
+      "完成後に一度だけテストする開発手法",
+      "テストを行わずコードレビューだけで品質を保証する手法",
+      "実装や修正より先にテストを用意し、そのテストに適合するよう開発する手法",
+      "Dockerコンテナだけで開発する手法"
+    ],
+    "answer": 2,
+    "explanation": "TDDはTest Driven Developmentの略で、先にテストを書き、そのテストを満たすように実装や改善を進める開発手法です。"
+  },
+  {
+    "id": "webapp2-15-004",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "次の関数isDone(task)が返すものはどれですか？\n\nfunction isDone(task) {\n  return task.isDone;\n}",
+    "choices": [
+      "taskの名前",
+      "taskオブジェクトそのもの",
+      "常にfalse",
+      "タスクの完了状態を表すisDoneプロパティの値"
+    ],
+    "answer": 3,
+    "explanation": "isDone関数はtask.isDoneをそのまま返すため、タスクが完了しているかどうかを表す真偽値を返します。"
+  },
+  {
+    "id": "webapp2-15-005",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "次のisNotDone関数の説明として正しいものはどれですか？\n\nfunction isNotDone(task) {\n  return !isDone(task);\n}",
+    "choices": [
+      "isDoneの結果を反転して未完了かどうかを返す",
+      "タスクを削除する",
+      "タスク名を変更する",
+      "常にtrueを返す"
+    ],
+    "answer": 0,
+    "explanation": "isNotDoneはisDone(task)の真偽値を!で反転し、タスクが未完了ならtrueを返します。"
+  },
+  {
+    "id": "webapp2-15-006",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "他の関数を内部で呼び出して、その機能を調整・補助するisNotDoneのような関数を何と呼びますか？",
+    "choices": [
+      "再帰関数",
+      "ラッパ関数",
+      "コールバック専用関数",
+      "コンストラクタ"
+    ],
+    "answer": 1,
+    "explanation": "既存の関数を包むように利用して機能を調整する関数をラッパ（wrapper）関数と呼びます。"
+  },
+  {
+    "id": "webapp2-15-007",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "次のリファクタリング後のコードで抽出されるものはどれですか？\n\ntasks.filter(isNotDone)",
+    "choices": [
+      "すべてのタスク",
+      "完了済みタスクだけ",
+      "未完了タスクだけ",
+      "名前が空のタスクだけ"
+    ],
+    "answer": 2,
+    "explanation": "isNotDoneは未完了タスクに対してtrueを返すため、filter(isNotDone)では未完了タスクだけが抽出されます。"
+  },
+  {
+    "id": "webapp2-15-008",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "「.filter(task => !task.isDone)」を「.filter(isNotDone)」へ変更するメリットとして最も適切なものはどれですか？",
+    "choices": [
+      "必ず実行速度が100倍になる",
+      "taskオブジェクトを削除できる",
+      "filterを使用しなくてよくなる",
+      "処理の意味が関数名から分かりやすくなり、内部構造への依存を減らせる"
+    ],
+    "answer": 3,
+    "explanation": "isNotDoneという意味のある名前に処理を切り出すことで、コードの意図が読み取りやすくなり、task.isDoneという内部構造を利用側から隠せます。"
+  },
+  {
+    "id": "webapp2-15-009",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "リファクタリング後に既存の動作が維持されているか確認するため、講義で実行するコマンドはどれですか？",
+    "choices": [
+      "yarn test",
+      "yarn init",
+      "git branch",
+      "docker compose build"
+    ],
+    "answer": 0,
+    "explanation": "リファクタリング後にはyarn testを実行し、既存のテストがすべて成功することを確認します。"
+  },
+  {
+    "id": "webapp2-15-010",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "ディレクトリtodoを中身ごとbot-todoへコピーするときに使用するコマンドはどれですか？",
+    "choices": [
+      "cp todo bot-todo",
+      "cp -r todo bot-todo",
+      "mv -r todo bot-todo",
+      "touch todo bot-todo"
+    ],
+    "answer": 1,
+    "explanation": "cp -rの-rはrecursive（再帰的）の意味で、ディレクトリとその中身をまとめてコピーします。"
+  },
+  {
+    "id": "webapp2-15-011",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "bot-todoのcompose.yamlを配置する場所として講義内容に合っているものはどれですか？",
+    "choices": [
+      "todo/index.jsの内部",
+      "ホームディレクトリ直下だけ",
+      "bot-todoディレクトリ直下",
+      "node_modulesディレクトリ内"
+    ],
+    "answer": 2,
+    "explanation": "compose.yamlはbot-todo直下に作成します。内部のtodoパッケージディレクトリの中ではありません。"
+  },
+  {
+    "id": "webapp2-15-012",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": ".gitignoreに.envを記述する主な理由はどれですか？",
+    "choices": [
+      ".envをNode.jsで利用できなくするため",
+      "環境変数を削除するため",
+      "Dockerが.envを読み込まないようにするため",
+      "トークンなどの機密情報をGitリポジトリへ登録しないようにするため"
+    ],
+    "answer": 3,
+    "explanation": ".envにはSlackのトークンなどの機密情報が含まれるため、Gitの管理対象から除外する必要があります。"
+  },
+  {
+    "id": "webapp2-15-013",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "Slackボット開発で.envに保存するものとして講義で扱っている組み合わせはどれですか？",
+    "choices": [
+      "SLACK_APP_TOKENとSLACK_BOT_TOKEN",
+      "GitHubのIssue IDとコミットハッシュ",
+      "Dockerイメージ名とポート番号",
+      "タスク名と完了状態"
+    ],
+    "answer": 0,
+    "explanation": ".envにはSLACK_APP_TOKENとSLACK_BOT_TOKENを記述し、機密情報をソースコードから分離します。"
+  },
+  {
+    "id": "webapp2-15-014",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "Slack公式のBoltパッケージを追加するコマンドはどれですか？",
+    "choices": [
+      "yarn add slack-bot",
+      "yarn add @slack/bolt",
+      "yarn init @slack/bolt",
+      "node install bolt"
+    ],
+    "answer": 1,
+    "explanation": "Slack公式のBoltフレームワークはyarn add @slack/boltでインストールします。"
+  },
+  {
+    "id": "webapp2-15-015",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "bot-todo直下に存在するtodoディレクトリをローカルパッケージとして追加するコマンドはどれですか？",
+    "choices": [
+      "yarn add todo.com",
+      "require('./todo')",
+      "yarn add ./todo",
+      "node ./todo"
+    ],
+    "answer": 2,
+    "explanation": "yarn add ./todoとすると、カレントディレクトリ内にあるtodoパッケージをローカルパスからインストールできます。"
+  },
+  {
+    "id": "webapp2-15-016",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "package.jsonに次の設定があります。\n\n\"scripts\": {\n  \"start\": \"node --env-file=.env bolt.js\"\n}\n\nボットを起動するコマンドはどれですか？",
+    "choices": [
+      "node start",
+      "yarn bolt",
+      "yarn init",
+      "yarn start"
+    ],
+    "answer": 3,
+    "explanation": "scriptsのstartにコマンドが登録されているため、yarn startを実行するとnode --env-file=.env bolt.jsが実行されます。"
+  },
+  {
+    "id": "webapp2-15-017",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "「node --env-file=.env bolt.js」の--env-file=.envの役割はどれですか？",
+    "choices": [
+      ".envに書かれた環境変数を読み込んでbolt.jsを実行する",
+      ".envをGitへcommitする",
+      ".envを削除する",
+      "bolt.jsを.envへ変換する"
+    ],
+    "answer": 0,
+    "explanation": "--env-file=.envを指定すると、.envに保存された環境変数を読み込んだ状態でNode.jsプログラムを実行できます。"
+  },
+  {
+    "id": "webapp2-15-018",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "「Error: Cannot find module 'undici'」が発生した場合の講義での対処法はどれですか？",
+    "choices": [
+      "Dockerを削除する",
+      "yarn add undiciを実行する",
+      "Gitリポジトリを作り直す",
+      "Slackワークスペースを削除する"
+    ],
+    "answer": 1,
+    "explanation": "undiciモジュールが見つからないエラーの場合は、yarn add undiciで必要なパッケージを追加します。"
+  },
+  {
+    "id": "webapp2-15-019",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "JavaScriptで「/word/g」のような記法を用いて文字列のパターンを表現する仕組みを何といいますか？",
+    "choices": [
+      "テンプレートリテラル",
+      "イベント駆動",
+      "正規表現",
+      "プロファイリング"
+    ],
+    "answer": 2,
+    "explanation": "文字列のパターンを表現して検索や抽出などに利用する仕組みを正規表現と呼びます。"
+  },
+  {
+    "id": "webapp2-15-020",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "正規表現「/add (.+)/i」における「.」の意味はどれですか？",
+    "choices": [
+      "文字列の先頭",
+      "0回以上の繰り返し",
+      "数字だけ",
+      "改行以外の任意の1文字"
+    ],
+    "answer": 3,
+    "explanation": "正規表現の.は、基本的に改行文字以外の任意の1文字にマッチします。"
+  },
+  {
+    "id": "webapp2-15-021",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "正規表現「/add (.+)/i」の「+」は何を表しますか？",
+    "choices": [
+      "直前のパターンの1回以上の繰り返し",
+      "文字列の最後",
+      "大文字小文字を無視する",
+      "空白だけにマッチする"
+    ],
+    "answer": 0,
+    "explanation": "+は直前のパターンが1回以上繰り返されることを表します。そのため.+は1文字以上の文字列にマッチします。"
+  },
+  {
+    "id": "webapp2-15-022",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "正規表現「/add (.+)/i」で「()」を使用する目的はどれですか？",
+    "choices": [
+      "文字列を削除する",
+      "マッチした部分をグループとして後から取得できるようにする",
+      "正規表現をコメントアウトする",
+      "必ず完全一致にする"
+    ],
+    "answer": 1,
+    "explanation": "()で囲んだ部分はキャプチャグループとなり、context.matches[1]などから取得できます。"
+  },
+  {
+    "id": "webapp2-15-023",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "Slackで「add 鉛筆を買う」というメッセージが「/add (.+)/i」にマッチした場合、context.matches[1]の値はどれですか？",
+    "choices": [
+      "add",
+      "add 鉛筆を買う",
+      "鉛筆を買う",
+      "undefined"
+    ],
+    "answer": 2,
+    "explanation": "matches[0]にはマッチ全体の「add 鉛筆を買う」、matches[1]には最初の()にマッチした「鉛筆を買う」が入ります。"
+  },
+  {
+    "id": "webapp2-15-024",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "文字列に対するtrim()の役割はどれですか？",
+    "choices": [
+      "文字列を数値へ変換する",
+      "文字列を逆順にする",
+      "すべての空白を文字列の途中も含めて削除する",
+      "文字列の先頭と末尾の余分な空白を取り除く"
+    ],
+    "answer": 3,
+    "explanation": "trim()は文字列の両端にある空白を取り除きます。タスク名などを整形する際に利用できます。"
+  },
+  {
+    "id": "webapp2-15-025",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "次のコードで「add 牛乳を買う」を受信した場合、sayで送信される内容はどれですか？\n\napp.message(/add (.+)/i, ({ context, say }) => {\n  const taskName = context.matches[1].trim();\n  say(`追加しました: ${taskName}`);\n});",
+    "choices": [
+      "追加しました: 牛乳を買う",
+      "add 牛乳を買う",
+      "完了しました: 牛乳を買う",
+      "削除しました: 牛乳を買う"
+    ],
+    "answer": 0,
+    "explanation": "context.matches[1]から「牛乳を買う」が取得され、その値がテンプレートリテラルへ埋め込まれるため「追加しました: 牛乳を買う」と送信されます。"
+  },
+  {
+    "id": "webapp2-15-026",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "配列['買い物', '勉強', '掃除']に対してjoin('\\n')を実行すると、どのような文字列になりますか？",
+    "choices": [
+      "買い物,勉強,掃除",
+      "各要素が改行で区切られた1つの文字列",
+      "['買い物', '勉強', '掃除']のまま",
+      "買い物勉強掃除"
+    ],
+    "answer": 1,
+    "explanation": "join('\\n')は配列の各要素を改行文字でつなぎ、1つの文字列として返します。"
+  },
+  {
+    "id": "webapp2-15-027",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "listとdonelistの正規表現を区別するため、講義で重要とされている記号はどれですか？",
+    "choices": [
+      "$",
+      "+",
+      "^",
+      "."
+    ],
+    "answer": 2,
+    "explanation": "^は文字列の先頭を表します。/^list/iとすることで、文字列の途中にlistを含むdonelistへの誤マッチを防ぎます。"
+  },
+  {
+    "id": "webapp2-15-028",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "listコマンドを「/list/i」とだけ記述した場合に問題となる可能性があるものはどれですか？",
+    "choices": [
+      "addに反応しなくなる",
+      "Slackへ接続できなくなる",
+      "listが一切実行されなくなる",
+      "donelistにもlistという文字列が含まれるため、両方の処理が反応する可能性がある"
+    ],
+    "answer": 3,
+    "explanation": "donelistにはlistという文字列が含まれています。先頭一致の^を付けて/^list/iとすることで誤反応を防ぎます。"
+  },
+  {
+    "id": "webapp2-15-029",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "Slackボットでtodo.list()が空配列[]を返したとき、そのままsay(list.join('\\n'))を実行すると問題になる理由はどれですか？",
+    "choices": [
+      "join('\\n')の結果が空文字列となり、Slackへ空のメッセージを送ろうとしてno_textエラーになるため",
+      "joinは空配列に利用できずJavaScriptの構文エラーになるため",
+      "todo.list()が自動的にnullへ変換されるため",
+      "Slackでは改行文字を使用できないため"
+    ],
+    "answer": 0,
+    "explanation": "空配列をjoinすると空文字列になります。Slackではテキストのないメッセージを送信できないため、no_textエラーの原因になります。"
+  },
+  {
+    "id": "webapp2-15-030",
+    "subject": "webapp2",
+    "lesson": 15,
+    "question": "todo.list()が空の場合の処理として最も適切なものはどれですか？",
+    "choices": [
+      "必ずjoin('\\n')して空文字列を送信する",
+      "list.length === 0を確認し、空なら「TODO はありません」などのメッセージを送る",
+      "Slackボットを終了する",
+      "todo.list()の結果を削除する"
+    ],
+    "answer": 1,
+    "explanation": "配列のlengthが0か確認し、空の場合は空文字列ではなく「TODO はありません」などの有効なメッセージを送ることでno_textエラーを防げます。"
+  }
+]
