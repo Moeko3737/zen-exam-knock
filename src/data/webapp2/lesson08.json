@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-08-001",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "GitHubのIssueの主な役割として最も適切なものはどれですか？",
+    "choices": [
+      "プロジェクトの課題やバグ、要望などを記録・管理する",
+      "ソースコードを自動的に実行する",
+      "画像だけを保存する",
+      "GitHubアカウントのパスワードを管理する"
+    ],
+    "answer": 0,
+    "explanation": "Issueは、バグ、不具合、新機能の要望、設計上の議論など、プロジェクトの課題や論点を記録・共有・管理するための機能です。"
+  },
+  {
+    "id": "webapp2-08-002",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "Issueがまだ解決していない状態を何といいますか？",
+    "choices": [
+      "Closed",
+      "Open",
+      "Merged",
+      "Secret"
+    ],
+    "answer": 1,
+    "explanation": "未解決のIssueはOpen、対応が完了したIssueはClosedとして管理されます。"
+  },
+  {
+    "id": "webapp2-08-003",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "GitHubのIssueを新たに作成するときに使用するボタンはどれですか？",
+    "choices": [
+      "Save page",
+      "Create public gist",
+      "New issue",
+      "Commit changes"
+    ],
+    "answer": 2,
+    "explanation": "Issuesタブを開き、「New issue」ボタンから新しいIssueを作成します。"
+  },
+  {
+    "id": "webapp2-08-004",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "リポジトリでIssues機能が無効になっている場合、利用可能にする設定として正しいものはどれですか？",
+    "choices": [
+      "WikiでIssuesというページを作る",
+      "README.mdにIssuesと書く",
+      "GistをPublicに変更する",
+      "SettingsのFeaturesでIssuesにチェックを入れる"
+    ],
+    "answer": 3,
+    "explanation": "リポジトリのSettingsを開き、FeaturesにあるIssuesのチェックを有効にするとIssue機能を利用できます。"
+  },
+  {
+    "id": "webapp2-08-005",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "最初に作成されたIssueに自動的に割り当てられるIDの表し方はどれですか？",
+    "choices": [
+      "#1",
+      "@1",
+      "$1",
+      "&1"
+    ],
+    "answer": 0,
+    "explanation": "Issueには作成順に通し番号が割り当てられ、最初のIssueは#1となります。"
+  },
+  {
+    "id": "webapp2-08-006",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "Issueへの対応として行ったコミットをIssue #1と関連付けたい場合、講義で扱った方法はどれですか？",
+    "choices": [
+      "ファイル名を#1に変更する",
+      "コミットメッセージに#1を記述する",
+      "Issueのタイトルをコミットに変更する",
+      "Wikiにコミットハッシュを書く"
+    ],
+    "answer": 1,
+    "explanation": "コミットメッセージに#1のようなIssue IDを書くと、その部分がIssueへのリンクとなり、コミットとIssueを関連付けて確認できます。"
+  },
+  {
+    "id": "webapp2-08-007",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "「コミットログ」の説明として最も適切なものはどれですか？",
+    "choices": [
+      "GitHubへログインした日時だけの記録",
+      "Issueのコメントだけを集めた一覧",
+      "リポジトリに加えられた変更の履歴情報",
+      "Wikiのアクセス数"
+    ],
+    "answer": 2,
+    "explanation": "コミットログは、リポジトリへどのような変更が加えられたかを記録した履歴情報です。"
+  },
+  {
+    "id": "webapp2-08-008",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "コミットごとに割り当てられる「aebed01」のような値を何といいますか？",
+    "choices": [
+      "Issue ID",
+      "Wiki ID",
+      "Markdown ID",
+      "コミットハッシュ"
+    ],
+    "answer": 3,
+    "explanation": "コミットには、それぞれを識別するための一意のハッシュ値が割り当てられます。"
+  },
+  {
+    "id": "webapp2-08-009",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "Issue #1への対応が完了したあと、状態をClosedにする目的として最も適切なものはどれですか？",
+    "choices": [
+      "対応済みの課題であることを明確にする",
+      "リポジトリを削除する",
+      "Issueの内容を非公開にする",
+      "GitHubアカウントを停止する"
+    ],
+    "answer": 0,
+    "explanation": "対応が完了したIssueをCloseすることで、未対応のOpen Issueと区別して進捗を管理できます。"
+  },
+  {
+    "id": "webapp2-08-010",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "コメントを投稿すると同時にIssueを閉じるために使用するボタンはどれですか？",
+    "choices": [
+      "Submit new issue",
+      "Close with comment",
+      "Save page",
+      "Create secret gist"
+    ],
+    "answer": 1,
+    "explanation": "「Close with comment」を使用すると、コメントの追加と同時にIssueをClosed状態にできます。"
+  },
+  {
+    "id": "webapp2-08-011",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "Issueへの対応でプログラムを変更した結果、既存のテストコードが失敗するようになりました。講義内容に沿った対応はどれですか？",
+    "choices": [
+      "テストコードは常に無視する",
+      "プログラムをGitHubから削除する",
+      "プログラムの変更内容に合わせてテストコードも見直す",
+      "IssueをOpenのまま放置する"
+    ],
+    "answer": 2,
+    "explanation": "プログラムの仕様変更によってテストの前提も変わる場合があるため、必要に応じてテストコードも修正する必要があります。"
+  },
+  {
+    "id": "webapp2-08-012",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "大規模なOSSプロジェクトでIssueに「bug」「question」「feature」などを付けて分類するために使われる機能はどれですか？",
+    "choices": [
+      "Gist",
+      "Wiki",
+      "Hash",
+      "Label"
+    ],
+    "answer": 3,
+    "explanation": "Issue数が多いプロジェクトでは、ラベルを使ってバグ、質問、新機能要望などのカテゴリに分類して管理します。"
+  },
+  {
+    "id": "webapp2-08-013",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "GitHub Wikiの主な用途として適切なものはどれですか？",
+    "choices": [
+      "プロジェクトの説明書やロードマップなどのドキュメントを作成・共有する",
+      "コミットハッシュを生成する",
+      "パスワードを保管する",
+      "ソースコードを自動テストする"
+    ],
+    "answer": 0,
+    "explanation": "Wikiは、プロジェクトの説明書、ロードマップ、操作マニュアル、開発ガイドなどのドキュメントを作成・共有するために利用できます。"
+  },
+  {
+    "id": "webapp2-08-014",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "GitHub Wikiに最初のページを作成するときに使用するボタンはどれですか？",
+    "choices": [
+      "New issue",
+      "Create the first page",
+      "Create secret gist",
+      "Close with comment"
+    ],
+    "answer": 1,
+    "explanation": "まだWikiページが存在しない場合は「Create the first page」から最初のページを作成します。"
+  },
+  {
+    "id": "webapp2-08-015",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "既存のGitHub Wikiに新しいページを追加するときに使う操作はどれですか？",
+    "choices": [
+      "New issue",
+      "Commit changes",
+      "New page",
+      "Create public gist"
+    ],
+    "answer": 2,
+    "explanation": "Wikiの新規ページを追加する場合は「New page」ボタンを使用します。"
+  },
+  {
+    "id": "webapp2-08-016",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "GitHub Wikiの説明として最も適切なものはどれですか？",
+    "choices": [
+      "コード片だけを投稿するサービス",
+      "Gitのバージョンを確認する機能",
+      "Issueだけを自動的に一覧化する機能",
+      "Web上から簡単に編集できるドキュメント作成・管理の仕組み"
+    ],
+    "answer": 3,
+    "explanation": "Wikiは、Webブラウザ上から簡単に内容を作成・編集できるドキュメント管理の仕組みです。"
+  },
+  {
+    "id": "webapp2-08-017",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "Markdown記法で「# タイトル」と記述した場合、HTMLでは主にどの要素に相当しますか？",
+    "choices": [
+      "<h1>",
+      "<p>",
+      "<ul>",
+      "<a>"
+    ],
+    "answer": 0,
+    "explanation": "Markdownでは行頭の#が見出しを表し、#はHTMLの<h1>相当、##は<h2>相当になります。"
+  },
+  {
+    "id": "webapp2-08-018",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "Markdownで第2階層の見出しを書く記法はどれですか？",
+    "choices": [
+      "# 見出し",
+      "## 見出し",
+      "- 見出し",
+      "[見出し]"
+    ],
+    "answer": 1,
+    "explanation": "Markdownでは##を行頭につけると、第2階層の見出しとして扱われます。"
+  },
+  {
+    "id": "webapp2-08-019",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "Markdownで箇条書きリストを作る方法として、講義で扱ったものはどれですか？",
+    "choices": [
+      "# 項目",
+      "[項目]",
+      "- 項目",
+      "(項目)"
+    ],
+    "answer": 2,
+    "explanation": "Markdownでは行頭にハイフン「-」を付けることで箇条書きリストを作成できます。"
+  },
+  {
+    "id": "webapp2-08-020",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "WikiのHomeページからResultsページへ「こちら」という文字でリンクするMarkdown記法はどれですか？",
+    "choices": [
+      "(こちら)[Results]",
+      "<Results>こちら",
+      "#こちら Results",
+      "[こちら](Results)"
+    ],
+    "answer": 3,
+    "explanation": "Markdownでは[表示する文字](リンク先)という形式でリンクを作ります。Wiki内のResultsページへは[こちら](Results)と記述できます。"
+  },
+  {
+    "id": "webapp2-08-021",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "Gistの主な用途として適切なものはどれですか？",
+    "choices": [
+      "短いメモやコードの断片を簡単に公開・共有する",
+      "大規模プロジェクト全体のタスクを管理する",
+      "GitHubアカウントの認証情報を保存する",
+      "Issueを自動的にCloseする"
+    ],
+    "answer": 0,
+    "explanation": "Gistは、Wikiほど本格的なドキュメントが不要なときに、短いメモやコードスニペットを簡単に共有するためのサービスです。"
+  },
+  {
+    "id": "webapp2-08-022",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "GistでMarkdown形式のファイルとして扱いたい場合、ファイル名につける拡張子はどれですか？",
+    "choices": [
+      ".html",
+      ".md",
+      ".git",
+      ".wiki"
+    ],
+    "answer": 1,
+    "explanation": ".mdという拡張子を付けることで、そのファイルがMarkdown形式であることを示せます。"
+  },
+  {
+    "id": "webapp2-08-023",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "Secret Gistについて正しい説明はどれですか？",
+    "choices": [
+      "作成者本人以外は絶対に閲覧できない",
+      "内容が暗号化され、GitHub社員も閲覧できない",
+      "検索には表示されにくいが、URLを知っている人は閲覧できる",
+      "公開後はURLを知っていても閲覧できない"
+    ],
+    "answer": 2,
+    "explanation": "Secret Gistは一般の検索結果などには表示されませんが、URLを知っている人であれば閲覧できます。完全な非公開機能ではありません。"
+  },
+  {
+    "id": "webapp2-08-024",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "Secret Gistへ保存してはいけないものとして最も適切なのはどれですか？",
+    "choices": [
+      "短いサンプルコード",
+      "Markdownの練習メモ",
+      "公開しても問題のないコード片",
+      "パスワードやAPIキーなどの機密情報"
+    ],
+    "answer": 3,
+    "explanation": "Secret GistはURLを知っていれば閲覧できるため、パスワード、APIキー、秘密情報などの保管には使用すべきではありません。"
+  },
+  {
+    "id": "webapp2-08-025",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "Public Gistについて正しいものはどれですか？",
+    "choices": [
+      "世界中に公開され、検索などから見つけられる可能性がある",
+      "URLを知る本人しか閲覧できない",
+      "暗号化された秘密情報専用である",
+      "GitHub Wikiのページとしてのみ表示される"
+    ],
+    "answer": 0,
+    "explanation": "Public Gistは一般公開され、Web検索などを通して他の人から見つけられる可能性があります。"
+  },
+  {
+    "id": "webapp2-08-026",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "「バグの報告と、その対応状況についてチームで議論したい」という場合に最も適したGitHub機能はどれですか？",
+    "choices": [
+      "Gist",
+      "Issues",
+      "Wiki",
+      "GitHub Pages"
+    ],
+    "answer": 1,
+    "explanation": "バグや要望などの課題を記録し、コメントを通して議論・進捗管理する用途にはIssuesが適しています。"
+  },
+  {
+    "id": "webapp2-08-027",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "「プロジェクトの使い方や開発方針を、継続的に更新するドキュメントとして公開したい」という場合に最も適した機能はどれですか？",
+    "choices": [
+      "Commit",
+      "Gist",
+      "Wiki",
+      "Issue"
+    ],
+    "answer": 2,
+    "explanation": "操作マニュアル、ロードマップ、開発ガイドなどの継続的なドキュメントにはWikiが適しています。"
+  },
+  {
+    "id": "webapp2-08-028",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "「数行のサンプルコードを知人にURLで手軽に共有したい」という場合に最も適した機能はどれですか？",
+    "choices": [
+      "Issue",
+      "Wiki",
+      "Settings",
+      "Gist"
+    ],
+    "answer": 3,
+    "explanation": "短いコード片やメモを手軽に共有する用途にはGistが適しています。"
+  },
+  {
+    "id": "webapp2-08-029",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "OSSの大規模プロジェクトで「このプロジェクトに参加するときに守るべき行動上のルール」を示す文書を何といいますか？",
+    "choices": [
+      "Code of Conduct",
+      "Secret Gist",
+      "Commit Hash",
+      "Issue ID"
+    ],
+    "answer": 0,
+    "explanation": "Code of Conduct（行動規範）は、プロジェクトへ参加する人が守るべき行動やコミュニケーション上のルールなどを示します。"
+  },
+  {
+    "id": "webapp2-08-030",
+    "subject": "webapp2",
+    "lesson": 8,
+    "question": "GitHubを使った共同開発の流れとして、講義内容に最も合っているものはどれですか？",
+    "choices": [
+      "IssueをCloseする → 課題を考える → コードを削除する",
+      "Issueで課題を共有する → 修正する → Issue IDを含むコミットを行う → 動作確認する → IssueをCloseする",
+      "Gistを作る → パスワードを書く → Wikiを削除する",
+      "Wikiだけを作成すればコードの修正や課題管理は不要になる"
+    ],
+    "answer": 1,
+    "explanation": "Issueで課題を明確にし、コードを修正してコミットとIssueを関連付け、動作確認後にIssueをCloseすることで、対応の経緯を追跡しやすくなります。"
+  }
+]
