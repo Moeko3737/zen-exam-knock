@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-14-001",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "プログラムの「モジュール化」の説明として最も適切なものはどれですか？",
+    "choices": [
+      "特定の機能を独立した部品として切り分けること",
+      "すべての処理を1つの関数にまとめること",
+      "プログラムを必ず複数のサーバーで実行すること",
+      "ソースコードを暗号化すること"
+    ],
+    "answer": 0,
+    "explanation": "モジュール化とは、プログラムの特定の機能を独立した部品として切り分けることです。保守性や機能の差し替えやすさ、再利用性の向上につながります。"
+  },
+  {
+    "id": "webapp2-14-002",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "モジュール化のメリットとして講義内容に含まれていないものはどれですか？",
+    "choices": [
+      "不具合がある部分だけを修正しやすくなる",
+      "プログラムの実行速度が必ず100倍になる",
+      "特定の機能だけを差し替えやすくなる",
+      "作成した機能を別のプログラムで再利用しやすくなる"
+    ],
+    "answer": 1,
+    "explanation": "モジュール化の主なメリットはメンテナンス性、機能向上の容易さ、コードの再利用性です。実行速度が必ず大幅に向上するというものではありません。"
+  },
+  {
+    "id": "webapp2-14-003",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "CRUDの「C」が表す操作はどれですか？",
+    "choices": [
+      "Complete",
+      "Copy",
+      "Create",
+      "Check"
+    ],
+    "answer": 2,
+    "explanation": "CRUDのCはCreateで、データを新しく生成する操作を表します。今回のタスク管理ではaddが該当します。"
+  },
+  {
+    "id": "webapp2-14-004",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "CRUDの4つの操作として正しい組み合わせはどれですか？",
+    "choices": [
+      "Create・Run・Upload・Download",
+      "Copy・Read・Undo・Delete",
+      "Create・Replace・Update・Download",
+      "Create・Read・Update・Delete"
+    ],
+    "answer": 3,
+    "explanation": "CRUDはCreate（生成）、Read（読み取り）、Update（更新）、Delete（削除）の4つの基本操作です。"
+  },
+  {
+    "id": "webapp2-14-005",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "タスク管理ボットで「add」がCRUDのどの操作に対応しますか？",
+    "choices": [
+      "Create",
+      "Read",
+      "Update",
+      "Delete"
+    ],
+    "answer": 0,
+    "explanation": "addは新しいタスクを作成するため、CRUDではCreateに対応します。"
+  },
+  {
+    "id": "webapp2-14-006",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "タスク管理ボットの「list」と「donelist」がCRUDで同じ分類になる理由はどれですか？",
+    "choices": [
+      "どちらもデータを削除するから",
+      "どちらもデータを読み取って一覧表示する処理だから",
+      "どちらも新しいタスクを生成するから",
+      "どちらもタスクの状態を書き換えるから"
+    ],
+    "answer": 1,
+    "explanation": "listは未完了、donelistは完了済みを表示しますが、どちらも保存されたデータを読み取る処理なのでCRUDではReadです。"
+  },
+  {
+    "id": "webapp2-14-007",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "タスク管理ボットで「done」がCRUDのどの操作に対応しますか？",
+    "choices": [
+      "Create",
+      "Read",
+      "Update",
+      "Delete"
+    ],
+    "answer": 2,
+    "explanation": "doneは既存タスクの状態を未完了から完了へ変更するため、Updateに対応します。"
+  },
+  {
+    "id": "webapp2-14-008",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "オブジェクトのライフサイクルの説明として最も適切なものはどれですか？",
+    "choices": [
+      "プログラムの実行速度を測定する手法",
+      "ライブラリをインストールする順序",
+      "Gitのコミットからpushまでの流れ",
+      "オブジェクトが生成され、利用され、状態が変化し、削除される一連の流れ"
+    ],
+    "answer": 3,
+    "explanation": "オブジェクトのライフサイクルは、オブジェクトが生成されてから状態が変化し、最終的に削除されるまでの一連の流れです。"
+  },
+  {
+    "id": "webapp2-14-009",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "タスク管理システムでaddを実行した直後、新しく作成されたタスクの状態はどれですか？",
+    "choices": [
+      "未完了",
+      "完了",
+      "削除済",
+      "保留"
+    ],
+    "answer": 0,
+    "explanation": "addで作られるタスクはisDone: falseとして登録されるため、最初は未完了状態です。"
+  },
+  {
+    "id": "webapp2-14-010",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "タスクの状態を「未完了」から「完了」へ遷移させるコマンドはどれですか？",
+    "choices": [
+      "list",
+      "done",
+      "add",
+      "del"
+    ],
+    "answer": 1,
+    "explanation": "doneを実行すると、対象タスクのisDoneがfalseからtrueへ変更され、未完了から完了へ状態遷移します。"
+  },
+  {
+    "id": "webapp2-14-011",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "タスク管理システムのステートチャートについて正しいものはどれですか？",
+    "choices": [
+      "削除済みから完了へ直接戻せる",
+      "完了から未完了へdoneで戻せる",
+      "未完了と完了のどちらからでもdelによって削除できる",
+      "addは完了状態のタスクを作成する"
+    ],
+    "answer": 2,
+    "explanation": "delは未完了・完了どちらの状態からでも実行でき、対象タスクを削除できます。"
+  },
+  {
+    "id": "webapp2-14-012",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "package.jsonに次の設定があります。\n\n\"scripts\": {\n  \"test\": \"node test.js\"\n}\n\nこのときnode test.jsを実行するために使えるコマンドはどれですか？",
+    "choices": [
+      "yarn init",
+      "yarn add test",
+      "yarn node",
+      "yarn test"
+    ],
+    "answer": 3,
+    "explanation": "package.jsonのscriptsにtestとしてnode test.jsを登録すると、yarn testでそのコマンドを実行できます。"
+  },
+  {
+    "id": "webapp2-14-013",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "package.jsonのscriptsプロパティを利用するメリットとして適切なものはどれですか？",
+    "choices": [
+      "長いコマンドなどに短い実行名を付けて定型処理を簡単に実行できる",
+      "JavaScriptの変数を自動的に暗号化できる",
+      "Dockerが不要になる",
+      "GitHubへ自動的に公開される"
+    ],
+    "answer": 0,
+    "explanation": "scriptsを利用すると、node test.jsなどのコマンドをyarn testのような短い名前で実行できます。"
+  },
+  {
+    "id": "webapp2-14-014",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "次のadd関数を実行すると、新しいタスクはどのような値で追加されますか？\n\nfunction add(taskName) {\n  tasks.push({ name: taskName, isDone: false });\n}",
+    "choices": [
+      "文字列だけが追加される",
+      "nameとisDoneを持つオブジェクトが配列末尾に追加される",
+      "配列の先頭要素が削除される",
+      "すべての既存タスクが完了になる"
+    ],
+    "answer": 1,
+    "explanation": "pushによって、{ name: taskName, isDone: false }というオブジェクトがtasks配列の末尾へ追加されます。"
+  },
+  {
+    "id": "webapp2-14-015",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "次のコードの実行結果はどれですか？\n\nconst numbers = [10, 15, 20, 25, 30];\nconst filteredNumbers = numbers.filter(num => num > 20);\nconsole.log(filteredNumbers);",
+    "choices": [
+      "[10, 15, 20]",
+      "[20, 25, 30]",
+      "[25, 30]",
+      "[15, 20, 25]"
+    ],
+    "answer": 2,
+    "explanation": "filterは条件がtrueになる要素だけを抽出します。20より大きい数は25と30なので、[25, 30]になります。"
+  },
+  {
+    "id": "webapp2-14-016",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "JavaScriptのfilterメソッドの説明として正しいものはどれですか？",
+    "choices": [
+      "すべての要素を同じ値に書き換える",
+      "最初の要素だけを返す",
+      "元の配列を必ず並び替える",
+      "条件を満たす要素だけを抽出した新しい配列を返す"
+    ],
+    "answer": 3,
+    "explanation": "filterは各要素に条件を適用し、trueとなった要素だけを集めた新しい配列を返します。"
+  },
+  {
+    "id": "webapp2-14-017",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "次のlist関数でfilterが抽出するタスクはどれですか？\n\nreturn tasks.filter(task => !task.isDone).map(task => task.name);",
+    "choices": [
+      "isDoneがfalseの未完了タスク",
+      "isDoneがtrueの完了タスク",
+      "名前が空のタスクだけ",
+      "すべてのタスク"
+    ],
+    "answer": 0,
+    "explanation": "!task.isDoneはisDoneがfalseのときtrueになるため、未完了タスクだけが抽出されます。"
+  },
+  {
+    "id": "webapp2-14-018",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "次のコードの実行結果はどれですか？\n\nconst numbers = [1, 2, 3, 4, 5];\nconst squaredNumbers = numbers.map(num => num * num);\nconsole.log(squaredNumbers);",
+    "choices": [
+      "[1, 2, 3, 4, 5]",
+      "[1, 4, 9, 16, 25]",
+      "[2, 4]",
+      "[1, 3, 5]"
+    ],
+    "answer": 1,
+    "explanation": "mapは各要素に関数を適用した結果から新しい配列を作ります。それぞれを2乗するため[1, 4, 9, 16, 25]です。"
+  },
+  {
+    "id": "webapp2-14-019",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "配列のmapメソッドの説明として正しいものはどれですか？",
+    "choices": [
+      "条件を満たす要素だけを削除する",
+      "最初に一致した要素の位置を返す",
+      "各要素を変換し、その戻り値から新しい配列を作る",
+      "配列から指定した要素数を直接削除する"
+    ],
+    "answer": 2,
+    "explanation": "mapは配列の各要素に関数を適用し、その戻り値を要素とする新しい配列を生成します。"
+  },
+  {
+    "id": "webapp2-14-020",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "次のアロー関数と同じ意味になる省略形はどれですか？\n\ntask => { return task.name; }",
+    "choices": [
+      "task = task.name",
+      "task { task.name }",
+      "task -> task.name",
+      "task => task.name"
+    ],
+    "answer": 3,
+    "explanation": "処理が1つの式だけの場合、{}とreturnを省略してtask => task.nameと書けます。"
+  },
+  {
+    "id": "webapp2-14-021",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "findIndexメソッドの特徴として正しいものはどれですか？",
+    "choices": [
+      "条件に最初に一致した要素のインデックスを返す",
+      "一致した要素をすべて配列で返す",
+      "必ず最後の要素のインデックスを返す",
+      "条件に合わない要素だけを返す"
+    ],
+    "answer": 0,
+    "explanation": "findIndexは、条件に最初に一致した要素のインデックスを返します。"
+  },
+  {
+    "id": "webapp2-14-022",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "findIndexで条件に一致する要素が存在しなかった場合、返される値はどれですか？",
+    "choices": [
+      "0",
+      "-1",
+      "null",
+      "false"
+    ],
+    "answer": 1,
+    "explanation": "findIndexで該当要素が見つからない場合は-1が返ります。そのためindexFound !== -1のように存在確認できます。"
+  },
+  {
+    "id": "webapp2-14-023",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "次の処理で「if (indexFound !== -1)」と確認している理由はどれですか？\n\nconst indexFound = tasks.findIndex(task => task.name === taskName);",
+    "choices": [
+      "配列が空か確認するため",
+      "タスクが完了済みか確認するため",
+      "対象のタスクが実際に見つかった場合だけ後続処理を行うため",
+      "配列の要素数を確認するため"
+    ],
+    "answer": 2,
+    "explanation": "findIndexは見つからない場合に-1を返します。-1でないことを確認することで、安全に対象要素への処理を行えます。"
+  },
+  {
+    "id": "webapp2-14-024",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "次のコードを実行した後のfruitsはどれですか？\n\nconst fruits = ['apple', 'banana', 'cherry', 'date'];\nfruits.splice(1, 2);",
+    "choices": [
+      "['banana', 'cherry']",
+      "['apple', 'banana']",
+      "['cherry', 'date']",
+      "['apple', 'date']"
+    ],
+    "answer": 3,
+    "explanation": "splice(1, 2)はインデックス1から2要素、つまりbananaとcherryを削除します。残るのは['apple', 'date']です。"
+  },
+  {
+    "id": "webapp2-14-025",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "tasks.splice(indexFound, 1)の意味として正しいものはどれですか？",
+    "choices": [
+      "indexFoundの位置から要素を1つ削除する",
+      "indexFoundの位置に1を追加する",
+      "配列全体をコピーする",
+      "indexFound以外をすべて削除する"
+    ],
+    "answer": 0,
+    "explanation": "splice(開始位置, 削除個数)なので、tasks.splice(indexFound, 1)は指定位置から1要素を削除します。"
+  },
+  {
+    "id": "webapp2-14-026",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "index.js内のaddやlistなどの関数を別ファイルから利用できるようにする記述はどれですか？",
+    "choices": [
+      "require.exports = { add, list };",
+      "module.exports = { add, list };",
+      "package.exports = { add, list };",
+      "yarn.exports = { add, list };"
+    ],
+    "answer": 1,
+    "explanation": "CommonJSではmodule.exportsに公開したい関数を設定し、別ファイルからrequire()して利用できます。"
+  },
+  {
+    "id": "webapp2-14-027",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "Node.js標準のテストランナーを読み込むコードはどれですか？",
+    "choices": [
+      "const test = require('node:assert');",
+      "const test = require('test');",
+      "const test = require('node:test');",
+      "const test = require('node:testing');"
+    ],
+    "answer": 2,
+    "explanation": "node:testはNode.js標準のテストランナーです。テストの実行や結果レポートなどを行えます。"
+  },
+  {
+    "id": "webapp2-14-028",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "次のうち、別々に作成された配列の中身が同じかを検証するのに適したものはどれですか？",
+    "choices": [
+      "assert.equal",
+      "assert.strictEqual",
+      "===",
+      "assert.deepStrictEqual"
+    ],
+    "answer": 3,
+    "explanation": "配列やオブジェクトは参照型なので、別インスタンス同士をstrictEqualや===で比較すると一致しません。中身を比較する場合はdeepStrictEqualを使用します。"
+  },
+  {
+    "id": "webapp2-14-029",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "次の比較結果として正しいものはどれですか？\n\n[1] === [1]",
+    "choices": [
+      "false",
+      "true",
+      "undefined",
+      "配列なので必ずエラー"
+    ],
+    "answer": 0,
+    "explanation": "2つの[1]は内容は同じですが別々の配列インスタンスです。===は参照先も含めて比較するためfalseになります。"
+  },
+  {
+    "id": "webapp2-14-030",
+    "subject": "webapp2",
+    "lesson": 14,
+    "question": "次の関数isMultipleOfSeventeen(34)の戻り値はどれですか？\n\nfunction isMultipleOfSeventeen(num) {\n  return num % 17 === 0;\n}",
+    "choices": [
+      "34",
+      "true",
+      "false",
+      "17"
+    ],
+    "answer": 1,
+    "explanation": "34を17で割った余りは0なので、34 % 17 === 0はtrueになります。つまり34は17の倍数です。"
+  }
+]
