@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-13-001",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "ライブラリの説明として最も適切なものはどれですか？",
+    "choices": [
+      "特定の機能やタスクを実現するための再利用可能なコードの集まり",
+      "ソフトウェアの実行環境全体を仮想化する技術",
+      "プロジェクトの変更履歴を管理するシステム",
+      "Webページの見た目だけを整える仕組み"
+    ],
+    "answer": 0,
+    "explanation": "ライブラリとは、特定の機能や処理を再利用できるようにまとめたコードの集まりです。既存の実装を利用することで、開発の手間やバグを減らせます。"
+  },
+  {
+    "id": "webapp2-13-002",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "既存ライブラリを利用するメリットとして最も適切なものはどれですか？",
+    "choices": [
+      "必ず自分で全機能を実装できるようになる",
+      "検証済みの処理を再利用し、開発の手間やバグを減らせる",
+      "プログラムのソースコードが不要になる",
+      "インターネット接続が一切不要になる"
+    ],
+    "answer": 1,
+    "explanation": "既存ライブラリには過去の開発者による実装・検証・運用経験が蓄積されているため、自作するより効率的かつ安全に機能を利用できます。"
+  },
+  {
+    "id": "webapp2-13-003",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "講義の自作pow関数でpow(2, -1)を実行した場合、どの値が返る問題がありましたか？",
+    "choices": [
+      "0",
+      "0.5",
+      "1",
+      "-2"
+    ],
+    "answer": 2,
+    "explanation": "自作例ではyが負数だとfor文が1度も実行されないため、resultの初期値である1がそのまま返ってしまいます。本来2の-1乗は0.5です。"
+  },
+  {
+    "id": "webapp2-13-004",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "2の-1乗をJavaScriptの標準機能で正しく計算するコードはどれですか？",
+    "choices": [
+      "Math.add(2, -1)",
+      "Math.multi(2, -1)",
+      "Math.calc(2, -1)",
+      "Math.pow(2, -1)"
+    ],
+    "answer": 3,
+    "explanation": "Math.pow()はべき乗を計算する標準機能です。Math.pow(2, -1)は0.5を返します。"
+  },
+  {
+    "id": "webapp2-13-005",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "パッケージマネージャの主な役割はどれですか？",
+    "choices": [
+      "ライブラリのインストール・削除や依存関係を管理する",
+      "JavaScriptをHTMLへ変換する",
+      "Slackのチャンネルを作成する",
+      "Gitのコミット履歴だけを表示する"
+    ],
+    "answer": 0,
+    "explanation": "パッケージマネージャは、使用するライブラリやそのバージョン、依存関係などを管理し、必要なパッケージのインストールや削除を行います。"
+  },
+  {
+    "id": "webapp2-13-006",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "パッケージの「依存関係」とは何ですか？",
+    "choices": [
+      "パッケージが必ずインターネットへ接続すること",
+      "あるパッケージを動かすために別のパッケージが必要になる関係",
+      "すべてのパッケージが同じバージョンになること",
+      "パッケージがGitHubにしか存在できないこと"
+    ],
+    "answer": 1,
+    "explanation": "例えばパッケージAを利用するためにBとCが必要になるような関係を依存関係といいます。パッケージマネージャは必要な依存パッケージも管理します。"
+  },
+  {
+    "id": "webapp2-13-007",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "Node.jsで標準的に利用されるパッケージマネージャはどれですか？",
+    "choices": [
+      "apt",
+      "pip",
+      "npm",
+      "gem"
+    ],
+    "answer": 2,
+    "explanation": "npmはNode.jsで標準的に利用されるパッケージマネージャです。講義ではyarnやpnpmも紹介されています。"
+  },
+  {
+    "id": "webapp2-13-008",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "次のうち、Node.jsのパッケージマネージャを利用することで得られるメリットとして誤っているものはどれですか？",
+    "choices": [
+      "ライブラリの依存関係を自動的に解決できる",
+      "パッケージのインストールや削除を簡単に行える",
+      "package.jsonなどを使ってプロジェクトの依存関係を管理できる",
+      "実行中のNode.jsアプリのメモリ消費を自動的に削減できる"
+    ],
+    "answer": 3,
+    "explanation": "パッケージマネージャは依存関係やインストール・削除などを管理しますが、実行中のNode.jsアプリのメモリ使用量を自動削減するためのものではありません。"
+  },
+  {
+    "id": "webapp2-13-009",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "axiosを現在のプロジェクトへインストールするコマンドはどれですか？",
+    "choices": [
+      "yarn add axios",
+      "yarn init axios",
+      "node add axios",
+      "require axios"
+    ],
+    "answer": 0,
+    "explanation": "yarn add axiosを実行すると、axiosが現在のプロジェクトへローカルインストールされます。"
+  },
+  {
+    "id": "webapp2-13-010",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "axiosのバージョン1.6.7を指定してインストールするコマンドはどれですか？",
+    "choices": [
+      "yarn axios 1.6.7",
+      "yarn add axios@1.6.7",
+      "yarn add axios=1.6.7",
+      "npm axios --1.6.7"
+    ],
+    "answer": 1,
+    "explanation": "パッケージ名の後ろに@バージョン番号を付けることで、特定バージョンを指定できます。"
+  },
+  {
+    "id": "webapp2-13-011",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "インストールしたaxiosをNode.jsのプログラムで読み込むコードとして正しいものはどれですか？",
+    "choices": [
+      "const axios = import('axios');",
+      "const axios = load('axios');",
+      "const axios = require('axios');",
+      "const axios = yarn('axios');"
+    ],
+    "answer": 2,
+    "explanation": "講義のCommonJS形式ではrequire('axios')を使ってaxiosを読み込みます。"
+  },
+  {
+    "id": "webapp2-13-012",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "axiosを使ってGoogleへGETリクエストを送り、取得した内容を表示するコードとして適切なものはどれですか？",
+    "choices": [
+      "axios.read('https://www.google.com');",
+      "axios.post('https://www.google.com').print();",
+      "console.log(axios);",
+      "axios.get('https://www.google.com').then(res => { console.log(res.data); });"
+    ],
+    "answer": 3,
+    "explanation": "axios.get()でGETリクエストを送り、Promiseが解決された後のres.dataから取得内容を参照できます。"
+  },
+  {
+    "id": "webapp2-13-013",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "ローカルインストールされたNode.jsパッケージが主に配置されるディレクトリはどれですか？",
+    "choices": [
+      "node_modules",
+      ".git",
+      ".ssh",
+      "public"
+    ],
+    "answer": 0,
+    "explanation": "プロジェクトへローカルインストールされたパッケージは、主にnode_modulesディレクトリへ配置されます。"
+  },
+  {
+    "id": "webapp2-13-014",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "新しいNode.jsパッケージを作成するとき、講義で使用した初期化コマンドはどれですか？",
+    "choices": [
+      "yarn start",
+      "yarn init",
+      "yarn build",
+      "yarn package"
+    ],
+    "answer": 1,
+    "explanation": "yarn initを実行すると、パッケージ名、バージョン、entry point、ライセンスなどを設定し、package.jsonを生成できます。"
+  },
+  {
+    "id": "webapp2-13-015",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "yarn initを完了すると生成される、パッケージ情報を記録するファイルはどれですか？",
+    "choices": [
+      "index.html",
+      "compose.yaml",
+      "package.json",
+      ".env"
+    ],
+    "answer": 2,
+    "explanation": "package.jsonにはパッケージ名、バージョン、entry point、依存パッケージなどプロジェクトに関する情報が記録されます。"
+  },
+  {
+    "id": "webapp2-13-016",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "自作したadd関数を他のNode.jsプログラムから利用可能にする記述はどれですか？",
+    "choices": [
+      "require = { add };",
+      "package = add;",
+      "exports.import(add);",
+      "module.exports = { add };"
+    ],
+    "answer": 3,
+    "explanation": "module.exportsへ公開したい値や関数を設定することで、別のNode.jsプログラムからrequire()して利用できます。"
+  },
+  {
+    "id": "webapp2-13-017",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "npm公式サイトに公開していない自作パッケージ「../sum」を現在のプロジェクトへ追加するコマンドはどれですか？",
+    "choices": [
+      "yarn add ../sum",
+      "yarn publish ../sum",
+      "require ../sum",
+      "node ../sum"
+    ],
+    "answer": 0,
+    "explanation": "yarn add ../sumのようにローカルパスを指定すると、ローカルにある自作パッケージを依存パッケージとして追加できます。"
+  },
+  {
+    "id": "webapp2-13-018",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "Socket Modeについて、講義内容に最も合っている説明はどれですか？",
+    "choices": [
+      "GitHubへコードをpushするための機能",
+      "WebSocketを利用してSlackアプリとリアルタイム通信を行うための仕組み",
+      "SlackのメッセージをCSVへ変換する機能",
+      "Node.jsパッケージをインストールするモード"
+    ],
+    "answer": 1,
+    "explanation": "SlackのSocket ModeではWebSocketを使用し、Slackとのイベント通信を行います。"
+  },
+  {
+    "id": "webapp2-13-019",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "SlackのApp-Level Tokenの先頭として講義で扱われているものはどれですか？",
+    "choices": [
+      "xoxb-",
+      "ghp-",
+      "xapp-",
+      "ssh-"
+    ],
+    "answer": 2,
+    "explanation": "Socket Modeで利用するApp-Level Tokenはxapp-から始まります。Bot OAuth Tokenのxoxb-と区別します。"
+  },
+  {
+    "id": "webapp2-13-020",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "SlackのBot OAuth Tokenの先頭として講義で扱われているものはどれですか？",
+    "choices": [
+      "xapp-",
+      "http-",
+      "bot-",
+      "xoxb-"
+    ],
+    "answer": 3,
+    "explanation": "ワークスペースへアプリをインストールした際に得られるBot OAuth Tokenはxoxb-から始まります。"
+  },
+  {
+    "id": "webapp2-13-021",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "Slackでチャンネルに投稿されたメッセージをボットイベントとして受け取りたい場合に追加するイベントはどれですか？",
+    "choices": [
+      "message.channels",
+      "chat:write",
+      "channel.create",
+      "socket.message"
+    ],
+    "answer": 0,
+    "explanation": "Event SubscriptionsのSubscribe to bot eventsへmessage.channelsを追加することで、チャンネル内のメッセージイベントを受け取れるようにします。"
+  },
+  {
+    "id": "webapp2-13-022",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "Slackボットがメッセージを投稿するために追加するBot Token Scopeはどれですか？",
+    "choices": [
+      "message:read",
+      "chat:write",
+      "bot:admin",
+      "socket:write"
+    ],
+    "answer": 1,
+    "explanation": "OAuth & PermissionsのBot Token Scopesへchat:writeを追加すると、ボットがSlackへメッセージを投稿できます。"
+  },
+  {
+    "id": "webapp2-13-023",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "Slack APIを利用しても、その機能だけではできないこととして確認テストに出ているものはどれですか？",
+    "choices": [
+      "チャンネルへメッセージを送信する",
+      "ユーザーのメッセージ履歴を取得する",
+      "外部Webサイトへアクセスし内容を取得するスクレイピングを行う",
+      "チャンネルメンバー情報を扱う"
+    ],
+    "answer": 2,
+    "explanation": "Slack APIはSlack内のデータや操作を扱うAPIです。外部Webサイトのスクレイピングには別途HTTP通信やスクレイピング用の仕組みが必要です。"
+  },
+  {
+    "id": "webapp2-13-024",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "プログラミングにおける「環境変数」の説明として最も適切なものはどれですか？",
+    "choices": [
+      "CSSで画面の見た目を設定する値",
+      "ソースコードのバージョン管理番号",
+      "JavaScriptの配列だけに保存できる値",
+      "プログラムやシステムへ影響を与える設定値を保存する外部の変数"
+    ],
+    "answer": 3,
+    "explanation": "環境変数はAPIキーやトークン、サーバーURLなど、プログラムの動作に影響する設定値をコードの外側で管理するために利用できます。"
+  },
+  {
+    "id": "webapp2-13-025",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": ".envファイルの説明として最も適切なものはどれですか？",
+    "choices": [
+      "環境変数をキーと値の形式で記述しておく設定ファイル",
+      "アルゴリズムを効率化するコードファイル",
+      "CPU使用率を保存するログファイル",
+      "ユニットテスト専用のファイル"
+    ],
+    "answer": 0,
+    "explanation": ".envファイルには、SLACK_APP_TOKENやSLACK_BOT_TOKENなどの環境変数をキーと値の形式で記述できます。"
+  },
+  {
+    "id": "webapp2-13-026",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "Slackのトークンを.envに保存する大きな理由はどれですか？",
+    "choices": [
+      "トークンの文字数を短くするため",
+      "機密情報をソースコードへ直接書かず、外部で管理するため",
+      "Slackの通信速度を上げるため",
+      "Node.jsを自動更新するため"
+    ],
+    "answer": 1,
+    "explanation": "APIトークンなどの機密情報をコードへ直接書くと、Gitなどを通じて漏洩する危険があります。.envなどを利用してコードから分離します。"
+  },
+  {
+    "id": "webapp2-13-027",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": ".gitignoreへ「.env」と「node_modules」を記述する主な目的はどれですか？",
+    "choices": [
+      "Node.jsで読み込めなくするため",
+      "Dockerでしか利用できなくするため",
+      "機密情報や大量の依存ファイルをGitの管理対象から除外するため",
+      "Slackから削除するため"
+    ],
+    "answer": 2,
+    "explanation": ".envには機密情報が含まれ、node_modulesには多数の依存パッケージが保存されます。これらは通常Git管理から除外します。"
+  },
+  {
+    "id": "webapp2-13-028",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "Slack公式のBoltライブラリをYarnでインストールするコマンドはどれですか？",
+    "choices": [
+      "yarn add slack",
+      "yarn bolt",
+      "npm init bolt",
+      "yarn add @slack/bolt"
+    ],
+    "answer": 3,
+    "explanation": "Slack公式フレームワークBoltは@yarn add @slack/boltでプロジェクトへ追加できます。"
+  },
+  {
+    "id": "webapp2-13-029",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "次のBoltコードにある「/hello/i」の「i」の意味はどれですか？\n\napp.message(/hello/i, async ({ message, say }) => { ... });",
+    "choices": [
+      "大文字と小文字を区別せずにhelloを検索する",
+      "helloを1回だけ検索する",
+      "helloを整数へ変換する",
+      "helloをSlackのユーザーIDとして扱う"
+    ],
+    "answer": 0,
+    "explanation": "正規表現のiフラグは大文字小文字を区別しない指定です。そのためhello、Hello、HELLOなどに反応できます。"
+  },
+  {
+    "id": "webapp2-13-030",
+    "subject": "webapp2",
+    "lesson": 13,
+    "question": "Node.js v20.6.0以降で.envファイルを読み込みながらbolt.jsを起動するコマンドとして、講義で扱ったものはどれですか？",
+    "choices": [
+      "node bolt.js .env",
+      "node --env-file=.env bolt.js",
+      "yarn .env bolt.js",
+      "node --dotenv bolt.js"
+    ],
+    "answer": 1,
+    "explanation": "Node.js v20.6.0以降では、node --env-file=.env bolt.jsのように.envファイルを指定して環境変数を読み込んだ状態でプログラムを起動できます。"
+  }
+]
