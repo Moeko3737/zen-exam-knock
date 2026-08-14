@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-07-001",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "今回の講義で扱う「ボット（bot）」の説明として最も適切なものはどれですか？",
+    "choices": [
+      "人間が毎回手作業で実行するプログラム",
+      "自動的に処理を行うプログラム",
+      "Webブラウザだけを操作する人",
+      "Linuxのファイル形式"
+    ],
+    "answer": 1,
+    "explanation": "botとは、何らかの処理を自動的に行うプログラムです。今回の講義では、動画情報を定期的に取得・保存するボットを作成します。"
+  },
+  {
+    "id": "webapp2-07-002",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "要件定義を行う主な目的として、確認テストの内容に最も合っているものはどれですか？",
+    "choices": [
+      "プログラムのテスト計画だけを作成する",
+      "開発者だけが理解できる仕様にする",
+      "ユーザーのニーズやシステムの目的を明確にする",
+      "システムの設計図だけを詳細に作成する"
+    ],
+    "answer": 2,
+    "explanation": "要件定義では、ユーザーのニーズやビジネス目標を把握し、それをもとに必要な機能や性能などを明確にします。"
+  },
+  {
+    "id": "webapp2-07-003",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "今回のニコニコ動画ボットの処理として、授業内容に合っているものはどれですか？",
+    "choices": [
+      "前日に投稿された「ゲーム」タグの動画情報をAPIから取得して保存する",
+      "ニコニコ動画へ毎日自動で動画を投稿する",
+      "すべての動画を自動的に削除する",
+      "動画そのものを5本ダウンロードする"
+    ],
+    "answer": 0,
+    "explanation": "今回作成するボットは、ニコニコ動画のスナップショット検索API v2を使い、前日に投稿された「ゲーム」タグの動画情報を取得・保存します。"
+  },
+  {
+    "id": "webapp2-07-004",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "次のコマンドの役割として正しいものはどれですか？\n\nmkdir -p /home/ubuntu/bot/niconico-api-json",
+    "choices": [
+      "JSONファイルを削除する",
+      "APIへリクエストを送信する",
+      "シェルスクリプトを実行する",
+      "必要な親ディレクトリを含めて保存先ディレクトリを作成する"
+    ],
+    "answer": 3,
+    "explanation": "mkdir -pを使うと、途中のディレクトリが存在しない場合でも必要な階層をまとめて作成できます。"
+  },
+  {
+    "id": "webapp2-07-005",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "空のシェルスクリプト「niconico-snapshot-api.sh」を作成するコマンドはどれですか？",
+    "choices": [
+      "touch niconico-snapshot-api.sh",
+      "mkdir niconico-snapshot-api.sh",
+      "curl niconico-snapshot-api.sh",
+      "crontab niconico-snapshot-api.sh"
+    ],
+    "answer": 0,
+    "explanation": "touchコマンドを使うと、存在しないファイル名を指定した場合に空のファイルを作成できます。"
+  },
+  {
+    "id": "webapp2-07-006",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "作成したシェルスクリプトへ実行権限を追加するコマンドはどれですか？",
+    "choices": [
+      "touch +x niconico-snapshot-api.sh",
+      "chmod +x niconico-snapshot-api.sh",
+      "mkdir +x niconico-snapshot-api.sh",
+      "curl +x niconico-snapshot-api.sh"
+    ],
+    "answer": 1,
+    "explanation": "chmod +xを使うと、ファイルに実行権限を追加できます。"
+  },
+  {
+    "id": "webapp2-07-007",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "次のシェルスクリプトで変数dirnameに代入されているものはどれですか？\n\ndirname=\"/home/ubuntu/bot/niconico-api-json\"",
+    "choices": [
+      "APIのURL",
+      "検索キーワード",
+      "データの保存先ディレクトリ",
+      "cronの実行時刻"
+    ],
+    "answer": 2,
+    "explanation": "dirnameには、APIから取得したJSONファイルを保存するディレクトリのパスが代入されています。"
+  },
+  {
+    "id": "webapp2-07-008",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "シェルスクリプト内の「mkdir -p $dirname」が行う処理として正しいものはどれですか？",
+    "choices": [
+      "変数dirnameを削除する",
+      "現在日時を表示する",
+      "dirnameという文字列のファイルを作る",
+      "dirname変数で指定されたディレクトリを必要に応じて作成する"
+    ],
+    "answer": 3,
+    "explanation": "$dirnameはdirname変数の値を参照します。そのパスをmkdir -pへ渡して保存先ディレクトリを作成します。"
+  },
+  {
+    "id": "webapp2-07-009",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "「date +%Y%m%d%H%M」の出力として、2025年1月1日11時38分だった場合に適切なものはどれですか？",
+    "choices": [
+      "202501011138",
+      "2025-01-01 11:38",
+      "11:38-20250101",
+      "%Y%m%d%H%M"
+    ],
+    "answer": 0,
+    "explanation": "%Yは西暦4桁、%mは月、%dは日、%Hは時、%Mは分を表すため、202501011138のような文字列になります。"
+  },
+  {
+    "id": "webapp2-07-010",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "次のコードで生成されるfilenameの特徴として最も適切なものはどれですか？\n\nfilename=\"${dirname}/daily-snapshot-`date +%Y%m%d%H%M`.json\"",
+    "choices": [
+      "常に同じ名前になる",
+      "実行時の日時を含むJSONファイル名になる",
+      "前日の日付だけを含むXMLファイルになる",
+      "動画タイトルがそのままファイル名になる"
+    ],
+    "answer": 1,
+    "explanation": "dateコマンドの結果をファイル名へ埋め込んでいるため、実行時の年月日時分を含んだJSONファイル名になります。"
+  },
+  {
+    "id": "webapp2-07-011",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "API（Application Programming Interface）の説明として最も適切なものはどれですか？",
+    "choices": [
+      "Webサイトを自動翻訳する機能",
+      "Linuxのファイルアクセス権",
+      "ソフトウェアが他のソフトウェアの機能やデータを呼び出すためのインターフェース",
+      "プログラムを入力するためのテキストエディタ"
+    ],
+    "answer": 2,
+    "explanation": "APIは、ソフトウェア同士が機能やデータを利用するためのインターフェースです。今回の講義ではニコニコ動画の検索APIを利用します。"
+  },
+  {
+    "id": "webapp2-07-012",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "今回使用するAPIエンドポイントとして変数api_endpointに設定するものはどれですか？",
+    "choices": [
+      "保存先ディレクトリ",
+      "cronの設定ファイル",
+      "前日の日付",
+      "ニコニコ動画スナップショット検索API v2のURL"
+    ],
+    "answer": 3,
+    "explanation": "api_endpointには、ニコニコ動画スナップショット検索API v2へアクセスするためのエンドポイントURLを設定します。"
+  },
+  {
+    "id": "webapp2-07-013",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "今回の検索で「ゲーム」を指定するためのパラメータはどれですか？",
+    "choices": [
+      "q=ゲーム",
+      "targets=ゲーム",
+      "_limit=ゲーム",
+      "fields=ゲーム"
+    ],
+    "answer": 0,
+    "explanation": "検索キーワードはqパラメータで指定するため、q=ゲームとなります。"
+  },
+  {
+    "id": "webapp2-07-014",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "今回「ゲーム」という文字列を動画のタグから検索するために使用する指定はどれですか？",
+    "choices": [
+      "_sort=tags",
+      "targets=tags",
+      "fields=tags",
+      "_limit=tags"
+    ],
+    "answer": 1,
+    "explanation": "targets=tagsとすることで、「ゲーム」という検索キーワードの検索対象をタグに指定しています。"
+  },
+  {
+    "id": "webapp2-07-015",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "APIから取得する件数を5件に制限するパラメータはどれですか？",
+    "choices": [
+      "fields=5",
+      "targets=5",
+      "_limit=5",
+      "_sort=5"
+    ],
+    "answer": 2,
+    "explanation": "_limitは取得するデータ数を指定するパラメータで、_limit=5なら5件取得します。"
+  },
+  {
+    "id": "webapp2-07-016",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "次のコマンドの主な目的はどれですか？\n\ndate +%Y-%m-%d --date yesterday",
+    "choices": [
+      "現在時刻だけを表示する",
+      "1年後の日付を表示する",
+      "ファイルの更新日時を変更する",
+      "前日の日付をYYYY-MM-DD形式で取得する"
+    ],
+    "answer": 3,
+    "explanation": "--date yesterdayを指定することで前日の日付を取得し、+%Y-%m-%dによってYYYY-MM-DD形式で表示します。"
+  },
+  {
+    "id": "webapp2-07-017",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "変数query_dateに前日の日付を保存する目的として最も適切なものはどれですか？",
+    "choices": [
+      "前日に投稿された動画だけを検索する期間指定に利用する",
+      "ファイルの実行権限を設定する",
+      "cronを停止する",
+      "APIの取得件数を決定する"
+    ],
+    "answer": 0,
+    "explanation": "前日0時から23時59分59秒までをfiltersパラメータへ設定し、前日に投稿された動画だけを取得するために利用します。"
+  },
+  {
+    "id": "webapp2-07-018",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "「fields=contentId,title,description,...」のようなパラメータの役割はどれですか？",
+    "choices": [
+      "APIへアクセスする日時を設定する",
+      "取得したいデータ項目を指定する",
+      "保存ディレクトリを指定する",
+      "cronの実行頻度を指定する"
+    ],
+    "answer": 1,
+    "explanation": "fieldsパラメータでは、contentId、title、description、tags、viewCounterなど、レスポンスで取得したいフィールドを指定します。"
+  },
+  {
+    "id": "webapp2-07-019",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "複数のAPIパラメータを組み合わせてapi_request_urlを作る主な理由はどれですか？",
+    "choices": [
+      "シェルスクリプトを暗号化するため",
+      "ファイルの実行権限を変更するため",
+      "検索条件をまとめたAPIリクエスト用URLを作成するため",
+      "VMを自動終了するため"
+    ],
+    "answer": 2,
+    "explanation": "エンドポイントに検索キーワード、検索対象、並び順、取得項目、期間、件数などのクエリを連結してAPIリクエストURLを作成します。"
+  },
+  {
+    "id": "webapp2-07-020",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "次のcurlコマンドにおける「-o $filename」の役割はどれですか？\n\ncurl -s -o $filename -H \"User-Agent: CrawlBot; mail@example.com\" $api_request_url",
+    "choices": [
+      "User-Agentを削除する",
+      "APIへの接続を停止する",
+      "取得結果を画面だけに表示する",
+      "取得したデータを指定したファイルへ保存する"
+    ],
+    "answer": 3,
+    "explanation": "curlの-oオプションは、取得したデータの出力先ファイル名を指定するために使います。"
+  },
+  {
+    "id": "webapp2-07-021",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "curlの「-s」オプションの役割として授業内容に合っているものはどれですか？",
+    "choices": [
+      "進捗表示などを抑えて実行する",
+      "保存するファイルを削除する",
+      "SSL通信だけを許可する",
+      "スクリプトを自動実行する"
+    ],
+    "answer": 0,
+    "explanation": "-sはsilentオプションで、curl実行時の進捗表示などを抑えます。"
+  },
+  {
+    "id": "webapp2-07-022",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "HTTP通信におけるUser-Agentの役割として最も適切なものはどれですか？",
+    "choices": [
+      "ユーザーのパスワードを暗号化する",
+      "クライアントの種類などの情報をサーバへ伝える",
+      "サーバのIPアドレスをDNSへ変換する",
+      "APIのレスポンスをJSONへ変換する"
+    ],
+    "answer": 1,
+    "explanation": "User-AgentはHTTPリクエストヘッダの一つで、ブラウザやプログラムなど、アクセスしているクライアント側の情報をサーバへ伝えます。"
+  },
+  {
+    "id": "webapp2-07-023",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "今回のcurlコマンドで「-H」を使う目的はどれですか？",
+    "choices": [
+      "HTMLだけを取得する",
+      "ホームディレクトリを指定する",
+      "User-AgentなどのHTTPヘッダを指定する",
+      "1時間ごとに実行する"
+    ],
+    "answer": 2,
+    "explanation": "-Hオプションを使うことで、User-AgentなどのHTTPヘッダをリクエストへ追加できます。"
+  },
+  {
+    "id": "webapp2-07-024",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "今回のニコニコ動画APIから取得したデータを保存する形式はどれですか？",
+    "choices": [
+      "PNG",
+      "CSV",
+      "MP4",
+      "JSON"
+    ],
+    "answer": 3,
+    "explanation": "ニコニコ動画のスナップショット検索API v2から取得した動画情報はJSON形式で保存します。"
+  },
+  {
+    "id": "webapp2-07-025",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "Linuxでプログラムを指定した日時や間隔で繰り返し実行する仕組みとして、今回使用するものはどれですか？",
+    "choices": [
+      "cron",
+      "date",
+      "curl",
+      "vim"
+    ],
+    "answer": 0,
+    "explanation": "cronは、設定したスケジュールに従ってプログラムなどを自動実行する仕組みです。"
+  },
+  {
+    "id": "webapp2-07-026",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "自分のcron設定を編集するために使用するコマンドはどれですか？",
+    "choices": [
+      "cron -v",
+      "crontab -e",
+      "chmod cron",
+      "date -e"
+    ],
+    "answer": 1,
+    "explanation": "crontab -eを実行すると、そのユーザーのcron設定をエディタで編集できます。"
+  },
+  {
+    "id": "webapp2-07-027",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "cronの設定「0 1 * * * /home/ubuntu/bot/niconico-ran」が表す実行タイミングとして正しいものはどれですか？",
+    "choices": [
+      "毎分1回",
+      "毎時1分に1回",
+      "毎日1時0分に1回",
+      "毎月1日の0時に1回"
+    ],
+    "answer": 2,
+    "explanation": "cronの最初の5項目は「分 時 日 月 曜日」です。0 1 * * * は毎日1時0分に実行する指定です。"
+  },
+  {
+    "id": "webapp2-07-028",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "cron設定の5つの時刻指定フィールドの順番として正しいものはどれですか？",
+    "choices": [
+      "時・分・曜日・日・月",
+      "日・月・年・時・分",
+      "秒・分・時・日・月",
+      "分・時・日・月・曜日"
+    ],
+    "answer": 3,
+    "explanation": "cronでは「分 時 日 月 曜日」の順番で実行タイミングを指定します。"
+  },
+  {
+    "id": "webapp2-07-029",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "「0 * * * * /home/ubuntu/bot/itunes-topsong.sh」というcron設定は、どのような実行を表しますか？",
+    "choices": [
+      "毎時0分に1回実行する",
+      "毎日0時だけ実行する",
+      "毎分実行する",
+      "毎月1回実行する"
+    ],
+    "answer": 0,
+    "explanation": "分が0、その他が*なので、毎時間の0分、つまり1時間に1回実行します。"
+  },
+  {
+    "id": "webapp2-07-030",
+    "subject": "webapp2",
+    "lesson": 7,
+    "question": "今回作成したボットをcronで毎日自動実行するための条件として、授業内容に最も合っているものはどれですか？",
+    "choices": [
+      "cronを設定すればVMを削除しても実行される",
+      "cronが動作するVMインスタンスが起動している必要がある",
+      "シェルスクリプトを毎回Vimで開いておく必要がある",
+      "APIを利用するとcronは使用できない"
+    ],
+    "answer": 1,
+    "explanation": "cronはそのVM上で動作するため、指定時刻に処理を実行するにはVMインスタンスが起動している必要があります。"
+  }
+]
