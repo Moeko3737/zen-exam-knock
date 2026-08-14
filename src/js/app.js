@@ -33,6 +33,11 @@ const SUBJECTS = {
 };
 
 
+const MIX_QUESTION_COUNT = 20;
+
+const KNOCK_QUESTION_COUNT = 100;
+
+
 /* ========================================
 DOM取得
 ======================================== */
@@ -77,6 +82,9 @@ const quizSubjectName =
 
 const quizLessonName =
   document.querySelector("#quiz-lesson-name");
+
+const quizQuestionSource =
+  document.querySelector("#quiz-question-source");
 
 const questionProgress =
   document.querySelector("#question-progress");
@@ -154,6 +162,8 @@ let answered = false;
 
 /*
  * lesson
+ * mix
+ * knock100
  * mistakes
  */
 let quizMode = "lesson";
@@ -189,6 +199,55 @@ function showSection(sectionName) {
   sections[sectionName].hidden = false;
 
   window.scrollTo(0, 0);
+}
+
+
+function shuffleArray(items) {
+  const shuffled = [...items];
+
+  for (
+    let i = shuffled.length - 1;
+    i > 0;
+    i -= 1
+  ) {
+    const j = Math.floor(
+      Math.random() * (i + 1)
+    );
+
+    [
+      shuffled[i],
+      shuffled[j],
+    ] = [
+      shuffled[j],
+      shuffled[i],
+    ];
+  }
+
+  return shuffled;
+}
+
+
+function getQuestionSourceLabel(question) {
+  const idMatch =
+    question.id.match(/-(\d{3})$/);
+
+  const questionNumber =
+    idMatch
+      ? Number(idMatch[1])
+      : null;
+
+  if (
+    Number.isInteger(question.lesson) &&
+    Number.isInteger(questionNumber)
+  ) {
+    return `第${question.lesson}回・第${questionNumber}問`;
+  }
+
+  if (Number.isInteger(question.lesson)) {
+    return `第${question.lesson}回`;
+  }
+
+  return "";
 }
 
 
@@ -233,6 +292,127 @@ async function loadLessonQuestions(
   }
 
   return questions;
+}
+
+
+async function loadAllAvailableQuestions(
+  subjectKey
+) {
+  const subject =
+    getSubject(subjectKey);
+
+  if (!subject) {
+    return [];
+  }
+
+  const lessonNumbers =
+    Array.from(
+      { length: subject.lessonCount },
+      (_, index) => index + 1
+    );
+
+  const results =
+    await Promise.allSettled(
+      lessonNumbers.map(
+        (lesson) =>
+          loadLessonQuestions(
+            subjectKey,
+            lesson
+          )
+      )
+    );
+
+  return results
+    .filter(
+      (result) =>
+        result.status ===
+        "fulfilled"
+    )
+    .flatMap(
+      (result) =>
+        result.value
+    );
+}
+
+
+function selectMixQuestions(
+  allQuestions,
+  count
+) {
+  const questionsByLesson =
+    new Map();
+
+  allQuestions.forEach(
+    (question) => {
+      const lesson =
+        question.lesson;
+
+      if (!questionsByLesson.has(lesson)) {
+        questionsByLesson.set(
+          lesson,
+          []
+        );
+      }
+
+      questionsByLesson
+        .get(lesson)
+        .push(question);
+    }
+  );
+
+  const lessonGroups =
+    shuffleArray(
+      Array.from(
+        questionsByLesson.values()
+      )
+    );
+
+  const selected =
+    lessonGroups
+      .slice(0, count)
+      .map(
+        (group) =>
+          shuffleArray(group)[0]
+      );
+
+  const selectedIds =
+    new Set(
+      selected.map(
+        (question) => question.id
+      )
+    );
+
+  const remaining =
+    shuffleArray(
+      allQuestions.filter(
+        (question) =>
+          !selectedIds.has(
+            question.id
+          )
+      )
+    );
+
+  selected.push(
+    ...remaining.slice(
+      0,
+      Math.max(
+        0,
+        count - selected.length
+      )
+    )
+  );
+
+  return shuffleArray(selected);
+}
+
+
+function selectRandomQuestions(
+  allQuestions,
+  count
+) {
+  return shuffleArray(
+    allQuestions
+  ).slice(0, count);
 }
 
 
@@ -393,6 +573,80 @@ async function startLessonQuiz(
 
 
 /* ========================================
+全範囲クイズ開始
+======================================== */
+
+async function startRangeQuiz(
+  subjectKey,
+  mode
+) {
+  const subject =
+    getSubject(subjectKey);
+
+  if (!subject) {
+    renderNotFound();
+    return;
+  }
+
+  if (
+    mode !== "mix" &&
+    mode !== "knock100"
+  ) {
+    renderNotFound();
+    return;
+  }
+
+  currentSubjectKey =
+    subjectKey;
+
+  currentLesson =
+    null;
+
+  quizMode =
+    mode;
+
+  const allQuestions =
+    await loadAllAvailableQuestions(
+      subjectKey
+    );
+
+  if (allQuestions.length === 0) {
+    alert(
+      `${subject.name}の問題がまだ登録されていません。`
+    );
+
+    navigate(
+      `#/${subjectKey}/mode`
+    );
+
+    return;
+  }
+
+  if (mode === "mix") {
+    currentQuestions =
+      selectMixQuestions(
+        allQuestions,
+        MIX_QUESTION_COUNT
+      );
+  } else {
+    currentQuestions =
+      selectRandomQuestions(
+        allQuestions,
+        KNOCK_QUESTION_COUNT
+      );
+  }
+
+  currentQuestionIndex = 0;
+
+  correctCount = 0;
+
+  answered = false;
+
+  renderQuestion();
+}
+
+
+/* ========================================
 問題表示
 ======================================== */
 
@@ -422,9 +676,32 @@ function renderQuestion() {
   if (quizMode === "mistakes") {
     quizLessonName.textContent =
       "間違えた問題";
+  } else if (quizMode === "mix") {
+    quizLessonName.textContent =
+      `全範囲MIX ${MIX_QUESTION_COUNT}問`;
+  } else if (quizMode === "knock100") {
+    quizLessonName.textContent =
+      "100問ノック";
   } else {
     quizLessonName.textContent =
       `第${currentLesson}回`;
+  }
+
+  if (quizMode === "lesson") {
+    quizQuestionSource.textContent =
+      "";
+
+    quizQuestionSource.hidden =
+      true;
+  } else {
+    quizQuestionSource.textContent =
+      getQuestionSourceLabel(
+        question
+      );
+
+    quizQuestionSource.hidden =
+      quizQuestionSource.textContent ===
+      "";
   }
 
   questionProgress.textContent =
@@ -661,6 +938,17 @@ function goToNextQuestion() {
       navigate(
         `#/${currentSubjectKey}/mistakes/result`
       );
+    } else if (quizMode === "mix") {
+      navigate(
+        `#/${currentSubjectKey}/mix/result`
+      );
+    } else if (
+      quizMode ===
+      "knock100"
+    ) {
+      navigate(
+        `#/${currentSubjectKey}/knock100/result`
+      );
     } else {
       navigate(
         `#/${currentSubjectKey}/lesson/${currentLesson}/result`
@@ -769,6 +1057,92 @@ function renderLessonResult(
 
   document.title =
     `結果 | ${subject.name} | ZEN Exam Knock`;
+
+  showSection("result");
+}
+
+
+/* ========================================
+全範囲クイズ結果
+======================================== */
+
+function renderRangeResult(
+  subjectKey,
+  mode
+) {
+  const subject =
+    getSubject(subjectKey);
+
+  if (!subject) {
+    renderNotFound();
+    return;
+  }
+
+  if (
+    mode !== "mix" &&
+    mode !== "knock100"
+  ) {
+    renderNotFound();
+    return;
+  }
+
+  if (
+    currentQuestions.length === 0 ||
+    currentSubjectKey !== subjectKey ||
+    quizMode !== mode
+  ) {
+    alert(
+      "結果データがありません。もう一度問題に挑戦してください。"
+    );
+
+    navigate(
+      `#/${subjectKey}/${mode}`
+    );
+
+    return;
+  }
+
+  const total =
+    currentQuestions.length;
+
+  const percentage =
+    Math.round(
+      (
+        correctCount /
+        total
+      ) * 100
+    );
+
+  const modeName =
+    mode === "mix"
+      ? `全範囲MIX ${MIX_QUESTION_COUNT}問`
+      : "100問ノック";
+
+  resultSubjectName.textContent =
+    subject.name;
+
+  resultLessonName.textContent =
+    modeName;
+
+  resultHeading.textContent =
+    "結果";
+
+  resultScore.textContent =
+    `${correctCount} / ${total}`;
+
+  resultRate.textContent =
+    `${percentage}%`;
+
+  retryQuizButton.textContent =
+    mode === "mix"
+      ? "もう一度20問に挑戦"
+      : "もう一度100問に挑戦";
+
+  resultBackButton.textContent =
+    "← 学習方法に戻る";
+
+  document.title =
+    `${modeName} 結果 | ${subject.name} | ZEN Exam Knock`;
 
   showSection("result");
 }
@@ -1216,6 +1590,84 @@ function router() {
 
 
   /*
+   * 全範囲MIX
+   *
+   * #/python/mix
+   */
+
+  if (
+    parts.length === 2 &&
+    parts[1] === "mix"
+  ) {
+    startRangeQuiz(
+      subjectKey,
+      "mix"
+    );
+
+    return;
+  }
+
+
+  /*
+   * 全範囲MIX 結果
+   *
+   * #/python/mix/result
+   */
+
+  if (
+    parts.length === 3 &&
+    parts[1] === "mix" &&
+    parts[2] === "result"
+  ) {
+    renderRangeResult(
+      subjectKey,
+      "mix"
+    );
+
+    return;
+  }
+
+
+  /*
+   * 100問ノック
+   *
+   * #/python/knock100
+   */
+
+  if (
+    parts.length === 2 &&
+    parts[1] === "knock100"
+  ) {
+    startRangeQuiz(
+      subjectKey,
+      "knock100"
+    );
+
+    return;
+  }
+
+
+  /*
+   * 100問ノック 結果
+   *
+   * #/python/knock100/result
+   */
+
+  if (
+    parts.length === 3 &&
+    parts[1] === "knock100" &&
+    parts[2] === "result"
+  ) {
+    renderRangeResult(
+      subjectKey,
+      "knock100"
+    );
+
+    return;
+  }
+
+
+  /*
    * 間違えた問題
    *
    * #/python/mistakes
@@ -1333,8 +1785,8 @@ modeCards.forEach(
          */
 
         if (mode === "mix") {
-          alert(
-            "全範囲MIXは準備中です！"
+          navigate(
+            `#/${currentSubjectKey}/mix`
           );
 
           return;
@@ -1349,8 +1801,8 @@ modeCards.forEach(
           mode ===
           "knock100"
         ) {
-          alert(
-            "100問ノックは準備中です！"
+          navigate(
+            `#/${currentSubjectKey}/knock100`
           );
         }
       }
@@ -1403,8 +1855,9 @@ backToLessonButton.addEventListener(
     }
 
     if (
-      quizMode ===
-      "mistakes"
+      quizMode === "mistakes" ||
+      quizMode === "mix" ||
+      quizMode === "knock100"
     ) {
       navigate(
         `#/${currentSubjectKey}/mode`
@@ -1453,6 +1906,25 @@ retryQuizButton.addEventListener(
       return;
     }
 
+    if (quizMode === "mix") {
+      navigate(
+        `#/${currentSubjectKey}/mix`
+      );
+
+      return;
+    }
+
+    if (
+      quizMode ===
+      "knock100"
+    ) {
+      navigate(
+        `#/${currentSubjectKey}/knock100`
+      );
+
+      return;
+    }
+
     navigate(
       `#/${currentSubjectKey}/lesson/${currentLesson}`
     );
@@ -1473,8 +1945,9 @@ resultBackButton.addEventListener(
     }
 
     if (
-      quizMode ===
-      "mistakes"
+      quizMode === "mistakes" ||
+      quizMode === "mix" ||
+      quizMode === "knock100"
     ) {
       navigate(
         `#/${currentSubjectKey}/mode`

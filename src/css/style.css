@@ -368,6 +368,14 @@ main {
   font-size: 0.86rem;
 }
 
+#quiz-question-source {
+  margin: 2px 0 0;
+
+  color: #999;
+
+  font-size: 0.78rem;
+}
+
 #question-progress {
   flex-shrink: 0;
 
