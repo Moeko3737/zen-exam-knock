@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-12-001",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "アルゴリズムの説明として最も適切なものはどれですか？",
+    "choices": [
+      "問題を解決するための手順や計算方法の集合",
+      "コンピューターがデータを保存する形式",
+      "ソフトウェアのバージョン管理システム",
+      "通信内容を暗号化するプロトコル"
+    ],
+    "answer": 0,
+    "explanation": "アルゴリズムとは、特定の問題を解決するための手順や計算方法を体系化したものです。"
+  },
+  {
+    "id": "webapp2-12-002",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "CSVファイルの説明として正しいものはどれですか？",
+    "choices": [
+      "画像だけを保存する形式",
+      "データをカンマで区切ったテキスト形式",
+      "JavaScript専用の実行形式",
+      "データを必ず暗号化して保存する形式"
+    ],
+    "answer": 1,
+    "explanation": "CSVはComma Separated Valuesの略で、データをカンマで区切って表現するテキスト形式です。"
+  },
+  {
+    "id": "webapp2-12-003",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "Node.jsでファイルシステムを扱う標準モジュールを読み込むコードはどれですか？",
+    "choices": [
+      "const fs = require('node:path');",
+      "const fs = require('node:events');",
+      "const fs = require('node:fs');",
+      "const fs = require('node:http');"
+    ],
+    "answer": 2,
+    "explanation": "node:fsはNode.js標準のFile Systemモジュールで、ファイルやディレクトリを扱うために使用します。"
+  },
+  {
+    "id": "webapp2-12-004",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "require('node:fs')の「node:」プレフィックスが示しているものはどれですか？",
+    "choices": [
+      "外部サイトから取得したモジュール",
+      "自作したJavaScriptファイル",
+      "Docker専用のモジュール",
+      "Node.jsが標準で提供するモジュール"
+    ],
+    "answer": 3,
+    "explanation": "node:プレフィックスは、Node.jsに標準搭載されているモジュールであることを明示します。"
+  },
+  {
+    "id": "webapp2-12-005",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "Streamの説明として最も適切なものはどれですか？",
+    "choices": [
+      "データを流れとして少しずつ処理する仕組み",
+      "Mapを自動的に配列へ変換する仕組み",
+      "JavaScriptをコンパイルする仕組み",
+      "GitHubへファイルを送信する仕組み"
+    ],
+    "answer": 0,
+    "explanation": "Streamはデータの流れを扱う仕組みで、大きなファイルなどを一度にすべて読み込まず、少しずつ処理できます。"
+  },
+  {
+    "id": "webapp2-12-006",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "次のコードの役割として正しいものはどれですか？\n\nconst rs = fs.createReadStream('./popu-pref.csv');",
+    "choices": [
+      "CSVファイルを削除する",
+      "CSVファイルを読み込むためのStreamを作成する",
+      "CSVファイルをMapへ変換する",
+      "CSVファイルを並び替える"
+    ],
+    "answer": 1,
+    "explanation": "fs.createReadStream()を使うと、指定したファイルを読み込むためのReadable Streamを作成できます。"
+  },
+  {
+    "id": "webapp2-12-007",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "readline.createInterface({ input: rs })を利用する主な目的はどれですか？",
+    "choices": [
+      "CSVをJSONへ変換する",
+      "ファイルを削除する",
+      "Streamからデータを1行ずつ扱えるようにする",
+      "CSVの列を自動的にソートする"
+    ],
+    "answer": 2,
+    "explanation": "readline.createInterfaceに読み込みStreamを渡すことで、ファイルを1行ずつ処理できます。"
+  },
+  {
+    "id": "webapp2-12-008",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "イベント駆動型プログラミングの説明として正しいものはどれですか？",
+    "choices": [
+      "すべての処理を必ず上から同期的に実行する",
+      "配列だけを扱うプログラミング手法",
+      "関数を一度しか実行できない手法",
+      "特定のイベントが発生したタイミングで対応する処理を実行する手法"
+    ],
+    "answer": 3,
+    "explanation": "イベント駆動では、「1行読み込まれた」などのイベントをきっかけに、登録しておいた関数を実行します。"
+  },
+  {
+    "id": "webapp2-12-009",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "次のコードでは、関数はどのタイミングで実行されますか？\n\nrl.on('line', lineString => {\n  console.log(lineString);\n});",
+    "choices": [
+      "ファイルから1行読み込まれるたび",
+      "ファイルをすべて読み終えたあと1回だけ",
+      "プログラム開始前",
+      "エラーが発生したときだけ"
+    ],
+    "answer": 0,
+    "explanation": "'line'イベントは、readlineがデータを1行読み込むたびに発生します。"
+  },
+  {
+    "id": "webapp2-12-010",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "readlineの'close'イベントが発生するタイミングとして適切なものはどれですか？",
+    "choices": [
+      "1文字読み込むたび",
+      "ファイルの読み込みがすべて終了したとき",
+      "Mapに値を追加するたび",
+      "sortを実行するたび"
+    ],
+    "answer": 1,
+    "explanation": "'close'イベントは、入力データをすべて読み終えた後の集計結果の出力などに利用できます。"
+  },
+  {
+    "id": "webapp2-12-011",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "次の処理を行うとlineStringはどのように変換されますか？\n\nlineString.split(',')",
+    "choices": [
+      "数値になる",
+      "Mapになる",
+      "カンマの位置で分割された配列になる",
+      "JSON文字列になる"
+    ],
+    "answer": 2,
+    "explanation": "split(',')は文字列をカンマごとに分割し、各部分を要素とする配列を返します。"
+  },
+  {
+    "id": "webapp2-12-012",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "parseIntに整数へ変換できない文字列を渡した場合、講義内容ではどの値になると説明されていますか？",
+    "choices": [
+      "0",
+      "null",
+      "undefined",
+      "NaN"
+    ],
+    "answer": 3,
+    "explanation": "数値へ変換できない文字列をparseIntへ渡した場合、NaN（Not a Number）が返ります。"
+  },
+  {
+    "id": "webapp2-12-013",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "JavaScriptのMapについて正しい説明はどれですか？",
+    "choices": [
+      "キーと値を組み合わせてデータを管理できる",
+      "配列の各要素を加工するメソッドである",
+      "文字列だけしか保存できない",
+      "必ず数値をキーにしなければならない"
+    ],
+    "answer": 0,
+    "explanation": "Mapはキーと値をペアにしてデータを管理するデータ構造です。配列のmapメソッドとは別物です。"
+  },
+  {
+    "id": "webapp2-12-014",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "Mapに指定したキーが存在するかを確認するメソッドはどれですか？",
+    "choices": [
+      "map.get(key)",
+      "map.has(key)",
+      "map.set(key)",
+      "map.map(key)"
+    ],
+    "answer": 1,
+    "explanation": "Mapのhasメソッドは指定したキーが存在するかを確認し、trueまたはfalseを返します。"
+  },
+  {
+    "id": "webapp2-12-015",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "Mapから指定したキーに対応する値を取得するメソッドはどれですか？",
+    "choices": [
+      "set",
+      "has",
+      "get",
+      "split"
+    ],
+    "answer": 2,
+    "explanation": "Mapのget(key)を使うと指定したキーの値を取得できます。キーが存在しなければundefinedが返ります。"
+  },
+  {
+    "id": "webapp2-12-016",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "Mapへ新しい値を保存したり、既存の値を更新したりするときに使うメソッドはどれですか？",
+    "choices": [
+      "get",
+      "has",
+      "push",
+      "set"
+    ],
+    "answer": 3,
+    "explanation": "Mapではset(key, value)を使ってキーと値を保存します。同じキーがすでに存在する場合は値が更新されます。"
+  },
+  {
+    "id": "webapp2-12-017",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "次のコードについて正しい説明はどれですか？\n\nconst data = new Map();\ndata.set('Tokyo', 100);",
+    "choices": [
+      "constで宣言していても、Mapの中身へ要素を追加することはできる",
+      "constなのでsetを実行すると必ずエラーになる",
+      "dataへ別のMapを再代入できる",
+      "constはMapでは使用できない"
+    ],
+    "answer": 0,
+    "explanation": "constで禁止されるのは変数そのものへの再代入です。参照先のMapや配列、オブジェクトの内容を変更することはできます。"
+  },
+  {
+    "id": "webapp2-12-018",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "Array.from(prefectureDataMap)を実行する主な目的はどれですか？",
+    "choices": [
+      "Mapを削除する",
+      "Mapの内容を通常の配列へ変換する",
+      "CSVを読み込む",
+      "Mapのキーをすべて文字列へ変更する"
+    ],
+    "answer": 1,
+    "explanation": "Mapの要素をsortなどの配列メソッドで扱うため、一度Array.from()で配列へ変換します。"
+  },
+  {
+    "id": "webapp2-12-019",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "Array.from(new Map([['A', 10], ['B', 20]]))のようにMapを配列へ変換した場合、基本的にどのような形になりますか？",
+    "choices": [
+      "[10, 20]",
+      "['A', 'B']",
+      "[['A', 10], ['B', 20]]",
+      "{ A: 10, B: 20 }"
+    ],
+    "answer": 2,
+    "explanation": "MapをArray.fromで変換すると、各要素が[key, value]となる二次元配列として扱えます。"
+  },
+  {
+    "id": "webapp2-12-020",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "Array.prototype.sortの比較関数が「負の数」を返した場合の動作として正しいものはどれですか？",
+    "choices": [
+      "2つの要素を削除する",
+      "必ず並び順を逆転する",
+      "比較を終了する",
+      "第1引数の要素を第2引数の要素より前に配置する"
+    ],
+    "answer": 3,
+    "explanation": "比較関数が負なら第1要素を前、正なら後ろ、0なら順序を変更しないという規則でsortが行われます。"
+  },
+  {
+    "id": "webapp2-12-021",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "数値を大きい順に並べる比較関数として適切なものはどれですか？",
+    "choices": [
+      "(a, b) => b - a",
+      "(a, b) => a - b",
+      "(a, b) => a + b",
+      "(a, b) => 0"
+    ],
+    "answer": 0,
+    "explanation": "b - aとすると、大きい値が前へ移動するため降順になります。a - bなら昇順です。"
+  },
+  {
+    "id": "webapp2-12-022",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "配列のmapメソッドの説明として正しいものはどれですか？",
+    "choices": [
+      "キーと値を保存する連想配列そのもの",
+      "配列の各要素へ関数を適用し、その結果から新しい配列を作る",
+      "配列を必ず降順へ並べ替える",
+      "ファイルを一行ずつ読み込む"
+    ],
+    "answer": 1,
+    "explanation": "配列のmapメソッドは各要素を変換し、その結果を要素とする新しい配列を返します。データ構造のMapとは別物です。"
+  },
+  {
+    "id": "webapp2-12-023",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "次のmap処理で第2引数iは何を表しますか？\n\nrankingArray.map(([key, value], i) => {\n  return `${i + 1}位 ${key}`;\n});",
+    "choices": [
+      "Mapのキー",
+      "Mapの値",
+      "現在処理している要素のインデックス",
+      "配列の長さ"
+    ],
+    "answer": 2,
+    "explanation": "mapのコールバック関数の第2引数には現在の要素のインデックスが渡されます。i + 1とすれば1位、2位…という順位表示に利用できます。"
+  },
+  {
+    "id": "webapp2-12-024",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "再帰呼び出しとは何ですか？",
+    "choices": [
+      "同じ配列をsortとmapで処理すること",
+      "複数のファイルを同時に読むこと",
+      "同じ関数を別ファイルからrequireすること",
+      "関数の処理の中から、その関数自身を呼び出すこと"
+    ],
+    "answer": 3,
+    "explanation": "再帰呼び出しは、ある関数がその処理の中で自分自身を呼び出すことです。フィボナッチ数列の実装などで利用できます。"
+  },
+  {
+    "id": "webapp2-12-025",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "単純な再帰によるフィボナッチ関数が非常に遅くなる主な理由はどれですか？",
+    "choices": [
+      "同じ値を求める計算を何度も重複して行うため",
+      "Mapを使いすぎるため",
+      "CSVを読み込んでいるため",
+      "Node.jsでは再帰を実行できないため"
+    ],
+    "answer": 0,
+    "explanation": "単純な再帰ではfib(2)やfib(3)など同じ計算が繰り返し発生し、nが増えるほど計算回数が急激に増加します。"
+  },
+  {
+    "id": "webapp2-12-026",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "プログラムの実際の実行時間を測定したい場合、講義で扱ったコマンドはどれですか？",
+    "choices": [
+      "speed node app.js",
+      "time node app.js",
+      "calc node app.js",
+      "node time app.js"
+    ],
+    "answer": 1,
+    "explanation": "time node app.jsのように実行すると、real、user、sysなどの実行時間を確認できます。"
+  },
+  {
+    "id": "webapp2-12-027",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "timeコマンドの結果に表示される「real」が表すものはどれですか？",
+    "choices": [
+      "OSだけが使用したCPU時間",
+      "JavaScriptの行数",
+      "実際に開始から終了まで経過した時間",
+      "ユーザー入力にかかった時間"
+    ],
+    "answer": 2,
+    "explanation": "realはプログラムを開始してから終了するまでに実際に経過した時間です。userはユーザー処理のCPU時間、sysはOSなどの処理時間です。"
+  },
+  {
+    "id": "webapp2-12-028",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "Node.jsでプロファイリング用のログを取得するコマンドはどれですか？",
+    "choices": [
+      "node --time app.js",
+      "node --cache app.js",
+      "node --map app.js",
+      "node --prof app.js"
+    ],
+    "answer": 3,
+    "explanation": "node --prof app.jsを実行するとプロファイリング用ログが生成され、処理時間のボトルネック分析に利用できます。"
+  },
+  {
+    "id": "webapp2-12-029",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "メモ化（Memoization）の説明として最も適切なものはどれですか？",
+    "choices": [
+      "一度計算した結果を保存し、同じ計算が必要になったとき再利用する",
+      "すべての計算を再帰で最初からやり直す",
+      "CSVデータを必ずメモ帳へ保存する",
+      "プログラムの実行時間だけを記録する"
+    ],
+    "answer": 0,
+    "explanation": "メモ化では一度計算した値をMapなどへキャッシュし、再び同じ値が必要になったとき計算を省略して再利用します。"
+  },
+  {
+    "id": "webapp2-12-030",
+    "subject": "webapp2",
+    "lesson": 12,
+    "question": "次のメモ化されたフィボナッチ関数の処理として正しいものはどれですか？\n\nif (memo.has(n)) {\n  return memo.get(n);\n}\nconst value = fib(n - 1) + fib(n - 2);\nmemo.set(n, value);\nreturn value;",
+    "choices": [
+      "memoに値があっても必ず再計算する",
+      "すでに計算済みなら保存された値を返し、未計算なら計算してmemoへ保存する",
+      "nの値を毎回0へ変更する",
+      "計算結果を保存せず、Mapを毎回削除する"
+    ],
+    "answer": 1,
+    "explanation": "memo.has(n)で計算済みか確認し、存在すればmemo.get(n)で再利用します。存在しなければ計算結果をmemo.set(n, value)で保存します。これにより重複計算を大幅に減らせます。"
+  }
+]
