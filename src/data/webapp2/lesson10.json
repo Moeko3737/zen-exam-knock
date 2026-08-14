@@ -1,0 +1,422 @@
+[
+  {
+    "id": "webapp2-10-001",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "Gitにおける「ブランチ」の説明として最も適切なものはどれですか？",
+    "choices": [
+      "開発作業を分岐させ、独立した履歴で作業できる仕組み",
+      "複数のリポジトリを自動的に削除する仕組み",
+      "コミット履歴をすべて1つにまとめる操作",
+      "GitHubへのログイン方法"
+    ],
+    "answer": 0,
+    "explanation": "ブランチは、ある時点のソースコードから開発作業を分岐させ、他の作業へ影響を与えずに独立して変更を進められる仕組みです。"
+  },
+  {
+    "id": "webapp2-10-002",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "ブランチを利用するメリットとして最も適切なものはどれですか？",
+    "choices": [
+      "すべての開発者が同じファイルを同時に直接編集できる",
+      "複数の機能や修正を互いに影響させず並行して開発できる",
+      "コミットを行わなくても履歴が残る",
+      "GitHubを使わずにWebサイトを公開できる"
+    ],
+    "answer": 1,
+    "explanation": "機能ごとなどにブランチを分けることで、別の開発内容に影響を与えず並行して作業できます。"
+  },
+  {
+    "id": "webapp2-10-003",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "現在のリポジトリに存在するブランチ一覧を表示するコマンドはどれですか？",
+    "choices": [
+      "git status",
+      "git log",
+      "git branch",
+      "git merge"
+    ],
+    "answer": 2,
+    "explanation": "git branchを実行すると、そのリポジトリにあるブランチの一覧を確認できます。"
+  },
+  {
+    "id": "webapp2-10-004",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "git branchを実行したとき、ブランチ名の左側に表示される「*」は何を意味しますか？",
+    "choices": [
+      "削除予定のブランチ",
+      "リモートに存在しないブランチ",
+      "コンフリクトしているブランチ",
+      "現在利用しているブランチ"
+    ],
+    "answer": 3,
+    "explanation": "ブランチ一覧で*が付いているものが、現在チェックアウトしているブランチです。"
+  },
+  {
+    "id": "webapp2-10-005",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "GitHubで2020年10月以降、新規リポジトリのデフォルトブランチ名として使われるようになったものはどれですか？",
+    "choices": [
+      "main",
+      "master",
+      "default",
+      "primary"
+    ],
+    "answer": 0,
+    "explanation": "講義では、従来のmasterに代わり、GitHubでは2020年10月から新規リポジトリのデフォルトブランチ名がmainになったと説明されています。"
+  },
+  {
+    "id": "webapp2-10-006",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "「new-branch」という新しいブランチを作成するコマンドはどれですか？",
+    "choices": [
+      "git switch new-branch",
+      "git branch new-branch",
+      "git add new-branch",
+      "git merge new-branch"
+    ],
+    "answer": 1,
+    "explanation": "git branch ブランチ名で新しいブランチを作成できます。ただし、作成しただけではそのブランチへ切り替わりません。"
+  },
+  {
+    "id": "webapp2-10-007",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "すでに存在する「new-branch」へ切り替えるコマンドはどれですか？",
+    "choices": [
+      "git branch new-branch",
+      "git merge new-branch",
+      "git switch new-branch",
+      "git add new-branch"
+    ],
+    "answer": 2,
+    "explanation": "git switch ブランチ名を使うと、指定したブランチへ切り替えられます。"
+  },
+  {
+    "id": "webapp2-10-008",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "「feature-login」というブランチを新規作成し、そのブランチへ同時に切り替えるコマンドはどれですか？",
+    "choices": [
+      "git branch feature-login",
+      "git switch feature-login",
+      "git merge -c feature-login",
+      "git switch -c feature-login"
+    ],
+    "answer": 3,
+    "explanation": "git switch -c ブランチ名を使うと、新規ブランチの作成と切り替えを同時に行えます。"
+  },
+  {
+    "id": "webapp2-10-009",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "旧来の「git checkout -b feature」の操作と同様の目的で、現在推奨されるコマンドはどれですか？",
+    "choices": [
+      "git switch -c feature",
+      "git restore feature",
+      "git merge feature",
+      "git push feature"
+    ],
+    "answer": 0,
+    "explanation": "git checkout -bはブランチ作成と切り替えを行う旧来の方法です。現在は目的が明確なgit switch -cが利用できます。"
+  },
+  {
+    "id": "webapp2-10-010",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "Git 2.23以降、git checkoutの機能が分けられた理由として講義内容に合っているものはどれですか？",
+    "choices": [
+      "GitHub Pagesを使いやすくするため",
+      "ブランチ切り替えとファイル復元という異なる役割が混在していて分かりにくかったため",
+      "SSHが使えなくなったため",
+      "masterブランチを削除するため"
+    ],
+    "answer": 1,
+    "explanation": "checkoutにはブランチ切り替えとファイル復元という異なる機能があり、意図を明確にするためswitchとrestoreへ役割が分けられました。"
+  },
+  {
+    "id": "webapp2-10-011",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "ローカルで作成した「feature-login」ブランチをGitHubへ送信するコマンドはどれですか？",
+    "choices": [
+      "git pull origin feature-login",
+      "git merge origin feature-login",
+      "git push origin feature-login",
+      "git branch origin feature-login"
+    ],
+    "answer": 2,
+    "explanation": "git push origin ブランチ名で、ローカルのブランチをリモートリポジトリへ送信できます。"
+  },
+  {
+    "id": "webapp2-10-012",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "ブランチで行った変更を別のブランチへ統合する操作を何といいますか？",
+    "choices": [
+      "clone",
+      "fork",
+      "restore",
+      "merge"
+    ],
+    "answer": 3,
+    "explanation": "あるブランチで行った変更内容を別のブランチへ取り込んで統合する操作をmergeといいます。"
+  },
+  {
+    "id": "webapp2-10-013",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "featureブランチの内容をmainブランチへ取り込みたい場合、最初に行う操作として適切なものはどれですか？",
+    "choices": [
+      "git switch main",
+      "git merge main",
+      "git push feature",
+      "git branch main"
+    ],
+    "answer": 0,
+    "explanation": "マージでは「取り込む側」のブランチへ先に移動します。featureの内容をmainへ取り込むなら、まずmainへ切り替えます。"
+  },
+  {
+    "id": "webapp2-10-014",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "mainブランチにいる状態で、featureブランチの変更を取り込むコマンドはどれですか？",
+    "choices": [
+      "git push feature",
+      "git merge feature",
+      "git switch feature",
+      "git diff main"
+    ],
+    "answer": 1,
+    "explanation": "mainへ移動した状態でgit merge featureを実行すると、featureブランチの変更をmainへ取り込めます。"
+  },
+  {
+    "id": "webapp2-10-015",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "featureブランチをmainへマージしたあと、その変更をGitHubのmainへ反映するコマンドはどれですか？",
+    "choices": [
+      "git pull origin main",
+      "git branch origin main",
+      "git push origin main",
+      "git restore origin main"
+    ],
+    "answer": 2,
+    "explanation": "ローカルのmainへマージした内容をGitHubへ反映するにはgit push origin mainを実行します。"
+  },
+  {
+    "id": "webapp2-10-016",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "GitHub Pagesでmainブランチの内容をWebサイトとして公開する設定場所として、講義で扱われているものはどれですか？",
+    "choices": [
+      "Issues → New issue",
+      "Pull requests → New pull request",
+      "Actions → New workflow",
+      "Settings → Pages"
+    ],
+    "answer": 3,
+    "explanation": "講義ではSettingsのPagesから公開するBranchとしてmainを指定し、GitHub Pagesを有効化しています。"
+  },
+  {
+    "id": "webapp2-10-017",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "Gitの操作をGUIで視覚的に扱えるツールとして、講義で紹介されているものはどれですか？",
+    "choices": [
+      "SourcetreeやGitHub Desktop",
+      "Vimやnano",
+      "curlやping",
+      "Apacheやnginx"
+    ],
+    "answer": 0,
+    "explanation": "SourcetreeやGitHub Desktopなどを使うと、ブランチの分岐やマージなどをGUIで視覚的に確認できます。"
+  },
+  {
+    "id": "webapp2-10-018",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "GitのGUIツールを使う際の注意点として、講義内容に最も合っているものはどれですか？",
+    "choices": [
+      "GUIを使う場合はGitのコマンドを理解してはいけない",
+      "基本的なGitコマンドや仕組みを理解したうえでGUIを使うことが望ましい",
+      "GUIではブランチを利用できない",
+      "GUIはリモートリポジトリでは利用できない"
+    ],
+    "answer": 1,
+    "explanation": "GUIは便利ですが、基本となるGitの仕組みやCUI操作を理解していないと思わぬ操作ミスにつながるため、基礎理解が重要です。"
+  },
+  {
+    "id": "webapp2-10-019",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "Gitでコンフリクトが発生しやすい状況として最も適切なものはどれですか？",
+    "choices": [
+      "リモートリポジトリが存在しないとき",
+      "コミットが一度も行われていないとき",
+      "異なるブランチで同じファイルの同じ場所を別々に変更し、それらを統合しようとしたとき",
+      "git statusを実行したとき"
+    ],
+    "answer": 2,
+    "explanation": "同じファイルの同じ箇所を異なるブランチで別々に編集すると、Gitがどちらを採用するか判断できずコンフリクトが起こることがあります。"
+  },
+  {
+    "id": "webapp2-10-020",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "「git commit -am \"修正\"」について正しい説明はどれですか？",
+    "choices": [
+      "新規作成ファイルを含むすべてのファイルを必ずコミットできる",
+      "マージだけを実行するコマンドである",
+      "リモートへ自動的にpushする",
+      "すでにGitで管理されているファイルについてaddとcommitをまとめて行える"
+    ],
+    "answer": 3,
+    "explanation": "git commit -amでは、すでに追跡対象となっているファイルについてステージングとコミットをまとめて行えます。未追跡の新規ファイルは対象になりません。"
+  },
+  {
+    "id": "webapp2-10-021",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "マージ前に、現在のブランチとfeatureブランチとの差分を確認したい場合に使えるコマンドはどれですか？",
+    "choices": [
+      "git diff feature",
+      "git push feature",
+      "git init feature",
+      "git clone feature"
+    ],
+    "answer": 0,
+    "explanation": "git diff 比較ブランチ名を利用すると、現在のブランチと指定したブランチとの差分を確認できます。"
+  },
+  {
+    "id": "webapp2-10-022",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "コンフリクトが発生したあとgit statusを実行した際、該当ファイルに表示される状態として講義で紹介されているものはどれですか？",
+    "choices": [
+      "deleted remotely",
+      "both modified",
+      "ready to publish",
+      "no branch"
+    ],
+    "answer": 1,
+    "explanation": "コンフリクトしたファイルはgit statusでboth modifiedなどと表示され、両方のブランチで変更されていることを確認できます。"
+  },
+  {
+    "id": "webapp2-10-023",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "コンフリクトしたファイル内で「<<<<<<< HEAD」が示しているものとして最も適切なのはどれですか？",
+    "choices": [
+      "リモートリポジトリのURL",
+      "削除予定のコード",
+      "現在のブランチ側の変更内容の開始位置",
+      "コミットハッシュ"
+    ],
+    "answer": 2,
+    "explanation": "コンフリクトマーカーでは<<<<<<< HEADから=======までが現在のブランチ側の変更として示されます。"
+  },
+  {
+    "id": "webapp2-10-024",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "コンフリクトを手動で解消する方法として最も適切なものはどれですか？",
+    "choices": [
+      "リポジトリ全体を削除する",
+      "コンフリクトマーカーだけ残してpushする",
+      "必ず現在のブランチ側だけを採用する",
+      "マーカーを削除し、採用したい内容へ手動で修正して再度コミットする"
+    ],
+    "answer": 3,
+    "explanation": "コンフリクト時は<<<<<<<、=======、>>>>>>>などのマーカーを削除し、正しい内容へ編集したうえでコミットして解決します。"
+  },
+  {
+    "id": "webapp2-10-025",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "GitHubにおけるForkの説明として最も適切なものはどれですか？",
+    "choices": [
+      "他人のリポジトリを自分のGitHubアカウントへコピーする機能",
+      "自分のローカルリポジトリを削除する機能",
+      "ブランチをmainへ統合する機能",
+      "GitHub Pagesを公開する機能"
+    ],
+    "answer": 0,
+    "explanation": "Forkは、他人が所有するGitHubリポジトリを自分のGitHubアカウント上へコピーする機能です。"
+  },
+  {
+    "id": "webapp2-10-026",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "Pull Request（PR）の目的として最も適切なものはどれですか？",
+    "choices": [
+      "GitHubからローカルへ最新データを取り込む",
+      "自分が行った変更を相手のリポジトリへ取り込んでもらうよう依頼する",
+      "Gitのユーザー名を変更する",
+      "コンフリクトを自動的にすべて削除する"
+    ],
+    "answer": 1,
+    "explanation": "Pull Requestは、自分が行った変更内容を確認してもらい、元のリポジトリへ取り込んでもらうよう提案する仕組みです。"
+  },
+  {
+    "id": "webapp2-10-027",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "フォークしたリポジトリから元のプロジェクトへPull Requestを送る流れとして最も適切なものはどれですか？",
+    "choices": [
+      "元リポジトリを直接編集 → git init → PR",
+      "Issueを削除 → mainを削除 → PR",
+      "自分の作業ブランチをpush → GitHubで変更先を確認 → Pull Requestを作成",
+      "git pullだけ実行 → 自動的にPRが作成される"
+    ],
+    "answer": 2,
+    "explanation": "自分側で変更をコミットし、作業ブランチをGitHubへpushしたあと、baseとheadを確認してPull Requestを作成します。"
+  },
+  {
+    "id": "webapp2-10-028",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "Pull Requestを作成するときの「base repository」と「head repository」の関係として、講義内容に合っているものはどれですか？",
+    "choices": [
+      "baseは自分のローカルPC、headはGitの設定ファイル",
+      "baseとheadは必ず同じリポジトリでなければならない",
+      "baseがコピー元、headがGitHub Pages専用リポジトリ",
+      "baseが変更を取り込んでもらう送り先、headが自分の変更を持つ側"
+    ],
+    "answer": 3,
+    "explanation": "PRではbase側が変更を取り込む対象、head側が変更内容を持っている自分側のリポジトリ・ブランチとなります。"
+  },
+  {
+    "id": "webapp2-10-029",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "ソーシャルコーディングの説明として最も適切なものはどれですか？",
+    "choices": [
+      "GitHubなどを使い、コードを共有しながらレビューや議論を通じて共同開発すること",
+      "1人だけでコードを書き、誰にも公開しない開発方法",
+      "SNSへ完成品の画像だけを投稿すること",
+      "Gitを使用せず紙だけで設計すること"
+    ],
+    "answer": 0,
+    "explanation": "ソーシャルコーディングとは、GitHubなどのプラットフォームを利用し、コード共有・レビュー・議論などを行いながら共同で開発するスタイルです。"
+  },
+  {
+    "id": "webapp2-10-030",
+    "subject": "webapp2",
+    "lesson": 10,
+    "question": "オープンソースなどのソーシャルコーディングで、Code of Conduct（行動規範）において特に重視される姿勢はどれですか？",
+    "choices": [
+      "最もプログラミング能力の高い人の意見だけに従う",
+      "国籍・性別・言語などの違いにかかわらず、他の参加者を尊重する",
+      "他人のコードを批判するときは人格についても評価する",
+      "コミュニティのルールより個人の考えを優先する"
+    ],
+    "answer": 1,
+    "explanation": "多様な背景を持つ人が参加する共同開発では、技術力だけでなく他の参加者を尊重する姿勢が重要であり、ハラスメントを防ぐための行動規範も設けられます。"
+  }
+]
