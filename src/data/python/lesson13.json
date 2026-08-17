@@ -1,0 +1,422 @@
+[
+  {
+    "id": "py13-001",
+    "subject": "python",
+    "lesson": 13,
+    "question": "プログラミングで、ファイルをグループ化して管理する場所を何と呼びますか？",
+    "choices": [
+      "ディレクトリ",
+      "モジュール",
+      "オブジェクト",
+      "プロパティ"
+    ],
+    "answer": 0,
+    "explanation": "ファイルをまとめて管理する場所をディレクトリと呼びます。一般的に「フォルダ」と呼ばれるものと同じ意味です。"
+  },
+  {
+    "id": "py13-002",
+    "subject": "python",
+    "lesson": 13,
+    "question": "MacのターミナルでPythonの対話モードを起動するコマンドはどれですか？",
+    "choices": [
+      "py -3",
+      "python3",
+      "python -m",
+      "start python"
+    ],
+    "answer": 1,
+    "explanation": "講義では、Macでは「python3」、Windowsでは「py -3」を使用してPythonの対話モードを起動します。"
+  },
+  {
+    "id": "py13-003",
+    "subject": "python",
+    "lesson": 13,
+    "question": "現在作業しているディレクトリを取得する関数はどれですか？",
+    "choices": [
+      "os.chdir()",
+      "os.listdir()",
+      "os.getcwd()",
+      "os.mkdir()"
+    ],
+    "answer": 2,
+    "explanation": "os.getcwd()は現在の作業ディレクトリ（current working directory）を取得します。"
+  },
+  {
+    "id": "py13-004",
+    "subject": "python",
+    "lesson": 13,
+    "question": "作業ディレクトリを変更するために使用する関数はどれですか？",
+    "choices": [
+      "os.getcwd()",
+      "os.rename()",
+      "os.move()",
+      "os.chdir()"
+    ],
+    "answer": 3,
+    "explanation": "os.chdir(path)を使用すると、カレントディレクトリを指定した場所へ変更できます。chdirはchange directoryの意味です。"
+  },
+  {
+    "id": "py13-005",
+    "subject": "python",
+    "lesson": 13,
+    "question": "パスで「.」が表す場所はどこですか？",
+    "choices": [
+      "現在のディレクトリ",
+      "1つ上のディレクトリ",
+      "ルートディレクトリ",
+      "ホームディレクトリ"
+    ],
+    "answer": 0,
+    "explanation": "「.」は現在のディレクトリ、つまりカレントディレクトリを表します。"
+  },
+  {
+    "id": "py13-006",
+    "subject": "python",
+    "lesson": 13,
+    "question": "カレントディレクトリから1つ上の親ディレクトリへ移動するコードはどれですか？",
+    "choices": [
+      "os.chdir('.')",
+      "os.chdir('..')",
+      "os.chdir('/')",
+      "os.chdir('*')"
+    ],
+    "answer": 1,
+    "explanation": "「..」は1つ上の親ディレクトリを表すため、os.chdir('..')で親ディレクトリへ移動できます。"
+  },
+  {
+    "id": "py13-007",
+    "subject": "python",
+    "lesson": 13,
+    "question": "ルートディレクトリから目的の場所までの経路をすべて記述するパスを何と呼びますか？",
+    "choices": [
+      "親パス",
+      "カレントパス",
+      "絶対パス",
+      "相対パス"
+    ],
+    "answer": 2,
+    "explanation": "絶対パスは、ルートディレクトリから目的の場所までの経路をすべて記述する方法です。"
+  },
+  {
+    "id": "py13-008",
+    "subject": "python",
+    "lesson": 13,
+    "question": "相対パスの説明として最も適切なものはどれですか？",
+    "choices": [
+      "必ずルートディレクトリから記述する",
+      "OSに関係なく常に同じ文字列になる",
+      "ファイル名だけを指定する方法である",
+      "カレントディレクトリを基準として場所を指定する"
+    ],
+    "answer": 3,
+    "explanation": "相対パスは、現在いるカレントディレクトリを基準として目的の場所を指定します。"
+  },
+  {
+    "id": "py13-009",
+    "subject": "python",
+    "lesson": 13,
+    "question": "カレントディレクトリ内に「data」という新しいディレクトリを作成するコードはどれですか？",
+    "choices": [
+      "os.mkdir('data')",
+      "os.chdir('data')",
+      "os.listdir('data')",
+      "os.remove('data')"
+    ],
+    "answer": 0,
+    "explanation": "os.mkdir(path)は新しいディレクトリを作成する関数です。mkdirはmake directoryの意味です。"
+  },
+  {
+    "id": "py13-010",
+    "subject": "python",
+    "lesson": 13,
+    "question": "MacやLinuxで「現在のディレクトリ内にあるdata/temp」を相対パスで表したものはどれですか？",
+    "choices": [
+      ".\\data\\temp",
+      "./data/temp",
+      "../data/../temp",
+      "/./data"
+    ],
+    "answer": 1,
+    "explanation": "Mac/Linuxではパスの区切りに「/」を使います。「.」は現在のディレクトリなので、./data/tempと表せます。"
+  },
+  {
+    "id": "py13-011",
+    "subject": "python",
+    "lesson": 13,
+    "question": "os.listdir()を引数なしで実行すると、何が得られますか？",
+    "choices": [
+      "すべてのサブディレクトリ内部まで含めた一覧",
+      "カレントディレクトリの絶対パス",
+      "カレントディレクトリ直下のファイル名やディレクトリ名のリスト",
+      "ファイルサイズの一覧"
+    ],
+    "answer": 2,
+    "explanation": "os.listdir()は指定したディレクトリ直下のファイル名とディレクトリ名をリストで返します。引数を省略するとカレントディレクトリが対象です。"
+  },
+  {
+    "id": "py13-012",
+    "subject": "python",
+    "lesson": 13,
+    "question": "指定したパスがファイルかどうかを判定し、ファイルならTrueを返す関数はどれですか？",
+    "choices": [
+      "os.path.exists()",
+      "os.path.isdir()",
+      "os.stat()",
+      "os.path.isfile()"
+    ],
+    "answer": 3,
+    "explanation": "os.path.isfile(path)は、指定したパスがファイルならTrueを返します。"
+  },
+  {
+    "id": "py13-013",
+    "subject": "python",
+    "lesson": 13,
+    "question": "変数fに入ったファイル名が「.txt」で終わっているか調べるコードはどれですか？",
+    "choices": [
+      "f.endswith('.txt')",
+      "f.startswith('.txt')",
+      "f.isfile('.txt')",
+      "f.exists('.txt')"
+    ],
+    "answer": 0,
+    "explanation": "endswith()は文字列が指定した文字列で終わっているかを判定するメソッドです。拡張子の判定にも利用できます。"
+  },
+  {
+    "id": "py13-014",
+    "subject": "python",
+    "lesson": 13,
+    "question": "ファイル「sample.txt」のサイズをバイト単位で取得するコードはどれですか？",
+    "choices": [
+      "os.listdir('sample.txt').size",
+      "os.stat('sample.txt').st_size",
+      "os.path.isfile('sample.txt').size",
+      "os.getcwd('sample.txt').st_size"
+    ],
+    "answer": 1,
+    "explanation": "os.stat(path)でファイル情報を取得し、そのst_size属性を参照するとファイルサイズをバイト単位で取得できます。"
+  },
+  {
+    "id": "py13-015",
+    "subject": "python",
+    "lesson": 13,
+    "question": "次のコードで表示されるのはどのようなファイルですか？\n\nfor f in os.listdir():\n    if os.path.isfile(f):\n        file_size = os.stat(f).st_size\n        if file_size >= 1000:\n            print(f)",
+    "choices": [
+      "1000バイト未満のファイル",
+      "すべてのディレクトリ",
+      "1000バイト以上のファイル",
+      "拡張子が.pyのファイルだけ"
+    ],
+    "answer": 2,
+    "explanation": "isfile()でファイルだけに絞り、st_sizeが1000以上の場合だけprintしているため、1000バイト以上のファイルが表示されます。"
+  },
+  {
+    "id": "py13-016",
+    "subject": "python",
+    "lesson": 13,
+    "question": "1024バイトを、講義で扱った換算方法でKBにすると何KBですか？",
+    "choices": [
+      "0.1KB",
+      "10KB",
+      "1024KB",
+      "1KB"
+    ],
+    "answer": 3,
+    "explanation": "講義では1024バイト＝1KBとして扱います。"
+  },
+  {
+    "id": "py13-017",
+    "subject": "python",
+    "lesson": 13,
+    "question": "「平成.txt」を「令和.txt」に名前変更するコードはどれですか？",
+    "choices": [
+      "os.rename('平成.txt', '令和.txt')",
+      "os.rename('令和.txt', '平成.txt')",
+      "os.remove('平成.txt', '令和.txt')",
+      "os.mkdir('平成.txt', '令和.txt')"
+    ],
+    "answer": 0,
+    "explanation": "os.rename(古い名前, 新しい名前)の順で指定します。したがって、os.rename('平成.txt', '令和.txt')です。"
+  },
+  {
+    "id": "py13-018",
+    "subject": "python",
+    "lesson": 13,
+    "question": "指定したファイルやディレクトリが存在するか確認する関数はどれですか？",
+    "choices": [
+      "os.path.isfile()",
+      "os.path.exists()",
+      "os.rename()",
+      "os.listdir()"
+    ],
+    "answer": 1,
+    "explanation": "os.path.exists(path)は、指定したファイルやディレクトリが存在すればTrueを返します。"
+  },
+  {
+    "id": "py13-019",
+    "subject": "python",
+    "lesson": 13,
+    "question": "ファイル「memo.txt」を削除するコードはどれですか？",
+    "choices": [
+      "os.rmdir('memo.txt')",
+      "os.delete('memo.txt')",
+      "os.remove('memo.txt')",
+      "shutil.rmtree('memo.txt')"
+    ],
+    "answer": 2,
+    "explanation": "ファイルの削除にはos.remove(path)を使用します。"
+  },
+  {
+    "id": "py13-020",
+    "subject": "python",
+    "lesson": 13,
+    "question": "os.rmdir('data')で削除できるdataディレクトリの状態はどれですか？",
+    "choices": [
+      "ファイルが1つ入っている",
+      "サブディレクトリが入っている",
+      "中身が何個あってもよい",
+      "中身が空である"
+    ],
+    "answer": 3,
+    "explanation": "os.rmdir()で削除できるのは空のディレクトリだけです。中身がある場合はOSErrorが発生します。"
+  },
+  {
+    "id": "py13-021",
+    "subject": "python",
+    "lesson": 13,
+    "question": "次のコードでiが3のとき、new_nameの値はどれですか？\n\nnew_name = f\"report{i:02d}.txt\"",
+    "choices": [
+      "report03.txt",
+      "report3.02.txt",
+      "report003.txt",
+      "report3.txt"
+    ],
+    "answer": 0,
+    "explanation": "「:02d」は整数を2桁で表示し、足りない桁を左側から0で埋めます。そのため3は03となります。"
+  },
+  {
+    "id": "py13-022",
+    "subject": "python",
+    "lesson": 13,
+    "question": "ファイルの移動やコピーなど、osより高度なファイル操作を行うために講義で使用したモジュールはどれですか？",
+    "choices": [
+      "path",
+      "shutil",
+      "calendar",
+      "random"
+    ],
+    "answer": 1,
+    "explanation": "shutilはshell utilityに由来し、ファイルの移動・コピー・ディレクトリの一括削除などに利用します。"
+  },
+  {
+    "id": "py13-023",
+    "subject": "python",
+    "lesson": 13,
+    "question": "ファイル「sample.txt」を「backup」ディレクトリへ移動するために使用できる関数はどれですか？",
+    "choices": [
+      "shutil.copy('sample.txt', 'backup')",
+      "os.chdir('sample.txt', 'backup')",
+      "shutil.move('sample.txt', 'backup')",
+      "os.stat('sample.txt', 'backup')"
+    ],
+    "answer": 2,
+    "explanation": "shutil.move(移動元, 移動先)を使用するとファイルを移動できます。移動先がディレクトリならその中へ移動します。"
+  },
+  {
+    "id": "py13-024",
+    "subject": "python",
+    "lesson": 13,
+    "question": "「original.txt」を複製して「backup.txt」を作成するコードはどれですか？",
+    "choices": [
+      "shutil.move('original.txt', 'backup.txt')",
+      "os.rename('original.txt', 'backup.txt')",
+      "os.remove('original.txt', 'backup.txt')",
+      "shutil.copy('original.txt', 'backup.txt')"
+    ],
+    "answer": 3,
+    "explanation": "shutil.copy(コピー元, コピー先)を使用するとファイルを複製できます。元ファイルも残ります。"
+  },
+  {
+    "id": "py13-025",
+    "subject": "python",
+    "lesson": 13,
+    "question": "ファイルやサブディレクトリが入っている「temp」ディレクトリを中身ごと削除するコードはどれですか？",
+    "choices": [
+      "shutil.rmtree('temp')",
+      "os.rmdir('temp')",
+      "os.remove('temp')",
+      "shutil.copy('temp')"
+    ],
+    "answer": 0,
+    "explanation": "shutil.rmtree()はディレクトリを中身ごと削除します。os.rmdir()とは異なり、空でなくても削除できるため、指定先を十分確認して使用する必要があります。"
+  },
+  {
+    "id": "py13-026",
+    "subject": "python",
+    "lesson": 13,
+    "question": "今日の日付だけを取得するために使用するコードはどれですか？\n\nfrom datetime import date",
+    "choices": [
+      "date.now()",
+      "date.today()",
+      "date.current()",
+      "date.time()"
+    ],
+    "answer": 1,
+    "explanation": "date.today()を使用すると今日の日付を表すdateオブジェクトを取得できます。"
+  },
+  {
+    "id": "py13-027",
+    "subject": "python",
+    "lesson": 13,
+    "question": "現在の日付と時刻の両方を取得するために使用するコードはどれですか？\n\nfrom datetime import datetime",
+    "choices": [
+      "datetime.today_date()",
+      "datetime.current()",
+      "datetime.now()",
+      "datetime.time()"
+    ],
+    "answer": 2,
+    "explanation": "datetime.now()を使用すると、現在の日付と時刻を含むdatetimeオブジェクトを取得できます。"
+  },
+  {
+    "id": "py13-028",
+    "subject": "python",
+    "lesson": 13,
+    "question": "os.stat('sample.txt').st_mtimeで取得できるものはどれですか？",
+    "choices": [
+      "ファイルサイズ",
+      "ファイル名",
+      "ファイルの拡張子",
+      "ファイルの最終更新日時を表すUNIX時間"
+    ],
+    "answer": 3,
+    "explanation": "st_mtimeはファイルの最終更新日時をUNIX時間で取得します。"
+  },
+  {
+    "id": "py13-029",
+    "subject": "python",
+    "lesson": 13,
+    "question": "UNIX時間とは何を基準とした値ですか？",
+    "choices": [
+      "1970年1月1日0時0分0秒からの経過秒数",
+      "2000年1月1日からの経過日数",
+      "コンピューターを起動してからの経過秒数",
+      "現在時刻を秒だけで表した値"
+    ],
+    "answer": 0,
+    "explanation": "UNIX時間は、1970年1月1日0時0分0秒を基準として、そこから何秒経過したかを表す数値です。"
+  },
+  {
+    "id": "py13-030",
+    "subject": "python",
+    "lesson": 13,
+    "question": "変数m_timeにUNIX時間が入っています。人間が読みやすいdatetimeオブジェクトへ変換するコードはどれですか？",
+    "choices": [
+      "datetime.now(m_time)",
+      "datetime.fromtimestamp(m_time)",
+      "date.today(m_time)",
+      "os.stat(m_time)"
+    ],
+    "answer": 1,
+    "explanation": "datetime.fromtimestamp()を使用すると、UNIX時間をdatetimeオブジェクトへ変換できます。ファイルのst_mtimeを読みやすい日時へ変換するときにも利用します。"
+  }
+]
