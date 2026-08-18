@@ -1,0 +1,422 @@
+[
+  {
+    "id": "py14-001",
+    "subject": "python",
+    "lesson": 14,
+    "question": "講義における「ライブラリ」の説明として最も適切なものはどれですか？",
+    "choices": [
+      "汎用性の高いプログラムをまとめ、他のプログラムから利用できるようにしたもの",
+      "Pythonの変数を保存するためだけのファイル",
+      "必ず1つの関数だけを含むソースファイル",
+      "グラフだけを保存する画像形式"
+    ],
+    "answer": 0,
+    "explanation": "ライブラリは、汎用性の高いプログラムをまとめて、他のプログラムから呼び出して利用できるようにしたものです。"
+  },
+  {
+    "id": "py14-002",
+    "subject": "python",
+    "lesson": 14,
+    "question": "関数や変数などが定義された1つのPythonソースファイルを何と呼びますか？",
+    "choices": [
+      "ライブラリ",
+      "モジュール",
+      "パッケージ",
+      "ディレクトリ"
+    ],
+    "answer": 1,
+    "explanation": "1つのPythonソースファイルをモジュールと呼びます。複数のモジュールをまとめたものがパッケージです。"
+  },
+  {
+    "id": "py14-003",
+    "subject": "python",
+    "lesson": 14,
+    "question": "Matplotlibのpyplotモジュールにpltという別名を付けてインポートするコードはどれですか？",
+    "choices": [
+      "import pyplot as matplotlib",
+      "from matplotlib import plt",
+      "import matplotlib.pyplot as plt",
+      "import matplotlib as pyplot"
+    ],
+    "answer": 2,
+    "explanation": "pyplotモジュールは「import matplotlib.pyplot as plt」とインポートするのが一般的です。"
+  },
+  {
+    "id": "py14-004",
+    "subject": "python",
+    "lesson": 14,
+    "question": "折れ線グラフを描く関数はどれですか？",
+    "choices": [
+      "plt.bar()",
+      "plt.scatter()",
+      "plt.hist()",
+      "plt.plot()"
+    ],
+    "answer": 3,
+    "explanation": "折れ線グラフにはplt.plot()を使用します。scatterは散布図、barは棒グラフ、histはヒストグラムです。"
+  },
+  {
+    "id": "py14-005",
+    "subject": "python",
+    "lesson": 14,
+    "question": "散布図を描くコードはどれですか？",
+    "choices": [
+      "plt.scatter(x, y)",
+      "plt.plot(x, y)",
+      "plt.bar(x, y)",
+      "plt.text(x, y)"
+    ],
+    "answer": 0,
+    "explanation": "2つのデータの関係を点で表す散布図にはplt.scatter(x, y)を使用します。"
+  },
+  {
+    "id": "py14-006",
+    "subject": "python",
+    "lesson": 14,
+    "question": "棒グラフを描くコードはどれですか？",
+    "choices": [
+      "plt.hist(x, y)",
+      "plt.bar(x, y)",
+      "plt.plot(x, y)",
+      "plt.scatter(x, y)"
+    ],
+    "answer": 1,
+    "explanation": "棒グラフにはplt.bar()を使用します。第1引数に横軸の項目、第2引数に棒の高さを指定します。"
+  },
+  {
+    "id": "py14-007",
+    "subject": "python",
+    "lesson": 14,
+    "question": "作成したグラフを画面に表示するために使用する関数はどれですか？",
+    "choices": [
+      "plt.open()",
+      "plt.display()",
+      "plt.show()",
+      "plt.view()"
+    ],
+    "answer": 2,
+    "explanation": "グラフを作成した後、plt.show()を実行することでグラフを画面に表示できます。"
+  },
+  {
+    "id": "py14-008",
+    "subject": "python",
+    "lesson": 14,
+    "question": "折れ線グラフの各データ点を星形のマーカーで表示するために指定する引数はどれですか？",
+    "choices": [
+      "point='*'",
+      "shape='*'",
+      "symbol='*'",
+      "marker='*'"
+    ],
+    "answer": 3,
+    "explanation": "plt.plot()のmarker引数に「*」を指定すると、各データ点を星形で表示できます。"
+  },
+  {
+    "id": "py14-009",
+    "subject": "python",
+    "lesson": 14,
+    "question": "Matplotlibでグラフを画像ファイルとして保存する関数はどれですか？",
+    "choices": [
+      "plt.savefig()",
+      "plt.save()",
+      "plt.write()",
+      "plt.export()"
+    ],
+    "answer": 0,
+    "explanation": "plt.savefig()を使用すると、作成したグラフをPNGなどの画像ファイルとして保存できます。"
+  },
+  {
+    "id": "py14-010",
+    "subject": "python",
+    "lesson": 14,
+    "question": "グラフを画像として保存し、その後画面にも表示したい場合の実行順序として正しいものはどれですか？",
+    "choices": [
+      "plt.show() → plt.savefig()",
+      "plt.savefig() → plt.show()",
+      "どちらを先にしても必ず同じ",
+      "plt.show()だけ実行する"
+    ],
+    "answer": 1,
+    "explanation": "講義ではsavefigで保存してからshowで表示します。show後に保存すると、画像が正しく保存されず白くなる場合があります。"
+  },
+  {
+    "id": "py14-011",
+    "subject": "python",
+    "lesson": 14,
+    "question": "グラフにタイトルを追加するコードはどれですか？",
+    "choices": [
+      "plt.xlabel('タイトル')",
+      "plt.text('タイトル')",
+      "plt.title('タイトル')",
+      "plt.header('タイトル')"
+    ],
+    "answer": 2,
+    "explanation": "グラフのタイトルはplt.title()で設定します。"
+  },
+  {
+    "id": "py14-012",
+    "subject": "python",
+    "lesson": 14,
+    "question": "MacでMatplotlibの日本語文字化けを防ぐため、講義で例として指定されているフォントはどれですか？",
+    "choices": [
+      "Times New Roman",
+      "Arial",
+      "Yu Gothic",
+      "Hiragino Sans"
+    ],
+    "answer": 3,
+    "explanation": "Macでは例としてplt.rcParams['font.family'] = 'Hiragino Sans'を指定します。WindowsではYu Gothicなどが例として挙げられています。"
+  },
+  {
+    "id": "py14-013",
+    "subject": "python",
+    "lesson": 14,
+    "question": "散布図などの横軸にラベルを追加する関数はどれですか？",
+    "choices": [
+      "plt.xlabel()",
+      "plt.ylabel()",
+      "plt.title()",
+      "plt.text()"
+    ],
+    "answer": 0,
+    "explanation": "横軸のラベルにはplt.xlabel()、縦軸のラベルにはplt.ylabel()を使用します。"
+  },
+  {
+    "id": "py14-014",
+    "subject": "python",
+    "lesson": 14,
+    "question": "グラフ上の座標(x, y)に文字列を表示する基本的なコードはどれですか？",
+    "choices": [
+      "plt.label(x, y, '文字')",
+      "plt.text(x, y, '文字')",
+      "plt.title(x, y, '文字')",
+      "plt.write(x, y, '文字')"
+    ],
+    "answer": 1,
+    "explanation": "plt.text(x座標, y座標, '文字列')を使うと、指定した位置にテキストを表示できます。"
+  },
+  {
+    "id": "py14-015",
+    "subject": "python",
+    "lesson": 14,
+    "question": "辞書nobel_prizeのキーを横軸、値を棒の高さとして棒グラフを描くコードはどれですか？",
+    "choices": [
+      "plt.bar(nobel_prize.values(), nobel_prize.keys())",
+      "plt.plot(nobel_prize.keys(), nobel_prize.values())",
+      "plt.bar(nobel_prize.keys(), nobel_prize.values())",
+      "plt.scatter(nobel_prize)"
+    ],
+    "answer": 2,
+    "explanation": "辞書のkeys()を横軸、values()を棒の高さとしてplt.bar()へ渡します。"
+  },
+  {
+    "id": "py14-016",
+    "subject": "python",
+    "lesson": 14,
+    "question": "次のコードを実行するとどうなりますか？\n\nx = range(6)\ny = x ** 2",
+    "choices": [
+      "0, 1, 4, 9, 16, 25が得られる",
+      "xの値が2倍になる",
+      "自動的にNumPy配列へ変換される",
+      "TypeErrorが発生する"
+    ],
+    "answer": 3,
+    "explanation": "Python標準のrangeオブジェクトに対して、そのまま**演算で各要素を二乗することはできないためTypeErrorになります。"
+  },
+  {
+    "id": "py14-017",
+    "subject": "python",
+    "lesson": 14,
+    "question": "NumPyパッケージをnpという別名でインポートするコードはどれですか？",
+    "choices": [
+      "import numpy as np",
+      "import numpy, np",
+      "from numpy import np",
+      "import np from numpy"
+    ],
+    "answer": 0,
+    "explanation": "NumPyは「import numpy as np」とインポートするのが一般的です。"
+  },
+  {
+    "id": "py14-018",
+    "subject": "python",
+    "lesson": 14,
+    "question": "np.arange(6)で作成される配列として正しいものはどれですか？",
+    "choices": [
+      "[1, 2, 3, 4, 5, 6]",
+      "[0, 1, 2, 3, 4, 5]",
+      "[0, 1, 2, 3, 4, 5, 6]",
+      "[1, 2, 3, 4, 5]"
+    ],
+    "answer": 1,
+    "explanation": "np.arange(6)では0から始まり、終了値6は含まれないため、0〜5までの値が生成されます。"
+  },
+  {
+    "id": "py14-019",
+    "subject": "python",
+    "lesson": 14,
+    "question": "np.arange()が返すオブジェクトの型はどれですか？",
+    "choices": [
+      "list",
+      "tuple",
+      "numpy.ndarray",
+      "dict"
+    ],
+    "answer": 2,
+    "explanation": "np.arange()はNumPyのndarray型オブジェクトを返します。"
+  },
+  {
+    "id": "py14-020",
+    "subject": "python",
+    "lesson": 14,
+    "question": "次のコードを実行したときのyとして正しいものはどれですか？\n\nx = np.arange(6)\ny = x ** 2",
+    "choices": [
+      "array([0, 2, 4, 6, 8, 10])",
+      "TypeErrorになる",
+      "array([2, 3, 4, 5, 6, 7])",
+      "array([0, 1, 4, 9, 16, 25])"
+    ],
+    "answer": 3,
+    "explanation": "NumPyのndarrayでは要素ごとの演算が可能なので、各要素が二乗されます。"
+  },
+  {
+    "id": "py14-021",
+    "subject": "python",
+    "lesson": 14,
+    "question": "曲線をより滑らかに描画するためにnp.arange()を使う場合、講義で推奨されている方法はどれですか？",
+    "choices": [
+      "差分を0.1などの小さい値にしてデータ点を増やす",
+      "差分を10などの大きい値にする",
+      "終了値を必ず0にする",
+      "NumPyを使用せず文字列に変換する"
+    ],
+    "answer": 0,
+    "explanation": "np.arange(0, 6, 0.1)のように細かい間隔で多数の点を生成すると、グラフをより滑らかに描画できます。"
+  },
+  {
+    "id": "py14-022",
+    "subject": "python",
+    "lesson": 14,
+    "question": "360度をラジアンで表したものはどれですか？",
+    "choices": [
+      "π",
+      "2π",
+      "π/2",
+      "4π"
+    ],
+    "answer": 1,
+    "explanation": "円1周の360度は2πラジアンです。NumPyでは円周率をnp.piで参照できます。"
+  },
+  {
+    "id": "py14-023",
+    "subject": "python",
+    "lesson": 14,
+    "question": "半径r、角度aを使って円のx座標を求める式はどれですか？",
+    "choices": [
+      "x = r * np.sin(a)",
+      "x = np.pi * r",
+      "x = r * np.cos(a)",
+      "x = r ** 2"
+    ],
+    "answer": 2,
+    "explanation": "円の座標はx = r × cos(a)、y = r × sin(a)として求めます。"
+  },
+  {
+    "id": "py14-024",
+    "subject": "python",
+    "lesson": 14,
+    "question": "円を描いたときに縦横のスケールの違いで楕円のように見える場合、講義で使用する設定はどれですか？",
+    "choices": [
+      "plt.xlabel('equal')",
+      "plt.plot('equal')",
+      "plt.title('equal')",
+      "g.set_aspect('equal')"
+    ],
+    "answer": 3,
+    "explanation": "plt.subplot()でAxesオブジェクトを作り、そのset_aspect('equal')を使用すると縦横のスケールを等しくできます。"
+  },
+  {
+    "id": "py14-025",
+    "subject": "python",
+    "lesson": 14,
+    "question": "np.arange(0, 2 * np.pi, 0.01)で円を描いたとき、小さな隙間ができる可能性がある理由はどれですか？",
+    "choices": [
+      "np.arange()は終了値を含まないため",
+      "np.piが整数だから",
+      "np.cos()が使用できないため",
+      "plt.plot()では円を描けないため"
+    ],
+    "answer": 0,
+    "explanation": "np.arange()は終了値を含まないため、2πの直前で配列が終わります。講義では終了値に差分0.01を加えて閉じる方法を扱っています。"
+  },
+  {
+    "id": "py14-026",
+    "subject": "python",
+    "lesson": 14,
+    "question": "リストから1つの要素をランダムに選択するrandomモジュールの関数はどれですか？",
+    "choices": [
+      "random.sample()",
+      "random.choice()",
+      "random.randint()",
+      "random.select()"
+    ],
+    "answer": 1,
+    "explanation": "random.choice(リスト)を使用すると、リストから1要素をランダムに選択できます。"
+  },
+  {
+    "id": "py14-027",
+    "subject": "python",
+    "lesson": 14,
+    "question": "リストから複数の要素を重複なしでランダムに抽出する関数はどれですか？",
+    "choices": [
+      "random.choice()",
+      "random.randint()",
+      "random.sample()",
+      "random.range()"
+    ],
+    "answer": 2,
+    "explanation": "random.sample(リスト, 個数)は、指定した数の要素を重複なしでランダムに抽出します。"
+  },
+  {
+    "id": "py14-028",
+    "subject": "python",
+    "lesson": 14,
+    "question": "random.randint(1, 6)で生成される可能性がある整数の範囲はどれですか？",
+    "choices": [
+      "0〜5",
+      "1〜5",
+      "0〜6",
+      "1〜6"
+    ],
+    "answer": 3,
+    "explanation": "random.randint()は開始値と終了値の両方を含みます。そのためrandint(1, 6)では1〜6が生成されます。"
+  },
+  {
+    "id": "py14-029",
+    "subject": "python",
+    "lesson": 14,
+    "question": "データの分布を確認するヒストグラムを描く関数はどれですか？",
+    "choices": [
+      "plt.hist()",
+      "plt.scatter()",
+      "plt.sample()",
+      "plt.plot()"
+    ],
+    "answer": 0,
+    "explanation": "ヒストグラムにはplt.hist()を使用します。横軸は階級、縦軸はその区間に含まれるデータ数である度数を表します。"
+  },
+  {
+    "id": "py14-030",
+    "subject": "python",
+    "lesson": 14,
+    "question": "サイコロの出目1〜6のヒストグラムを見やすくするため、次のコードでrwidth=0.5を指定する目的はどれですか？\n\nplt.hist(result, bins=np.arange(0.5, 6.6), rwidth=0.5)",
+    "choices": [
+      "ヒストグラムを折れ線グラフに変える",
+      "棒の幅を狭くして棒同士に隙間を作る",
+      "出目を0〜5へ変更する",
+      "乱数の個数を半分にする"
+    ],
+    "answer": 1,
+    "explanation": "rwidthは棒の相対的な横幅を指定します。rwidth=0.5にすると棒が細くなり、棒同士の間に隙間ができます。"
+  }
+]
