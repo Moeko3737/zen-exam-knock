@@ -1,0 +1,422 @@
+[
+  {
+    "id": "py15-001",
+    "subject": "python",
+    "lesson": 15,
+    "question": "Pythonのコードの書き方の決まりに反しているときに発生するエラーを何と呼びますか？",
+    "choices": [
+      "構文エラー",
+      "論理エラー",
+      "通信エラー",
+      "実行結果エラー"
+    ],
+    "answer": 0,
+    "explanation": "Pythonの文法や構文上の決まりに違反している場合に発生するエラーを構文エラーと呼びます。SyntaxErrorなどが該当します。"
+  },
+  {
+    "id": "py15-002",
+    "subject": "python",
+    "lesson": 15,
+    "question": "プログラムの実行中に発生し、適切に処理しなければプログラムが異常停止するものを何と呼びますか？",
+    "choices": [
+      "コメント",
+      "例外",
+      "モジュール",
+      "型ヒント"
+    ],
+    "answer": 1,
+    "explanation": "文法的には正しいコードでも、実行中に問題が起きると例外が発生します。例外処理を行わなければ、そこでプログラムが停止する場合があります。"
+  },
+  {
+    "id": "py15-003",
+    "subject": "python",
+    "lesson": 15,
+    "question": "プログラムはエラーなく最後まで実行できるものの、意図した結果にならない問題を何と呼びますか？",
+    "choices": [
+      "構文エラー",
+      "例外",
+      "論理エラー",
+      "NameError"
+    ],
+    "answer": 2,
+    "explanation": "プログラム自体は実行できても、アルゴリズムなどの誤りによって期待した結果にならないものを論理エラーと呼びます。"
+  },
+  {
+    "id": "py15-004",
+    "subject": "python",
+    "lesson": 15,
+    "question": "次のコードを実行しようとした場合、最も適切な説明はどれですか？\n\nfor i in range(3)\n    print(i)",
+    "choices": [
+      "正常に0〜2が表示される",
+      "ZeroDivisionErrorが発生する",
+      "NameErrorが発生する",
+      "文法上必要なコロンがないため、構文上のエラーになる"
+    ],
+    "answer": 3,
+    "explanation": "for文のヘッダー末尾には「:」が必要です。このようなコードの書き方の誤りは構文上のエラーです。"
+  },
+  {
+    "id": "py15-005",
+    "subject": "python",
+    "lesson": 15,
+    "question": "次のコードを実行すると発生する例外はどれですか？\n\nprint(10 / 0)",
+    "choices": [
+      "ZeroDivisionError",
+      "TypeError",
+      "NameError",
+      "KeyError"
+    ],
+    "answer": 0,
+    "explanation": "数値を0で割ろうとするとZeroDivisionErrorが発生します。"
+  },
+  {
+    "id": "py15-006",
+    "subject": "python",
+    "lesson": 15,
+    "question": "定義されていない変数を参照したときに発生する例外はどれですか？",
+    "choices": [
+      "TypeError",
+      "NameError",
+      "KeyError",
+      "FileNotFoundError"
+    ],
+    "answer": 1,
+    "explanation": "まだ定義されていない変数や関数を参照するとNameErrorが発生します。"
+  },
+  {
+    "id": "py15-007",
+    "subject": "python",
+    "lesson": 15,
+    "question": "次のコードで発生する例外として最も適切なものはどれですか？\n\nage = '20'\nprint(100 - age)",
+    "choices": [
+      "NameError",
+      "KeyError",
+      "TypeError",
+      "FileNotFoundError"
+    ],
+    "answer": 2,
+    "explanation": "整数100から文字列'20'を引くことはできません。想定とは異なる型を演算に使用しているためTypeErrorが発生します。"
+  },
+  {
+    "id": "py15-008",
+    "subject": "python",
+    "lesson": 15,
+    "question": "辞書に存在しないキーを指定して値を取得しようとしたときに発生する例外はどれですか？",
+    "choices": [
+      "ValueError",
+      "NameError",
+      "TypeError",
+      "KeyError"
+    ],
+    "answer": 3,
+    "explanation": "辞書に登録されていないキーを指定して値を参照するとKeyErrorが発生します。"
+  },
+  {
+    "id": "py15-009",
+    "subject": "python",
+    "lesson": 15,
+    "question": "存在しないファイルを読み込みモードで開こうとした場合に発生する代表的な例外はどれですか？",
+    "choices": [
+      "FileNotFoundError",
+      "SyntaxError",
+      "AssertionError",
+      "NameError"
+    ],
+    "answer": 0,
+    "explanation": "指定したファイルが存在しない状態で読み込みを行おうとするとFileNotFoundErrorが発生します。"
+  },
+  {
+    "id": "py15-010",
+    "subject": "python",
+    "lesson": 15,
+    "question": "例外処理に使用する基本的な構文はどれですか？",
+    "choices": [
+      "if-else文",
+      "try-except文",
+      "for-while文",
+      "match-case文"
+    ],
+    "answer": 1,
+    "explanation": "例外が起こる可能性のある処理をtry節に記述し、発生した例外への処理をexcept節に記述します。"
+  },
+  {
+    "id": "py15-011",
+    "subject": "python",
+    "lesson": 15,
+    "question": "try-except文におけるtry節には、通常どのような処理を書きますか？",
+    "choices": [
+      "例外発生後に必ず行う処理",
+      "エラーメッセージだけ",
+      "例外が発生する可能性のある処理",
+      "クラス定義だけ"
+    ],
+    "answer": 2,
+    "explanation": "try節には、ファイル読み込みなど、実行中に例外が発生する可能性のある処理を書きます。"
+  },
+  {
+    "id": "py15-012",
+    "subject": "python",
+    "lesson": 15,
+    "question": "try-except-else-finally文で、例外が発生しなかった場合にだけ実行される節はどれですか？",
+    "choices": [
+      "try節",
+      "except節",
+      "finally節",
+      "else節"
+    ],
+    "answer": 3,
+    "explanation": "else節は、try節で例外が一度も発生しなかった場合にのみ実行されます。"
+  },
+  {
+    "id": "py15-013",
+    "subject": "python",
+    "lesson": 15,
+    "question": "try-except-else-finally文で、例外が発生したかどうかに関係なく最後に実行される節はどれですか？",
+    "choices": [
+      "finally節",
+      "else節",
+      "except節",
+      "raise節"
+    ],
+    "answer": 0,
+    "explanation": "finally節は、例外が発生した場合でも発生しなかった場合でも最後に実行されます。ファイルや接続などのリソースを確実に解放する処理などに利用されます。"
+  },
+  {
+    "id": "py15-014",
+    "subject": "python",
+    "lesson": 15,
+    "question": "次のコードでsample.txtが存在しない場合、実行される節はどれですか？\n\ntry:\n    open('sample.txt', 'r')\nexcept FileNotFoundError:\n    print('ありません')\nelse:\n    print('成功')",
+    "choices": [
+      "else節だけ",
+      "except FileNotFoundError節",
+      "try節の後に必ずelse節",
+      "どの節も実行されない"
+    ],
+    "answer": 1,
+    "explanation": "存在しないファイルを開くとFileNotFoundErrorが発生するため、対応するexcept節が実行されます。else節は実行されません。"
+  },
+  {
+    "id": "py15-015",
+    "subject": "python",
+    "lesson": 15,
+    "question": "開発者が意図的に例外を発生させるために使用する文はどれですか？",
+    "choices": [
+      "assert",
+      "except",
+      "raise",
+      "return"
+    ],
+    "answer": 2,
+    "explanation": "指定した条件で意図的に例外を送出したい場合にはraise文を使用します。"
+  },
+  {
+    "id": "py15-016",
+    "subject": "python",
+    "lesson": 15,
+    "question": "次のコードを実行した場合、最初に発生することとして正しいものはどれですか？\n\nprint('開始')\nraise Exception('エラー')\nprint('終了')",
+    "choices": [
+      "「終了」だけ表示される",
+      "Exceptionは無視される",
+      "「開始」「終了」の両方が必ず表示される",
+      "「開始」の後で例外が送出され、「終了」は実行されない"
+    ],
+    "answer": 3,
+    "explanation": "raiseによって例外が送出されると、その時点で通常の処理の流れは中断されます。そのため後ろのprint('終了')は実行されません。"
+  },
+  {
+    "id": "py15-017",
+    "subject": "python",
+    "lesson": 15,
+    "question": "次のexcept文で「as err」の役割はどれですか？\n\nexcept Exception as err:",
+    "choices": [
+      "キャッチした例外オブジェクトをerrという変数で参照できるようにする",
+      "Exceptionをerrという新しいクラスに変更する",
+      "例外を無効にする",
+      "エラーが発生しないようにする"
+    ],
+    "answer": 0,
+    "explanation": "as errと記述すると、キャッチした例外オブジェクトをerrという変数から参照でき、print(err)などでメッセージを取得できます。"
+  },
+  {
+    "id": "py15-018",
+    "subject": "python",
+    "lesson": 15,
+    "question": "Pythonでユーザー独自の例外クラスを作成するとき、講義では通常どのクラスを継承しますか？",
+    "choices": [
+      "object",
+      "Exception",
+      "Error",
+      "UserClass"
+    ],
+    "answer": 1,
+    "explanation": "ユーザー定義例外はExceptionクラスを基底クラスとして継承して定義します。"
+  },
+  {
+    "id": "py15-019",
+    "subject": "python",
+    "lesson": 15,
+    "question": "ユーザー定義例外のクラス名として講義で示されている一般的な慣例はどれですか？",
+    "choices": [
+      "必ずExceptionで始める",
+      "すべて小文字にする",
+      "Errorで終わる名前を付ける",
+      "数字だけで命名する"
+    ],
+    "answer": 2,
+    "explanation": "InputErrorやEmptyNameErrorのように、ユーザー定義例外のクラス名はErrorで終わる名前にするのが一般的な慣例です。"
+  },
+  {
+    "id": "py15-020",
+    "subject": "python",
+    "lesson": 15,
+    "question": "次のクラス定義の意味として最も適切なものはどれですか？\n\nclass InputError(Exception):\n    pass",
+    "choices": [
+      "Exceptionという名前をInputErrorに変更している",
+      "InputErrorを通常のデータクラスとして定義している",
+      "Exceptionを削除している",
+      "Exceptionを継承した独自の例外InputErrorを定義している"
+    ],
+    "answer": 3,
+    "explanation": "Exceptionクラスを継承することで、InputErrorというユーザー定義例外を作成しています。特殊な追加処理がなければpassだけでも定義できます。"
+  },
+  {
+    "id": "py15-021",
+    "subject": "python",
+    "lesson": 15,
+    "question": "次のコードでageに文字列'16'が渡された場合、何が起こりますか？\n\nif type(age) != int:\n    raise TypeError('年齢は整数値で入力してください')",
+    "choices": [
+      "TypeErrorが送出される",
+      "自動的に16という整数へ変換される",
+      "NameErrorが発生する",
+      "何も起こらない"
+    ],
+    "answer": 0,
+    "explanation": "文字列'16'の型はstrでありintではないため、条件がTrueとなりTypeErrorが送出されます。"
+  },
+  {
+    "id": "py15-022",
+    "subject": "python",
+    "lesson": 15,
+    "question": "クラスの__init__メソッドの実行中に例外が発生し、処理されないまま終了した場合、そのインスタンスはどうなりますか？",
+    "choices": [
+      "属性だけリセットされる",
+      "インスタンスの作成に失敗する",
+      "自動的に空のインスタンスが作られる",
+      "すべての既存インスタンスが削除される"
+    ],
+    "answer": 1,
+    "explanation": "__init__の実行中に処理されない例外が発生すると、そのインスタンスの作成自体に失敗します。"
+  },
+  {
+    "id": "py15-023",
+    "subject": "python",
+    "lesson": 15,
+    "question": "次の型ヒントについて正しい説明はどれですか？\n\ndef hello(name: str):\n    pass",
+    "choices": [
+      "str以外を渡すとPythonが必ず実行前に停止する",
+      "str以外は自動的にstrへ変換される",
+      "型ヒントだけでは、異なる型を渡しても実行時に自動で例外は発生しない",
+      "型ヒントはコメントと完全に同じで、開発支援にも利用されない"
+    ],
+    "answer": 2,
+    "explanation": "型ヒントは可読性や開発支援のための情報です。指定と違う型が渡されても、Python自身が型ヒントだけを理由に実行時例外を自動発生させるわけではありません。"
+  },
+  {
+    "id": "py15-024",
+    "subject": "python",
+    "lesson": 15,
+    "question": "複数のexcept節を書くときの並び順として適切なものはどれですか？",
+    "choices": [
+      "Exceptionを必ず最初に書く",
+      "順番は結果に一切影響しない",
+      "親クラスほど上に書く",
+      "具体的な例外を上に、より一般的なExceptionを下に書く"
+    ],
+    "answer": 3,
+    "explanation": "except節は上から順に判定され、最初に一致したものだけが実行されます。Exceptionを先に書くと、その派生クラスの例外まで先にキャッチしてしまうため、具体的な例外を先に書きます。"
+  },
+  {
+    "id": "py15-025",
+    "subject": "python",
+    "lesson": 15,
+    "question": "次のexcept節がある場合、TypeErrorが発生したときに最初に実行されるのはどれですか？\n\nexcept TypeError:\n    print('型エラー')\nexcept Exception:\n    print('その他')",
+    "choices": [
+      "「型エラー」と表示される",
+      "「その他」とだけ表示される",
+      "両方表示される",
+      "どちらも表示されない"
+    ],
+    "answer": 0,
+    "explanation": "TypeErrorは最初のexcept TypeErrorに一致するため、その節だけが実行されます。最初に一致したexcept節の後に別のexcept節が続けて実行されることはありません。"
+  },
+  {
+    "id": "py15-026",
+    "subject": "python",
+    "lesson": 15,
+    "question": "except Exception: でキャッチできるものについて、講義内容に最も合うものはどれですか？",
+    "choices": [
+      "Exceptionそのものだけ",
+      "Exceptionのインスタンスと、Exceptionから派生した例外クラスのインスタンス",
+      "構文エラーだけ",
+      "論理エラーだけ"
+    ],
+    "answer": 1,
+    "explanation": "Exceptionを指定すると、Exceptionクラス自身のインスタンスに加え、TypeErrorなどExceptionから派生した例外クラスのインスタンスもキャッチできます。"
+  },
+  {
+    "id": "py15-027",
+    "subject": "python",
+    "lesson": 15,
+    "question": "assert文の主な用途として最も適切なものはどれですか？",
+    "choices": [
+      "ユーザーのパスワードを本番環境で必ず検証する",
+      "ファイルを削除する",
+      "開発中のテストやデバッグで、期待した条件が成立しているか確認する",
+      "例外をすべて無視する"
+    ],
+    "answer": 2,
+    "explanation": "assertは主に開発段階のテストやデバッグで、プログラムの論理や実装に問題がないか確認するために使用します。"
+  },
+  {
+    "id": "py15-028",
+    "subject": "python",
+    "lesson": 15,
+    "question": "次のコードを実行するとどうなりますか？\n\nassert 2 + 3 == 6",
+    "choices": [
+      "何も起こらず次へ進む",
+      "TypeErrorが発生する",
+      "NameErrorが発生する",
+      "AssertionErrorが発生する"
+    ],
+    "answer": 3,
+    "explanation": "2 + 3は5であり、5 == 6はFalseです。assertの条件がFalseの場合はAssertionErrorが発生します。"
+  },
+  {
+    "id": "py15-029",
+    "subject": "python",
+    "lesson": 15,
+    "question": "次のコードを実行したときの説明として正しいものはどれですか？\n\nassert 10 > 3\nprint('OK')",
+    "choices": [
+      "条件がTrueなのでAssertionErrorは発生せず、「OK」が表示される",
+      "assertを書いた時点で必ずAssertionErrorになる",
+      "10と3の型が異なるためTypeErrorになる",
+      "assertの次の行は必ず実行されない"
+    ],
+    "answer": 0,
+    "explanation": "assertの条件がTrueなら例外は発生せず、そのまま次の処理へ進むため「OK」が表示されます。"
+  },
+  {
+    "id": "py15-030",
+    "subject": "python",
+    "lesson": 15,
+    "question": "FizzBuzzで次の順番に条件を書いたところ、30を渡すと「Fizz」が返ってしまいました。修正方法として適切なものはどれですか？\n\nif num % 3 == 0:\n    return 'Fizz'\nelif num % 5 == 0:\n    return 'Buzz'\nelif num % 15 == 0:\n    return 'FizzBuzz'",
+    "choices": [
+      "5の倍数の判定だけ削除する",
+      "15の倍数の条件を3や5の倍数より先に判定する",
+      "すべてのelifをifに変更するだけでよい",
+      "assert文をすべて削除する"
+    ],
+    "answer": 1,
+    "explanation": "30は3の倍数でもあるため、最初の条件でFizzが返ってしまいます。より条件の厳しい15の倍数を最初に判定することでFizzBuzzを正しく返せます。assertを使うことで、このような論理エラーを発見できます。"
+  }
+]
