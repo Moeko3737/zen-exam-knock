@@ -10,6 +10,13 @@ import {
 ======================================== */
 
 const SUBJECTS = {
+  pm: {
+    name: "プロジェクトマネジメント概論",
+    dataDir: "pm",
+    lessonCount: 1,
+    idPattern: /^pm(\d{2})-\d{3}$/,
+  },
+
   python: {
     name: "Pythonプログラミング",
     dataDir: "python",

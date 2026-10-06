@@ -173,12 +173,17 @@ test(
 
       /**
        * ------------------------
-       * 最低20問あるか
+       * 既存科目は最低20問、PM第1回は提供された15問
        * ------------------------
        */
+      const minimumQuestionCount =
+        subjectName === "pm" && expectedLesson === 1
+          ? 15
+          : 20;
+
       assert.ok(
-        questions.length >= 20,
-        `${subjectName}/${fileName} は20問以上である必要があります`
+        questions.length >= minimumQuestionCount,
+        `${subjectName}/${fileName} は${minimumQuestionCount}問以上である必要があります`
       );
 
       /**
