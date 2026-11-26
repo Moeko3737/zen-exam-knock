@@ -13,7 +13,7 @@ const SUBJECTS = {
   pm: {
     name: "プロジェクトマネジメント概論",
     dataDir: "pm",
-    lessonCount: 3,
+    lessonCount: 4,
     idPattern: /^pm(\d{2})-\d{3}$/,
   },
 
