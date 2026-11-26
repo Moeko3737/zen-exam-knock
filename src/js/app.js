@@ -37,6 +37,13 @@ const SUBJECTS = {
     lessonCount: 15,
     idPattern: /^ethics(\d{2})-\d{3}$/,
   },
+
+  media: {
+    name: "メディア論",
+    dataDir: "media",
+    lessonCount: 1,
+    idPattern: /^media(\d{2})-\d{3}$/,
+  },
 };
 
 
