@@ -41,7 +41,7 @@ const SUBJECTS = {
   media: {
     name: "メディア論",
     dataDir: "media",
-    lessonCount: 4,
+    lessonCount: 5,
     idPattern: /^media(\d{2})-\d{3}$/,
   },
 };
