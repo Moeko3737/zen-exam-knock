@@ -346,3 +346,120 @@ test(
     }
   }
 );
+
+/**
+ * ========================================
+ * 選択肢の長さの偏りチェック
+ * ========================================
+ *
+ * 正解だけがいつも長い（または短い）と、
+ * 内容を読まなくても長さで答えがわかってしまう。
+ * 科目ごとに、正解が「いちばん長い」「いちばん短い」
+ * 選択肢になる割合が40%を超えないようにする。
+ */
+
+const LENGTH_BIAS_LIMIT = 0.4;
+
+/*
+ * 長さの偏りを直し終えた科目だけをチェックする。
+ * ほかの科目を直したら、ここに追加する。
+ */
+const LENGTH_CHECKED_SUBJECTS =
+  new Set(["pm", "media"]);
+
+test(
+  "正解の選択肢の長さが偏っていない",
+  () => {
+    const files =
+      getQuestionFiles();
+
+    const statsBySubject =
+      new Map();
+
+    for (
+      const file
+      of files
+    ) {
+      if (
+        !LENGTH_CHECKED_SUBJECTS.has(
+          file.subjectName
+        )
+      ) {
+        continue;
+      }
+
+      const questions =
+        loadQuestions(
+          file.filePath
+        );
+
+      const stats =
+        statsBySubject.get(
+          file.subjectName
+        ) || {
+          total: 0,
+          longest: 0,
+          shortest: 0,
+        };
+
+      for (
+        const question
+        of questions
+      ) {
+        const lengths =
+          question.choices.map(
+            (choice) =>
+              [...choice].length
+          );
+
+        const answerLength =
+          lengths[question.answer];
+
+        const otherLengths =
+          lengths.filter(
+            (_, index) =>
+              index !==
+              question.answer
+          );
+
+        stats.total += 1;
+
+        if (
+          answerLength >
+          Math.max(...otherLengths)
+        ) {
+          stats.longest += 1;
+        }
+
+        if (
+          answerLength <
+          Math.min(...otherLengths)
+        ) {
+          stats.shortest += 1;
+        }
+      }
+
+      statsBySubject.set(
+        file.subjectName,
+        stats
+      );
+    }
+
+    for (
+      const [subjectName, stats]
+      of statsBySubject
+    ) {
+      assert.ok(
+        stats.longest / stats.total <=
+          LENGTH_BIAS_LIMIT,
+        `${subjectName}: 正解がいちばん長い選択肢になる問題が多すぎます（${stats.longest}/${stats.total}）`
+      );
+
+      assert.ok(
+        stats.shortest / stats.total <=
+          LENGTH_BIAS_LIMIT,
+        `${subjectName}: 正解がいちばん短い選択肢になる問題が多すぎます（${stats.shortest}/${stats.total}）`
+      );
+    }
+  }
+);
